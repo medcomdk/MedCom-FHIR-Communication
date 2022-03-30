@@ -1,7 +1,6 @@
-title: "MedCom on FHIR"
-description: "This page includes content about MedCom FHIR standards"
+title: "MedCom FHIR Communication Rules"
 logo: Medcom-logo-2015.png
-description: "MedCom standard based on HL7 FHIR"
+description: "Rules for the Message exchange of MedCom HL7 FHIR"
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
