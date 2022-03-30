@@ -11,7 +11,7 @@ Here you will find the information you need to get started with MedCom's FHIR st
 ## Information about the Transportation Layer
 
 Danish [here](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
-English [here](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes)
+English [here](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes.md)
 
 
 ## Test and Certification
