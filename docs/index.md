@@ -1,4 +1,4 @@
-# Welcom to MedCom FHIR Messaging
+# MedCom FHIR Communication Rules
 
 Here you will find the information you need to get started with MedCom's FHIR standards. 
 
@@ -11,6 +11,7 @@ Here you will find the information you need to get started with MedCom's FHIR st
 ## Information about the Transportation Layer
 
 Danish [here](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
+
 English [here](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes.md)
 
 
