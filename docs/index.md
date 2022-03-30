@@ -1,9 +1,3 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/medcomdk/MedCom-FHIR-Communication/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
 # Welcom to MedCom FHIR Messaging
 
 Here you will find the information you need to get started with MedCom's FHIR standards. 
@@ -36,6 +30,12 @@ Updates in the latest release.
 [MedCom](https://www.medcom.dk/) is responsible for this page.  
 For any question regaring the standard, please contact <fhir@medcom.dk>
 
+
+## Welcome to GitHub Pages
+
+You can use the [editor on GitHub](https://github.com/medcomdk/MedCom-FHIR-Communication/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
