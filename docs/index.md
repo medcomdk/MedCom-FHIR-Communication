@@ -6,26 +6,22 @@
 
 Here you will find the information you need to get started with MedCom's FHIR standards.
 
-<table border=1>
-    <tr border=1>
-        <td>Name in English</td>
-        <td>Name in Danish</td>
+<table border=2>
+    <tr border=2>
+        <td><b>Name in English</b></td>
+        <td><b>Name in Danish</b></td>
     </tr>
-    <tr border=1>
+    <tr border=2>
         <td>Core Profiles</td>
         <td>Kerneprofiler</td>
     </tr>
-    <tr border=1>
+    <tr border=2>
         <td>Messaging</td>
         <td>Medddelser</td>
     </tr>
-    <tr border=1>
+    <tr border=2>
         <td>Acknowledgement</td>
         <td>Kvittering</td>
-    </tr>
-    <tr border=1>
-        <td/>
-        <td/>
     </tr>
 </table>
 
