@@ -3,12 +3,27 @@
 Here you will find the information you need to get started with MedCom's FHIR standards.
 
 |       Name in English      |       Name in Danish       |                            Short description                      |
-|:--------------------------:|:--------------------------:|:-----------------------------------------------------------------:|
+|:---------------------------|:---------------------------|:------------------------------------------------------------------|
 | Core Profiles        | Kerneprofiler            | Describes core-profiles that are static and used across standards |
 | Messaging            | Medddelser..             | Describes profiles that...                                        |
 | Acknowledgement      | Kvittering               | Describes profiles that...                                        |
 
-## Information about the Transportation Layer
+## FHIR Messaging
+
+### MessageHeader
+
+[here](/assets/documents/MessageHeader%20Identifiers%20%26%20Timestamps.md)
+
+### Timestamps
+
+[here](/assets/documents/MessageHeader%20Identifiers%20%26%20Timestamps.md)
+
+## Reliable Messaging
+
+When reliable messaging is implemented , the Receiver SHALL check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
+
+
+## Information about Network Envelopes and the Transportation Layer
 
 Danish [here](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
 
