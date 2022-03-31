@@ -1,12 +1,12 @@
 # Communication Rules for MedCom HL7 FHIR®© Messaging
 
+Here you will find the information you need to get started with MedCom's FHIR®© standards.
+
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
 
 ## Indledning
 
 [here](/assets/documents/01-Indledning.md)
-
-Here you will find the information you need to get started with MedCom's FHIR®© standards.
 
 <table border=2>
     <tr border=2>
@@ -27,6 +27,10 @@ Here you will find the information you need to get started with MedCom's FHIR®�
     </tr>
 </table>
 
+## Content
+[FHIR Messaging](FHIR Messaging)
+- [Basic Messaging Assumptions](Basic Messaging Assumptions)
+
 ## FHIR Messaging
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2  (see detailed comparison). Applications asserting conformance to this framework claim to be conformant to "FHIR messaging".
@@ -45,7 +49,7 @@ The agreements around the content of the messages and the behavior of the two ap
 
 This specification ignores the existence of interface engines and message transfer agents that exist between the source and destination. Either they are transparent to the message/transaction content and irrelevant to this specification, or they are actively involved in manipulating the message content (in particular, the source and destination headers are often changed). If these middleware agents are modifying the message content, then they become responsible for honoring the contract that applies (including applicable profiles) in both directions.
 
-## Content
+## Basic elements of FHIR Messages
 
 ### MessageHeader
 
