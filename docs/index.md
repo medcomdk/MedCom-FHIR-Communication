@@ -17,10 +17,6 @@ Here you will find the information you need to get started with MedCom's FHIR st
 |**\|** Acknowledgement      |**\|** Kvittering           |
 |**\|**--------------------|**\|**--------------------**\|**|
 
-## Horizontal ruler
-
--------------------------------------------------------------
-
 <table border=1>
     <tr border=1>
         <td>Name in English</td>
@@ -29,6 +25,18 @@ Here you will find the information you need to get started with MedCom's FHIR st
     <tr border=1>
         <td>Core Profiles</td>
         <td>Kerneprofiler</td>
+    </tr>
+    <tr border=1>
+        <td>Messaging</td>
+        <td>Medddelser</td>
+    </tr>
+    <tr border=1>
+        <td>Acknowledgement</td>
+        <td>Kvittering</td>
+    </tr>
+    <tr border=1>
+        <td/>
+        <td/>
     </tr>
 </table>
 
