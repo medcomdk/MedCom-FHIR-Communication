@@ -2,25 +2,23 @@
 
 ## Indledning
 
-[here](/assets/documents/MessageHeader_Identifiers.md)
+[here](/assets/documents/01-Indledning.md)
 
 Here you will find the information you need to get started with MedCom's FHIR standards.
 
-{:class="table table-bordered"}
-|\|---- Name in English      | Name in Danish       |
-|:---------------------|:---------------------|
-|----|---|---|
+|**\|---**|**\|---\|**|
+|:--------------------|:---------------------|
+|**\|** Name in English      | Name in Danish       |
+|**\|---**|**\|---\|**|
 |\| Core Profiles        | Kerneprofiler        |
-|----|---|---|
+|**\|---**|**\|---\|**|
 |\| Messaging            | Medddelser..         |
-|----|---|---|
+|**\|---**|**\|---\|**|
 |\| Acknowledgement      | Kvittering           |
-|----|---|---|
+|**\|---**|**\|---\|**|
 
-## Horizontal ruler
-
-xyz
-__-----__
+**Horizontal ruler**
+**---**
 
 <table border=1>
     <tr border=1>
