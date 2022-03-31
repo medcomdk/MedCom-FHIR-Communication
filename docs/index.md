@@ -1,21 +1,26 @@
 # MedCom FHIR Communication Rules
 
+## Indledning
+
+[here](/assets/documents/MessageHeader_Identifiers.md)
+
 Here you will find the information you need to get started with MedCom's FHIR standards.
 
 {:class="table table-bordered"}
-|\|---- Name in English      | Name in Danish       | Short description                                                 |
-|:---------------------|:---------------------|:------------------------------------------------------------------|
+|\|---- Name in English      | Name in Danish       |
+|:---------------------|:---------------------|
 |----|---|---|
-|\| Core Profiles        | Kerneprofiler        | Describes core-profiles that are static and used across standards |
+|\| Core Profiles        | Kerneprofiler        |
 |----|---|---|
-|\| Messaging            | Medddelser..         | Describes profiles that...                                        |
+|\| Messaging            | Medddelser..         |
 |----|---|---|
-|\| Acknowledgement      | Kvittering           | Describes profiles that...                                        |
+|\| Acknowledgement      | Kvittering           |
 |----|---|---|
 
 ## Horizontal ruler
 
------
+xyz
+__-----__
 
 <table border=1>
     <tr border=1>
