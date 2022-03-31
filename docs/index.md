@@ -28,8 +28,8 @@ Here you will find the information you need to get started with MedCom's FHIRÂ®Â
 </table>
 
 ## Content
-[FHIR Messaging](https://medcomdk.github.io/MedCom-FHIR-Communication#FHIR Messaging)
-- [Basic Messaging Assumptions](https://medcomdk.github.io/MedCom-FHIR-Communication#Basic Messaging Assumptions)
+[FHIR Messaging](#fhir-messaging)
+[Basic Messaging Assumptions](#basic-messaging-assumptions)
 
 ## FHIR Messaging
 
