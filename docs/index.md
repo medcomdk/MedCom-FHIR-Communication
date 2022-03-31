@@ -13,23 +13,23 @@ Here you will find the information you need to get started with MedCom's FHIR st
 
 ### MessageHeader
 
-[here](/assets/documents/MessageHeader%20Identifiers%20%26%20Timestamps.md)
+[here](/assets/documents/MessageHeader_Identifiers.md)
 
 ### Timestamps
 
-[here](/assets/documents/MessageHeader%20Identifiers%20%26%20Timestamps.md)
+[here](/assets/documents/MessageHeader_Timestamps.md)
 
 ### Messaging rules
 
-[here](/assets/documents/Messaging%20rules.md)
+[here](/assets/documents/Rules_Messaging.md
 
 ### Acnowledgment rules
 
-[here](/assets/documents/Acknowledgment%20rules.md)
+[here](/assets/documents/Rules_Acknowledgment.md)
 
 ## Reliable Messaging
 
-[here](/assets/documents/Reliable%20Messaging.md)
+[here](/assets/documents/Reliable_Messaging.md)
 
 ## Information about Network Envelopes and the Transportation Layer
 
