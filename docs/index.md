@@ -12,7 +12,11 @@ Here you will find the information you need to get started with MedCom's FHIR st
 <table border=1>
     <tr>
         <td>Name in English</td>
+        <td>Name in Danish</td>
+    </tr>
+    <tr>
         <td>Core Profiles</td>
+        <td>Kerneprofiler</td>
     </tr>
 </table>
 
