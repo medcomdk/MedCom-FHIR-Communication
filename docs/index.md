@@ -9,7 +9,7 @@ Here you will find the information you need to get started with MedCom's FHIR st
 | Messaging            | Medddelser..         | Describes profiles that...                                        |
 | Acknowledgement      | Kvittering           | Describes profiles that...                                        |
 
-<table>
+<table border=1>
     <tr>
         <td>Name in English</td>
         <td>Core Profiles</td>
