@@ -7,6 +7,7 @@ Here you will find the information you need to get started with MedCom's FHIR st
 | Core Profiles        | Kerneprofiler            | Describes core-profiles that are static and used across standards |
 | Messaging            | Medddelser..             | Describes profiles that...                                        |
 | Acknowledgement      | Kvittering               | Describes profiles that...                                        |
+{:.table-striped}
 
 ## FHIR Messaging
 
@@ -18,10 +19,17 @@ Here you will find the information you need to get started with MedCom's FHIR st
 
 [here](/assets/documents/MessageHeader%20Identifiers%20%26%20Timestamps.md)
 
+### Messaging rules
+
+[here](/assets/documents/Messaging%20rules.md)
+
+### Acnowledgment rules
+
+[here](/assets/documents/Acknowledgment%20rules.md)
+
 ## Reliable Messaging
 
-When reliable messaging is implemented , the Receiver SHALL check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
-
+[here](/assets/documents/Reliable%20Messaging.md)
 
 ## Information about Network Envelopes and the Transportation Layer
 
