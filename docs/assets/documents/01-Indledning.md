@@ -1,5 +1,7 @@
 # Indledning
 
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
+
 Disse ”FHIR syntaks- og kommunikationsregler” har til formål at præcisere benyttelsen af MedComs FHIR-meddelelser til sundheds- og socialområdet.
 
 Det er hensigten, at reglerne sammen med MedComs standarder for de enkelte meddelelser kan udgøre det fulde og tilstrækkelige grundlag for at implementere MedComs sygehusmeddelelser – på samme måde som dette var tilfældet for ”De gode EDI-breve” på primærområdet.
