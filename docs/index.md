@@ -1,6 +1,6 @@
 # Communication Rules for MedCom HL7 FHIR®© Messaging
 
-![alt text](https://github.com/medcomdk/MedCom-FHIR-Communication/blob/1.0.0-a.1-MedCom-FHIR-Communication-Rules-(GitHub-Pages)/docs/_images/fhir-logo.png "HL7 FHIR")
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
 
 ## Indledning
 
