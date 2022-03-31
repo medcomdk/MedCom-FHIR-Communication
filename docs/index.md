@@ -10,10 +10,10 @@ Here you will find the information you need to get started with MedCom's FHIR st
 | Acknowledgement      | Kvittering           | Describes profiles that...                                        |
 
 <table border=1>
-    <tr>
+    <th>
         <td>Name in English</td>
         <td>Name in Danish</td>
-    </tr>
+    </th>
     <tr>
         <td>Core Profiles</td>
         <td>Kerneprofiler</td>
