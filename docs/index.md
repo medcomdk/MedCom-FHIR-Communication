@@ -13,6 +13,8 @@ Here you will find the information you need to get started with MedCom's FHIR st
 |\| Acknowledgement      | Kvittering           | Describes profiles that...                                        |
 |---|---|---|
 
+## Horizontal ruler
+
 ---
 
 <table border=1>
@@ -38,11 +40,13 @@ Here you will find the information you need to get started with MedCom's FHIR st
 
 ### Messaging rules
 
-[here](/assets/documents/Rules_Messaging.md)
+[Danish here](/assets/documents/Rules_Messaging-DA.md)
+[English here](/assets/documents/Rules_Messaging-EN.md)
 
 ### Acnowledgment rules
 
-[here](/assets/documents/Rules_Acknowledgment.md)
+[Danish here](/assets/documents/Rules_Acknowledgment-DA.md)
+[English here](/assets/documents/Rules_Acknowledgment-EN.md)
 
 ## Reliable Messaging
 

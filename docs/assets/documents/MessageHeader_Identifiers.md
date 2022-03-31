@@ -1,6 +1,6 @@
 # MessageHeader Identifiers
 
-An incoming message contains two identifiers:
+A message contains two identifiers:
 
 - the Bundle.id and
 - the MessageHeader.id.
