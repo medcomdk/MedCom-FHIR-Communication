@@ -3,11 +3,11 @@
 Here you will find the information you need to get started with MedCom's FHIR standards.
 
 {:class="table table-bordered"}
-|       Name in English      |       Name in Danish       |                            Short description                      |
-|:---------------------------|:---------------------------|:------------------------------------------------------------------|
-| Core Profiles        | Kerneprofiler            | Describes core-profiles that are static and used across standards |
-| Messaging            | Medddelser..             | Describes profiles that...                                        |
-| Acknowledgement      | Kvittering               | Describes profiles that...                                        |
+| Name in English      | Name in Danish       | Short description                                                 |
+|:---------------------|:---------------------|:------------------------------------------------------------------|
+| Core Profiles        | Kerneprofiler        | Describes core-profiles that are static and used across standards |
+| Messaging            | Medddelser..         | Describes profiles that...                                        |
+| Acknowledgement      | Kvittering           | Describes profiles that...                                        |
 
 ## FHIR Messaging
 
@@ -30,6 +30,10 @@ Here you will find the information you need to get started with MedCom's FHIR st
 ## Reliable Messaging
 
 [here](/assets/documents/Reliable_Messaging.md)
+
+## MustSupport
+
+[here](/assets/documents/MustSupport.md)
 
 ## Information about Network Envelopes and the Transportation Layer
 
