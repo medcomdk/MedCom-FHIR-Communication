@@ -1,6 +1,6 @@
-title: "MedCom FHIR Communication Rules"
+title: "FHIR Communication Rules for"
 logo: Medcom-logo-2015.png
-description: "Rules for the Message exchange of MedCom HL7 FHIR"
+description: "Communication rules for the message exchange of MedCom HL7 FHIR"
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
