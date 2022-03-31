@@ -1,10 +1,10 @@
-# Communication Rules for MedCom HL7® FHIR© Messaging
+# Communication Rules for MedCom HL7® FHIR® Messaging
 
 ## Indledning
 
 [here](/assets/documents/01-Indledning.md)
 
-Here you will find the information you need to get started with MedCom's FHIR standards.
+Here you will find the information you need to get started with MedCom's FHIR® standards.
 
 <table border=2>
     <tr border=2>
