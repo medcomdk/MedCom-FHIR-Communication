@@ -1,4 +1,4 @@
-# MedCom FHIR Communication Rules
+# Communication Rules for MedCom HL7® FHIR© Messaging
 
 ## Indledning
 
