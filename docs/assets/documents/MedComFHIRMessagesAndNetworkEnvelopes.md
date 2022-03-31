@@ -1,5 +1,7 @@
 # MedCom FHIR Messages And Network Envelopes
 
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
+
 ## Table of Content
 
 [1. Indledning][1]
