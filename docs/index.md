@@ -6,19 +6,20 @@
 
 Here you will find the information you need to get started with MedCom's FHIR standards.
 
-|**\|---**|**\|---\|**|
+|**\|**---|**\|**---**\|**|
 |:--------------------|:---------------------|
-|**\|** Name in English      | Name in Danish       |
-|**\|---**|**\|---\|**|
+|**\| Name in English**      | **Name in Danish**       |
+|**\|**---|**\|**---**\|**|
 |\| Core Profiles        | Kerneprofiler        |
-|**\|---**|**\|---\|**|
+|**\|**---|**\|**---**\|**|
 |\| Messaging            | Medddelser..         |
-|**\|---**|**\|---\|**|
+|**\|**---|**\|**---**\|**|
 |\| Acknowledgement      | Kvittering           |
-|**\|---**|**\|---\|**|
+|**\|**---|**\|**---**\|**|
 
-**Horizontal ruler**
-**---**
+## Horizontal ruler
+
+---
 
 <table border=1>
     <tr border=1>
