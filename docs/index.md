@@ -4,6 +4,15 @@ Here you will find the information you need to get started with MedCom's FHIRÂ®Â
 
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
 
+## Content
+[indledning](#indledning)
+
+[FHIR Messaging](#fhir-messaging)
+
+[Basic Messaging Assumptions](#basic-messaging-assumptions)
+
+[Basic elements of fhir messages](#basic-elements-of-fhir-messages)
+
 ## Indledning
 
 [here](/assets/documents/01-Indledning.md)
@@ -26,10 +35,6 @@ Here you will find the information you need to get started with MedCom's FHIRÂ®Â
         <td>Kvittering</td>
     </tr>
 </table>
-
-## Content
-[FHIR Messaging](#fhir-messaging)
-[Basic Messaging Assumptions](#basic-messaging-assumptions)
 
 ## FHIR Messaging
 
