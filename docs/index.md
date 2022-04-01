@@ -12,7 +12,13 @@ Here you will find the information you need to get started with MedCom's FHIR®�
 
 ¤ [Basic Messaging Assumptions](#basic-messaging-assumptions)
 
-¤ [Basic elements of fhir messages](#basic-elements-of-fhir-messages)
+¤ [Message exchange patterns](#message-exchange-patterns)
+
+ ¤ [Asynchrous](#asynchronous)
+
+[Basic elements of MedCom fhir messages](#basic-elements-of-medcom-fhir-messages)
+
+¤ [Message Header](#message-exchange-patterns)
 
 ## Indledning
 
@@ -51,9 +57,15 @@ In principle, source applications are not required to wait for a response to a t
 In Asynchronous messaging, the server acknowledges receipt of the message immediately, and responds to the sender separately. The server may respond more than once to any given message.
 When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
 
-## Basic elements of FHIR Messages
+## Basic elements of MedCom FHIR Messages
+
+[here](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/pagecontent/index.md)
 
 ### MessageHeader
+
+[here](/assets/documents/MessageHeader.md)
+
+### Identifiers
 
 [here](/assets/documents/MessageHeader_Identifiers.md)
 
