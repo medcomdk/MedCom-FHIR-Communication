@@ -59,6 +59,8 @@ When a message is received, a receiver can determine from the content of the mes
 
 ## Basic elements of MedCom FHIR Messages
 
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png "MedCom Messaging Model")
+
 [here](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/pagecontent/index.md)
 
 [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md)
@@ -90,6 +92,8 @@ When a message is received, a receiver can determine from the content of the mes
 [here](/assets/documents/MustSupport.md)
 
 ## Provenance
+
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts")
 
 [here](/assets/documents/Provenance.md)
 
