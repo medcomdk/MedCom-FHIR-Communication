@@ -67,6 +67,8 @@ When a message is received, a receiver can determine from the content of the mes
 
 ### MessageHeader
 
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedCom Messaging Model")
+
 [here](/assets/documents/MessageHeader.md)
 
 ### Identifiers
