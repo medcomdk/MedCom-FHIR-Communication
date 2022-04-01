@@ -5,6 +5,7 @@ Here you will find the information you need to get started with MedCom's FHIRÂ®Â
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
 
 ## Content
+
 [indledning](#indledning)
 
 [FHIR Messaging](#fhir-messaging)
@@ -15,26 +16,9 @@ Here you will find the information you need to get started with MedCom's FHIRÂ®Â
 
 ## Indledning
 
-[here](/assets/documents/01-Indledning.md)
+Some of these Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html) but not all of it, and what you find here is also how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 
-<table border=2>
-    <tr border=2>
-        <td><b>Name in English</b></td>
-        <td><b>Name in Danish</b></td>
-    </tr>
-    <tr border=2>
-        <td>Core Profiles</td>
-        <td>Kerneprofiler</td>
-    </tr>
-    <tr border=2>
-        <td>Messaging</td>
-        <td>Medddelser</td>
-    </tr>
-    <tr border=2>
-        <td>Acknowledgement</td>
-        <td>Kvittering</td>
-    </tr>
-</table>
+[here](/assets/documents/01-Indledning.md)
 
 ## FHIR Messaging
 
@@ -46,13 +30,26 @@ The events supported in FHIR, along with the resources that are included in them
 
 The destination application processes the message and returns an acknowledgment message and one or more response messages, which are also a bundle of resources identified by the type "message", with the first resource in each bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
-### Basic Messaging Assumptions
+### Basic Messaging Assumptions [TBD]
 
-This specification assumes that content will be delivered from one application to another by some delivery mechanism, and then one or more responses will be returned to the source application. The exact mechanism of transfer is irrelevant to this specification, but may include file transfer, HTTP based transfer, MLLP (HL7 minimal lower layer protocol), MQ series messaging or anything else. The only requirement for the transfer layer is that requests are sent to a known location and responses are returned to the source of the request. This specification considers the source and destination applications as logical entities, and the mapping from logical source and destination to implementation specific addresses is outside the scope of this specification, though this specification does provide a direct delivery mechanism below.
+This specification assumes that content will be delivered from one application to another by some delivery mechanism, and then one or more responses will be returned to the source application.
 
-The agreements around the content of the messages and the behavior of the two applications form the "contract" that describes the exchange. The contract will add regional and local agreements to the rules defined in this specification.
+In Denmark this specification rules the exchange of messages through the Danish Messaging Network, currently known as VANS, and using the central organization register, SOR, for delivering the virtual adressing information.
+
+The agreements around the content of the messages and the behavior of the two applications form the "contract" that describes the exchange. These contract is exactly what MedCom delivers in a the Danish Healthcare Domain and therefore adds  regional and local agreements to the rules defined in the HL7 FHIR specification.
 
 This specification ignores the existence of interface engines and message transfer agents that exist between the source and destination. Either they are transparent to the message/transaction content and irrelevant to this specification, or they are actively involved in manipulating the message content (in particular, the source and destination headers are often changed). If these middleware agents are modifying the message content, then they become responsible for honoring the contract that applies (including applicable profiles) in both directions.
+
+### Message Exchange Patterns
+
+Each MedCom FHIR message has one or more response messages. There must be at least one response message so that the sender can know that the message was properly received. Multiple response messages SHALL NOT be returned for messages of consequence, and SHOULD not be returned for notifications.
+
+In principle, source applications are not required to wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
+
+#### Asynchronous
+
+In Asynchronous messaging, the server acknowledges receipt of the message immediately, and responds to the sender separately. The server may respond more than once to any given message.
+When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
 
 ## Basic elements of FHIR Messages
 
@@ -74,15 +71,19 @@ This specification ignores the existence of interface engines and message transf
 [Danish here](/assets/documents/Rules_Acknowledgment-DA.md)
 [English here](/assets/documents/Rules_Acknowledgment-EN.md)
 
-## Reliable Messaging
-
-[here](/assets/documents/Reliable_Messaging.md)
-
 ## MustSupport
 
 [here](/assets/documents/MustSupport.md)
 
-## Information about Network Envelopes and the Transportation Layer
+## Provenance
+
+[here](/assets/documents/Provenance.md)
+
+## Reliable Messaging
+
+[here](/assets/documents/Reliable_Messaging.md)
+
+## Network Envelopes and the VANS Transportation Layer
 
 Danish [here](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
 
