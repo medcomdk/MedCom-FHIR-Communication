@@ -59,9 +59,6 @@ When a message is received, a receiver can determine from the content of the mes
 
 ## Basic elements of MedCom FHIR Messages
 
-<iframe width="100%" height="100%" src="(https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md" frameborder="yes" scrolling="yes">
-</iframe>
-
 [here](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/pagecontent/index.md)
 
 [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md)
