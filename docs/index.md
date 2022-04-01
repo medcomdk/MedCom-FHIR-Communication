@@ -10,9 +10,9 @@ Here you will find the information you need to get started with MedCom's FHIR®�
 
 [FHIR Messaging](#fhir-messaging)
 
-[Basic Messaging Assumptions](#basic-messaging-assumptions)
+¤ [Basic Messaging Assumptions](#basic-messaging-assumptions)
 
-[Basic elements of fhir messages](#basic-elements-of-fhir-messages)
+¤ [Basic elements of fhir messages](#basic-elements-of-fhir-messages)
 
 ## Indledning
 
