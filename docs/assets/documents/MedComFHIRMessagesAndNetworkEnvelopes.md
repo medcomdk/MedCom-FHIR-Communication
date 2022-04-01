@@ -2,9 +2,6 @@
 
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
 
-<iframe width="100%" height="100%" src="https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/images/pdf/MedCom_FHIR-messages_and_enclosing_envelope.pdf" frameborder="yes" scrolling="yes">
-</iframe>
-
 ## Table of Content
 
 [1. Indledning][1]
