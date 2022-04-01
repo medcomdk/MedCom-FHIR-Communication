@@ -45,3 +45,7 @@ The Provenance resource depends upon having References to all the resources, ent
 Versioning and unique identification are not mandated for all systems that provide Resources, entities, and agents. But, inclusion of Provenance requirements may introduce requirements for versioning and unique identification on those systems
 
 The Provenance resource is based on leveraging the W3C Provenance specification to represent HL7 support of provenance throughout its standards and explicitly modeled as functional capabilities in ISO/HL7 10781 EHR System Functional Model Release 2 and ISO 21089 Trusted End-to-End Information Flows. Mappings are provided. The Provenance resource is tailored to fit the FHIR use-cases for provenance more directly. In terms of W3C Provenance the FHIR Provenance resources covers "Generation" of "Entity" with respect to FHIR defined resources for creation or updating; whereas AuditEvent covers "Usage" of "Entity" and all other "Activity" as defined in W3C Provenance.
+
+## MedCom use of Provenance in Messaging
+
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts")
