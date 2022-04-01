@@ -95,7 +95,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 ## Provenance
 
-![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts")
+![alt text](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/images/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts")
 
 ![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts(Remote)")
 
