@@ -118,8 +118,8 @@ When a message is received, a receiver can determine from the content of the mes
 
 - MedCom FHIR Messages SHALL be enveloped in a VANS ENVELOPE
 - MedCom FHIR Messages SHALL follow the metadataspecification outlined in
--- Danish [here](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
--- English [here](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes.md)
+- Danish [here](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
+- English [here](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes.md)
 
 ## Test and Certification
 
