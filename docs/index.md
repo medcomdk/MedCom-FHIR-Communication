@@ -1,3 +1,7 @@
+# Introduction
+
+Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html). What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
+
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
 
 ## Content
@@ -7,10 +11,6 @@
 |[Introduction](#introduction)                ||[Reliable Messaging](#reliable-messaging)|
 |[FHIR Messaging](#fhir-messaging)            ||[Network Layer](#network-envelopes-and-the-vans-transportation-layer)|
 |[MedCom FHIR messages](#medcom-fhir-messages)||[Test and Certification](#test-and-certification)|
-
-## Introduction
-
-Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html). What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 
 [Introduction details](/assets/documents/01-Introduction.md)
 
@@ -102,12 +102,14 @@ When a message is received, a receiver can determine from the content of the mes
 
 [here](/assets/documents/Reliable_Messaging.md)
 
-## Network Envelopes and the VANS Transportation Layer
+## Network Envelope
 
 - MedCom FHIR Messages SHALL be enveloped in a VANS ENVELOPE
 - MedCom FHIR Messages SHALL follow the metadataspecification outlined in
-- Danish [here](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
-- English [here](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes.md)
+  - [Danish](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
+  - [English](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes.md)
+
+## VANS Transportation Layer
 
 ## Test and Certification
 
