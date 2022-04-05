@@ -10,7 +10,7 @@ Here you will find the information you need to get started with MedCom's FHIRÂ®Â
 
 [FHIR Messaging](#fhir-messaging)
 
-[Basic elements of MedCom fhir messages](#basic-elements-of-medcom-fhir-messages)
+[MedCom FHIR messages](#medcom-fhir-messages)
 
 [Reliable Messaging](#reliable-messaging)
 
@@ -56,7 +56,7 @@ In principle, source applications are not required to wait for a response to a t
 In Asynchronous messaging, the server acknowledges receipt of the message immediately, and responds to the sender separately. The server may respond more than once to any given message.
 When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
 
-## Basic elements of MedCom FHIR Messages
+## MedCom FHIR Messages
 
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png "MedCom Messaging Model")
 
