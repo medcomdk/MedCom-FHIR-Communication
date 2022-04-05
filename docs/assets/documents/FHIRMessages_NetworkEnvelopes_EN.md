@@ -4,16 +4,16 @@
 
 ## Table of Content
 
-[1. Indledning][1]
-[2. Forsendelseskuverter][2]
-[2.1 VANSenvelope][2.1]
-[2.1.1 Format][2.1.1]
-[2.1.2 Name][2.1.2]
-[2.1.3 Version][2.1.3]
-[3. FHIR meddelelsestyper][3]
-[3.1 CareCommunication][3.1]
-[3.2 HospitalNotification][3.2]
-[3.3 Acknowledgment][3.3]
+[1. Indledning][1] <br/>
+[2. Forsendelseskuverter][2] <br/>
+[2.1 VANSenvelope][2.1] <br/>
+[2.1.1 Format][2.1.1] <br/>
+[2.1.2 Name][2.1.2] <br/>
+[2.1.3 Version][2.1.3] <br/>
+[3. FHIR meddelelsestyper][3] <br/>
+[3.1 CareCommunication][3.1] <br/>
+[3.2 HospitalNotification][3.2] <br/>
+[3.3 Acknowledgment][3.3] <br/>
 
 ---
 
