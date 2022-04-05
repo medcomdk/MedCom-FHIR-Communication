@@ -10,15 +10,14 @@ Here you will find the information you need to get started with MedCom's FHIR®�
 
 [FHIR Messaging](#fhir-messaging)
 
-¤ [Basic Messaging Assumptions](#basic-messaging-assumptions)
-
-¤ [Message exchange patterns](#message-exchange-patterns)
-
- ¤ [Asynchrous](#asynchronous)
-
 [Basic elements of MedCom fhir messages](#basic-elements-of-medcom-fhir-messages)
 
-¤ [Message Header](#message-exchange-patterns)
+[Reliable Messaging](#reliable-messaging)
+
+[Network Envelopes and the VANS Transportation Layer](#network-envelopes-and-the-vans-transportation-layer)
+
+[Test and Certification](#test-and-certification)
+
 
 ## Indledning
 
