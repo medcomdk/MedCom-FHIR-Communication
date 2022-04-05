@@ -1,9 +1,6 @@
-# Communication Rules for MedCom HL7 FHIR®© Messaging
+#
 
-||||||
-|---|---|---|---|---|
-|||![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")|||
-
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
 
 ## Content
 
