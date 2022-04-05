@@ -100,7 +100,8 @@ Name kan eksplicit tages fra følgende Valueset: [VANS StatisticalCode Combinati
 ### HospitalNotification
 
 |:---|:---|
-|Kuvert  |Kuvert: VANSenvelope i afsendelse, KOMBITs BeskedFordeler kuvert i modtagelse hos EOJ\-systemerne |
+|Kuvert afsendelse |VANSenvelope (EPJ)|
+|Kuvert modtagelse |KOMBITs BeskedFordeler kuvert (EOJ)|
 |Format  |"HL7"                 |
 |Name    |"MCM:FDIS20#`<code>`" |
 |Version |"1.0"                 |
