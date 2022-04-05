@@ -7,18 +7,13 @@
 
 ## Content
 
-[Introduction](#introduction)
+||||||
+|---|---|---|---|---|
+|[Introduction](#introduction)                ||||[Reliable Messaging](#reliable-messaging)|
 
-[FHIR Messaging](#fhir-messaging)
+|[FHIR Messaging](#fhir-messaging)            ||||[Network Envelopes and the VANS Transportation Layer](#network-envelopes-and-the-vans-transportation-layer)|
 
-[MedCom FHIR messages](#medcom-fhir-messages)
-
-[Reliable Messaging](#reliable-messaging)
-
-[Network Envelopes and the VANS Transportation Layer](#network-envelopes-and-the-vans-transportation-layer)
-
-[Test and Certification](#test-and-certification)
-
+|[MedCom FHIR messages](#medcom-fhir-messages)||||[Test and Certification](#test-and-certification)|
 
 ## Introduction
 
