@@ -5,23 +5,14 @@
 ## Table of Content
 
 [1. Indledning][1]
-
 [2. Forsendelseskuverter][2]
-
 [2.1 VANSenvelope][2.1]
-
 [2.1.1 Format][2.1.1]
-
 [2.1.2 Name][2.1.2]
-
 [2.1.3 Version][2.1.3]
-
 [3. FHIR meddelelsestyper][3]
-
 [3.1 CareCommunication][3.1]
-
 [3.2 HospitalNotification][3.2]
-
 [3.3 Acknowledgment][3.3]
 
 ---
@@ -65,7 +56,7 @@ Format bliver samme som "Standard type" i MedComs standardkatalog og defineres f
 
 ---
 
-##### Name
+#### Name
 
 Name bliver samme som "Type nr." i MedComs standardkatalog og vil dermed variere fra meddelelsestype til meddelelsestype. Name prefixes med MCM: og vil i øvrigt kunne postfixes med statistiske varianter af en given meddelelsestype. Kendt fra GGOP kan dette udfaldsrum f.eks. være GGOP1, GGOP2 og GGOP3. Lignende konstruktioner vil forekomme så længe FHIR\-meddelelser transporteres i VANSenvelope.
 
@@ -85,11 +76,12 @@ Konkret betyder ovenstående for MedComs FHIR\-meddelelser dette
 
 ### CareCommunication
 
+|||
 |:---|:---|
 |Kuvert  |VANSenvelope          |
 |Format  |"HL7"                 |
 |Name    |"MCM:FDIS91#`<code>`" |
-|Version |"1.0"                 |
+|Version |"2.0.0"               |
 
 Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra: [CareCommunications ValueSet for categories](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-careCommunication-categories.html)
 
@@ -99,12 +91,13 @@ Name kan eksplicit tages fra følgende Valueset: [VANS StatisticalCode Combinati
 
 ### HospitalNotification
 
+|||
 |:---|:---|
 |Kuvert afsendelse |VANSenvelope (EPJ)|
 |Kuvert modtagelse |KOMBITs BeskedFordeler kuvert (EOJ)|
 |Format  |"HL7"                 |
 |Name    |"MCM:FDIS20#`<code>`" |
-|Version |"1.0"                 |
+|Version |"2.0.0"               |
 
 Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra HospitalNotifications ValueSet: MedCom Hospital Notification Message Activity Codes:  [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html)
 
@@ -114,11 +107,12 @@ Name kan eksplicit tages fra følgende Valueset: [https://build.fhir.org/ig/hl7d
 
 ### Acknowledgement
 
+|||
 |:---|:---|
 |Kuvert  |VANSenvelope          |
 |Format  |"HL7"                 |
 |Name    |"MCM:FCTL#`<code>`"   |
-|Version |"1.0"                 |
+|Version |"2.0.0"               |
 
 Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra Response Code ValueSet: Codes:  [http://hl7.org/fhir/R4/valueset-response-code.html](http://hl7.org/fhir/R4/valueset-response-code.html)
 
