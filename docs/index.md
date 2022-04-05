@@ -8,9 +8,9 @@ Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Websi
 
 ||||
 |:---|---|:---|
-|[Introduction](#introduction)                ||[Reliable Messaging](#reliable-messaging)|
-|[FHIR Messaging](#fhir-messaging)            ||[Network Layer](#network-envelopes-and-the-vans-transportation-layer)|
-|[MedCom FHIR messages](#medcom-fhir-messages)||[Test and Certification](#test-and-certification)|
+|[FHIR Messaging](#fhir-messaging)            ||[Network Envelope](#network-envelope)|
+|[MedCom FHIR messages](#medcom-fhir-messages)||[Network Layer](#network-layer)|
+|[Reliable Messaging](#reliable-messaging)    ||[Test and Certification](#test-and-certification)|
 
 [Introduction details](/assets/documents/01-Introduction.md)
 
@@ -109,7 +109,7 @@ When a message is received, a receiver can determine from the content of the mes
   - [Danish](/assets/documents/MedComs_FHIR-meddelelser_og_forsendelseskuvert.md)
   - [English](/assets/documents/MedComFHIRMessagesAndNetworkEnvelopes.md)
 
-## VANS Transportation Layer
+## Network Layer
 
 ## Test and Certification
 
