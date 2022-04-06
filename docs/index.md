@@ -1,7 +1,5 @@
 # MedCom Messaging Communication Rules
 
-![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
-
 ## Content
 
 ||||
@@ -126,3 +124,5 @@ Updates in the latest release.
 
 [MedCom](https://www.medcom.dk/) is responsible for this page.  
 For any question regaring the standard, please contact <fhir@medcom.dk>
+
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
