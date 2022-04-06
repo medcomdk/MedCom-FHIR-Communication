@@ -1,22 +1,13 @@
-﻿# GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER
+﻿||:---:||
+||# GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER||
+||![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.002.png)||
+||![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)||
 
 |**Id og proces**|**Id og titel**|**Init**|**Version**|**Dato**|
 | :- | :-: | :-: | -: | -: |
 |SOP 4.1 |SKA-4.X.X-Forretningsmæssige use cases|OVI/MBK/KML|1.0.0-rc.1|06-04-2022|
 
-||:---:||
-||**GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER**||
-||![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.002.png)||
-||![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)||
-
-**Dokumenthistorik**
-
-|Dato|Initialer|Version|Ændring|
-| :- | :- | :- | :- |
-|2021-10-25|OVI|0.8||
-|2022-03-07|OVI|0.9||
-
-# Indholdsfortegnelse
+## Indholdsfortegnelse
 
 [1	Indledning	3](#_Toc97758631)
 
@@ -168,7 +159,7 @@ De tekniske use cases vedrører primært hhv. Fagsystemets Tekniske Meddelelsesm
 I denne oversigt over use cases kan det synes mærkeligt, at kvitterings use cases ”vender omvendt” ift. afsendelse og modtagelses use cases for meddelelser. Dette skyldes at use casene skal ses i sammenhæng i et Forsendelsesflow, som indebærer afsendelse/modtagelse af en meddelelse og afsendelse/modtagelse af den tilhørende kvittering.
 
 |**Teknisk hændelse**|**Afsender (S)-use case**|**Modtager (R)-use case**|
-| :-: | :-: | :-: |
+| :- | -: | -: |
 |Afsend meddelelse|[**S.TC1**](#_Toc82614226)||
 |Gensend automatisk meddelelse|[**S.TC2**](#_S.TC2_-_Automatisk)||
 |Modtag meddelelse||[**R.TC1** ](#_R.TC1_Modtagelse_af)|
@@ -249,7 +240,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Alternative handlinger|2a. R.TC1.A1 Afvis meddelelse pga. teknisk invalidt indhold2b. R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet|
 |Bemærkninger|Meddelelsen modtages med indhold som beskrevet i standarddokumentationen for den pågældende meddelelse|
 
-### R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold
+## R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold
 
 |**R.TC1.A1**|**Afvis meddelelse pga. invalidt teknisk indhold.**|
 | :- | :- |
@@ -260,7 +251,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har afvist en meddelelse modtaget i Fagsystemets tekniske indbakke og logget/markeret for, at der skal sendes en negativ kvittering af typen ACK AR.|
 |Bemærkninger||
 
-### R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet
+## R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet
 
 |**R.TC1.A2**|**Afvis meddelelse pga. teknisk fejl i modtagersystemet**|
 | :- | :- |
@@ -271,7 +262,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har afvist en meddelelse modtaget i Fagsystemets tekniske indbakke og logget/markeret for, at der skal sendes en negativ kvittering af typen ACK AE.|
 |Bemærkninger||
 
-### R.TC3 Håndtér dubleret meddelelse
+## R.TC3 Håndtér dubleret meddelelse
 
 |**R.TC3**|**Håndtér af dubleret meddelelse**|
 | :- | :- |
@@ -343,7 +334,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Alternative handlinger|Hvis handlingspunkt 2 ikke er positiv (ACK AA) kan en af følgende 2 handlinger være alternative handlinger:- S.TC3.A1 Modtag negativ kvittering (ACK AE)- S.TC3.A2 Modtag negativ kvittering (ACK AR)|
 |Bemærkninger|Kvitteringen er modtaget med indhold som beskrevet i kvitteringsstandarden|
 
-### S.TC3.A1 Modtag negativ kvittering (ACK AE)
+## S.TC3.A1 Modtag negativ kvittering (ACK AE)
 
 |**S.TC3.A1**|**Modtag negativ kvittering (ACK AE) pga. teknisk fejl under modtagelse i modtagersystem**|
 | :- | :- |
@@ -356,7 +347,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har markeret den oprindelige meddelelse for at være fejlet og markeret den oprindelige meddelelse til gensendelse|
 |Bemærkninger|Kvitteringen er modtaget med indhold som beskrevet i kvitteringsstandarden|
 
-### S.TC3.A2 Modtag negativ kvittering (ACK AR)
+## S.TC3.A2 Modtag negativ kvittering (ACK AR)
 
 |**S.TC3.A2**|**Modtag negativ kvittering (ACK AR) pga. invalidt indhold** |
 | :- | :- |
