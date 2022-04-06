@@ -1,7 +1,6 @@
-﻿||:---:||
-||# GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER||
-||![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.002.png)||
-||![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)||
+﻿# GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER
+
+![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)
 
 |**Id og proces**|**Id og titel**|**Init**|**Version**|**Dato**|
 | :- | :-: | :-: | -: | -: |
@@ -9,65 +8,65 @@
 
 ## Indholdsfortegnelse
 
-[1	Indledning	3](#_Toc97758631)
+[1 Indledning 3](#_Toc97758631)
 
-[1.1	Baggrund og formål	3](#_Toc97758632)
+[1.1 Baggrund og formål 3](#_Toc97758632)
 
-[1.2	Målgruppe	3](#_Toc97758633)
+[1.2 Målgruppe 3](#_Toc97758633)
 
-[1.3	Afgrænsning	3](#_Toc97758634)
+[1.3 Afgrænsning 3](#_Toc97758634)
 
-[1.4	Referencer	3](#_Toc97758635)
+[1.4 Referencer 3](#_Toc97758635)
 
-[1.5	Læsevejledning for use cases	3](#_Toc97758636)
+[1.5 Læsevejledning for use cases 3](#_Toc97758636)
 
-[1.6	Termer	5](#_Toc97758637)
+[1.6 Termer 5](#_Toc97758637)
 
-[1.7	Illustration af et fagsystem og dets forretningsmæssige og tekniske dele	7](#_Toc97758638)
+[1.7 Illustration af et fagsystem og dets forretningsmæssige og tekniske dele 7](#_Toc97758638)
 
-[2	Oversigt over use cases	7](#_Toc97758639)
+[2 Oversigt over use cases 7](#_Toc97758639)
 
-[3	Use cases for afsendelse af meddelelser	9](#_Toc97758640)
+[3 Use cases for afsendelse af meddelelser 9](#_Toc97758640)
 
-[3.1	S.TC1 Afsend meddelelse	9](#_Toc97758641)
+[3.1 S.TC1 Afsend meddelelse 9](#_Toc97758641)
 
-[3.2	S.TC2 Gensend automatisk meddelelse	10](#_Toc97758642)
+[3.2 S.TC2 Gensend automatisk meddelelse 10](#_Toc97758642)
 
-[4	Use cases for modtagelse af meddelelser	11](#_Toc97758643)
+[4 Use cases for modtagelse af meddelelser 11](#_Toc97758643)
 
-[4.1	R.TC1 Modtag meddelelse	12](#_Toc97758644)
+[4.1 R.TC1 Modtag meddelelse 12](#_Toc97758644)
 
-[4.1.1	R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold	12](#_Toc97758645)
+[4.1.1 R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold 12](#_Toc97758645)
 
-[4.1.2	R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet	13](#_Toc97758646)
+[4.1.2 R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet 13](#_Toc97758646)
 
-[4.1.3	R.TC3 Håndtér dubleret meddelelse	13](#_Toc97758647)
+[4.1.3 R.TC3 Håndtér dubleret meddelelse 13](#_Toc97758647)
 
-[5	Use cases for afsendelse af kvittering	14](#_Toc97758648)
+[5 Use cases for afsendelse af kvittering 14](#_Toc97758648)
 
-[5.1	R.TC2 Dan kvittering	14](#_Toc97758649)
+[5.1 R.TC2 Dan kvittering 14](#_Toc97758649)
 
-[5.2	R.TC3 Afsend kvittering	15](#_Toc97758650)
+[5.2 R.TC3 Afsend kvittering 15](#_Toc97758650)
 
-[6	Use cases for modtagelse af kvittering	16](#_Toc97758651)
+[6 Use cases for modtagelse af kvittering 16](#_Toc97758651)
 
-[6.1	S.TC3 Modtag kvittering (ACK AA)	17](#_Toc97758652)
+[6.1 S.TC3 Modtag kvittering (ACK AA) 17](#_Toc97758652)
 
-[6.1.1	S.TC3.A1 Modtag negativ kvittering (ACK AE)	17](#_Toc97758653)
+[6.1.1 S.TC3.A1 Modtag negativ kvittering (ACK AE) 17](#_Toc97758653)
 
-[6.1.2	S.TC3.A2 Modtag negativ kvittering (ACK AR)	18](#_Toc97758654)
+[6.1.2 S.TC3.A2 Modtag negativ kvittering (ACK AR) 18](#_Toc97758654)
 
-[6.2	S.TC4 Forventet kvittering ikke modtaget	18](#_Toc97758655)
+[6.2 S.TC4 Forventet kvittering ikke modtaget 18](#_Toc97758655)
 
-[7	Regler i systemerne, som use casene beror på	19](#_Toc97758656)
+[7 Regler i systemerne, som use casene beror på 19](#_Toc97758656)
 
-[7.1	Meddelelsesregler	19](#_Toc97758657)
+[7.1 Meddelelsesregler 19](#_Toc97758657)
 
-[7.2	Kvitteringsregler	19](#_Toc97758658)
+[7.2 Kvitteringsregler 19](#_Toc97758658)
 
-[7.3	Fejltilstande	20](#_Toc97758659)
+[7.3 Fejltilstande 20](#_Toc97758659)
 
-[7.4	Meddelelsestilstand	20](#_Toc97758660)
+[7.4 Meddelelsestilstand 20](#_Toc97758660)
 
 ## Indledning
 
@@ -105,22 +104,23 @@ Der skelnes mellem tre forskellige typer af use cases:
 Alle use cases er opdelt i:
 
 - Afsender (S)-use case: Beskriver use casen fra systemets afsenderside (S = sender)
-- Modtager (R)-use case: Beskriver use casen fra systemets modtagerside (R = receiver) 
+- Modtager (R)-use case: Beskriver use casen fra systemets modtagerside (R = receiver)
 
-Hver teknisk use case er bygget op af nedenstående elementer[^1]. 
+Hver teknisk use case er bygget op af nedenstående elementer.[^1]
 
 |**Element**|**Forklaring**|
 | :- | :- |
 |ID|Unikt ID|
 |Navn|Aktivitet i bydemåde|
 |Igangsættende aktør|I de tekniske use cases altid ’systemaktør’|
-|Formål|Kort beskrivelse af det tekniske formål, samt eventuel afgrænsning til andre use cases.|
-|Startbetingelser/forudsætninger|De forudsætninger, der skal være opfyldt for at scenariet/use casen kan gennemføres frem til slutresultatet.|
-|Igangsættende hændelse|Den begivenhed eller hændelse, som udløser aktørens handlinger i scenariet/use casen.|
-|Handlinger|Forløbet af handlinger, der – uden afbrydelser – fører fra den igangsættende begivenhed til slutresultatet.|
+|Formål|Kort beskrivelse af det tekniske formål, samt eventuel afgrænsning til andre use cases|
+|Startbetingelser/forudsætninger|De forudsætninger, der skal være opfyldt for at scenariet/use casen kan gennemføres frem til slutresultatet|
+|Igangsættende hændelse|Den begivenhed eller hændelse, som udløser aktørens handlinger i scenariet/use casen|
+|Handlinger|Forløbet af handlinger, der – uden afbrydelser – fører fra den igangsættende begivenhed til slutresultatet|
 |Slutresultat|Det ønskede tekniske mål|
-|Alternative handlinger (A)|Beskrivelse af eventuelle alternative handlinger, der afviger fra handlingerne i normalforløbet (med reference/link til alternative use case(s). |
+|Alternative handlinger (A)|Beskrivelse af eventuelle alternative handlinger, der afviger fra handlingerne i normalforløbet (med reference/link til alternative use case(s)|
 |Korrigerende handlinger (CANC/CORR)|Beskrivelse af korrigerende handlinger, der foretaget, når et forløb ender med en fejlsituation eller med genoptagelse (med reference/link til korrigerende use cases. Eksempelvis rettelser og annulleringer|
+
 Tabel 1: Oversigt over de elementer, som indgår i de tekniske use cases
 
 ## Termer
@@ -284,7 +284,7 @@ Indsæt forklarende tekst til afsendelses use cases
 
 ## R.TC2 Dan kvittering
 
-|**R.TC2**|**Dan kvittering**	|
+|**R.TC2**|**Dan kvittering** |
 | :- | :- |
 |Igangsættende aktør|Systemaktør|
 |Formål|At Systemaktør danner en korrekt udformet kvittering og lægger denne i Fagsystemets forretningsmæssige udbakke|
@@ -299,7 +299,7 @@ Indsæt forklarende tekst til afsendelses use cases
 
 ## R.TC3 Afsend kvittering
 
-|**R.TC3**|**Afsend kvittering**	|
+|**R.TC3**|**Afsend kvittering** |
 | :- | :- |
 |Igangsættende aktør|Systemaktør|
 |Formål|At Systemaktør afsender en kvittering, som er blevet placeret i Fagsystemets forretningsmæssige udbakke|
