@@ -19,7 +19,8 @@
 |2021-10-25|OVI|0.8||
 |2022-03-07|OVI|0.9||
 
-# **Indholdsfortegnelse**
+# Indholdsfortegnelse
+
 [1	Indledning	3](#_Toc97758631)
 
 [1.1	Baggrund og formål	3](#_Toc97758632)
@@ -80,28 +81,31 @@
 
 [7.4	Meddelelsestilstand	20](#_Toc97758660)
 
+## Indledning
 
-
-
-1. # **Indledning** 
 Dette dokument indeholder en række tekniske use case til brug for implementering af alle MedComs meddelelsesstandarder. 
 
 Use case-beskrivelserne supplerer det øvrige dokumentationsmateriale og bør derfor læses i sammenhæng til dette (se afsnit 1.4).
-1. ## **Baggrund og formål**
+
+## Baggrund og formål
 Formålet med de tekniske use cases er at beskrive de generelle tekniske krav, der er forbundet med afsendelse og modtagelse af MedCom-standarder, herunder systemets funktionaliteter ift. kommunikationsnetværket samt afsendelse og modtagelse af kvitteringer. Dokumentet har til hensigt at sikre en ensartet implementering og anvendelse af MedCom-standarder. 
-1. ## **Målgruppe**
+
+## Målgruppe
 Dokumentet målretter sig både it-systemleverandører og implementeringsansvarlige.
-1. ## **Afgrænsning**
+
+## Afgrænsning
 Use casene i dette notat beskriver de tekniske handlinger, som ligger før og efter brugeraktørens interaktion med systemet (fx systemets funktionaliteter i kommunikationsnetværket samt afsendelse og modtagelse af kvitteringer). De handlinger/use cases, der vedrører brugeraktørens interaktion med systemet, og som beskriver de forretningsmæssige krav til standarden, optræder som selvstændigt beskrevne use cases i et dokument baseret på ”SKA-4.X.X Forretningsmæssige use cases”.
 
 Tekniske afsender-use cases indledes således med, at systemaktøren henter meddelelsesindholdet fra [*fagsystemets forretningsmæssige udbakke*](#_Toc83807604) og afsluttes med, at systemaktøren sender meddelelsen ved at lægge den i [*fagsystemets tekniske udbakkeReferencer*](#_Referencer). Ligeledes igangsættes tekniske modtager-use cases med, at systemaktøren modtager meddelelsen i [*fagsystemets tekniske indbakke*](#_Toc83807604) og afsluttes med, at systemaktøren lægger meddelelsen i [*fagsystemets forretningsmæssige indbakke*](#_Toc83807604). Se i øvrigt forklaring og illustration i afsnit 1.6.  
-1. ## **Referencer**
+
+## Referencer
 
 |**Materiale/reference**|**Version**|**Link/reference**|**Beskrivelse**|
 | :- | :- | :- | :- |
 |SKA-4.X.X Forretningsmæssige use cases|SKA-4.XX|LINK|Skabelon, som disse use cases er udarbejdet på baggrund af|
 
-1. ## **Læsevejledning for use cases**
+## Læsevejledning for use cases
+
 Use casene beskriver et detaljeret forløb over *systemaktørens* tekniske handlinger, som finder sted før og efter brugeraktørens interaktion med systemet.
 
 Der skelnes mellem tre forskellige typer af use cases:
@@ -131,8 +135,7 @@ Hver teknisk use case er bygget op af nedenstående elementer[^1].
 |Korrigerende handlinger (CANC/CORR)|Beskrivelse af korrigerende handlinger, der foretaget, når et forløb ender med en fejlsituation eller med genoptagelse (med reference/link til korrigerende use cases. Eksempelvis rettelser og annulleringer|
 Tabel 1: Oversigt over de elementer, som indgår i de tekniske use cases
 
-
-1. ## **Termer**
+## Termer
 
 |**Termer**|**Beskrivelse**|
 | :- | :- |
@@ -156,15 +159,15 @@ Tabel 1: Oversigt over de elementer, som indgår i de tekniske use cases
 |ACK AE|HL7 kvitteringsterm for en negativ kvittering, hvor modtagersystemet har haft en teknisk fejl under modtagelse af meddelelsen således, at den ikke kunne indlæses i systemet. ACK AE er HL7s ikke dækket af MedComs Negative CTRL ((X)CTL02)|
 |ACK AR|HL7 kvitteringsterm for en negativ kvittering på en meddelelse, hvis indhold er invalidt ift. standardens profilering. ACK AR er HL7s pendant til MedComs Negative CTRL ((X)CTL02) |
 
+## Illustration af et fagsystem og dets forretningsmæssige og tekniske dele
 
-1. ## **Illustration af et fagsystem og dets forretningsmæssige og tekniske dele**
 Illustrationen herunder angiver i detaljer et forsendelsesflow mellem to fagsystemer for en given meddelelse. Indeværende dokument omfatter den tekniske del (markeret med grøn) af forsendelsesflowet, mens dokumentet ”Forretningsmæssige use cases” omfatter den forretningsmæssige del (markeret med rød). 
 
 De tekniske use cases vedrører primært hhv. Fagsystemets Tekniske Meddelelsesmodul og Fagsystemets Tekniske Udbakke i Afsendersystemet og Fagsystemets Tekniske Indbakke og Fagsystemets Tekniske Meddelelsesmodul i Modtagersystemet. Fagsystemets tekniske dele har i afsendersystemet udveksling med Fagsystemets Forretningsmæssige Udbakke og i modtagersystemet med Fagsystemets Forretningsmæssige Indbakke.
 
 ![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.004.png)
 
-1. # **Oversigt over use cases** 
+## Oversigt over use cases
 I denne oversigt over use cases kan det synes mærkeligt, at kvitterings use cases ”vender omvendt” ift. afsendelse og modtagelses use cases for meddelelser. Dette skyldes at use casene skal ses i sammenhæng i et Forsendelsesflow, som indebærer afsendelse/modtagelse af en meddelelse og afsendelse/modtagelse af den tilhørende kvittering.
 
 |**Teknisk hændelse**|**Afsender (S)-use case**|**Modtager (R)-use case**|
@@ -182,7 +185,8 @@ I denne oversigt over use cases kan det synes mærkeligt, at kvitterings use cas
 |*Modtag negativ kvittering (ACK AR)*|[***S.TC3.A2](#_S.TC2.A2_Modtagelse_af)*** ||
 |Forventet kvittering ikke modtaget|[**S.TC4**](#BKM_D8323758_66B8_46FA_A405_D03A01013483)||
 
-1. ## **Grafisk oversigt over use cases** 
+## Grafisk oversigt over use cases
+
 ![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.005.png)
 
 **Figur 1 Grafisk oversigt over tekniske use cases (R = Receiver, S = Sender, TC = Technical (use) Case, ACK AA = Positiv kvittering, ACK AE = Negativ kvittering (teknisk fejl), ACK AR = Negativ kvittering (invalidt indhold),**
@@ -190,9 +194,11 @@ I denne oversigt over use cases kan det synes mærkeligt, at kvitterings use cas
 Ovenstående grafiske oversigt viser det samlede sæt af use cases, som dette dokument beskriver. I de følgende afsnit er de brudt ned i relevante grupperinger og vises i de følgende kapitler partielt. Teksten er på engelsk.
 
 
-1. # **Use cases for afsendelse af meddelelser**
+# Use cases for afsendelse af meddelelser
+
 Indsæt grafik + forklarende tekst til afsendelses use cases
-1. ## **S.TC1 Afsend meddelelse** 
+
+## S.TC1 Afsend meddelelse
 
 |**S.TC1**|**Afsend meddelelse**|
 | :- | :- |
@@ -207,7 +213,7 @@ Indsæt grafik + forklarende tekst til afsendelses use cases
 |Slutresultat|Systemaktør har lagt en formateret meddelelse markeret med ønske om kvittering i Fagsystemets tekniske udbakke|
 |Bemærkninger|Meddelelsen sendes med indhold som beskrevet i standarddokumentationen|
 
-1. ## **S.TC2 Gensend automatisk meddelelse**
+## S.TC2 Gensend automatisk meddelelse
 
 |**S.TC2**|**Gensend automatisk meddelelse**|
 | :- | :- |
@@ -223,12 +229,13 @@ Indsæt grafik + forklarende tekst til afsendelses use cases
 |Slutresultat|Systemaktør har lagt en formateret meddelelse markeret med ønske om kvittering i Fagsystemets tekniske udbakke|
 |Bemærkninger|Meddelelsen sendes med indhold som beskrevet i standarddokumentationen|
 
+# Use cases for modtagelse af meddelelser
 
-1. # **Use cases for modtagelse af meddelelser**
 Indsæt forklarende tekst til modtagelses use cases
 
 ![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.006.png)
-1. ## **R.TC1 Modtag meddelelse**
+
+## R.TC1 Modtag meddelelse
 
 |**R.TC1**|**Modtag meddelelse**|
 | :- | :- |
@@ -245,7 +252,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Alternative handlinger|<p>2a. R.TC1.A1 Afvis meddelelse pga. teknisk invalidt indhold</p><p>2b. R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet</p>|
 |Bemærkninger|Meddelelsen modtages med indhold som beskrevet i standarddokumentationen for den pågældende meddelelse|
 
-1. ### R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold
+### R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold
 
 |**R.TC1.A1**|**Afvis meddelelse pga. invalidt teknisk indhold.**|
 | :- | :- |
@@ -256,7 +263,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har afvist en meddelelse modtaget i Fagsystemets tekniske indbakke og logget/markeret for, at der skal sendes en negativ kvittering af typen ACK AR.|
 |Bemærkninger||
 
-1. ### R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet
+### R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet
 
 |**R.TC1.A2**|**Afvis meddelelse pga. teknisk fejl i modtagersystemet**|
 | :- | :- |
@@ -267,7 +274,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har afvist en meddelelse modtaget i Fagsystemets tekniske indbakke og logget/markeret for, at der skal sendes en negativ kvittering af typen ACK AE.|
 |Bemærkninger||
 
-1. ### R.TC3 Håndtér dubleret meddelelse 
+### R.TC3 Håndtér dubleret meddelelse
 
 |**R.TC3**|**Håndtér af dubleret meddelelse**|
 | :- | :- |
@@ -281,13 +288,13 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har evalueret meddelelsen som en dublet og logget/markeret, at systemet skal sende kvittering af samme type og med samme indhold, som blev sendt som feedback på originalmeddelelsen|
 |Bemærkninger||
 
+# Use cases for afsendelse af kvittering
 
-1. # **Use cases for afsendelse af kvittering**
 Indsæt forklarende tekst til afsendelses use cases
 
 ![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.007.png)
 
-1. ## **R.TC2 Dan kvittering** 
+## R.TC2 Dan kvittering
 
 |**R.TC2**|**Dan kvittering**	|
 | :- | :- |
@@ -302,7 +309,7 @@ Indsæt forklarende tekst til afsendelses use cases
 |Alternative handlinger||
 |Bemærkninger|Kvitteringen dannes med indhold som beskrevet i kvitteringsstandarden|
 
-1. ## **R.TC3 Afsend kvittering** 
+## R.TC3 Afsend kvittering
 
 |**R.TC3**|**Afsend kvittering**	|
 | :- | :- |
@@ -317,13 +324,13 @@ Indsæt forklarende tekst til afsendelses use cases
 |Alternative handlinger||
 |Bemærkninger|Kvitteringen sendes med indhold som beskrevet i kvitteringsstandarden|
 
+# Use cases for modtagelse af kvittering
 
-
-1. # **Use cases for modtagelse af kvittering**
 Indsæt forklarende tekst til modtagelses use cases
 
 ![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.008.png) 
-1. ## **S.TC3 Modtag kvittering (ACK AA)**
+
+## S.TC3 Modtag kvittering (ACK AA)
 
 |**S.TC3**|**Modtag kvittering (ACK AA)**|
 | :- | :- |
@@ -339,7 +346,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Alternative handlinger|<p>Hvis handlingspunkt 2 ikke er positiv (ACK AA) kan en af følgende 2 handlinger være alternative handlinger:</p><p>- S.TC3.A1 Modtag negativ kvittering (ACK AE)</p><p>- S.TC3.A2 Modtag negativ kvittering (ACK AR)</p>|
 |Bemærkninger|Kvitteringen er modtaget med indhold som beskrevet i kvitteringsstandarden|
 
-1. ### S.TC3.A1 Modtag negativ kvittering (ACK AE)
+### S.TC3.A1 Modtag negativ kvittering (ACK AE)
 
 |**S.TC3.A1**|**Modtag negativ kvittering (ACK AE) pga. teknisk fejl under modtagelse i modtagersystem**|
 | :- | :- |
@@ -352,7 +359,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har markeret den oprindelige meddelelse for at være fejlet og markeret den oprindelige meddelelse til gensendelse|
 |Bemærkninger|Kvitteringen er modtaget med indhold som beskrevet i kvitteringsstandarden|
 
-1. ### S.TC3.A2 Modtag negativ kvittering (ACK AR)
+### S.TC3.A2 Modtag negativ kvittering (ACK AR)
 
 |**S.TC3.A2**|**Modtag negativ kvittering (ACK AR) pga. invalidt indhold** |
 | :- | :- |
@@ -365,7 +372,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har markeret den oprindelige meddelelse, som permanent fejlende, og har lagt metadatainformation om dette i Fagsystemets forretningsmæssige indbakke. |
 |Bemærkninger|Kvitteringen er modtaget med indhold som beskrevet i kvitteringsstandarden|
 
-1. ## **S.TC4 Forventet kvittering ikke modtaget**
+## S.TC4 Forventet kvittering ikke modtaget
 
 |**S.TC4**|**Forventet kvittering ikke modtaget**|
 | :- | :- |
@@ -378,10 +385,9 @@ Indsæt forklarende tekst til modtagelses use cases
 |Slutresultat|Systemaktør har markeret den oprindelige meddelelse for ikke at være modtaget og markeret den oprindelige meddelelse til gensendelse|
 |Bemærkninger||
 
+# Regler for systemerne, som use casene beror på
 
-
-1. # **Regler for systemerne, som use casene beror på**
-   1. ## **Meddelelsesregler**
+## Meddelelsesregler
 
 |**ID**|**Regel**|
 | :- | :- |
@@ -395,7 +401,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |MR8.R|En meddelelse, der gensendes, skal altid opdateres med et nyt tidsstempel = Konvoluttid og en ny identifier = KonvolutId |
 |MR9.R|En meddelelse er en dublet, hvis den indeholder samme MessageHeader.Id som en tidligere modtaget meddelelse|
 
-1. ## **Kvitteringsregler**
+## Kvitteringsregler
 
 |**ID**|**Regel**|
 | :- | :- |
@@ -406,7 +412,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |KR5.R|Hvis en meddelelse validerer negativt mod standardens profilering, kvitteres der negativt med Ack AR|
 |KR6.S|Hvis en kvittering på en meddelelse ikke er modtaget inden 30 minutter, markeres den originale meddelelse til gensendelse.|
 
-1. ## **Fejltilstande**
+## Fejltilstande
 
 |**ID**|**Regel**|
 | :- | :- |
@@ -414,7 +420,7 @@ Indsæt forklarende tekst til modtagelses use cases
 |F2.S|Hvis en meddelelse er afsendt/gensendt 3 gange uden at modtage korrekt kvittering, sættes meddelelsen i fejltilstand, og afsender skal håndtere problemet uden at bruge videre meddelelseshåndtering.|
 |F3.R|Hvis en meddelelse er modtaget 3 gange, selvom der er afsendt korrekt kvittering, sættes kvitteringen på meddelelsen i fejltilstand, og modtager skal håndtere problemet uden at bruge videre meddelelseshåndtering.|
 
-1. ## **Meddelelsestilstand**
+## Meddelelsestilstand
 
 |**Tilstand**|**Beskrivelse**|
 | :- | :- |
@@ -422,9 +428,5 @@ Indsæt forklarende tekst til modtagelses use cases
 |Kvitteret|Meddelelsen er sendt og ACK AA kvittering modtaget|
 |Fejlet|Meddelelsen er sendt og ACK AE fejlkvittering modtaget, oprindelig meddelelse kan gensendes|
 |Permanent fejlende|<p>- Meddelelsen er sendt og fejlkvittering af ACK AR modtaget, oprindelig meddelelse kan ikke gensendes, da den er markeret som havende en teknisk fejl</p><p>- Kvittering på meddelelse er ikke modtaget, efter at meddelelsen har været gensendt 3 gange</p>|
-
-Side 2**/2**
-
-Generelle tekniske use cases 	Version 0.9 - 05-04-2022
 
 [^1]: Use casene er udarbejdet med inspiration fra [KOMBIT’s metodehåndbog for use cases](https://www.kombit.dk/metodeh%C3%A5ndb%C3%B8ger)
