@@ -1,8 +1,8 @@
 # MedCom-FHIR-Messaging-Events
 
-CodeSystem: MedComMessageEventCodes
-Id: medcom-messaging-eventCodes
-Title: "MedComMessagingEventCodes"
+CodeSystem: MedComMessageEventCodes <br\>
+Id: medcom-messaging-eventCodes <br\>
+Title: "MedComMessagingEventCodes" <br\>
 Description: "Message events for MedCom messages"
 
 * #care-communication-message "Care Communication Message"
