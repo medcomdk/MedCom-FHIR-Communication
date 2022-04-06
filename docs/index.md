@@ -1,6 +1,8 @@
-# Communication Rules
+# MedCom Messaging Communication Rules
 
+<p align="center">
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
+</p>
 
 ## Content
 
