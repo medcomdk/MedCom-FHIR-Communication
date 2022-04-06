@@ -1,7 +1,5 @@
 # Communication Rules
 
-## Content
-
 ||||
 |:---|---|:---|
 |[FHIR Messaging](#fhir-messaging)            ||[Network Envelope](#network-envelope)|
