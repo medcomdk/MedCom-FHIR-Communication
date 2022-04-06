@@ -1,4 +1,4 @@
-# MedCom Messaging Communication Rules
+# Communication Rules
 
 ## Content
 
