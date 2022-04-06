@@ -1,4 +1,4 @@
-﻿
+﻿# GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER
 
 |**Id og proces**|**Id og titel**|**Init**|**Version**|**Dato**|
 | :- | :-: | :-: | -: | -: |
@@ -122,10 +122,10 @@ Hver teknisk use case er bygget op af nedenstående elementer[^1].
 | :- | :- |
 |ID|Unikt ID|
 |Navn|Aktivitet i bydemåde|
-|Igangsættende aktør\*|I de tekniske use cases altid ’systemaktør’|
-|Formål\*|Kort beskrivelse af det tekniske formål, samt eventuel afgrænsning til andre use cases.|
-|Startbetingelser/forudsætninger\*|De forudsætninger, der skal være opfyldt for at scenariet/use casen kan gennemføres frem til slutresultatet.|
-|Igangsættende hændelse\*|Den begivenhed eller hændelse, som udløser aktørens handlinger i scenariet/use casen.|
+|Igangsættende aktør|I de tekniske use cases altid ’systemaktør’|
+|Formål|Kort beskrivelse af det tekniske formål, samt eventuel afgrænsning til andre use cases.|
+|Startbetingelser/forudsætninger|De forudsætninger, der skal være opfyldt for at scenariet/use casen kan gennemføres frem til slutresultatet.|
+|Igangsættende hændelse|Den begivenhed eller hændelse, som udløser aktørens handlinger i scenariet/use casen.|
 |Handlinger|Forløbet af handlinger, der – uden afbrydelser – fører fra den igangsættende begivenhed til slutresultatet.|
 |Slutresultat|Det ønskede tekniske mål|
 |Alternative handlinger (A)|Beskrivelse af eventuelle alternative handlinger, der afviger fra handlingerne i normalforløbet (med reference/link til alternative use case(s). |
@@ -136,18 +136,18 @@ Tabel 1: Oversigt over de elementer, som indgår i de tekniske use cases
 
 |**Termer**|**Beskrivelse**|
 | :- | :- |
-|Fagsystem|<p>Et fagsystem består – ift. meddelelsesforsendelse og -modtagelse – af en forretningsmæssig og en teknisk del.</p><p>Fagsystemets to dele kan være alt fra et tæt sammenbygget system til to forskellige moduler i samme system, eller to systemer, der er konfigureret til at kommunikere sammen. Dette er uden betydning for use casenes opbygning.</p>|
+|Fagsystem|Et fagsystem består – ift. meddelelsesforsendelse og -modtagelse – af en forretningsmæssig og en teknisk del.Fagsystemets to dele kan være alt fra et tæt sammenbygget system til to forskellige moduler i samme system, eller to systemer, der er konfigureret til at kommunikere sammen. Dette er uden betydning for use casenes opbygning.|
 |Afsendersystem|Fagsystem hos afsender af en meddelelse|
 |Modtagersystem|Fagsystem hos modtager af en meddelelse|
-|Fagsystemets forretningsmæssige del |<p>I den forretningsmæssige del håndteres alt det faglige, som er fagsystemets primære anvendelsesområde. </p><p>Fagsystemets forretningsmæssige del består af</p><p>- Fagsystemets forretningsmæssige indbakke</p><p>- Fagsystemets forretningsmæssige modul </p><p>- Fagsystemets forretningsmæssige udbakke</p>|
-|Fagsystemets tekniske del |<p>I den tekniske del håndteres kommunikationen med kommunikationsnetværket vedrørende afsendelse og modtagelse af meddelelser og kvitteringer. Her evalueres også hvilken kvitteringstype, der skal retur til afsender af en modtaget meddelelse.</p><p>Fagsystemets tekniske del består af:</p><p>- Fagsystemets tekniske indbakke</p><p>- Fagsystemets tTekniske meddelelsesmodul </p><p>- Fagsystemets tekniske udbakke</p>|
+|Fagsystemets forretningsmæssige del |I den forretningsmæssige del håndteres alt det faglige, som er fagsystemets primære anvendelsesområde. Fagsystemets forretningsmæssige del består af- Fagsystemets forretningsmæssige indbakke- Fagsystemets forretningsmæssige modul - Fagsystemets forretningsmæssige udbakke|
+|Fagsystemets tekniske del |I den tekniske del håndteres kommunikationen med kommunikationsnetværket vedrørende afsendelse og modtagelse af meddelelser og kvitteringer. Her evalueres også hvilken kvitteringstype, der skal retur til afsender af en modtaget meddelelse.Fagsystemets tekniske del består af:- Fagsystemets tekniske indbakke- Fagsystemets tTekniske meddelelsesmodul - Fagsystemets tekniske udbakke|
 |Fagsystemets forretningsmæssige modul|I Fagsystemets forretningsmæssige modul håndteres alt det faglige, som er fagsystemets primære anvendelsesområde. Det er bl.a. her slutbrugeren arbejder med brugergrænsefladen i fagsystemet.|
 |Fagsystemets forretningsmæssige indbakke|Fagsystemets forretningsmæssige indbakke er en abstrakt term for den indgående funktionalitet mellem fagsystemets tekniske del og dets forretningsmæssige del i indgående retning set ift. den forretningsmæssige del.|
 |Fagsystemets forretningsmæssige udbakke|Fagsystemets forretningsmæssige udbakke er en abstrakt term for den udgående funktionalitet mellem fagsystemets forretningsmæssige del og dets tekniske del i udgående retning set ift. den forretningsmæssige del.|
 |Fagsystemets tTekniske meddelelsesmodul|Fagsystemets tTekniske meddelelsesmodul håndteres transformationer og valideringer af meddelelserne, og her evalueres også hvilken kvitteringstype, der skal retur til afsender af en modtaget meddelelse. Her håndteres også evt. konvolutindpakninger.|
-|Fagsystemets tekniske indbakke|<p>Fagsystemets tekniske indbakke er en abstrakt term for den indgående funktionalitet mellem kommunikationsnetværket og fagsystemets tTekniske meddelelsesmodul i indgående retning set ift. kommunikationsnetværket.</p><p>Fagsystemets tekniske indbakke er reelt kommunikationsnetværkets aflevering af en meddelelse til fagsystemet. </p>|
-|Fagsystemets tekniske udbakke|<p>Fagsystemets tekniske udbakke er en abstrakt term for den udgående funktionalitet mellem fagsystemets forretningsmæssige udbakke og kommunikationsnetværket i udgående retning set ift. fagsystemets forretningsmæssige del.</p><p>Fagsystemets tekniske udbakke er reelt forsendelse af en meddelelse til kommunikationsnetværket.</p>|
-|Standarddokumentationen|<p>En samlet dokumentation bestående af </p><p>- Forretningsmæssig dokumentation</p><p>- Forretningsmæssige og tekniske use cases</p><p>- Profilering af standarden</p>|
+|Fagsystemets tekniske indbakke|Fagsystemets tekniske indbakke er en abstrakt term for den indgående funktionalitet mellem kommunikationsnetværket og fagsystemets tTekniske meddelelsesmodul i indgående retning set ift. kommunikationsnetværket.Fagsystemets tekniske indbakke er reelt kommunikationsnetværkets aflevering af en meddelelse til fagsystemet. |
+|Fagsystemets tekniske udbakke|Fagsystemets tekniske udbakke er en abstrakt term for den udgående funktionalitet mellem fagsystemets forretningsmæssige udbakke og kommunikationsnetværket i udgående retning set ift. fagsystemets forretningsmæssige del.Fagsystemets tekniske udbakke er reelt forsendelse af en meddelelse til kommunikationsnetværket.|
+|Standarddokumentationen|En samlet dokumentation bestående af - Forretningsmæssig dokumentation- Forretningsmæssige og tekniske use cases- Profilering af standarden|
 |Kommunikationsnetværket |Kommunikationsnetværket er det netværk, som meddelelser fysisk afsendes på. Netværket er pt det samme som VANS- netværket.|
 |Forsendelsesflow |Et forsendelsesflow er det samlede antal hændelser, der sker i en konkret meddelelses vej fra slutbrugeren i fFagsystemets forretningsmæssige modul afsender en meddelelse til slutbrugeren i Fagsystemets forretningsmæssige modul hos modtager og det tilhørende kvitteringsflow flyder den modsatte vej til den oprindelige afsender.|
 |MeddelelsesId|Meddelelsens unikke Id, som danner baggrund for vurdering af, om en meddelelse tidligere er afsendt/modtaget|
@@ -216,7 +216,7 @@ Indsæt grafik + forklarende tekst til afsendelses use cases
 | :- | :- |
 |Igangsættende aktør|Systemaktør|
 |Formål|At Systemaktør automatisk gensender en meddelelse, som er blevet placeret i Fagsystemets forretningsmæssige udbakke |
-|Startbetingelser/forudsætninger|<p>Systemaktør har enten </p><p>- Ikke modtaget kvittering på en meddelelse </p><p>eller </p><p>- Modtaget negativ kvittering af typen ACK AE på en meddelelse</p>|
+|Startbetingelser/forudsætninger|Systemaktør har enten - Ikke modtaget kvittering på en meddelelse eller - Modtaget negativ kvittering af typen ACK AE på en meddelelse|
 |Igangsættende hændelse|Systemaktør har lagt et meddelelsesindhold i Fagsystemets forretningsmæssige udbakke med henblik på automatisk gensendelse af meddelelsen|
 |Handlinger|1. Systemaktør henter meddelelsesindholdet fra Fagsystemets forretningsmæssige udbakke|
 ||2. Systemaktør formaterer meddelelsesindholdet iht standardens meddelelsesformat|
@@ -246,7 +246,7 @@ Indsæt forklarende tekst til modtagelses use cases
 ||4. Systemaktør formaterer meddelelsesindholdet iht. fagsystemets meddelelsesformat|
 ||5. Systemaktør lægger meddelelsesindholdet i Fagsystemets forretningsmæssige indbakke|
 |Slutresultat|Systemaktør har lagt et formateret meddelelsesindholdet i Fagsystemets forretningsmæssige indbakke og logget/markeret for, at der skal sendes en positiv kvittering.|
-|Alternative handlinger|<p>2a. R.TC1.A1 Afvis meddelelse pga. teknisk invalidt indhold</p><p>2b. R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet</p>|
+|Alternative handlinger|2a. R.TC1.A1 Afvis meddelelse pga. teknisk invalidt indhold2b. R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet|
 |Bemærkninger|Meddelelsen modtages med indhold som beskrevet i standarddokumentationen for den pågældende meddelelse|
 
 ### R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold
@@ -340,7 +340,7 @@ Indsæt forklarende tekst til modtagelses use cases
 ||3. Systemaktør markerer den oprindelige meddelelse for at være sendt og positivt kvitteret|
 ||4. Systemaktør udtrækker metadatainformation fra kvitteringen og lægger denne i Fagsystemets forretningsmæssige indbakke|
 |Slutresultat|Systemaktør har markeret den oprindelige meddelelse for at være sendt og positivt kvitteret, og har lagt metadatainformation om denne i Fagsystemets forretningsmæssige indbakke.|
-|Alternative handlinger|<p>Hvis handlingspunkt 2 ikke er positiv (ACK AA) kan en af følgende 2 handlinger være alternative handlinger:</p><p>- S.TC3.A1 Modtag negativ kvittering (ACK AE)</p><p>- S.TC3.A2 Modtag negativ kvittering (ACK AR)</p>|
+|Alternative handlinger|Hvis handlingspunkt 2 ikke er positiv (ACK AA) kan en af følgende 2 handlinger være alternative handlinger:- S.TC3.A1 Modtag negativ kvittering (ACK AE)- S.TC3.A2 Modtag negativ kvittering (ACK AR)|
 |Bemærkninger|Kvitteringen er modtaget med indhold som beskrevet i kvitteringsstandarden|
 
 ### S.TC3.A1 Modtag negativ kvittering (ACK AE)
@@ -424,6 +424,6 @@ Indsæt forklarende tekst til modtagelses use cases
 |Afventer kvittering|Meddelelsen er sendt, men afventer kvittering|
 |Kvitteret|Meddelelsen er sendt og ACK AA kvittering modtaget|
 |Fejlet|Meddelelsen er sendt og ACK AE fejlkvittering modtaget, oprindelig meddelelse kan gensendes|
-|Permanent fejlende|<p>- Meddelelsen er sendt og fejlkvittering af ACK AR modtaget, oprindelig meddelelse kan ikke gensendes, da den er markeret som havende en teknisk fejl</p><p>- Kvittering på meddelelse er ikke modtaget, efter at meddelelsen har været gensendt 3 gange</p>|
+|Permanent fejlende|- Meddelelsen er sendt og fejlkvittering af ACK AR modtaget, oprindelig meddelelse kan ikke gensendes, da den er markeret som havende en teknisk fejl- Kvittering på meddelelse er ikke modtaget, efter at meddelelsen har været gensendt 3 gange|
 
 [^1]: Use casene er udarbejdet med inspiration fra [KOMBIT’s metodehåndbog for use cases](https://www.kombit.dk/metodeh%C3%A5ndb%C3%B8ger)
