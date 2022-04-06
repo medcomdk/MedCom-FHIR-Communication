@@ -15,11 +15,12 @@ Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Websi
 
 ## FHIR Messaging
 
-FHIR Resources can be used in a traditional messaging context, much like HL7 v2  (see detailed comparison). Applications asserting conformance to this framework claim to be conformant to "FHIR messaging".
+FHIR Resources can be used in a traditional messaging context, much like HL7 v2. Applications asserting conformance to this framework claim to be conformant to "FHIR messaging".
 
-In FHIR messaging, a "request message" or an "unsolicidated message" is sent from a source application to a destination application when an event happens. Events mostly correspond to things that happen in the real world. The message consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the request message, and it also carries additional metadata. The other resources in the bundle depend on the type of the message.
+In FHIR messaging, a "request message" or an "unsolicidated message" is sent from a source application to a destination application when an event happens. Events mostly correspond to things that happen in the real world.
+The message consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the bundle depend on the type of the message.
 
-The events supported in FHIR, along with the resources that are included in them, are defined below.
+The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in [here](/assets/documents/MedCom-FHIR-Messaging-Events.md).
 
 The destination application processes the message and returns an acknowledgment message and one or more response messages, which are also a bundle of resources identified by the type "message", with the first resource in each bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
