@@ -1,15 +1,13 @@
 ﻿
 
-|![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.001.png)|**Id og proces**|**Id og titel**|**Init**|**Version**|**Dato**|
-| :- | :- | :- | :-: | :-: | -: |
-||SOP 4.1 |SKA-4.X.X-Forretningsmæssige use cases|OVI/MBK/KML|1.0.0-rc.1|06-04-2022|
+|**Id og proces**|**Id og titel**|**Init**|**Version**|**Dato**|
+| :- | :-: | :-: | -: | -: |
+|SOP 4.1 |SKA-4.X.X-Forretningsmæssige use cases|OVI/MBK/KML|1.0.0-rc.1|06-04-2022|
 
 |:---:|
 |**GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER**|
-
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.002.png)
-
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)
+|![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.002.png)|
+|![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)|
 
 |<p>**Dette dokument ”Tekniske use cases” indeholder en række tekniske use cases. Dokumentet supplerer SKA-4.X.X-Forretningsmæssige use cases, som udfyldes ved udarbejdelse og ændring af en MedCom-standard jf. SOP-4.1 Udarbejdelse og ændring af MedCom-standard (afsnit XX).** </p><p></p><p>**Ved anvendelse bør følgende bemærkes:** </p><p>- Dokumentet indeholder en række tekniske use cases, som beskriver de tekniske handlinger, som ligger før og efter brugeraktørens interaktion med systemet (fx systemets funktionaliteter i kommunikationsnetværket samt afsendelse og modtagelse af kvitteringer), og som er generiske på tværs af forskellige MedCom-standarder. </p><p>- Dokumentet supplerer SKA-4.X.X-Forretningsmæssige use cases, som beskriver de use cases, der omhandler brugeraktørens interaktion med systemet. </p><p>- Det bør – som udgangspunkt – kun være nødvendigt at tilrette de indledende afsnit og ikke selve use casene. Såfremt der er særlige tekniske handlinger forbundet med den pågældende standard, bør disse indarbejdes i dokumentet for de forretningsmæssige use cases for den pågældende standard, som bygger på SKA-4.X.X-Forretningsmæssige use cases.</p><p>- Den seneste version af dette dokument skal altid sættes ind som reference i SKA-4.X.X Forretningsmæssige use cases, således at nye standarder bygger på den nyeste version af dette dokument.</p><p></p><p>**Før publicering af materiale:**</p><p>- Opdatér alle krydsreferencer</p><p>- Opdatér indholdsfortegnelse</p><p>- Revidér sidehoved</p><p>- Opdatér notatets dokumenthistorik</p><p>- Slet denne boks</p>|
 | :- |
