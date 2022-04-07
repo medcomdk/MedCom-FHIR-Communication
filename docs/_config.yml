@@ -1,6 +1,6 @@
 title: "MedCom Messaging - HL7 FHIR®©"
 logo: /assets/images/medcom+fhir-logo.png
-description: "MedCom HL7 FHIR®© Messaging Communication Rules - Version 1.0.0-alpha.1"
+description: "MedCom FHIR®© Messaging Governance - Version 1.0.0-alpha.1"
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-minimal
