@@ -1,4 +1,4 @@
-# Communication Rules
+# MedCom FHIR®© Messaging Governance
 
 ||||
 |:---|---|:---|
