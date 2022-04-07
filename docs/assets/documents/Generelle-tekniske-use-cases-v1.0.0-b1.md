@@ -1,6 +1,6 @@
 ﻿# GENERELLE TEKNISKE USE CASES FOR AFSENDELSE OG MODTAGELSE AF MEDDELELSER, KVITTERINGER OG KUVERTER
 
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)
+![ ](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.003.png)
 
 |**Id og proces**|**Id og titel**|**Init**|**Version**|**Dato**|
 | :- | :-: | :-: | -: | -: |
@@ -70,17 +70,20 @@
 
 ## Indledning
 
-Dette dokument indeholder en række tekniske use case til brug for implementering af alle MedComs meddelelsesstandarder. 
+Dette dokument indeholder en række tekniske use case til brug for implementering af alle MedComs meddelelsesstandarder.
 
 Use case-beskrivelserne supplerer det øvrige dokumentationsmateriale og bør derfor læses i sammenhæng til dette (se afsnit 1.4).
 
 ## Baggrund og formål
-Formålet med de tekniske use cases er at beskrive de generelle tekniske krav, der er forbundet med afsendelse og modtagelse af MedCom-standarder, herunder systemets funktionaliteter ift. kommunikationsnetværket samt afsendelse og modtagelse af kvitteringer. Dokumentet har til hensigt at sikre en ensartet implementering og anvendelse af MedCom-standarder. 
+
+Formålet med de tekniske use cases er at beskrive de generelle tekniske krav, der er forbundet med afsendelse og modtagelse af MedCom-standarder, herunder systemets funktionaliteter ift. kommunikationsnetværket samt afsendelse og modtagelse af kvitteringer. Dokumentet har til hensigt at sikre en ensartet implementering og anvendelse af MedCom-standarder.
 
 ## Målgruppe
+
 Dokumentet målretter sig både it-systemleverandører og implementeringsansvarlige.
 
 ## Afgrænsning
+
 Use casene i dette notat beskriver de tekniske handlinger, som ligger før og efter brugeraktørens interaktion med systemet (fx systemets funktionaliteter i kommunikationsnetværket samt afsendelse og modtagelse af kvitteringer). De handlinger/use cases, der vedrører brugeraktørens interaktion med systemet, og som beskriver de forretningsmæssige krav til standarden, optræder som selvstændigt beskrevne use cases i et dokument baseret på ”SKA-4.X.X Forretningsmæssige use cases”.
 
 Tekniske afsender-use cases indledes således med, at systemaktøren henter meddelelsesindholdet fra [*fagsystemets forretningsmæssige udbakke*](#_Toc83807604) og afsluttes med, at systemaktøren sender meddelelsen ved at lægge den i [*fagsystemets tekniske udbakkeReferencer*](#_Referencer). Ligeledes igangsættes tekniske modtager-use cases med, at systemaktøren modtager meddelelsen i [*fagsystemets tekniske indbakke*](#_Toc83807604) og afsluttes med, at systemaktøren lægger meddelelsen i [*fagsystemets forretningsmæssige indbakke*](#_Toc83807604). Se i øvrigt forklaring og illustration i afsnit 1.6.  
@@ -97,8 +100,8 @@ Use casene beskriver et detaljeret forløb over *systemaktørens* tekniske handl
 
 Der skelnes mellem tre forskellige typer af use cases:
 
-- **Primære** tekniske** use cases: For hvert teknisk scenarie vil der være beskrevet én primær teknisk use case, som beskriver normalforløbet over systemaktørens interaktion med kommunikationsnetværket.  
-- **Alternative** tekniske** use cases: Såfremt der kan være afvigelser til det tekniske normalforløb, vil der i den primære tekniske use case være henvist til alternative (selvstændigt beskrevne) tekniske use cases. 
+- **Primære** tekniske** use cases: For hvert teknisk scenarie vil der være beskrevet én primær teknisk use case, som beskriver normalforløbet over systemaktørens interaktion med kommunikationsnetværket.
+- **Alternative** tekniske** use cases: Såfremt der kan være afvigelser til det tekniske normalforløb, vil der i den primære tekniske use case være henvist til alternative (selvstændigt beskrevne) tekniske use cases.
 - **Korrigerende tekniske** use cases: Ligeledes vil der ved korrigerende handlinger til forløbet (typisk rettelser og annulleringer) være henvist til korrigerende (selvstændigt beskrevne) use cases fra den primære use case. De korrigerende use cases vil typisk være generiske på tværs af forskellige use cases.
 
 Alle use cases er opdelt i:
@@ -153,9 +156,10 @@ Illustrationen herunder angiver i detaljer et forsendelsesflow mellem to fagsyst
 
 De tekniske use cases vedrører primært hhv. Fagsystemets Tekniske Meddelelsesmodul og Fagsystemets Tekniske Udbakke i Afsendersystemet og Fagsystemets Tekniske Indbakke og Fagsystemets Tekniske Meddelelsesmodul i Modtagersystemet. Fagsystemets tekniske dele har i afsendersystemet udveksling med Fagsystemets Forretningsmæssige Udbakke og i modtagersystemet med Fagsystemets Forretningsmæssige Indbakke.
 
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.004.png)
+![ ](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.004.png)
 
 ## Oversigt over use cases
+
 I denne oversigt over use cases kan det synes mærkeligt, at kvitterings use cases ”vender omvendt” ift. afsendelse og modtagelses use cases for meddelelser. Dette skyldes at use casene skal ses i sammenhæng i et Forsendelsesflow, som indebærer afsendelse/modtagelse af en meddelelse og afsendelse/modtagelse af den tilhørende kvittering.
 
 |**Teknisk hændelse**|**Afsender (S)-use case**|**Modtager (R)-use case**|
@@ -175,12 +179,11 @@ I denne oversigt over use cases kan det synes mærkeligt, at kvitterings use cas
 
 ## Grafisk oversigt over use cases
 
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.005.png)
+![ ](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.005.png)
 
 **Figur 1 Grafisk oversigt over tekniske use cases (R = Receiver, S = Sender, TC = Technical (use) Case, ACK AA = Positiv kvittering, ACK AE = Negativ kvittering (teknisk fejl), ACK AR = Negativ kvittering (invalidt indhold),**
 
 Ovenstående grafiske oversigt viser det samlede sæt af use cases, som dette dokument beskriver. I de følgende afsnit er de brudt ned i relevante grupperinger og vises i de følgende kapitler partielt. Teksten er på engelsk.
-
 
 # Use cases for afsendelse af meddelelser
 
@@ -221,7 +224,7 @@ Indsæt grafik + forklarende tekst til afsendelses use cases
 
 Indsæt forklarende tekst til modtagelses use cases
 
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.006.png)
+![ ](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.006.png)
 
 ## R.TC1 Modtag meddelelse
 
@@ -280,7 +283,7 @@ Indsæt forklarende tekst til modtagelses use cases
 
 Indsæt forklarende tekst til afsendelses use cases
 
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.007.png)
+![ ](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.007.png)
 
 ## R.TC2 Dan kvittering
 
@@ -316,7 +319,7 @@ Indsæt forklarende tekst til afsendelses use cases
 
 Indsæt forklarende tekst til modtagelses use cases
 
-![](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.008.png) 
+![ ](Aspose.Words.a77aa0f5-ad23-4c34-839d-9463f19dc431.008.png)
 
 ## S.TC3 Modtag kvittering (ACK AA)
 
