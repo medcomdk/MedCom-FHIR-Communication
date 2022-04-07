@@ -6,7 +6,7 @@
 |[MedCom FHIR messages](#medcom-fhir-messages)||[Network Layer](#network-layer)|
 |[Reliable Messaging](#reliable-messaging)    ||[Test and Certification](#test-and-certification)|
 
-# Introduction
+## Introduction
 
 Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html). What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 [Introduction details](/assets/documents/01-Introduction.md)
@@ -47,7 +47,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 ## MedCom FHIR Messages
 
-![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png "MedCom Messaging Model")
+![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png "MedCom Messaging Model")
 
 - MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingHeader resource
 -- The MedComMessagingHeader resource SHALL be the first resource in a MedCom Message Bundle
