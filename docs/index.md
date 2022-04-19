@@ -2,9 +2,9 @@
 
 ||||
 |:---|---|:---|
-|[FHIR Messaging](#fhir-messaging)            ||[Network Envelope](#network-envelope)|
-|[MedCom FHIR messages](#medcom-fhir-messages)||[Network Layer](#network-layer)|
-|[Reliable Messaging](#reliable-messaging)    ||[Test and Certification](#test-and-certification)|
+|[MedComFHIR Messaging](#medcom-fhir-messaging) ||[Network Envelope](#network-envelope)|
+|[MedCom FHIR Messages](#medcom-fhir-messages)  ||[Network Layer](#network-layer)|
+|[Reliable Messaging](#reliable-messaging)      ||[Test and Certification](#test-and-certification)|
 
 ## Introduction
 
@@ -13,7 +13,7 @@ Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Websi
 
 [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b1.md)
 
-## FHIR Messaging
+## MedCom FHIR Messaging
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2. Applications asserting conformance to this framework claim to be conformant to "FHIR messaging".
 
