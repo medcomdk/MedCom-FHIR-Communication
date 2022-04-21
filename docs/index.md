@@ -60,6 +60,8 @@ When a message is received, a receiver can determine from the content of the mes
 
 [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md)
 
+### Narrative Text
+
 ### MessageHeader
 
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedCom Messaging Model")
