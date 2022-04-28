@@ -1,6 +1,6 @@
 title: "MedCom Messaging - HL7 FHIR®©"
 logo: /assets/images/medcom+fhir-logo.png
 description: "MedCom FHIR®© Messaging Governance - Version 1.0.0-alpha.1"
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
