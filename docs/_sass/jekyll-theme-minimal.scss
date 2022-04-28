@@ -186,7 +186,7 @@ strong {
 }
 
 section {
-  width:90%;
+  width:95%;
   float:right;
   padding-bottom:50px;
 }
@@ -210,7 +210,7 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-@media print, screen and (max-width: 80%) {
+@media print, screen and (max-width: 90%) {
 
   div.wrapper {
     width:auto;
@@ -245,7 +245,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 80%) {
+@media print, screen and (max-width: 90%) {
   body {
     word-wrap:break-word;
   }
@@ -263,7 +263,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 80%) {
+@media print, screen and (max-width: 90%) {
   body {
     padding:15px;
   }
