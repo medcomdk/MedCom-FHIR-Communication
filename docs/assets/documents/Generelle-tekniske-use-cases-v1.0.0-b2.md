@@ -1,4 +1,8 @@
-# Generelle tekniske use cases for afsendelse og modtagelse af meddelelseR, kvitteringer og kuverter 
+# Generelle tekniske use cases for afsendelse og modtagelse af meddelelser, kvitteringer og kuverter 
+
+<p align="center">
+  <img src="media/f81db2c6aaff64b9d80d9434aec79c8e.png">
+</p>
 
 ![](media/f81db2c6aaff64b9d80d9434aec79c8e.png)
 
