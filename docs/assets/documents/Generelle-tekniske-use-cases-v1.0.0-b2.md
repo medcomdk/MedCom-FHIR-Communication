@@ -18,46 +18,65 @@
 [Indledning	3](#indledning)
 
 > [Baggrund og formål](#baggrund-og-formål)
+
 > [Målgruppe](#målgruppe)
+
 > [Afgrænsning](#afgrænsning)
+
 > [Referencer](#referencer)
+
 > [Læsevejledning for use cases](#læsevejledning-for-use-cases)
+
 > [Termer](#termer)
+
 > [Illustration af et fagsystem og dets forretningsmæssige og tekniske dele](#illustration-af-et-fagsystem-og-dets-forretningsmæssige-og-tekniske-dele)
 
-[Oversigt over use cases](#_Toc101994396)
+[Oversigt over use cases](#oversigt-over-use-cases)
 
-> [Grafisk oversigt over use cases](#_Toc101994397)
+> [Grafisk oversigt over use cases](#grafisk-oversigt-over-use-cases)
 
-[Use cases for afsendelse af meddelelser](#_Toc101994398)
+[Use cases for afsendelse af meddelelser](#use-cases-for-afsendelse-af-meddelelser)
 
-> [S.TC1 Afsend meddelelse](#_Toc101994399)
-> [S.TC2 Gensend automatisk meddelelse](#_Toc101994400)
+> [S.TC1 Afsend meddelelse](#stc1-afsend-meddelelse)
+
+> [S.TC2 Gensend automatisk meddelelse](#stc2-gensend-automatisk-meddelelse)
 
 [Use cases for modtagelse af meddelelser](#_Toc101994401)
 
 > [R.TC1 Modtag meddelelse](#_Toc101994402)
+
 >> [R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold](#_Toc101994403)
+
 >> [R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet](#_Toc101994404)
+
 > [R.TC3 Håndtér dubleret meddelelse](#_Toc101994405)
 
 [Use cases for afsendelse af kvittering](#_Toc101994406)
 
 > [R.TC2 Dan kvittering](#_Toc101994407)
+
 > [R.TC3 Afsend kvittering](#_Toc101994408)
 
 [Use cases for modtagelse af kvittering](#_Toc101994409)
 
 > [S.TC3 Modtag kvittering (ACK AA)](#_Toc101994410)
+
 >> [S.TC3.A1 Modtag negativ kvittering (ACK AR)](#_Toc101994411)
+
 >> [S.TC3.A2 Modtag negativ kvittering (ACK AE)](#_Toc101994412)
+
 > [S.TC4 Forventet kvittering ikke modtaget](#_Toc101994413)
 
 [Regler for systemerne, som use casene beror på](#_Toc101994414)
+
 > [Meddelelsesregler](#_Toc101994415)
+
 > [Kvitteringsregler](#_Toc101994416)
+
 > [Meddelelsestilstande](#_Toc101994417)
+
 >> [Afsender](#afsender)
+
 >> [Modtager](#modtager)
 
 # Indledning 
