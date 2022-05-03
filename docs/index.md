@@ -49,12 +49,14 @@ When a message is received, a receiver can determine from the content of the mes
 
 ![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png "MedCom Messaging Model")
 
-- MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingHeader resource
--- The MedComMessagingHeader resource SHALL be the first resource in a MedCom Message Bundle
-- MedCom FHIR Messages SHALL contain at least two bundled MedComMessagingOrganization resources
--- One of the two bundled MedComMessagingOrganization resources SHALL repsresent the Sender Organization
--- One of the two bundled MedComMessagingOrganization resources SHALL repsresent the Receiver Organization
-- MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingProvenance resource
+| **MedCom FHIR Messages**|
+|:---|
+| **MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingHeader resource** |
+| **The MedComMessagingHeader resource SHALL be the first resource in a MedCom Message Bundle** |
+| **MedCom FHIR Messages SHALL contain at least two bundled MedComMessagingOrganization resources** |
+| **One of the two bundled MedComMessagingOrganization resources SHALL repsresent the Sender Organization** |
+| **One of the two bundled MedComMessagingOrganization resources SHALL repsresent the Receiver Organization** |
+| **MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingProvenance resource** |
 
 [here](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/pagecontent/index.md)
 
