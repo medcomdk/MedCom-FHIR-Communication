@@ -3,10 +3,9 @@
 <p align="center">
   <img src="media/f81db2c6aaff64b9d80d9434aec79c8e.png">
 </p>
-
-![](media/f81db2c6aaff64b9d80d9434aec79c8e.png)
-
-![](media/3b175b17410da7ca8eebbb4fdcdc2c7d.png)
+<p align="center">
+  <img src="media/3b175b17410da7ca8eebbb4fdcdc2c7d.png">
+</p>
 
 **Dokumenthistorik**
 
@@ -16,69 +15,50 @@
 
 **Indholdsfortegnelse**
 
-[1	Indledning	3](#_Toc101994388)
+[Indledning	3](#indledning)
 
->   [1.1	Baggrund og formål	3](#_Toc101994389)
+> [Baggrund og formål](#baggrund-og-formål)
+> [Målgruppe](#målgruppe)
+> [Afgrænsning](#afgrænsning)
+> [Referencer](#referencer)
+> [Læsevejledning for use cases](#læsevejledning-for-use-cases)
+> [Termer](#termer)
+> [Illustration af et fagsystem og dets forretningsmæssige og tekniske dele](#illustration-af-et-fagsystem-og-dets-forretningsmæssige-og-tekniske-dele)
 
->   [1.2	Målgruppe	3](#_Toc101994390)
+[Oversigt over use cases](#_Toc101994396)
 
->   [1.3	Afgrænsning	3](#_Toc101994391)
+> [Grafisk oversigt over use cases](#_Toc101994397)
 
->   [1.4	Referencer	3](#_Toc101994392)
+[Use cases for afsendelse af meddelelser](#_Toc101994398)
 
->   [1.5	Læsevejledning for use cases	3](#_Toc101994393)
+> [S.TC1 Afsend meddelelse](#_Toc101994399)
+> [S.TC2 Gensend automatisk meddelelse](#_Toc101994400)
 
->   [1.6	Termer	5](#_Toc101994394)
+[Use cases for modtagelse af meddelelser](#_Toc101994401)
 
->   [1.7	Illustration af et fagsystem og dets forretningsmæssige og tekniske dele	7](#_Toc101994395)
+> [R.TC1 Modtag meddelelse](#_Toc101994402)
+>> [R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold](#_Toc101994403)
+>> [R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet](#_Toc101994404)
+> [R.TC3 Håndtér dubleret meddelelse](#_Toc101994405)
 
-[2	Oversigt over use cases	8](#_Toc101994396)
+[Use cases for afsendelse af kvittering](#_Toc101994406)
 
->   [2.1	Grafisk oversigt over use cases	9](#_Toc101994397)
+> [R.TC2 Dan kvittering](#_Toc101994407)
+> [R.TC3 Afsend kvittering](#_Toc101994408)
 
-[3	Use cases for afsendelse af meddelelser	10](#_Toc101994398)
+[Use cases for modtagelse af kvittering](#_Toc101994409)
 
->   [3.1	S.TC1 Afsend meddelelse	10](#_Toc101994399)
+> [S.TC3 Modtag kvittering (ACK AA)](#_Toc101994410)
+>> [S.TC3.A1 Modtag negativ kvittering (ACK AR)](#_Toc101994411)
+>> [S.TC3.A2 Modtag negativ kvittering (ACK AE)](#_Toc101994412)
+> [S.TC4 Forventet kvittering ikke modtaget](#_Toc101994413)
 
->   [3.2	S.TC2 Gensend automatisk meddelelse	11](#_Toc101994400)
-
-[4	Use cases for modtagelse af meddelelser	12](#_Toc101994401)
-
->   [4.1	R.TC1 Modtag meddelelse	13](#_Toc101994402)
-
->   [4.1.1	R.TC1.A1 Afvis meddelelse pga. invalidt teknisk indhold	13](#_Toc101994403)
-
->   [4.1.2	R.TC1.A2 Afvis meddelelse pga. teknisk fejl i modtagersystemet	14](#_Toc101994404)
-
->   [4.2	R.TC3 Håndtér dubleret meddelelse	14](#_Toc101994405)
-
-[5	Use cases for afsendelse af kvittering	15](#_Toc101994406)
-
->   [5.1	R.TC2 Dan kvittering	16](#_Toc101994407)
-
->   [5.2	R.TC3 Afsend kvittering	16](#_Toc101994408)
-
-[6	Use cases for modtagelse af kvittering	17](#_Toc101994409)
-
->   [6.1	S.TC3 Modtag kvittering (ACK AA)	18](#_Toc101994410)
-
->   [6.1.1	S.TC3.A1 Modtag negativ kvittering (ACK AR)	18](#_Toc101994411)
-
->   [6.1.2	S.TC3.A2 Modtag negativ kvittering (ACK AE)	19](#_Toc101994412)
-
->   [6.2	S.TC4 Forventet kvittering ikke modtaget	19](#_Toc101994413)
-
-[7	Regler for systemerne, som use casene beror på	20](#_Toc101994414)
-
->   [7.1	Meddelelsesregler	20](#_Toc101994415)
-
->   [7.2	Kvitteringsregler	20](#_Toc101994416)
-
->   [7.3	Meddelelsestilstande	20](#_Toc101994417)
-
->   [7.3.1	Afsender	20](#_Toc101994418)
-
->   [7.3.2	Modtager	21](#_Toc101994419)
+[Regler for systemerne, som use casene beror på](#_Toc101994414)
+> [Meddelelsesregler](#_Toc101994415)
+> [Kvitteringsregler](#_Toc101994416)
+> [Meddelelsestilstande](#_Toc101994417)
+>> [Afsender](#afsender)
+>> [Modtager](#modtager)
 
 # Indledning 
 
