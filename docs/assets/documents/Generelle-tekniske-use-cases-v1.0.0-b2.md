@@ -1,18 +1,8 @@
-generelle   
-tekniske use caseS
-
-for afsendelse og
-
-modtagelse af
-
-meddelelseR, kvitteringer og kuverter
+# Generelle tekniske use cases for afsendelse og modtagelse af meddelelseR, kvitteringer og kuverter 
 
 ![](media/f81db2c6aaff64b9d80d9434aec79c8e.png)
 
 ![](media/3b175b17410da7ca8eebbb4fdcdc2c7d.png)
-
-| **Dette dokument ”Tekniske use cases” indeholder en række tekniske use cases. Dokumentet supplerer SKA-4.X.X-Forretningsmæssige use cases, som udfyldes ved udarbejdelse og ændring af en MedCom-standard jf. SOP-4.1 Udarbejdelse og ændring af MedCom-standard (afsnit XX).**   **Ved anvendelse bør følgende bemærkes:**  Dokumentet indeholder en række tekniske use cases, som beskriver de tekniske handlinger, som ligger før og efter brugeraktørens interaktion med systemet (fx systemets funktionaliteter i kommunikationsnetværket samt afsendelse og modtagelse af kvitteringer), og som er generiske på tværs af forskellige MedCom-standarder.  Dokumentet supplerer SKA-4.X.X-Forretningsmæssige use cases, som beskriver de use cases, der omhandler brugeraktørens interaktion med systemet.  Det bør – som udgangspunkt – kun være nødvendigt at tilrette de indledende afsnit og ikke selve use casene. Såfremt der er særlige tekniske handlinger forbundet med den pågældende standard, bør disse indarbejdes i dokumentet for de forretningsmæssige use cases for den pågældende standard, som bygger på SKA-4.X.X-Forretningsmæssige use cases. Den seneste version af dette dokument skal altid sættes ind som reference i SKA-4.X.X Forretningsmæssige use cases, således at nye standarder bygger på den nyeste version af dette dokument.  **Før publicering af materiale:** Opdatér alle krydsreferencer Opdatér indholdsfortegnelse Revidér sidehoved Opdatér notatets dokumenthistorik Slet denne boks |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **Dokumenthistorik**
 
@@ -20,7 +10,7 @@ meddelelseR, kvitteringer og kuverter
 |------------|-----------|---------|---------|
 | 2022-05-01 | OVI       | 1.0.0   |         |
 
->   Indholdsfortegnelse
+**Indholdsfortegnelse**
 
 [1	Indledning	3](#_Toc101994388)
 
