@@ -55,13 +55,13 @@ When a message is received, a receiver can determine from the content of the mes
 ![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png "MedCom Messaging Model")
 -->
 
-| **MedCom FHIR Messages Rules**|
+| **MedComMessingMessage Rules**|
 |:---|
 | MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingHeader resource |
 | The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
 | MedCom FHIR Messages **SHALL** contain at least two bundled MedComMessagingOrganization resources |
-| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader destination:primary sliced element |
-| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader destination:cc sliced element |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader.sender element |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader.destination:primary sliced element |
 | MedCom FHIR Messages **SHALL** contain at least one bundled MedComCorePatient resource |
 | MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingProvenance resource |
 | MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
@@ -70,7 +70,16 @@ When a message is received, a receiver can determine from the content of the mes
 
 [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md)
 
-### Narrative Text
+### Narrative Texts
+
+| **General Narrative Text Rules**|
+
+A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed oout by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
+
+|:---|
+| All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element |
+| The Narrative Text **SHALL** be of type |
 
 ### MessageHeader
 
@@ -82,15 +91,15 @@ When a message is received, a receiver can determine from the content of the mes
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedComMessageHeader")
 -->
 
-| **MedCom FHIR Messages Rules**|
+| **MedComMessageHeader Rules**|
 |:---|
 | The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
-| The MedComMessagingHeader resource **SHALL** contain the event of the MedCom Message (eg. the type of the message) |
-| The MedComMessagingHeader resource **SHALL** contain the  of the MedCom Message (eg. the type of the message) |
-| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader "sender" element |
-| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader "destination:primary" sliced element |
-| The MedComMessagingHeader resource **MAY** include a list of carbon-copy receiver organizations pointed to by the MedComMessagingHeader "destination:cc" sliced element(s) |
-| MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader pointed to by the MedComMessagingHeader "focus" element |
+| The MedComMessagingHeader resource **SHALL** contain an event of the MedCom Message (eg. the type of the message) |
+| The MedComMessagingHeader resource **SHALL** contain an MedComMessagingHeader.id of the MedCom Message (eg. the letter.id of the message) |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader.sender element |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader.destination:primary sliced element |
+| The MedComMessagingHeader resource **MAY** include a list of carbon-copy receiver organizations pointed to by the MedComMessagingHeader.destination:cc sliced element(s) |
+| MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader pointed to by the MedComMessagingHeader.focus element |
 
 [here](/assets/documents/MessageHeader.md)
 
