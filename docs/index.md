@@ -116,15 +116,17 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 | The MedComMessagingHeader resource **MAY** include a list of carbon-copy receiver organizations pointed to by the MedComMessagingHeader.destination:cc sliced element(s) |
 | MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader pointed to by the MedComMessagingHeader.focus element |
 
-[here](/assets/documents/MessageHeader.md)
+[MedComMessageHeader](/assets/documents/MessageHeader.md)
+
+[MessageHeader in FHIR R4](http://hl7.org/fhir/R4/messageheader.html)
 
 ### Identifiers
 
-[here](/assets/documents/MessageHeader_Identifiers.md)
+[Identifiers](/assets/documents/MessageHeader_Identifiers.md)
 
 ### Timestamps
 
-[here](/assets/documents/MessageHeader_Timestamps.md)
+[Timestamps](/assets/documents/MessageHeader_Timestamps.md)
 
 ### Messaging rules
 
@@ -138,7 +140,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 ## MustSupport
 
-[here](/assets/documents/MustSupport.md)
+[MustSupport](/assets/documents/MustSupport.md)
 
 ## Provenance
 
@@ -154,20 +156,20 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 ![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts(Remote)")
 -->
 
-[here](/assets/documents/Provenance.md)
+[Provenance](/assets/documents/Provenance.md)
 
 ## Reliable Messaging
 
-[here](/assets/documents/Reliable_Messaging.md)
+[Reliable Messaging](/assets/documents/Reliable_Messaging.md)
 
-## Network Envelope
+## Network Layer
+
+### Network Envelope
 
 - MedCom FHIR Messages SHALL be enveloped in a VANS ENVELOPE
 - MedCom FHIR Messages SHALL follow the metadataspecification outlined in
   - [Danish](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   - [English](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
-
-## Network Layer
 
 ## Test and Certification
 
