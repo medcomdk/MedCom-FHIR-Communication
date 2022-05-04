@@ -60,8 +60,9 @@ When a message is received, a receiver can determine from the content of the mes
 | MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingHeader resource |
 | The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
 | MedCom FHIR Messages **SHALL** contain at least two bundled MedComMessagingOrganization resources |
-| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader |
-| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader destination:primary sliced element |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader destination:cc sliced element |
+| MedCom FHIR Messages **SHALL** contain at least one bundled MedComCorePatient resource |
 | MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingProvenance resource |
 | MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
 
@@ -80,6 +81,16 @@ When a message is received, a receiver can determine from the content of the mes
 <!--
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedComMessageHeader")
 -->
+
+| **MedCom FHIR Messages Rules**|
+|:---|
+| The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
+| The MedComMessagingHeader resource **SHALL** contain the event of the MedCom Message (eg. the type of the message) |
+| The MedComMessagingHeader resource **SHALL** contain the  of the MedCom Message (eg. the type of the message) |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader "sender" element |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader "destination:primary" sliced element |
+| The MedComMessagingHeader resource **MAY** include a list of carbon-copy receiver organizations pointed to by the MedComMessagingHeader "destination:cc" sliced element(s) |
+| MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader pointed to by the MedComMessagingHeader "focus" element |
 
 [here](/assets/documents/MessageHeader.md)
 
