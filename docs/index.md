@@ -47,16 +47,23 @@ When a message is received, a receiver can determine from the content of the mes
 
 ## MedCom FHIR Messages
 
-![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png "MedCom Messaging Model")
+<p align="center">
+  <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png">
+</p>
 
-| **MedCom FHIR Messages**|
+<!--
+![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png "MedCom Messaging Model")
+-->
+
+| **MedCom FHIR Messages Rules**|
 |:---|
-| **MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingHeader resource** |
-| **The MedComMessagingHeader resource SHALL be the first resource in a MedCom Message Bundle** |
-| **MedCom FHIR Messages SHALL contain at least two bundled MedComMessagingOrganization resources** |
-| **One of the two bundled MedComMessagingOrganization resources SHALL repsresent the Sender Organization** |
-| **One of the two bundled MedComMessagingOrganization resources SHALL repsresent the Receiver Organization** |
-| **MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingProvenance resource** |
+| MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingHeader resource |
+| The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
+| MedCom FHIR Messages **SHALL** contain at least two bundled MedComMessagingOrganization resources |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader |
+| One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader |
+| MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingProvenance resource |
+| MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
 
 [here](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/pagecontent/index.md)
 
