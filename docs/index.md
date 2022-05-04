@@ -73,7 +73,13 @@ When a message is received, a receiver can determine from the content of the mes
 
 ### MessageHeader
 
-![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedCom Messaging Model")
+<p align="center">
+  <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png">
+</p>
+
+<!--
+![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedComMessageHeader")
+-->
 
 [here](/assets/documents/MessageHeader.md)
 
@@ -105,7 +111,13 @@ When a message is received, a receiver can determine from the content of the mes
 - MedCom FHIR Messages SHALL contain one bundled MedComMessagingProvenance resource for each message exchange the message ha been involved in
 - MedCom FHIR Messages SHALL contain no more than two bundled MedComMessagingProvenance resource when acknowledging a message
 
+<p align="center">
+  <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png">
+</p>
+
+<!--
 ![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts(Remote)")
+-->
 
 [here](/assets/documents/Provenance.md)
 
