@@ -76,6 +76,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed oout by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
 Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
+[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative)
 
 |:---|
 | All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element |
