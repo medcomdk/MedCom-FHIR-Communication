@@ -94,7 +94,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)
 
-[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
+[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
 
 ### MessageHeader
 
