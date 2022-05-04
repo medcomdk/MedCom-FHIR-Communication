@@ -55,6 +55,15 @@ When a message is received, a receiver can determine from the content of the mes
 ![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png "MedCom Messaging Model")
 -->
 
+### Bundle
+
+A container for a collection of resources.
+
+**Scope and Usage**
+One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
+
+[Bundle in FHIR R4](http://hl7.org/fhir/R4/bundle.html)
+
 | **MedComMessingMessage Rules**|
 |:---|
 | MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingHeader resource |
@@ -78,6 +87,7 @@ Contained resources do not have narrative, but their content SHALL be represente
 Narratives contains two sub elements, status and div.
 
 **The div element**
+
 The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes. 
 
 The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
@@ -144,6 +154,13 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 ## Provenance
 
+Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
+
+**Scope and Usage**
+The Provenance resource tracks information about the activity that created, revised, deleted, or signed a version of a resource, describing the entities and agents involved. This information can be used to form assessments about its quality, reliability, trustworthiness, or to provide pointers for where to go to further investigate the origins of the resource and the information in it.
+
+Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
+
 - MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingProvenance resource
 - MedCom FHIR Messages SHALL contain one bundled MedComMessagingProvenance resource for each message exchange the message ha been involved in
 - MedCom FHIR Messages SHALL contain no more than two bundled MedComMessagingProvenance resource when acknowledging a message
@@ -157,6 +174,8 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 -->
 
 [Provenance](/assets/documents/Provenance.md)
+
+[Provenance](http://hl7.org/fhir/R4/provenance.html)
 
 ## Reliable Messaging
 
