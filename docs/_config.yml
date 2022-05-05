@@ -1,6 +1,6 @@
 title: "MedCom Messaging - HL7 FHIR®©"
 logo: /assets/images/medcom+fhir-logo.png
-description: "Governance for MedCom FHIR®© Messaging - Version 1.0.0-alpha.1"
+description: "Governance for MedCom FHIR®© Messaging ("Syn & Kom") - Version 1.0.0-alpha.1"
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
