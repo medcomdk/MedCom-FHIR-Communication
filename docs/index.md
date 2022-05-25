@@ -8,7 +8,8 @@
 
 ## Introduction
 
-Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html). 
+Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html).
+
 What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 
 [Introduction details](/assets/documents/01-Introduction.md)
@@ -49,7 +50,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 ## MedCom FHIR Messages
 
-<p align="center">
+<p align="left">
   <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png">
 </p>
 
@@ -69,14 +70,18 @@ One common operation performed with resources is to gather a collection of resou
 
 | **MedComMessingMessage Rules**|
 |:---|
-| MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingHeader resource |
+| A MedCom FHIR Message **SHALL** be a bundle resource of type "message" |
+| A MedCom FHIR Message **SHALL** contain at least one bundled MedComMessagingHeader resource |
 | The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
-| MedCom FHIR Messages **SHALL** contain at least two bundled MedComMessagingOrganization resources |
+| A MedCom FHIR Message **SHALL** contain at least two bundled MedComMessagingOrganization resources |
 | One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader.sender element |
 | One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader.destination:primary sliced element |
-| MedCom FHIR Messages **SHALL** contain at least one bundled MedComCorePatient resource |
-| MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingProvenance resource |
-| MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
+| A MedCom FHIR Message **MAY** contain more bundled MedComMessagingOrganization resources |
+| A bundled MedComMessagingOrganization resource **MAY** represent the CCReceiver Organization pointed to by the MedComMessagingHeader.destination:cc sliced element |
+| A MedCom FHIR Message **SHALL** contain at least one bundled MedComCorePatient resource |
+| A MedCom FHIR Message **SHALL** contain at least one bundled MedComMessagingProvenance resource |
+| A MedCom FHIR Message **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
+| The MedComMessagingHeader resource **SHALL** contain a Narrative text |
 
 [here](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/pagecontent/index.md)
 
