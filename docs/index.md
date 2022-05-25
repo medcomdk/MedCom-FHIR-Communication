@@ -1,8 +1,9 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
-
+<hr/>
 Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Messaging Network.
 
 Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
+<hr/>
 
 ||||
 |:---|---|:---|
