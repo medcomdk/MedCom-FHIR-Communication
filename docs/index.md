@@ -77,7 +77,8 @@ One common operation performed with resources is to gather a collection of resou
 | One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Sender Organization pointed to by the MedComMessagingHeader.sender element |
 | One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader.destination:primary sliced element |
 | A MedCom FHIR Message **MAY** contain more bundled MedComMessagingOrganization resources |
-| A bundled MedComMessagingOrganization resource **MAY** represent the CCReceiver Organization pointed to by the MedComMessagingHeader.destination:cc sliced element |
+| The MedComMessagingHeader resource **MAY** include a list of carbon-copy receiver organizations pointed to by the MedComMessagingHeader.destination:cc sliced element(s) |
+| The bundled MedComMessagingOrganization resource **MAY** represent one of the carbon-copy receiver Organizations pointed to by the MedComMessagingHeader.destination:cc sliced element |
 | A MedCom FHIR Message **SHALL** contain at least one bundled MedComCorePatient resource |
 | A MedCom FHIR Message **SHALL** contain at least one bundled MedComMessagingProvenance resource |
 | A MedCom FHIR Message **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
@@ -116,7 +117,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 ### MessageHeader
 
-<p align="center">
+<p align="left">
   <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png">
 </p>
 
@@ -171,10 +172,10 @@ The Provenance resource tracks information about the activity that created, revi
 Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
 
 - MedCom FHIR Messages SHALL contain at least one bundled MedComMessagingProvenance resource
-- MedCom FHIR Messages SHALL contain one bundled MedComMessagingProvenance resource for each message exchange the message ha been involved in
+- MedCom FHIR Messages SHALL contain one bundled MedComMessagingProvenance resource for each message exchange the message has been involved in
 - MedCom FHIR Messages SHALL contain no more than two bundled MedComMessagingProvenance resource when acknowledging a message
 
-<p align="center">
+<p align="left">
   <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png">
 </p>
 
