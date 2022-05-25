@@ -196,7 +196,7 @@ Provenance resources are a record-keeping assertion that gathers information abo
 ### Network Envelope
 
 - MedCom FHIR Messages SHALL be enveloped in a VANS ENVELOPE
-- MedCom FHIR Messages SHALL follow the metadataspecification outlined in
+- MedCom FHIR Messages SHALL follow the metadata specification outlined in
   - [Danish](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   - [English](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
