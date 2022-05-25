@@ -19,7 +19,7 @@
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
 
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <!--p>{{ site.description | default: site.github.project_tagline }}</p-->
 
         {% if site.github.is_project_page %}
         <!--p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p-->
@@ -38,7 +38,7 @@
         {% endif %}
       <!--/header-->
       <!--section-->
-      <h1>{{ site.subject }}</h1>
+      <h1>{{ site.description }}</h1>
 
       {{ content }}
 
