@@ -1,5 +1,9 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 
+Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Messaging Network.
+
+Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
+
 ||||
 |:---|---|:---|
 |[MedComFHIR Messaging](#medcom-fhir-messaging) ||[Network Envelope](#network-envelope)|
@@ -53,13 +57,9 @@ When a message is received, a receiver can determine from the content of the mes
 
 ## MedCom FHIR Messages
 
-How is a MedCom FHIR Messages constructed, what parts does it consist of?
+How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
 
-<p align="left">
-  <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png">
-</p>
-
-![MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
+![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
 
 As shown in the diagram above there are 4 MedCom profiled FHIR resources involved in a message:
 
