@@ -1,6 +1,6 @@
-title: "MedCom Messaging - HL7 FHIR®©"
+title: "Governance for MedCom Messaging - HL7 FHIR®© - Version 1.0.0-alpha.1"
 logo: /assets/images/medcom+fhir-logo.png
-description: "Governance for MedCom FHIR®© Messaging ('Syn & Kom') - Version 1.0.0-alpha.1"
+description: "Formerly known as Syntax & Communication Rules"
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
