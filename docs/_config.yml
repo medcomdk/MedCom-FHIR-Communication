@@ -4,3 +4,4 @@ description: "Formerly known as Syntax & Communication Rules"
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
+version: "1.0.0-alpha.1"
