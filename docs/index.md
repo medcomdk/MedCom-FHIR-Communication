@@ -3,7 +3,6 @@
 Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Messaging Network.
 
 Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
-<hr/>
 
 ||||
 |:---|---|:---|
@@ -227,10 +226,3 @@ All profiles MUST be validated with TouchStone
 ## Release Notes
 
 Updates in the latest release.
-
-## Support or Contact
-
-[MedCom](https://www.medcom.dk/) is responsible for this page.  
-For any question regaring the standard, please contact <fhir@medcom.dk>
-
-![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/fhir-logo.png "HL7 FHIR")
