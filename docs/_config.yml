@@ -5,3 +5,4 @@ show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
 version: "version 1.0.0-alpha.1"
+fhir_version: "FHIR version R4"
