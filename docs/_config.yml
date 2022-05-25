@@ -1,8 +1,8 @@
 title: "Governance for MedCom HL7 FHIR®© Messaging"
 logo: /assets/images/medcom+fhir-logo.png
-description: "Formerly known as Syntax & Communication Rules"
+description: "Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Messaging Network. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'"
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
-version: "version 1.0.0-alpha.1"
-fhir_version: "FHIR version R4"
+version: "Version 1.0.0-alpha.1"
+fhir_version: "FHIR R4"
