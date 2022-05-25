@@ -1,4 +1,5 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
+
 ||||
 |:---|---|:---|
 |[MedComFHIR Messaging](#medcom-fhir-messaging) ||[Network Envelope](#network-envelope)|
