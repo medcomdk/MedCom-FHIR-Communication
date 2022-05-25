@@ -1,7 +1,7 @@
-title: "Governance for MedCom HL7 FHIR®© Messaging - Version 1.0.0-alpha.1"
+title: "Governance for MedCom HL7 FHIR®© Messaging"
 logo: /assets/images/medcom+fhir-logo.png
 description: "Formerly known as Syntax & Communication Rules"
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
-version: "1.0.0-alpha.1"
+version: "version 1.0.0-alpha.1"
