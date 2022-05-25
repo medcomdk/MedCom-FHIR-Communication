@@ -8,10 +8,12 @@
 
 ## Introduction
 
-Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html). What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
+Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html). 
+What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
+
 [Introduction details](/assets/documents/01-Introduction.md)
 
-[Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md)
+<!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
 ## MedCom FHIR Messaging
 
