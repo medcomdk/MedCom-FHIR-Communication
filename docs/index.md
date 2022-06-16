@@ -10,11 +10,11 @@ The governance rules must thus be able to function as “chief judge”, where t
 
 In the following, the "governance rules" for the use of MedCom's hospital messages are reviewed first, and then the more general communication rules. The "FHIR syntax and communication rules" must ensure a uniform use of MedCom's FHIR messages to the health and social area.
 
-||||
-|:---|---|:---|
-|[MedComFHIR Messaging](#medcom-fhir-messaging) ||[Network Envelope](#network-envelope)|
-|[MedCom FHIR Messages](#medcom-fhir-messages)  ||[Network Layer](#network-layer)|
-|[Reliable Messaging](#reliable-messaging)      ||[Test and Certification](#test-and-certification)|
+||||||
+|:---|---|:---|:---|:---|
+|[MedComFHIR Messaging](#medcom-fhir-messaging) ||[Network Envelope](#network-envelope)|||
+|[MedCom FHIR Messages](#medcom-fhir-messages)  ||[Network Layer](#network-layer)|||
+|[Reliable Messaging](#reliable-messaging)      ||[Test and Certification](#test-and-certification)|||
 
 ## Introduction
 
