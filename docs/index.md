@@ -1,11 +1,9 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
-<hr/>
-
 ||||||
 |:---|---|:---|:---|:---|
-|[MedComFHIR Messaging](#medcom-fhir-messaging) ||[Network Envelope](#network-envelope)|||
-|[MedCom FHIR Messages](#medcom-fhir-messages)  ||[Network Layer](#network-layer)|||
-|[Reliable Messaging](#reliable-messaging)      ||[Test and Certification](#test-and-certification)|||
+|[Network Layer](#network-layer)||[VANSEnvelope](#VANSEnvelope)||[Reliable Messaging using VANSEnvelope](#reliable-messaging- using-VANSEnvelope) |
+|[MedComFHIR Messaging](#medcom-fhir-messaging) ||[MedCom FHIR Messages](#medcom-fhir-messages) |||
+|[Test and Certification](#test-and-certification)|||||
 
 <hr/>
 
@@ -15,9 +13,6 @@ Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Websi
 
 What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 
-<!-- [Introduction details (Danish)](/assets/documents/01-Introduction.md)-->
-
-<!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
 
 These "FHIR Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
@@ -28,6 +23,10 @@ The governance rules must thus be able to function as “chief judge”, where t
 
 In the following, the "governance rules" for the use of MedCom's hospital messages are reviewed first, and then the more general communication rules. The "FHIR syntax and communication rules" must ensure a uniform use of MedCom's FHIR messages to the health and social area.
 
+<!-- [Introduction details (Danish)](/assets/documents/01-Introduction.md)-->
+
+<!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
+
 ## Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network. VANS is an abbreviation of Value Added Network Services, which is run by 3 private VANS suppliers.
@@ -35,7 +34,7 @@ To be able to communicate over the VANS Network, both senders and receivers **MU
 
 MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope
 
-Terms:
+Terms (to be moved to a termslist):
 
 - VANS
 - SOR
