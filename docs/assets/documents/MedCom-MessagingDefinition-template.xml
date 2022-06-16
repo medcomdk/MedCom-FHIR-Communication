@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageDefinition xmlns="http://hl7.org/fhir">
+    <id value="medcom-hospitalNotification-message"/>
+    <text>
+        <status value="generated"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">Message definition for MedCom HospitalNotification
+            Message</div>
+    </text>
+    <url
+        value="http://medcomfhir.dk/fhir/hospitalnotification/StructureDefinition/medcom-hospitalNotification-message"/>
+    <name value="medcom-hospitalNotification-message"/>
+    <title value="MedCom HospitalNotification Message"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <date value="2022-06-01"/>
+    <publisher value="MedCom, Denmark"/>
+    <contact>
+        <name value="MedCom FHIR Team"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://medcom.dk"/>
+        </telecom>
+        <telecom>
+            <system value="email"/>
+            <value value="fhir@medcom.dk"/>
+        </telecom>
+    </contact>
+    <purpose
+        value="The IG contains profiles for MedCom HospitalNotification, which is used to inform a municipality about hospitalization of a patient."/>
+    <eventCoding>
+        <system value="http://medcomfhir.dk/fhir/messaging/CodeSystem/medcom-messaging-eventCodes"/>
+        <code value="hospital-notification-message"/>
+    </eventCoding>
+    <category value="consequence"/>
+</MessageDefinition>
