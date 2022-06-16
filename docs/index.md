@@ -1,8 +1,14 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 <hr/>
-Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Messaging Network.
+Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
 
-Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
+These "FHIR Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
+
+It is the intention that the governance rules together with MedCom's standards for the individual messages can form the full and sufficient basis for implementing MedCom's healthcare messages.
+
+The governance rules must thus be able to function as “chief judge”, where there is doubt about the practical application of MedCom's FHIR messages.
+
+In the following, the "governance rules" for the use of MedCom's hospital messages are reviewed first, and then the more general communication rules. The "FHIR syntax and communication rules" must ensure a uniform use of MedCom's FHIR messages to the health and social area.
 
 ||||
 |:---|---|:---|
@@ -16,9 +22,34 @@ Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Websi
 
 What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 
-[Introduction details (Danish)](/assets/documents/01-Introduction.md)
+<!-- [Introduction details (Danish)](/assets/documents/01-Introduction.md)-->
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
+
+## Network Layer
+
+The Danish Healthcare Messaging Network is currently the VANS Network. VANS is an abbreviation of Value Added Network Services, which is run by 3 private VANS suppliers.
+To be able to communicate over the VANS Network, both senders and receivers **MUST** have an EAN number issued by the SOR. To be able to communicate a specific messagetype both senders and receivers **MUST** be registered in SOR with that messagetype and version.
+
+MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope
+
+Terms:
+
+- VANS
+- SOR
+- EAN (GLN, Location number)
+
+### VANSEnvelope
+
+- The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
+  - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
+- MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
+  - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
+  - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
+
+### Reliable Messaging using VANSEnvelope
+
+[Reliable Messaging](/assets/documents/Reliable_Messaging.md)
 
 ## MedCom FHIR Messaging
 
@@ -201,21 +232,6 @@ Provenance resources are a record-keeping assertion that gathers information abo
 [Provenance](/assets/documents/Provenance.md)
 
 [Provenance](http://hl7.org/fhir/R4/provenance.html)
-
-## Reliable Messaging
-
-[Reliable Messaging](/assets/documents/Reliable_Messaging.md)
-
-## Network Layer
-
-### Network Envelope
-
-- MedCom FHIR Messages **SHALL** be enveloped in a VANS ENVELOPE
-- The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
-  - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
-- MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
-  - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
-  - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
 ## Test and Certification
 
