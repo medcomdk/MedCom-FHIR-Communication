@@ -1,20 +1,13 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 <hr/>
-Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
-
-These "FHIR Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
-
-It is the intention that the governance rules together with MedCom's standards for the individual messages can form the full and sufficient basis for implementing MedCom's healthcare messages.
-
-The governance rules must thus be able to function as “chief judge”, where there is doubt about the practical application of MedCom's FHIR messages.
-
-In the following, the "governance rules" for the use of MedCom's hospital messages are reviewed first, and then the more general communication rules. The "FHIR syntax and communication rules" must ensure a uniform use of MedCom's FHIR messages to the health and social area.
 
 ||||||
 |:---|---|:---|:---|:---|
 |[MedComFHIR Messaging](#medcom-fhir-messaging) ||[Network Envelope](#network-envelope)|||
 |[MedCom FHIR Messages](#medcom-fhir-messages)  ||[Network Layer](#network-layer)|||
 |[Reliable Messaging](#reliable-messaging)      ||[Test and Certification](#test-and-certification)|||
+
+<hr/>
 
 ## Introduction
 
@@ -25,6 +18,15 @@ What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Frame
 <!-- [Introduction details (Danish)](/assets/documents/01-Introduction.md)-->
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
+Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
+
+These "FHIR Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
+
+It is the intention that the governance rules together with MedCom's standards for the individual messages can form the full and sufficient basis for implementing MedCom's healthcare messages.
+
+The governance rules must thus be able to function as “chief judge”, where there is doubt about the practical application of MedCom's FHIR messages.
+
+In the following, the "governance rules" for the use of MedCom's hospital messages are reviewed first, and then the more general communication rules. The "FHIR syntax and communication rules" must ensure a uniform use of MedCom's FHIR messages to the health and social area.
 
 ## Network Layer
 
