@@ -3,6 +3,7 @@
 
 ![messaging-best-practice](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging.png "messaging-best-practice")
 
+![messaging-best-practice-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "messaging-best-practice-principle")
 
 Reliable messaging in VANSenvelope is the default behaviour, but can explicitly be turned on by setting the 
 
