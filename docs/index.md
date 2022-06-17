@@ -51,7 +51,22 @@ Terms (to be moved to a termslist):
 
 ### Reliable Messaging
 
-![messaging-best-practice](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/messaging-best-practice-EN.png "messaging-best-practice")
+Reliable messaging is defined as:
+
+"In the most basic level, reliable messaging refers to the ability of a sender to deliver a message once and only once to its intended receiver. However the key requirements of reliable messaging can be captured more formally as follows:
+
+- Support carrying message traffic reliably in support of business processes whose lifetimes commonly exceed the up times of the components on which these processes are realized
+- Support quality-of-service assertions such as:
+- Each message sent be received exactly once (once and only once), at most once, at least once, and so on
+- Messages be received in the same order in which they were sent
+- Failure to deliver a message be made known to both the sender and receiver
+- Accommodate mobility of a reliable business process to different channels or physical machines
+- Support message transfer via intermediaries
+- Leverage the SOAP extensibility mechanism to achieve reliable messaging
+- Enable reliable messaging bindings to a variety of underlying reliable and unreliable transport protocols together with the Message Routing Protocol
+- Compose with other protocols to support security and other message delivery services
+
+![vansenvelope-reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "vansenvelope-reliable-messaging-principle")
 
 #### Reliable Messaging using VANSEnvelope
 
