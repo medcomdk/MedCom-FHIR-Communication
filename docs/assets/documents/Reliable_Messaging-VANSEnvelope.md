@@ -1,6 +1,12 @@
-# Reliable Messaging
+# Reliable Messaging using VANSenvelope
 
-When reliable messaging is implemented , the Receiver SHALL check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
+
+![messaging-best-practice](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging.png "messaging-best-practice")
+
+
+Reliable messaging in VANSenvelope is the default behaviour, but can explicitly be turned on by setting the 
+
+When reliable messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
 
 | Case                                                            | Description                 |
 |:----------------------------------------------------------------|:---------------------------|
