@@ -51,8 +51,6 @@ Terms (to be moved to a termslist):
 
 ### Reliable Messaging
 
-
-
 ![messaging-best-practice](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/messaging-best-practice-EN.png "messaging-best-practice")
 
 #### Reliable Messaging using VANSEnvelope
