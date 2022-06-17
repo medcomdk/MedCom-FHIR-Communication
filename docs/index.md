@@ -49,11 +49,15 @@ Terms (to be moved to a termslist):
   - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
-### Reliable Messaging using VANSEnvelope
+### Reliable Messaging
+
+
 
 ![messaging-best-practice](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/messaging-best-practice-EN.png "messaging-best-practice")
 
-[Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSenvelope.md)
+#### Reliable Messaging using VANSEnvelope
+
+[Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
 ## MedCom FHIR Messaging
 
