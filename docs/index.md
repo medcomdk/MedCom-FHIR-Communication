@@ -1,7 +1,7 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 ||||||
 |:---|---|:---|:---|:---|
-|[Network Layer](#network-layer)||[VANSEnvelope](#VANSEnvelope)||[Reliable Messaging using VANSEnvelope](#reliable-messaging- using-VANSEnvelope) |
+|[Network Layer](#network-layer)||[VANSEnvelope](#vansenvelope)||[Reliable Messaging using VANSEnvelope](#reliable-messaging-using-vansenvelope) |
 |[MedComFHIR Messaging](#medcom-fhir-messaging) ||[MedCom FHIR Messages](#medcom-fhir-messages) |||
 |[Test and Certification](#test-and-certification)|||||
 
@@ -36,9 +36,9 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope
 
 Terms (to be moved to a termslist):
 
-- VANS
-- SOR
-- EAN (GLN, Location number)
+- VANS - VANS is an abbreviation of Value Added Network Services
+- SOR - Sundhedsvæsenets Organisations Register (The Healthcare Organization Register)
+- EAN - (GLN, Location number)
 
 ### VANSEnvelope
 
