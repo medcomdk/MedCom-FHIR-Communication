@@ -1,11 +1,14 @@
 # Reliable Messaging using VANSenvelope
 
+Reliable messaging in VANSenvelope is the default mode, but can explicitly be turned on and off by setting the VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
 
-![messaging-best-practice](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging.png "messaging-best-practice")
+In FHIR Messaging this element **MUST** be "reliable" or left in default mode.
 
-![messaging-best-practice-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "messaging-best-practice-principle")
+When "reliable" the receiver of the VANSEnvelope **MUST** send a VANSEnvelopeAcknowledgment return to the original Sender.
 
-Reliable messaging in VANSenvelope is the default behaviour, but can explicitly be turned on by setting the 
+![VANSEnvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "VANSEnvelope_schema-reliable")
+
+![VANSEnvelope_schema-reliable-type](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable-type.png "VANSEnvelope_schema-reliable-type")
 
 When reliable messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
 
