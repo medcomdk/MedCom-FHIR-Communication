@@ -107,6 +107,10 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 In Asynchronous messaging, the server acknowledges receipt of the message immediately, and responds to the sender separately. The server may respond more than once to any given message.
 When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
 
+### Reliable Messaging using MedCom FHIR Messaging
+
+[Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-FHIR.md)
+
 ## MedCom FHIR Messages
 
 How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
