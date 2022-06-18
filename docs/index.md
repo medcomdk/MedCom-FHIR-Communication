@@ -109,7 +109,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 ### Reliable Messaging using MedCom FHIR Messaging
 
-[Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
+[Reliable Messaging using MedCom FHIR MessagingMedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
 ## MedCom FHIR Messages
 
@@ -254,9 +254,9 @@ Provenance resources are a record-keeping assertion that gathers information abo
 ![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts(Remote)")
 -->
 
-[Provenance](/assets/documents/Provenance.md)
+[MedComs use of Provenance](/assets/documents/Provenance.md)
 
-[Provenance](http://hl7.org/fhir/R4/provenance.html)
+[HL7 FHIR description of Provenance](http://hl7.org/fhir/R4/provenance.html)
 
 ## Test and Certification
 
