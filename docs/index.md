@@ -109,7 +109,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 ### Reliable Messaging using MedCom FHIR Messaging
 
-[Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-FHIR.md)
+[Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
 ## MedCom FHIR Messages
 
