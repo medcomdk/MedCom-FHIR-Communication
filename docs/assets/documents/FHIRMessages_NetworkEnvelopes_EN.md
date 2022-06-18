@@ -64,7 +64,7 @@ Name **SHALL** be the same as "Type nr." in MedCom's Standards Directory and wil
 
 #### Version
 
-Version **must** be the same as "Version" in MedCom's standard directory and will thus vary from message version to message version.
+Version **MUST** be the same as "Version" in MedCom's standard directory and will thus vary from message version to message version.
 
 ---
 
@@ -83,9 +83,9 @@ Specifically, the above for MedCom's FHIR messages means this
 |Name               |"MCM:FDIS91#`<postfix value>`"         |
 |Version            |"2.0.0"                                |
 
-Name **must** explicitly be taken from the following ValueSet: [VANS StatisticalCode Combinations](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
+Name **MUST** explicitly be taken from the following ValueSet: [VANS StatisticalCode Combinations](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
 
-Postfix Values for Name **must** be within this ValueSet, which is taken from: [CareCommunications ValueSet for categories](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-careCommunication-categories.html)
+Postfix Values for Name **MUST** be within this ValueSet, which is taken from: [CareCommunications ValueSet for categories](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-careCommunication-categories.html)
 
 ---
 
@@ -99,9 +99,9 @@ Postfix Values for Name **must** be within this ValueSet, which is taken from: [
 |Name               |"MCM:FDIS20#`<postfix value>`"          |
 |Version            |"2.0.0"                                 |
 
-Name **must** explicitly be taken from the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
+Name **MUST** explicitly be taken from the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
-Postfix Values for Name **must** be within this ValueSet, which is taken from the HospitalNotification ValueSet: MedCom Hospital Notification Message Activity Codes:  [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html)
+Postfix Values for Name **MUST** be within this ValueSet, which is taken from the HospitalNotification ValueSet: MedCom Hospital Notification Message Activity Codes:  [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html)
 
 ---
 
@@ -114,9 +114,9 @@ Postfix Values for Name **must** be within this ValueSet, which is taken from th
 |Name               |"MCM:FCTL1#`<postfix value>`"          |
 |Version            |"2.0.0"                                |
 
-Name **must** explicitly be taken from the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
+Name **MUST** explicitly be taken from the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
-Postfix Values for Name **must** be within this ValueSet, which is taken from the Response Code ValueSet: Codes:  [http://hl7.org/fhir/R4/valueset-response-code.html](http://hl7.org/fhir/R4/valueset-response-code.html)
+Postfix Values for Name **MUST** be within this ValueSet, which is taken from the Response Code ValueSet: Codes:  [http://hl7.org/fhir/R4/valueset-response-code.html](http://hl7.org/fhir/R4/valueset-response-code.html)
 
 ---
 
