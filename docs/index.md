@@ -260,9 +260,9 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 ## Test and Certification
 
-All profiles MUST be validated with the FHIR validator
+All profiles **MUST** be validated with the FHIR validator
 
-All profiles MUST be validated with TouchStone
+All profiles **MUST** be validated with TouchStone
 
 ## Release Notes
 
