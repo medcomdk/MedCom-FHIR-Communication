@@ -7,13 +7,13 @@
 [1. Introduction](#introduction) <br/>
 [2. Shipping envelopes](#shipping-envelopes) <br/>
 [2.1 VANSenvelope](#vansenvelope)) <br/>
-[2.1.1 Format][2.1.1] <br/>
-[2.1.2 Name][2.1.2] <br/>
-[2.1.3 Version][2.1.3] <br/>
-[3. FHIR meddelelsestyper][3] <br/>
-[3.1 CareCommunication][3.1] <br/>
-[3.2 HospitalNotification][3.2] <br/>
-[3.3 Acknowledgment][3.3] <br/>
+[2.1.1 Format](#format) <br/>
+[2.1.2 Name](#name) <br/>
+[2.1.3 Version](#version) <br/>
+[3. FHIR message types](#medcom-fhir-message-types) <br/>
+[3.1 CareCommunication](#carecommunication) <br/>
+[3.2 HospitalNotification](#hospitalnotification)) <br/>
+[3.3 Acknowledgment](#acknowledgement)) <br/>
 
 ---
 
@@ -24,6 +24,8 @@ MedCom's FHIR messages will be wrapped and appear in various envelope formats du
 Pt. shipping will take place in the existing VANS network and thus with the use of VANSenvelope unless otherwise specified under the individual standard. Reception can be both in VANSenvelope or in another reception envelope, e.g. KOMBITs BeskedFordeler envelope.
 
 Obs. When modernized infrastructure is implemented, it will draw on a new shipping envelope that will replace VANSenvelope, so this document will by that time be updated with the new envelope format. For a transitional period, both VANSenvelope and the new envelope will be used, but there will be clear clarifications of how this will take place.
+
+---
 
 ---
 
@@ -74,6 +76,8 @@ Specifically, the above for MedCom's FHIR messages means this
 
 ---
 
+---
+
 ### CareCommunication
 
 |||
@@ -86,6 +90,8 @@ Specifically, the above for MedCom's FHIR messages means this
 Name **MUST** explicitly be taken from the following ValueSet: [VANS StatisticalCode Combinations](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from: [CareCommunications ValueSet for categories](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-careCommunication-categories.html)
+
+---
 
 ---
 
@@ -105,6 +111,8 @@ Postfix Values for Name **MUST** be within this ValueSet, which is taken from th
 
 ---
 
+---
+
 ### Acknowledgement
 
 |||
@@ -119,14 +127,3 @@ Name **MUST** explicitly be taken from the following ValueSet: [https://build.fh
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from the Response Code ValueSet: Codes:  [http://hl7.org/fhir/R4/valueset-response-code.html](http://hl7.org/fhir/R4/valueset-response-code.html)
 
 ---
-
-[1]: ./MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#introduction
-[2]: ./MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#shipping-envelopes
-[2.1]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#VANSenvelope
-[2.1.1]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#format
-[2.1.2]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#name
-[2.1.3]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#version
-[3]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#fhir-meddelelsestyper
-[3.1]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#carecommunication
-[3.2]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#hospitalnotification
-[3.3]: https://github.com/hl7dk/dk-medcom/blob/1.0.3-ACK-VANSEnvCodes/input/markdown/MedComs%20FHIR-meddelelser%20og%20forsendelseskuvert.md/#acknowledgment
