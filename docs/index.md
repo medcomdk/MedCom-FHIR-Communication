@@ -8,21 +8,23 @@
 
 <hr/>
 
-## Introduction
-
-Some general HL7 FHIR Communication Rules can be found on the [HL7 FHIR R4 Website](http://hl7.org/fhir/R4/messaging.html).
+## Introduction to Governance for MedCom FHIR®© Messaging
 
 What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 
 Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
 
+The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR Communication Rules for FHIR Messaging can be found on the [HL7 FHIR R4 Messaging Website](http://hl7.org/fhir/R4/messaging.html).
+
 These "FHIR Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
 
-It is the intention that the governance rules together with MedCom's standards for the individual messages can form the full and sufficient basis for implementing MedCom's healthcare messages.
+It is the intention that the governance rules together with MedCom's standards for the individual messages form the full and sufficient basis for implementing MedCom's healthcare messages.
 
 The governance rules must thus be able to function as “chief judge”, where there is doubt about the practical application of MedCom's FHIR messages.
 
-In the following, the "governance rules" for the use of MedCom's hospital messages are reviewed first, and then the more general communication rules. The "FHIR syntax and communication rules" must ensure a uniform use of MedCom's FHIR messages to the health and social area.
+The "Governance for MedCom FHIR®© Messaging" must ensure a uniform use of MedCom's FHIR messages to the health and social area domains in Denmark.
+
+In the following we follow a top-down approach by addressing the Network Layer and its ruleset first and then next dig into MedCom's FHIR messages.
 
 <!-- [Introduction details (Danish)](/assets/documents/01-Introduction.md)-->
 
