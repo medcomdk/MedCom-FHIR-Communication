@@ -87,7 +87,7 @@ Specifically, the above for MedCom's FHIR messages means this
 |Name               |"MCM:FDIS91#`<postfix value>`"         |
 |Version            |"2.0.0"                                |
 
-Name **MUST** explicitly be taken from the following ValueSet: [VANS StatisticalCode Combinations](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
+Name **MUST** explicitly be taken from the following ValueSet: [CodeSystem-medcom-messaging-sorEdiSystem](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from: [CareCommunications ValueSet for categories](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-careCommunication-categories.html)
 
@@ -105,9 +105,11 @@ Postfix Values for Name **MUST** be within this ValueSet, which is taken from: [
 |Name               |"MCM:FDIS20#`<postfix value>`"          |
 |Version            |"2.0.0"                                 |
 
-Name **MUST** explicitly be taken from the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
+Name **MUST** explicitly be taken from the following ValueSet: [CodeSystem-medcom-messaging-sorEdiSystem](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from the HospitalNotification ValueSet: MedCom Hospital Notification Message Activity Codes:  [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html)
+
+The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
 ---
 
