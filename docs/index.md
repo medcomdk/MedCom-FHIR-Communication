@@ -16,7 +16,7 @@
 |[Test and Certification](#test-and-certification)||                                              ||                                                                                |
 -->
 
-<hr/>
+---
 
 ## Introduction to Governance for MedCom FHIR®© Messaging
 
@@ -42,20 +42,28 @@ In the following we follow a top-down approach by addressing the Network Layer a
 
 ---
 
+| Terms |||
+|:------||:-----|
+| EAN   | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
+| SDS  || Sundhedsdatastyrelsen (The Danish Health Data Authority) |
+| SOR   | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
+| VANS  || VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |
+
+---
+
 ## Network Layer
 
-The Danish Healthcare Messaging Network is currently the VANS Network. VANS is an abbreviation of Value Added Network Services, which is run by 3 private VANS suppliers.
-To be able to communicate over the VANS Network, both senders and receivers **MUST** have an EAN number issued by the SOR. To be able to communicate a specific messagetype both senders and receivers **MUST** be registered in SOR with that messagetype and version.
+The Danish Healthcare Messaging Network is currently the VANS Network.
 
-MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope
+To be able to communicate over the VANS Network, both senders and receivers **MUST** have an EAN number issued by the SOR.
 
-Terms (to be moved to a termslist):
-
-- VANS - VANS is an abbreviation of Value Added Network Services
-- SOR - Sundhedsvæsenets Organisations Register (The Healthcare Organization Register)
-- EAN - (GLN, Location number)
+To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **MUST** be registered in SOR with that messagetype and version.
 
 ### VANSEnvelope
+
+The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
+
+MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are shipped as "application/fhir+xml" or "application/fhir+json"
 
 - The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
@@ -65,26 +73,46 @@ Terms (to be moved to a termslist):
 
 ### Reliable Messaging
 
+Reliable Messaging Model
+
+![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/Ws-reliablemessaging.png "Ws-reliablemessaging")
+
+A Application Source (AS) wishes to reliably send messages to an Application Destination (AD) over an unreliable infrastructure. To accomplish this, they make use of a Reliable Messaging Source (RMS) and a Reliable Messaging Destination (RMD). The AS sends a message to the RMS. The RMS uses the a Reliable Messaging protocol to transmit the message to the RMD. The RMD delivers the message to the AD. If the RMS cannot transmit the message to the RMD for some reason, it must raise an exception or otherwise indicate to the AS that the message was not transmitted. The AS and RMS may be implemented within the same process space or they may be separate components. Similarly, the AD and RMD may exist within the same process space or they may be separate components.
+
+The protocol defines and supports a number of Delivery Assurances. These are:
+
+**AtLeastOnce**
+- Each message will be delivered to the AD at least once. If a message cannot be delivered, an error must be raised by the RMS and/or the RMD. Messages may be delivered to the AD more than once (i.e. the AD may get duplicate messages).
+
+**AtMostOnce**
+- Each message will be delivered to the AD at most once. Messages might not be delivered to the AD, but the AD will never get duplicate messages.
+
+**ExactlyOnce**
+Each message will be delivered to the AD exactly once. If a message cannot be delivered, an error must be raised by the RMS and/or the RMD. The AD will never get duplicate messages.
+InOrder
+Messages will be delivered from the RMD to the AD in the order that they are sent from the AS to the RMS. This assurance can be combined with any of the above assurances.
+<!-->
 Reliable messaging is defined as:
 
-"In the most basic level, reliable messaging refers to the ability of a sender to deliver a message once and only once to its intended receiver. However the key requirements of reliable messaging can be captured more formally as follows:
+"Reliable messaging refers to the ability of a sender to deliver a message once and only once to its intended receiver. However the key requirements of reliable messaging can be captured more formally as follows:
 
 - Support carrying message traffic reliably in support of business processes whose lifetimes commonly exceed the up times of the components on which these processes are realized
 - Support quality-of-service assertions such as:
-- Each message sent be received exactly once (once and only once), at most once, at least once, and so on
-- Messages be received in the same order in which they were sent
-- Failure to deliver a message be made known to both the sender and receiver
+  - Each message sent be received exactly once (once and only once), at most once, at least once, and so on
+  - Messages be received in the same order in which they were sent
+  - Failure to deliver a message be made known to both the sender and receiver
 - Accommodate mobility of a reliable business process to different channels or physical machines
 - Support message transfer via intermediaries
 - Leverage the SOAP extensibility mechanism to achieve reliable messaging
 - Enable reliable messaging bindings to a variety of underlying reliable and unreliable transport protocols together with the Message Routing Protocol
 - Compose with other protocols to support security and other message delivery services
-
-![vansenvelope-reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "vansenvelope-reliable-messaging-principle")
+-->
 
 #### Reliable Messaging using VANSEnvelope
 
 [Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
+
+![vansenvelope-reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "vansenvelope-reliable-messaging-principle")
 
 ---
 
