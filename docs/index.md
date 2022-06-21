@@ -1,14 +1,11 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 
 - [Network Layer](#network-layer)
-
   - [VANSEnvelope](#vansenvelope)
-  - [Reliable Messaging using VANSEnvelope](#reliable-messaging-using-vansenvelope)
-
+  - [Reliable Messaging](#reliable-messaging)
+    - [Reliable Messaging using VANSEnvelope](#reliable-messaging-using-vansenvelope)
 - [MedComFHIR Messaging](#medcom-fhir-messaging)
-
 - [MedCom FHIR Messages](#medcom-fhir-messages)
-
 - [Test and Certification](#test-and-certification)
 
 <!--
