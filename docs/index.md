@@ -34,7 +34,7 @@ The governance rules must thus be able to function as “chief judge”, where t
 
 The "Governance for MedCom FHIR®© Messaging" must ensure a uniform use of MedCom's FHIR messages to the health and social area domains in Denmark.
 
-In the following we follow a top-down approach by addressing the Network Layer and its ruleset first and then next dig into MedCom's FHIR messages.
+In the following we follow a top-down approach by addressing shipping over the Network Layer and its ruleset first, then the logistics for MedCom FHIR Messaging and last cover the basic ruleset of how to compose a MedCom FHIR message.
 
 <!-- [Introduction details (Danish)](/assets/documents/01-Introduction.md)-->
 
