@@ -30,6 +30,8 @@ In the following we follow a top-down approach by addressing the Network Layer a
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
+---
+
 ## Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network. VANS is an abbreviation of Value Added Network Services, which is run by 3 private VANS suppliers.
@@ -74,6 +76,8 @@ Reliable messaging is defined as:
 
 [Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
+---
+
 ## MedCom FHIR Messaging
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2. Applications asserting conformance to this framework claim to be conformant to "FHIR messaging".
@@ -112,6 +116,8 @@ When a message is received, a receiver can determine from the content of the mes
 ### Reliable Messaging using MedCom FHIR Messaging
 
 [Reliable Messaging using MedCom FHIR MessagingMedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
+
+---
 
 ## MedCom FHIR Messages
 
