@@ -1,6 +1,10 @@
 # Reliable Messaging using VANSenvelope
 
-Reliable messaging in VANSenvelope is the default mode, but can explicitly be turned on and off by setting the VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
+Reliable Messaging in VANSenvelope 
+
+![vansenvelope-reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "vansenvelope-reliable-messaging-principle")
+
+Reliable Messaging in VANSenvelope is the default mode, but can explicitly be turned on and off by setting the VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
 
 In FHIR Messaging this element **MUST** be "reliable" or left in default mode.
 
@@ -10,7 +14,7 @@ When "reliable" the receiver of the VANSEnvelope **MUST** send a VANSEnvelopeAck
 
 ![VANSEnvelope_schema-reliable-type](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable-type.png "VANSEnvelope_schema-reliable-type")
 
-When reliable messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
+When Reliable Messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
 
 | Case                                                            | Description                 |
 |:----------------------------------------------------------------|:---------------------------|
@@ -21,4 +25,4 @@ When reliable messaging is implemented , the Receiver **SHALL** check the incomi
 
 The duration period for caching does generally not need to be very long. At a minimum, it could be 1 minute longer than the timeout of the sending system, though it may need to be longer depending on the re-sending policies of the sending system.
 
-Applications that implement reliable messaging declare their reliable cache period in their Capability Statement.
+Applications that implement Reliable Messaging declare their reliable cache period in their Capability Statement.
