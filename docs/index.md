@@ -42,12 +42,12 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 ---
 
-| Terms |||
-|:------||:-----|
-| EAN   || Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
-| SDS   || Sundhedsdatastyrelsen (The Danish Health Data Authority) |
-| SOR   || Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
-| VANS  || VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |
+| Terms ||
+|:------|:-----|
+| EAN   | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
+| SDS   | Sundhedsdatastyrelsen (The Danish Health Data Authority) |
+| SOR   | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
+| VANS  | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |
 
 ---
 
@@ -59,19 +59,9 @@ To be able to communicate over the VANS Network, both senders and receivers **MU
 
 To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **MUST** be registered in SOR with that messagetype and version.
 
-### VANSEnvelope
-
-The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
-
-MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are shipped as "application/fhir+xml" or "application/fhir+json"
-
-- The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
-  - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
-- MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
-  - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
-  - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
-
 ## Reliable Messaging
+
+A key part of the Network Layer is to provide funcionality for Reliable Messaging
 
 Reliable Messaging Model
 
@@ -149,6 +139,26 @@ Resubmissions are always done manually.
 
 For historical reasons, there has been no requirement to use positive receipts, which is why Scenario # 1a can in practice be run as Scenario # 1b. The sender system may therefore experience that there is no acknowledgment of receipt of a message, and it is not recommended to make program logic that sends messages.
 For a number of standards, however, there is an explicit requirement for a positive receipt, see the documentation for the individual standards if this is the case.#### Reliable Messaging using VANSEnvelope
+
+### VANSEnvelope
+
+The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
+
+MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are shipped as "application/fhir+xml" or "application/fhir+json"
+
+- The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
+  - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
+- MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
+  - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
+  - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
+
+### Reliable Messaging using VANSenvelope
+
+VANSenvelope is also developed to support Reliable Messaging.
+VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
+
+- The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
+  - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
 
 [Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
