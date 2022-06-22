@@ -29,6 +29,8 @@ Applications that implement Reliable Messaging declare their reliable cache peri
 
 ### Different Reliable Messaging scenarios using VANSEnvelope
 
+**Update this section with VANSEnvelope specific details**
+
 This section provides a description of the different types of Reliable Messaging scenarios.
 
 Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgment request
