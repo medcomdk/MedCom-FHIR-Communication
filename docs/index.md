@@ -129,7 +129,7 @@ The Receiving System **SHALL** ignore the contents of the duplicate instances of
 ### Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
 
 Correct retransmission of a message A.
-The Sending System forms a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
+The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
 Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
 
 ### Scenario # 2b - Message is sent normally, acknowledgment is lost along the way (Google translated)
@@ -165,7 +165,7 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 - The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
 
-The details on how to setup Reliable Messaging using VANSEnvelope [here]](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
+The details on how to setup Reliable Messaging using VANSEnvelope [here](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
 ---
 
