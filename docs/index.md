@@ -71,7 +71,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
   - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
-### Reliable Messaging
+## Reliable Messaging
 
 Reliable Messaging Model
 
@@ -108,7 +108,7 @@ Reliable messaging is defined as:
 - Compose with other protocols to support security and other message delivery services
 -->
 
-## Different reliable messaging scenarios
+### Different reliable messaging scenarios
 
 This section provides a description of the different types of reliable messaging scenarios.
 
