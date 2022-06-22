@@ -75,7 +75,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
 
 Reliable Messaging Model
 
-![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/Ws-reliablemessaging.png "Ws-reliablemessaging")
+<!-- ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/Ws-reliablemessaging.png "Ws-reliablemessaging")
 
 A Application Source (AS) wishes to reliably send messages to an Application Destination (AD) over an unreliable infrastructure. To accomplish this, they make use of a Reliable Messaging Source (RMS) and a Reliable Messaging Destination (RMD). The AS sends a message to the RMS. The RMS uses the a Reliable Messaging protocol to transmit the message to the RMD. The RMD delivers the message to the AD. If the RMS cannot transmit the message to the RMD for some reason, it must raise an exception or otherwise indicate to the AS that the message was not transmitted. The AS and RMS may be implemented within the same process space or they may be separate components. Similarly, the AD and RMD may exist within the same process space or they may be separate components.
 
@@ -91,7 +91,7 @@ The protocol defines and supports a number of Delivery Assurances. These are:
 Each message will be delivered to the AD exactly once. If a message cannot be delivered, an error must be raised by the RMS and/or the RMD. The AD will never get duplicate messages.
 InOrder
 Messages will be delivered from the RMD to the AD in the order that they are sent from the AS to the RMS. This assurance can be combined with any of the above assurances.
-<!-->
+
 Reliable messaging is defined as:
 
 "Reliable messaging refers to the ability of a sender to deliver a message once and only once to its intended receiver. However the key requirements of reliable messaging can be captured more formally as follows:
@@ -108,7 +108,47 @@ Reliable messaging is defined as:
 - Compose with other protocols to support security and other message delivery services
 -->
 
-#### Reliable Messaging using VANSEnvelope
+## Different reliable messaging scenarios
+
+This section provides a description of the different types of reliable messaging scenarios.
+
+Scenario # 1a - Normally successful unsolicidated message or request message flow with receipt request
+Scenario # 1b - Duplicate an unchanged message with a positive acknowledgment request
+Scenario # 2a - (Re) Sending Unchanged Message
+Scenario # 2b - Message is sent normally, receipt is lost along the way
+Scenario # 2c - (Re) Sending Modified Message
+
+### Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgment request (Google translated)
+
+An unsolicidated message or request message is sent with a new request for a positive receipt from the Sending System to a Receiving System. The Receiving System **SHALL** always send a positive acknowledgment to the Sending System.
+
+### Scenario # 1b - Duplicate an unchanged message with a positive acknowledgment request (Google translated)
+
+Duplication of an unchanged message can be done in one of the following ways:
+• An error may have occurred in the flow from the Sender system to the Receiver system with subsequent duplication of message A in scenario 1a.
+• The sender system may inadvertently send a duplicate of message A
+The messages are completely identical.
+Message A with request for positive receipt K arrives at the Receiver System more than once.
+The receiving system ignores the contents of the duplicate instances of message A, but acknowledges duplicate message in the same way as the original message. A positive receipt must not be sent first and then a negative receipt or vice versa. The receiving system may never display several instances of message A in a message overview, but may of course log in to a system log that receipt of a duplicate has taken place. If the Sender system of message A has received receipt K already after the Receiver system's receipt of message A's first instance, the Sender system must similarly ignore the duplicate instances of the receipt. The sender system may never display multiple instances of receipt K in a message summary, but may of course like to log in a system log that receipt of a duplicate has taken place.
+
+### Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
+
+Correct retransmission of a message A.
+The sender system forms a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
+Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
+
+### Scenario # 2b - Message is sent normally, acknowledgment is lost along the way (Google translated)
+
+As Scenario # 1a, but where receipt is lost along the way from the Sender system to the Receiver system.
+The shipping pattern is like Scenario # 2a.
+
+### Scenario # 2c - (Re-) Sending Modified Message (Google translated)
+
+If the content of the letter part is changed, the message is considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
+Resubmissions are always done manually.
+
+For historical reasons, there has been no requirement to use positive receipts, which is why Scenario # 1a can in practice be run as Scenario # 1b. The sender system may therefore experience that there is no acknowledgment of receipt of a message, and it is not recommended to make program logic that sends messages.
+For a number of standards, however, there is an explicit requirement for a positive receipt, see the documentation for the individual standards if this is the case.#### Reliable Messaging using VANSEnvelope
 
 [Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
