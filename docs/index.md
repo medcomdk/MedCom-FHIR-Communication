@@ -20,13 +20,13 @@
 
 ## Introduction to Governance for MedCom FHIR®© Messaging
 
-What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
+What you will find here is, how MedCom has profiled the HL7 FHIR®© Messaging Framework to work in a Danish context.
 
 Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
 
-The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR Communication Rules for FHIR Messaging can be found on the [HL7 FHIR R4 Messaging Website](http://hl7.org/fhir/R4/messaging.html).
+The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR®© Communication Rules for FHIR Messaging can be found on the [HL7 FHIR®© R4 Messaging Website](http://hl7.org/fhir/R4/messaging.html).
 
-These "FHIR Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
+These "MedCom FHIR®© Messaging Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
 
 It is the intention that the governance rules together with MedCom's standards for the individual messages form the full and sufficient basis for implementing MedCom's healthcare messages.
 
@@ -41,6 +41,8 @@ In the following we follow a top-down approach by addressing shipping over the N
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
 ---
+
+### Terms used in Governance for MedCom FHIR®© Messaging
 
 | Terms ||
 |:------|:-----|
@@ -61,9 +63,11 @@ To be able to communicate a specific MedCom FHIR messagetype both senders and re
 
 ## Reliable Messaging
 
-A key part of the Network Layer is to provide funcionality for Reliable Messaging
+A key part of the Network Layer is to provide funcionality for Reliable Messaging.
 
-Reliable Messaging Model
+Sending and Receiving Systems **MUST** support the Reliable Messaging scenarios outlined in the following section.
+
+**Insert generic Reliable Messaging Model here**
 
 <!-- ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/Ws-reliablemessaging.png "Ws-reliablemessaging")
 
@@ -82,9 +86,9 @@ Each message will be delivered to the AD exactly once. If a message cannot be de
 InOrder
 Messages will be delivered from the RMD to the AD in the order that they are sent from the AS to the RMS. This assurance can be combined with any of the above assurances.
 
-Reliable messaging is defined as:
+Reliable Messaging is defined as:
 
-"Reliable messaging refers to the ability of a sender to deliver a message once and only once to its intended receiver. However the key requirements of reliable messaging can be captured more formally as follows:
+"Reliable Messaging refers to the ability of a sender to deliver a message once and only once to its intended receiver. However the key requirements of Reliable Messaging can be captured more formally as follows:
 
 - Support carrying message traffic reliably in support of business processes whose lifetimes commonly exceed the up times of the components on which these processes are realized
 - Support quality-of-service assertions such as:
@@ -93,43 +97,44 @@ Reliable messaging is defined as:
   - Failure to deliver a message be made known to both the sender and receiver
 - Accommodate mobility of a reliable business process to different channels or physical machines
 - Support message transfer via intermediaries
-- Leverage the SOAP extensibility mechanism to achieve reliable messaging
-- Enable reliable messaging bindings to a variety of underlying reliable and unreliable transport protocols together with the Message Routing Protocol
+- Leverage the SOAP extensibility mechanism to achieve Reliable Messaging
+- Enable Reliable Messaging bindings to a variety of underlying reliable and unreliable transport protocols together with the Message Routing Protocol
 - Compose with other protocols to support security and other message delivery services
 -->
 
-### Different reliable messaging scenarios
+### Different Reliable Messaging scenarios
 
-This section provides a description of the different types of reliable messaging scenarios.
+This section provides a description of the different types of Reliable Messaging scenarios.
 
-Scenario # 1a - Normally successful unsolicidated message or request message flow with receipt request
+Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgment request
 Scenario # 1b - Duplicate an unchanged message with a positive acknowledgment request
 Scenario # 2a - (Re) Sending Unchanged Message
-Scenario # 2b - Message is sent normally, receipt is lost along the way
+Scenario # 2b - Message is sent normally, acknowledgment is lost along the way
 Scenario # 2c - (Re) Sending Modified Message
 
 ### Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgment request (Google translated)
 
-An unsolicidated message or request message is sent with a new request for a positive receipt from the Sending System to a Receiving System. The Receiving System **SHALL** always send a positive acknowledgment to the Sending System.
+An unsolicidated message or request message is sent with a new request for a positive acknowledgment from the Sending System to a Receiving System.
+The Receiving System **SHALL** always send a positive acknowledgment to the Sending System.
 
 ### Scenario # 1b - Duplicate an unchanged message with a positive acknowledgment request (Google translated)
 
 Duplication of an unchanged message can be done in one of the following ways:
-• An error may have occurred in the flow from the Sender system to the Receiver system with subsequent duplication of message A in scenario 1a.
-• The sender system may inadvertently send a duplicate of message A
-The messages are completely identical.
-Message A with request for positive receipt K arrives at the Receiver System more than once.
-The receiving system ignores the contents of the duplicate instances of message A, but acknowledges duplicate message in the same way as the original message. A positive receipt must not be sent first and then a negative receipt or vice versa. The receiving system may never display several instances of message A in a message overview, but may of course log in to a system log that receipt of a duplicate has taken place. If the Sender system of message A has received receipt K already after the Receiver system's receipt of message A's first instance, the Sender system must similarly ignore the duplicate instances of the receipt. The sender system may never display multiple instances of receipt K in a message summary, but may of course like to log in a system log that receipt of a duplicate has taken place.
+• An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a message in scenario 1a.
+• The Sending System may inadvertently send a duplicate of message
+The messages are completely identical and as a consequence the message with request for positive acknowledgment arrives at the Receiving System more than once.
+
+The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. A positive acknowledgment may not be sent first and then a negative acknowledgment or vice versa. The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. If the Sending System of the message has received acknowledgment already after the Receiving System's acknowledgment of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgment. The Sending System **SHALL** never display multiple instances of the same acknowledgment in a message summary, but **SHALL** log in a system log that acknowledgment of a duplicate has taken place.
 
 ### Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
 
 Correct retransmission of a message A.
-The sender system forms a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
+The Sending System forms a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
 Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
 
 ### Scenario # 2b - Message is sent normally, acknowledgment is lost along the way (Google translated)
 
-As Scenario # 1a, but where receipt is lost along the way from the Sender system to the Receiver system.
+As Scenario # 1a, but where acknowledgment is lost along the way from the Sending System to the Receiving System.
 The shipping pattern is like Scenario # 2a.
 
 ### Scenario # 2c - (Re-) Sending Modified Message (Google translated)
@@ -137,8 +142,8 @@ The shipping pattern is like Scenario # 2a.
 If the content of the letter part is changed, the message is considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
 Resubmissions are always done manually.
 
-For historical reasons, there has been no requirement to use positive receipts, which is why Scenario # 1a can in practice be run as Scenario # 1b. The sender system may therefore experience that there is no acknowledgment of receipt of a message, and it is not recommended to make program logic that sends messages.
-For a number of standards, however, there is an explicit requirement for a positive receipt, see the documentation for the individual standards if this is the case.#### Reliable Messaging using VANSEnvelope
+For historical reasons, there has been no requirement to use positive acknowledgments, which is why Scenario # 1a can in practice be run as Scenario # 1b. The Sending System may therefore experience that there is no acknowledgment of acknowledgment of a message, and it is not recommended to make program logic that sends messages.
+For a number of standards, however, there is an explicit requirement for a positive acknowledgment, see the documentation for the individual standards if this is the case.#### Reliable Messaging using VANSEnvelope
 
 ### VANSEnvelope
 
@@ -160,9 +165,7 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 - The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
 
-[Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
-
-![vansenvelope-reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging-principle.png "vansenvelope-reliable-messaging-principle")
+The details on how to setup Reliable Messaging using VANSEnvelope [here]](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
 ---
 
@@ -184,7 +187,7 @@ This specification assumes that content will be delivered from one application t
 
 In Denmark this specification rules the exchange of messages through the Danish Messaging Network, currently known as VANS, and using the central organization register, SOR, for delivering the virtual adressing information.
 
-The agreements around the content of the messages and the behavior of the two applications form the "contract" that describes the exchange. These contracts are exactly what MedCom delivers in the Danish Healthcare Domain and therefore MedCom adds regional and local agreements to the rules defined in the HL7 FHIR specification.
+The agreements around the content of the messages and the behavior of the two applications form the "contract" that describes the exchange. These contracts are exactly what MedCom delivers in the Danish Healthcare Domain and therefore MedCom adds regional and local agreements to the rules defined in the HL7 FHIR®© specification.
 
 This specification ignores the existence of interface engines and message transfer agents that exist between the source and destination. Either they are transparent to the message/transaction content and irrelevant to this specification, or they are actively involved in manipulating the message content (in particular, the source and destination headers are often changed). If these middleware agents are modifying the message content, then they become responsible for honoring the contract that applies (including applicable profiles) in both directions.
 
@@ -198,7 +201,7 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 
 #### Asynchronous
 
-In Asynchronous messaging, the server acknowledges receipt of the message immediately, and responds to the sender separately. The server may respond more than once to any given message.
+In Asynchronous messaging, the server acknowledges acknowledgment of the message immediately, and responds to the sender separately. The server may respond more than once to any given message.
 When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
 
 ### Reliable Messaging using MedCom FHIR Messaging
@@ -352,7 +355,7 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 [MedComs use of Provenance](/assets/documents/Provenance.md)
 
-[HL7 FHIR description of Provenance](http://hl7.org/fhir/R4/provenance.html)
+[HL7 FHIR®© description of Provenance](http://hl7.org/fhir/R4/provenance.html)
 
 ## Test and Certification
 
