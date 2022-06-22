@@ -44,9 +44,9 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 | Terms |||
 |:------||:-----|
-| EAN   | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
-| SDS  || Sundhedsdatastyrelsen (The Danish Health Data Authority) |
-| SOR   | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
+| EAN   || Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
+| SDS   || Sundhedsdatastyrelsen (The Danish Health Data Authority) |
+| SOR   || Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
 | VANS  || VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |
 
 ---
