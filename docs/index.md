@@ -1,12 +1,14 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 
-- [Network Layer](#network-layer)
+- [Introduction](#introduction-to-governance-for-medcom-fhir®©-messaging)
+- [Governance for the Network Layer](#governance-for-network-layer)
   - [VANSEnvelope](#vansenvelope)
   - [Reliable Messaging](#reliable-messaging)
     - [Reliable Messaging using VANSEnvelope](#reliable-messaging-using-vansenvelope)
-- [MedComFHIR Messaging](#medcom-fhir-messaging)
-- [MedCom FHIR Messages](#medcom-fhir-messages)
-- [Test and Certification](#test-and-certification)
+- [Governance for MedComFHIR Messaging](#governance-for-medcom-fhir-messaging)
+- [Governance for MedCom FHIR Messages](#governance-for-medcom-fhir-messages)
+- [Governance for Test and Certification](#governance-for-test-and-certification)
+- [Governance for Release Notes](#governance-for-release-notes)
 
 <!--
 |                                                 ||                                              ||                                                                                |
@@ -53,7 +55,7 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 ---
 
-## Network Layer
+## Governance for Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network.
 
@@ -169,7 +171,7 @@ The details on how to setup Reliable Messaging using VANSEnvelope [here](/assets
 
 ---
 
-## MedCom FHIR Messaging
+## Governance for MedCom FHIR Messaging
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2. Applications asserting conformance to this framework claim to be conformant to "FHIR messaging".
 
@@ -210,7 +212,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 ---
 
-## MedCom FHIR Messages
+## Governance for MedCom FHIR Messages
 
 How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
 
@@ -357,12 +359,12 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 [HL7 FHIR®© description of Provenance](http://hl7.org/fhir/R4/provenance.html)
 
-## Test and Certification
+## Governance for Test and Certification
 
 All profiles **MUST** be validated with the FHIR validator
 
 All profiles **MUST** be validated with TouchStone
 
-## Release Notes
+## Governance for Release Notes
 
 Updates in the latest release.
