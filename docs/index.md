@@ -96,11 +96,11 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 
 This section provides a description of the different types of Reliable Messaging scenarios.
 
-Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgment request
-Scenario # 1b - Duplicate an unchanged message with a positive acknowledgment request
-Scenario # 2a - (Re) Sending Unchanged Message
-Scenario # 2b - Message is sent normally, acknowledgment is lost along the way
-Scenario # 2c - (Re) Sending Modified Message
+- Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgment request
+- Scenario # 1b - Duplicate an unchanged message with a positive acknowledgment request
+- Scenario # 2a - (Re) Sending Unchanged Message
+- Scenario # 2b - Message is sent normally, acknowledgment is lost along the way
+- Scenario # 2c - (Re) Sending Modified Message
 
 #### Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgment request (Google translated)
 
