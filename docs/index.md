@@ -4,7 +4,6 @@
 - [Governance for the Network Layer](#governance-for-network-layer)
   - [VANSEnvelope](#vansenvelope)
   - [Reliable Messaging](#reliable-messaging)
-    - [Reliable Messaging using VANSEnvelope](#reliable-messaging-using-vansenvelope)
 - [Governance for MedComFHIR Messaging](#governance-for-medcom-fhir-messaging)
 - [Governance for MedCom FHIR Messages](#governance-for-medcom-fhir-messages)
 - [Governance for Test and Certification](#governance-for-test-and-certification)
