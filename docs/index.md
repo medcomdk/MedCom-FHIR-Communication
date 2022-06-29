@@ -70,7 +70,7 @@ Sending and Receiving Systems **MUST** support the Reliable Messaging scenarios 
 
 **Insert generic Reliable Messaging Model here**
 
-<!-- ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/Ws-reliablemessaging.png "Ws-reliablemessaging")
+![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/reliable-messaging-principle.png "reliablemessaging")
 
 A Application Source (AS) wishes to reliably send messages to an Application Destination (AD) over an unreliable infrastructure. To accomplish this, they make use of a Reliable Messaging Source (RMS) and a Reliable Messaging Destination (RMD). The AS sends a message to the RMS. The RMS uses the a Reliable Messaging protocol to transmit the message to the RMD. The RMD delivers the message to the AD. If the RMS cannot transmit the message to the RMD for some reason, it must raise an exception or otherwise indicate to the AS that the message was not transmitted. The AS and RMS may be implemented within the same process space or they may be separate components. Similarly, the AD and RMD may exist within the same process space or they may be separate components.
 
