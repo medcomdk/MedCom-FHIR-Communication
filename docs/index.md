@@ -64,44 +64,27 @@ To be able to communicate a specific MedCom FHIR messagetype both senders and re
 
 ## Reliable Messaging
 
-A key part of the Network Layer is to provide funcionality for Reliable Messaging.
+A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
 
 Sending and Receiving Systems **MUST** support the Reliable Messaging scenarios outlined in the following section.
 
-**Insert generic Reliable Messaging Model here**
+**Generic Reliable Messaging Model**
 
 ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/reliable-messaging-principle.png "reliablemessaging")
 
-A Application Source (AS) wishes to reliably send messages to an Application Destination (AD) over an unreliable infrastructure. To accomplish this, they make use of a Reliable Messaging Source (RMS) and a Reliable Messaging Destination (RMD). The AS sends a message to the RMS. The RMS uses the a Reliable Messaging protocol to transmit the message to the RMD. The RMD delivers the message to the AD. If the RMS cannot transmit the message to the RMD for some reason, it must raise an exception or otherwise indicate to the AS that the message was not transmitted. The AS and RMS may be implemented within the same process space or they may be separate components. Similarly, the AD and RMD may exist within the same process space or they may be separate components.
+Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending system and its Messagehandler (MSH), to a Receiving Ecosystem, the Receiving System and its Messagehandler (MSH), or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
-The protocol defines and supports a number of Delivery Assurances. These are:
+A message sent from the Sending Ecosystem to the intended Receiving Ecosystem can be well received but the returned Acknowledgment can be lost. When discovering that the Sending Ecosystem after a well-agreed mutual time hasn't received the Acknowledgment, it therefore has to resend the message. That message can be lost and again the Sending Ecosystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the Acknowledgment will eventually reach the original Sending Ecosystem and the message transaction will be fulfilled. The Receiving Ecosystem will in the last event recognize the message as a duplicat and will return exactly the same Acknowledgment content as the first time it received the message.
+Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
 
-**AtLeastOnce**
-- Each message will be delivered to the AD at least once. If a message cannot be delivered, an error must be raised by the RMS and/or the RMD. Messages may be delivered to the AD more than once (i.e. the AD may get duplicate messages).
-
-**AtMostOnce**
-- Each message will be delivered to the AD at most once. Messages might not be delivered to the AD, but the AD will never get duplicate messages.
-
-**ExactlyOnce**
-Each message will be delivered to the AD exactly once. If a message cannot be delivered, an error must be raised by the RMS and/or the RMD. The AD will never get duplicate messages.
-InOrder
-Messages will be delivered from the RMD to the AD in the order that they are sent from the AS to the RMS. This assurance can be combined with any of the above assurances.
-
-Reliable Messaging is defined as:
-
-"Reliable Messaging refers to the ability of a sender to deliver a message once and only once to its intended receiver. However the key requirements of Reliable Messaging can be captured more formally as follows:
-
-- Support carrying message traffic reliably in support of business processes whose lifetimes commonly exceed the up times of the components on which these processes are realized
-- Support quality-of-service assertions such as:
-  - Each message sent be received exactly once (once and only once), at most once, at least once, and so on
-  - Messages be received in the same order in which they were sent
-  - Failure to deliver a message be made known to both the sender and receiver
-- Accommodate mobility of a reliable business process to different channels or physical machines
-- Support message transfer via intermediaries
-- Leverage the SOAP extensibility mechanism to achieve Reliable Messaging
-- Enable Reliable Messaging bindings to a variety of underlying reliable and unreliable transport protocols together with the Message Routing Protocol
-- Compose with other protocols to support security and other message delivery services
--->
+- A Sending Ecosystem **MUST** send a MedCom FHIR Message with a flag indicating that it expects an Acknowledgment on the Message
+- A Receiving Ecosystem **MUST** return an Acknowledgment on a received MedCom FHIR Message with a flag indicating that it expects an Acknowledgment on the Message
+- A Sending Ecosystem **MUST** be able to handle that it hasn't received an Acknowledgment on a MedCom FHIR Message
+-- A Sending Ecosystem **MUST** resend the MedCom FHIR Message when the expected Acknowledgment is not received within a timelimit of 15 minutes
+-- A Sending Ecosystem **MUST NOT** resend the MedCom FHIR Message when the expected Acknowledgment is not received more than 2 times
+- A Receiving Ecosystem **MUST** be able to receive a MedCom FHIR Message as a duplicate
+-- A Receiving Ecosystem **MUST NOT** present the end-user for a duplicate of a MedCom FHIR Message.
+-- A Receiving Ecosystem **MUST** return the same Acknowledgment content on a received MedCom FHIR Message as it returned on the first received copy of the Message
 
 ### Different Reliable Messaging scenarios
 
