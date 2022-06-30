@@ -47,20 +47,29 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 | Terms ||
 |:------|:-----|
-| EAN   | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
-| SDS   | Sundhedsdatastyrelsen (The Danish Health Data Authority) |
-| SOR   | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
-| VANS  | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |
+| EAN       | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
+| SDS       | Sundhedsdatastyrelsen (The Danish Health Data Authority) |
+| SOR       | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
+| VANS      | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |
+| Dispatch  | Dispatch of a message means the process in the Sending System, where a message is send|
+| Shipment  | Shipment of a message means the whole process from dispatchment in the Sending System to reception in the Receiving System|
 
 ---
 
 # Governance for Network Layer
 
-The Danish Healthcare Messaging Network is currently the VANS Network.
+The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
 To be able to communicate over the VANS Network, both senders and receivers **MUST** have an EAN number issued by the SOR.
 
 To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **MUST** be registered in SOR with that messagetype and version.
+
+The Sending system **MUST** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
+
+## Asynchronous Messaging
+
+In Asynchronous messaging, the Receiving System dispatches the acknowledgement of the message immediately, and responds to the Sending System separately. The Receiving System may respond more than once to any given message.
+When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
 
 ## Reliable Messaging
 
@@ -94,7 +103,7 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 
 ### Different Reliable Messaging scenarios
 
-This section provides a description of the different types of Reliable Messaging scenarios.
+This section provides a description of the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages see the description in the detailed sections of the respective chapters for these subjects.
 
 - Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request
 - Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request
@@ -110,8 +119,10 @@ The Receiving System **SHALL** always send a positive acknowledgement to the Sen
 #### Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
 
 Duplication of an unchanged message can be done in one of the following ways:
+
 - An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a message in scenario 1a.
 - The Sending System may inadvertently send a duplicate of message
+
 The messages are completely identical and as a consequence the message with request for positive acknowledgement arrives at the Receiving System more than once.
 
 The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa. The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. If the Sending System of the message has received acknowledgement already after the Receiving System's acknowledgement of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgement. The Sending System **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
@@ -161,13 +172,16 @@ The details on how to setup Reliable Messaging using VANSEnvelope can be found [
 
 ## Governance for MedCom FHIR Messaging
 
-FHIR Resources can be used in a traditional messaging context, much like HL7 v2. Applications asserting conformance to this framework claim to be conformant to "FHIR messaging".
+This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
-In FHIR messaging, a "request message" or an "unsolicidated message" is sent from a source application to a destination application when an event happens. Events mostly correspond to things that happen in the real world.
+FHIR Resources can be used in a traditional messaging context, much like HL7 v2. 
+<!-- Applications asserting conformance to this framework claim to be conformant to "FHIR messaging". -->
 
-The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](/assets/documents/MedCom-FHIR-Messaging-Events.md).
+In FHIR messaging, a "request message" or an "unsolicidated message" is sent from a source application (Sending System) to a destination application (Receiving System) when an event happens. Events mostly correspond to things that happen in the real world.
 
 The message consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the bundle depend on the type of the message, eg. in which context a message is triggered.
+
+The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](/assets/documents/MedCom-FHIR-Messaging-Events.md).
 
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a bundle of resources identified by the type "message", with the first resource in each bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
@@ -189,14 +203,11 @@ Multiple response messages **SHALL NOT** be returned for messages of consequence
 
 In principle, source applications **SHOULD** not wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
 
-#### Asynchronous
-
-In Asynchronous messaging, the server acknowledges acknowledgement of the message immediately, and responds to the sender separately. The server may respond more than once to any given message.
-When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
-
 ### Reliable Messaging using MedCom FHIR Messaging
 
 [Reliable Messaging using MedCom FHIR MessagingMedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
+
+### Reliable Messaging using MedCom FHIR Messaging
 
 ---
 
