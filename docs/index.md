@@ -171,11 +171,11 @@ FHIR Resources can be used in a traditional messaging context, much like HL7 v2.
 
 In FHIR messaging, a "request message" or an "unsolicidated message" is sent from a source application (Sending System) to a destination application (Receiving System) when an event happens. Events mostly correspond to things that happen in the real world.
 
-The message consists of a Bundle identified by the type "message", with the first resource in the bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the bundle depend on the type of the message, eg. in which context a message is triggered.
+The message consists of a Bundle identified by the type "message", with the first resource in the Bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the Bundle depend on the type of the message, eg. in which context a message is triggered.
 
 The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](/assets/documents/MedCom-FHIR-Messaging-Events.md).
 
-The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a bundle of resources identified by the type "message", with the first resource in each bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
+The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
 ### Basic Danish Messaging Assumptions [TBD]
 
@@ -229,11 +229,11 @@ A Bundle resource of type "message", which is a container for a collection of ot
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
-[Bundle in FHIR R4](http://hl7.org/fhir/R4/bundle.html)
+[Bundle in FHIR R4](http://hl7.org/fhir/R4/Bundle.html)
 
 | **MedComMessingMessage Rules**|
 |:---|
-| A MedCom FHIR Message **SHALL** be a bundle resource of type "message" |
+| A MedCom FHIR Message **SHALL** be a Bundle resource of type "message" |
 | A MedCom FHIR Message **SHALL** contain at least one bundled MedComMessagingHeader resource |
 | The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
 | A MedCom FHIR Message **SHALL** contain at least two bundled MedComMessagingOrganization resources |
@@ -253,24 +253,28 @@ One common operation performed with resources is to gather a collection of resou
 
 ### Narrative Texts
 
-A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed oout by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
 Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
 
 Narratives contains two sub elements, status and div.
 
+#### The status element
+
+[TBD]
+
 #### The div element
 
-The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes. 
+The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
 
 The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
 
 The div element **SHALL** have some non-whitespace content (text or an image).
 
-| **General Narrative Text Rules**|
-|:---|
-| All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element |
-| The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. |
- The narrative **SHALL** reflect the impact of all modifier extensions. |
+**General Narrative Text Rules**
+
+- All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element 
+- The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. 
+- The narrative **SHALL** reflect the impact of all modifier extensions. 
 
 [Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative)
 
