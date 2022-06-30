@@ -9,14 +9,6 @@
 - [5. Governance for Test and Certification](#5-governance-for-test-and-certification)
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
 
-<!--
-|                                                 ||                                              ||                                                                                |
-|:---|:---|:---|:---|:---|
-|[Network Layer](#network-layer)                  ||[VANSEnvelope](#vansenvelope)                 ||[Reliable Messaging using VANSEnvelope](#reliable-messaging-using-vansenvelope) |
-|[MedComFHIR Messaging](#medcom-fhir-messaging)   ||[MedCom FHIR Messages](#medcom-fhir-messages) ||                                                                                |
-|[Test and Certification](#test-and-certification)||                                              ||                                                                                |
--->
-
 ---
 
 # 1. Introduction to Governance for MedCom FHIR®© Messaging
@@ -255,9 +247,9 @@ One common operation performed with resources is to gather a collection of resou
 | A MedCom FHIR Message **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
 | The MedComMessagingHeader resource **SHALL** contain a Narrative text |
 
-[here](https://github.com/hl7dk/dk-medcom-messaging/blob/master/input/pagecontent/index.md)
+[Detailed description for MedCom Messaging](https://medcomdk.github.io/dk-medcom-messaging/)
 
-[Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md)
+<!-- [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md) -->
 
 ### Narrative Texts
 
@@ -266,7 +258,7 @@ Contained resources do not have narrative, but their content SHALL be represente
 
 Narratives contains two sub elements, status and div.
 
-**The div element**
+#### The div element
 
 The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes. 
 
@@ -358,12 +350,16 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 [HL7 FHIR®© description of Provenance](http://hl7.org/fhir/R4/provenance.html)
 
-## Governance for Test and Certification
+# 5. Governance for Test and Certification
 
 All profiles **MUST** be validated with the FHIR validator
 
 All profiles **MUST** be validated with TouchStone
 
-## Governance for Release Notes
+**Insert requirements from the test and certification process here**
+
+# 6. Governance for Release Notes
 
 Updates in the latest release.
+
+**Insert requirements from the test and certification process here**
