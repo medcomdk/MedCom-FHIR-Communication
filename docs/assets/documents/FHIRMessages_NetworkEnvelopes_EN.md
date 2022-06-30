@@ -76,8 +76,6 @@ Specifically, the above for MedCom's FHIR messages means this
 
 ---
 
----
-
 ### CareCommunication
 
 |||
@@ -91,7 +89,7 @@ Name **MUST** explicitly be taken from the following ValueSet: [CodeSystem-medco
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from: [CareCommunications ValueSet for categories](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-careCommunication-categories.html)
 
----
+The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
 ---
 
@@ -113,8 +111,6 @@ The combined Name+Postfix **MUST** explicitly conform with the following ValueSe
 
 ---
 
----
-
 ### Acknowledgement
 
 |||
@@ -127,5 +123,7 @@ The combined Name+Postfix **MUST** explicitly conform with the following ValueSe
 Name **MUST** explicitly be taken from the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from the Response Code ValueSet: Codes:  [http://hl7.org/fhir/R4/valueset-response-code.html](http://hl7.org/fhir/R4/valueset-response-code.html)
+
+The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
 ---
