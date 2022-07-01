@@ -2,17 +2,23 @@
 
 Reliable Messaging in VANSEnvelope
 
+The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is shown below:
+
 ![VANSEnvelope reliable messaging](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging.png "VANSEnvelope-reliable-messaging")
 
-Reliable Messaging in VANSEnvelope is the default mode, but can explicitly be turned on and off by setting the VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
+A VansEnvelope consists of the following elements:
+
+![VANSEnvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable.png  "VANSEnvelope_schema-reliable")
+
+A VansEnvelope's Reliale Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
+
+![VANSEnvelope_schema-reliable-type](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable-type.png "VANSEnvelope_schema-reliable-type")
+
+Reliable Messaging in VANSEnvelope is the default mode, but can explicitly be turned on and off by setting this VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
 
 In FHIR Messaging this element **MUST** be "reliable" or left in default mode.
 
 When "reliable" the receiver of the VANSEnvelope **MUST** send a VANSEnvelopeAcknowledgment return to the original Sender.
-
-![VANSEnvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable.png  "VANSEnvelope_schema-reliable")
-
-![VANSEnvelope_schema-reliable-type](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable-type.png "VANSEnvelope_schema-reliable-type")
 
 When Reliable Messaging is implemented , the Receiver **SHALL** check the incoming EnvelopeIdentifier and Message/MetaInformation/Identifier (hereafter MessageIdentifier) against a cache of previously received VANSEnvelopes. The correct action to take depends on what is received:
 
