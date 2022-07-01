@@ -20,6 +20,10 @@ In FHIR Messaging this element **MUST** be "reliable" or left in default mode.
 
 When "reliable" the receiver of the VANSEnvelope **MUST** send a VANSEnvelopeAcknowledgment return to the original Sender.
 
+A VansEnvelope consists of the following elements:
+
+![vansenvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope_schema-acknowledgement.png  "vansenvelope_schema-reliable")
+
 When Reliable Messaging is implemented , the Receiver **SHALL** check the incoming EnvelopeIdentifier and Message/MetaInformation/Identifier (hereafter MessageIdentifier) against a cache of previously received VANSEnvelopes. The correct action to take depends on what is received:
 
 | Case                                                            | Description                 |
