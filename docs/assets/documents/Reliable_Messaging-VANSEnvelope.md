@@ -4,15 +4,15 @@ Reliable Messaging in VANSEnvelope
 
 The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is shown below:
 
-![VANSEnvelope reliable messaging](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope-reliable-messaging.png "VANSEnvelope-reliable-messaging")
+![VANSEnvelope reliable messaging](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope_reliable-messaging.png "vansenvelope_reliable-messaging")
 
 A VansEnvelope consists of the following elements:
 
-![VANSEnvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable.png  "VANSEnvelope_schema-reliable")
+![vansenvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope_schema-reliable.png  "vansenvelope_schema-reliable")
 
 A VansEnvelope's Reliale Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
 
-![VANSEnvelope_schema-reliable-type](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/VANSEnvelope_schema-reliable-type.png "VANSEnvelope_schema-reliable-type")
+![vansenvelope_schema-reliable-type](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope_schema-reliable-type.png "vansenvelope_schema-reliable-type")
 
 Reliable Messaging in VANSEnvelope is the default mode, but can explicitly be turned on and off by setting this VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
 
