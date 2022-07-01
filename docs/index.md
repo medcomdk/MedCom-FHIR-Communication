@@ -52,6 +52,8 @@ In the following we follow a top-down approach by addressing shipping over the N
 | MSH | The part of a system that dispatches a message or receives a message |N/A|
 | FHIR MSH | The part of a system that dispatches a FHIR message or receives a FHIR message |N/A|
 | VANSEnvelope MSH | The part of a system that dispatches a VANSEnvelope message or receives a VANSEnvelope message |N/A|
+| Sending Ecosystem | The collection of Sending System, Sending FHIR MSH and Sending VANSEnvelope MSH, that dispatches a message |N/A|
+| Receiving Ecosystem | The collection of Receiving System, Receiving FHIR MSH and Receiving VANSEnvelope MSH, that receives a message |N/A|
 
 ---
 
