@@ -33,9 +33,7 @@ When Reliable Messaging is implemented , the Receiver **SHALL** check the incomi
 | MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original VANSEnvelopeAcknowledgement has been lost (failed to return to the request issuer) and thus the previously received Message in a VANSEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original VANSEnvelopeAcknowledgement **SHALL** be resent|
 | The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **MUST** never be reused. Receiver **MAY** return a Negative VANSEnvelopeAcknowledgement|
 
-### Different Reliable Messaging scenarios using VANSEnvelope
-
-**Update this section with VANSEnvelope specific details**
+## Different Reliable Messaging scenarios using VANSEnvelope
 
 This section provides a description of the different types of Reliable Messaging scenarios.
 
@@ -53,8 +51,10 @@ The Receiving System **SHALL** always send a positive VANSEnvelopeAcknowledgemen
 ### Scenario # 1b - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request (Google translated)
 
 Duplication of an unchanged VANSEnvelope can be done in one of the following ways:
-• An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a VANSEnvelope in scenario 1a.
-• The Sending System may inadvertently send a duplicate of VANSEnvelope
+
+- An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a VANSEnvelope in scenario 1a.
+- The Sending System may inadvertently send a duplicate of VANSEnvelope
+
 The VANSEnvelopes are completely identical and as a consequence the VANSEnvelope with request for positive VANSEnvelopeAcknowledgement arrives at the Receiving System more than once.
 
 The Receiving System **SHALL** ignore the contents of the duplicate instances of the VANSEnvelope, but **SHALL** acknowledge a duplicate VANSEnvelope in the same way as the original VANSEnvelope. A positive VANSEnvelopeAcknowledgement may not be sent first and then a negative VANSEnvelopeAcknowledgement or vice versa. The Receiving System **SHALL** never display several instances of a VANSEnvelope in a VANSEnvelope overview, but **SHALL** log in a system log that reception of a duplicate VANSEnvelope has taken place. If the Sending System of the VANSEnvelope has received VANSEnvelopeAcknowledgement already after the Receiving System's VANSEnvelopeAcknowledgement of a VANSEnvelope's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the VANSEnvelopeAcknowledgement. The Sending System **SHALL** never display multiple instances of the same VANSEnvelopeAcknowledgement in a VANSEnvelope summary, but **SHALL** log in a system log that VANSEnvelopeAcknowledgement of a duplicate has taken place.
