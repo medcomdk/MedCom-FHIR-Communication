@@ -37,14 +37,14 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 ## Terms used in Governance for MedCom FHIR®© Messaging
 
-| Terms ||
-|:------|:-----|
-| EAN       | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |
-| SDS       | Sundhedsdatastyrelsen (The Danish Health Data Authority) |
-| SOR       | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |
-| VANS      | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |
-| Dispatch  | Dispatch of a message means the process in the Sending System, where a message is send|
-| Shipment  | Shipment of a message means the whole process from dispatchment in the Sending System to reception in the Receiving System|
+| Terms |Description|Link|
+|:------|:-----|:-----|
+| EAN       | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |[Only Danish](https://www.medcom.dk/opslag/support/sundhedsvaesenets-organisationsregister-sor) - further links on that page|
+| SDS       | Sundhedsdatastyrelsen (The Danish Health Data Authority) |[Danish](https://sundhedsdatastyrelsen.dk/da/) & [English](https://sundhedsdatastyrelsen.dk/da/english)|
+| SOR       | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |[Only Danish](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering)|
+| VANS      | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |KMD (link missing), MultiMed (link missing), TrueCommerce (link missing)|
+| Dispatch  | Dispatch of a message means the process in the Sending System, where a message is send|N/A|
+| Shipment  | Shipment of a message means the whole process from dispatchment in the Sending System to reception in the Receiving System|N/A|
 
 ---
 
