@@ -8,7 +8,7 @@ The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is 
 
 A VansEnvelope consists of the following elements:
 
-![vansenvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope_schema-reliable.png  "vansenvelope_schema-reliable")
+![vansenvelope_schema-reliable](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/vansenvelope_schema-reliable.png "vansenvelope_schema-reliable")
 
 A VansEnvelope's Reliale Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
 
