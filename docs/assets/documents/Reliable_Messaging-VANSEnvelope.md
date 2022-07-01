@@ -28,14 +28,10 @@ When Reliable Messaging is implemented , the Receiver **SHALL** check the incomi
 
 | Case                                                            | Description                 |
 |:----------------------------------------------------------------|:---------------------------|
-| Both EnvelopeIdentifier and MessageIdentifier have not been received      | This is the normal case, and the message **SHALL** be processed            |
-| Both EnvelopeIdentifier and MessageIdentifier have already been received  | The original VANSEnvelope has server may either reprocess the message, or reject the message|
+| Both EnvelopeIdentifier and MessageIdentifier have not been received       | This is the normal case, and the message **SHALL** be processed            |
+| Both EnvelopeIdentifier and MessageIdentifier have already been received   | The original VANSEnvelope has server may either reprocess the message, or reject the message|
 | MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original VANSEnvelopeAcknowledgement has been lost (failed to return to the request issuer) and thus the previously received Message in a VANSEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original VANSEnvelopeAcknowledgement **SHALL** be resent|
-| The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values should never be reused |
-
-The duration period for caching does generally not need to be very long. At a minimum, it could be 1 minute longer than the timeout of the sending system, though it may need to be longer depending on the re-sending policies of the sending system.
-
-Applications that implement Reliable Messaging declare their reliable cache period in their Capability Statement.
+| The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **MUST** never be reused. Receiver **MAY** return a Negative VANSEnvelopeAcknowledgement|
 
 ### Different Reliable Messaging scenarios using VANSEnvelope
 
@@ -43,42 +39,38 @@ Applications that implement Reliable Messaging declare their reliable cache peri
 
 This section provides a description of the different types of Reliable Messaging scenarios.
 
-Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request
-Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request
-Scenario # 2a - (Re) Sending Unchanged Message
-Scenario # 2b - Message is sent normally, acknowledgement is lost along the way
-Scenario # 2c - (Re) Sending Modified Message
+Scenario # 1a - Normally successful unsolicidated VANSEnvelope or request message flow with VANSEnvelopeAcknowledgement request
+Scenario # 1b - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request
+Scenario # 2a - (Re) Sending Unchanged VANSEnvelope
+Scenario # 2b - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way
+Scenario # 2c - (Re) Sending Modified VANSEnvelope
 
-### Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request (Google translated)
+### Scenario # 1a - Normally successful unsolicidated VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request (Google translated)
 
-An unsolicidated message or request message is sent with a new request for a positive acknowledgement from the Sending System to a Receiving System.
-The Receiving System **SHALL** always send a positive acknowledgement to the Sending System.
+An unsolicidated VANSEnvelope is sent with a new request for a positive VANSEnvelopeAcknowledgement from the Sending System to a Receiving System.
+The Receiving System **SHALL** always send a positive VANSEnvelopeAcknowledgement to the Sending System.
 
-### Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
+### Scenario # 1b - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request (Google translated)
 
-Duplication of an unchanged message can be done in one of the following ways:
-• An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a message in scenario 1a.
-• The Sending System may inadvertently send a duplicate of message
-The messages are completely identical and as a consequence the message with request for positive acknowledgement arrives at the Receiving System more than once.
+Duplication of an unchanged VANSEnvelope can be done in one of the following ways:
+• An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a VANSEnvelope in scenario 1a.
+• The Sending System may inadvertently send a duplicate of VANSEnvelope
+The VANSEnvelopes are completely identical and as a consequence the VANSEnvelope with request for positive VANSEnvelopeAcknowledgement arrives at the Receiving System more than once.
 
-The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa. The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. If the Sending System of the message has received acknowledgement already after the Receiving System's acknowledgement of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgement. The Sending System **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
+The Receiving System **SHALL** ignore the contents of the duplicate instances of the VANSEnvelope, but **SHALL** acknowledge a duplicate VANSEnvelope in the same way as the original VANSEnvelope. A positive VANSEnvelopeAcknowledgement may not be sent first and then a negative VANSEnvelopeAcknowledgement or vice versa. The Receiving System **SHALL** never display several instances of a VANSEnvelope in a VANSEnvelope overview, but **SHALL** log in a system log that reception of a duplicate VANSEnvelope has taken place. If the Sending System of the VANSEnvelope has received VANSEnvelopeAcknowledgement already after the Receiving System's VANSEnvelopeAcknowledgement of a VANSEnvelope's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the VANSEnvelopeAcknowledgement. The Sending System **SHALL** never display multiple instances of the same VANSEnvelopeAcknowledgement in a VANSEnvelope summary, but **SHALL** log in a system log that VANSEnvelopeAcknowledgement of a duplicate has taken place.
 
-### Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
+### Scenario # 2a - (Re) Sending Unchanged VANSEnvelope (Google translated)
 
 Correct retransmission of a message A.
-The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
-Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
+The Sending System **SHALL** form a new VANSEnvelope with a new ID and time of dispatch. Since there has been no change in the Message content section, the rest of the VANSEnvelope remains identical. The VANSEnvelope is sent and VANSEnvelopeAcknowledged as a completely new VANSEnvelope according to Scenario # 1a or # 1b.
+Re-dispatches are always done manually and should be in accordance with the normal response time for the specific VANSEnvelope flow.
 
-### Scenario # 2b - Message is sent normally, acknowledgement is lost along the way (Google translated)
+### Scenario # 2b - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way (Google translated)
 
-As Scenario # 1a, but where acknowledgement is lost along the way from the Sending System to the Receiving System.
+As Scenario # 1a, but where VANSEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
 The shipping pattern is like Scenario # 2a.
 
 ### Scenario # 2c - (Re-) Sending Modified Message (Google translated)
 
-If the content of the letter part is changed, the message is considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
-Resubmissions are always done manually.
-
-For historical reasons, there has been no requirement to use positive acknowledgements, which is why Scenario # 1a can in practice be run as Scenario # 1b. The Sending System may therefore experience that there is no acknowledgement of acknowledgement of a message, and it is not recommended to make program logic that sends messages.
-For a number of standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.#### Reliable Messaging using VANSEnvelope
-
+If the content of the Message content part is changed, the VANSEnvelope is considered a completely new VANSEnvelope and consequently change of both EnvelopeIdentifier, MessageIdentifier and timestamp **SHALL** be made, where relevant.
+Resubmissions **SHALL** always done manually.
