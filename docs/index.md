@@ -37,14 +37,21 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 ## Terms used in Governance for MedCom FHIR®© Messaging
 
+(to be further expanded and detailed)
+
 | Terms |Description|Link|
 |:------|:-----|:-----|
-| EAN       | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number) |[Only Danish](https://www.medcom.dk/opslag/support/sundhedsvaesenets-organisationsregister-sor) - further links on that page|
+| EAN       | Location Number issued by th GS1 organization through its partners all over the world - in Denmark SDS ( also known as GLN, Location number). Location numbers and related electronic message types are used for electronic message-based communication between the health service parties |[Only Danish](https://www.medcom.dk/opslag/support/sundhedsvaesenets-organisationsregister-sor) - further links on that page|
 | SDS       | Sundhedsdatastyrelsen (The Danish Health Data Authority) |[Danish](https://sundhedsdatastyrelsen.dk/da/) & [English](https://sundhedsdatastyrelsen.dk/da/english)|
 | SOR       | Sundhedsvæsenets Organisations Register (Healthcare Organization Register in Denmark ) |[Only Danish](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering)|
 | VANS      | VANS is an abbreviation of Value Added Network Services, in Denmark an Asynchronous Network run by 3 private suppliers |KMD (link missing), MultiMed (link missing), TrueCommerce (link missing)|
 | Dispatch  | Dispatch of a message means the process in the Sending System, where a message is send|N/A|
 | Shipment  | Shipment of a message means the whole process from dispatchment in the Sending System to reception in the Receiving System|N/A|
+| Sending System | The system that dispatches a message |N/A|
+| Receiving System | The system that receives a shipped message |N/A|
+| MSH | The part of a system that dispatches a message or receives a message |N/A|
+| FHIR MSH | The part of a system that dispatches a FHIR message or receives a FHIR message |N/A|
+| VANSEnvelope MSH | The part of a system that dispatches a VANSEnvelope message or receives a VANSEnvelope message |N/A|
 
 ---
 
@@ -78,7 +85,7 @@ Realiable Messaging is the way to secure that important information sent through
 A message sent from the Sending Ecosystem to the intended Receiving Ecosystem can be well received but the returned acknowledgement can be lost. When discovering that the Sending Ecosystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. That message can be lost and again the Sending Ecosystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending Ecosystem and the message transaction will be fulfilled. The Receiving Ecosystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
 
-This ruleset is a generic ruleset governing the principles of Reliable Messaging:
+**This ruleset is a generic ruleset governing the principles of Reliable Messaging:**
 
 - A Sending Ecosystem **MUST** send a MedCom Message with a flag indicating that it expects an acknowledgement on the MedCom Message
 - A Receiving Ecosystem **MUST** return an MedCom acknowledgement on a received MedCom Message with a flag indicating that it expects a MedCom acknowledgement on the MedCom Message
@@ -121,7 +128,7 @@ The Receiving System **SHALL** ignore the contents of the duplicate instances of
 
 #### Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
 
-Correct retransmission of a message A.
+Correct retransmission of a message.
 The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
 Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
 
