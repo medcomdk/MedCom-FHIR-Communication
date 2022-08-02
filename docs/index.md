@@ -15,7 +15,7 @@
 
 What you will find here is, how MedCom has profiled the HL7 FHIR®© Messaging Framework to work in a Danish context.
 
-Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
+Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages SHALL be exhanged in the Danish Healthcare Messaging Network.
 
 The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR®© Communication Rules for FHIR Messaging can be found on the [HL7 FHIR®© R4 Messaging Website](http://hl7.org/fhir/R4/messaging.html).
 
@@ -61,11 +61,11 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
-To be able to communicate over the VANS Network, both senders and receivers **MUST** have an EAN number issued by the SOR.
+To be able to communicate over the VANS Network, both senders and receivers **SHALL** have an EAN number issued by the SOR.
 
-To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **MUST** be registered in SOR with that messagetype and version.
+To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **SHALL** be registered in SOR with that messagetype and version.
 
-The Sending system **MUST** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
+The Sending system **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
 ## Asynchronous Messaging
 
@@ -76,7 +76,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
 
-Sending and Receiving Systems **MUST** support the Reliable Messaging scenarios outlined in the following section.
+Sending and Receiving Systems **SHALL** support the Reliable Messaging scenarios outlined in the following section.
 
 **Generic Reliable Messaging Model**
 
@@ -89,16 +89,16 @@ Any of these events can happen over time and therefore Reliable Messaging define
 
 **This ruleset is a generic ruleset governing the principles of Reliable Messaging:**
 
-- A Sending Ecosystem **MUST** send a MedCom Message with a flag indicating that it expects an acknowledgement on the MedCom Message
-- A Receiving Ecosystem **MUST** return an MedCom acknowledgement on a received MedCom Message with a flag indicating that it expects a MedCom acknowledgement on the MedCom Message
-- A Sending Ecosystem **MUST** be able to handle an unacknowledged MedCom Message
--- A Sending Ecosystem **MUST** resend the MedCom Message, when the expected MedCom acknowledgement is not received within a timelimit of 15 minutes
--- A Sending Ecosystem **MUST** change the MessageEnvelopeId and the MessageSentTime of a resend MedCom Message
--- A Sending Ecosystem **MUST NOT** resend the MedCom Message more than 2 times, when the expected acknowledgement is not received
-- A Receiving Ecosystem **MUST** be able to receive a MedCom Message as a duplicate
--- A Receiving Ecosystem **MUST NOT** present the end-user for a duplicate of a MedCom Message.
--- A Receiving Ecosystem **MUST** change the MessageEnvelopeId and the MessageSentTime of a resend acknowledgement
--- A Receiving Ecosystem **MUST** return the same MedCom acknowledgement content on a received MedCom Message as it returned on the first received copy of the MedCom Message
+- A Sending Ecosystem **SHALL** send a MedCom Message with a flag indicating that it expects an acknowledgement on the MedCom Message
+- A Receiving Ecosystem **SHALL** return an MedCom acknowledgement on a received MedCom Message with a flag indicating that it expects a MedCom acknowledgement on the MedCom Message
+- A Sending Ecosystem **SHALL** be able to handle an unacknowledged MedCom Message
+-- A Sending Ecosystem **SHALL** resend the MedCom Message, when the expected MedCom acknowledgement is not received within a timelimit of 15 minutes
+-- A Sending Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend MedCom Message
+-- A Sending Ecosystem **SHALL NOT** resend the MedCom Message more than 2 times, when the expected acknowledgement is not received
+- A Receiving Ecosystem **SHALL** be able to receive a MedCom Message as a duplicate
+-- A Receiving Ecosystem **SHALL NOT** present the end-user for a duplicate of a MedCom Message.
+-- A Receiving Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend acknowledgement
+-- A Receiving Ecosystem **SHALL** return the same MedCom acknowledgement content on a received MedCom Message as it returned on the first received copy of the MedCom Message
 
 A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
 
@@ -365,9 +365,9 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 # 5. Governance for Test and Certification
 
-All profiles **MUST** be validated with the FHIR validator
+All profiles **SHALL** be validated with the FHIR validator
 
-All profiles **MUST** be validated with TouchStone
+All profiles **SHALL** be validated with TouchStone
 
 **Insert requirements from the test and certification process here**
 
