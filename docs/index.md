@@ -15,7 +15,7 @@
 
 What you will find here is, how MedCom has profiled the HL7 FHIR®© Messaging Framework to work in a Danish context.
 
-Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages SHALL be exhanged in the Danish Healthcare Messaging Network.
+Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
 
 The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR®© Communication Rules for FHIR Messaging can be found on the [HL7 FHIR®© R4 Messaging Website](http://hl7.org/fhir/R4/messaging.html).
 
@@ -76,7 +76,7 @@ When a message is received, a receiver can determine from the content of the mes
 
 A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
 
-Sending and Receiving Systems **SHALL** support the Reliable Messaging scenarios outlined in the following section.
+Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
 
 **Generic Reliable Messaging Model**
 
@@ -375,4 +375,4 @@ All profiles **SHALL** be validated with TouchStone
 
 Updates in the latest release.
 
-**Insert requirements from the test and certification process here**
+**Insert requirements from Release Notes**
