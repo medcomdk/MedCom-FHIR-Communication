@@ -70,7 +70,7 @@
             {% if site.menuurl_item1 %}
               <a href="{{ site.menuurl_item1 }}">{{ site.menutxt_item1 }}</a>
             {% endif %}
-            {% if site.menuurl_item2 and site.menuurl_item2!=this.url %}
+            {% if site.menuurl_item2 and site.menuurl_item2!=<script>window.location.href;</script> %}
               <a href="{{ site.menuurl_item2 }}">{{ site.menutxt_item2 }}</a>
             {% endif %}
             {% if site.menuurl_item3 %}
@@ -87,6 +87,8 @@
         <p/>
         <hr/>
       </strong>
+
+      
 
         <!--p>{{ site.description | default: site.github.project_tagline }}</p-->
 
