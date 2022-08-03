@@ -64,8 +64,8 @@
         <h3 align="left">This specification conforms to {{ site.fhir_version }}</h3>
         
         <strong>
-          <div class="dropdown">
-          <button class="dropbtn">Menu</button>
+        <div class="dropdown">
+          <button class="dropbtn">Navigation</button>
           <div class="dropdown-content">
             {% if site.menuurl_item1 %}
               <a href="{{ site.menuurl_item1 }}">{{ site.menutxt_item1 }}</a>
@@ -74,11 +74,31 @@
               <a href="{{ site.menuurl_item2 }}">{{ site.menutxt_item2 }}</a>
             {% endif %}
             {% if site.menuurl_item3 %}
-              <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/">Z</a>
+              <a href="{{ site.menuurl_item3 }}">{{ site.menutxt_item3 }}</a>
             {% endif %}
-              <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#About">About</a>
-          </div>
+            {% if site.menuurl_item4 %}
+              <a href="{{ site.menuurl_item5 }}">{{ site.menutxt_item4 }}</a>
+            {% endif %}
+            </div>
         </div>
+        <div class="dropdown">
+          <button class="dropbtn">Navigation2</button>
+          <div class="dropdown-content">
+            {% if site.menuurl_item1 %}
+              <a href="{{ site.menuurl_item1 }}">{{ site.menutxt_item1 }}</a>
+            {% endif %}
+            {% if site.menuurl_item2 %}
+              <a href="{{ site.menuurl_item2 }}">{{ site.menutxt_item2 }}</a>
+            {% endif %}
+            {% if site.menuurl_item3 %}
+              <a href="{{ site.menuurl_item3 }}">{{ site.menutxt_item3 }}</a>
+            {% endif %}
+            {% if site.menuurl_item4 %}
+              <a href="{{ site.menuurl_item5 }}">{{ site.menutxt_item4 }}</a>
+            {% endif %}
+            </div>
+        </div>
+        <br/>
         <hr/>
       </strong>
 
