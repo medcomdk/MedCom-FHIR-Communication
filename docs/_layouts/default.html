@@ -70,14 +70,17 @@
             {% if site.menuurl_item1 %}
               <a href="{{ site.menuurl_item1 }}">{{ site.menutxt_item1 }}</a>
             {% endif %}
-            {% if site.menuurl_item2 %}
+            {% if site.menuurl_item2 and site.menuurl_item2!=site.thisurl %}
               <a href="{{ site.menuurl_item2 }}">{{ site.menutxt_item2 }}</a>
             {% endif %}
             {% if site.menuurl_item3 %}
               <a href="{{ site.menuurl_item3 }}">{{ site.menutxt_item3 }}</a>
             {% endif %}
             {% if site.menuurl_item4 %}
-              <a href="{{ site.menuurl_item5 }}">{{ site.menutxt_item4 }}</a>
+              <a href="{{ site.menuurl_item4 }}">{{ site.menutxt_item4 }}</a>
+            {% endif %}
+            {% if site.menuurl_item5 %}
+              <a href="{{ site.menuurl_item5 }}">{{ site.menutxt_item5 }}</a>
             {% endif %}
           </div>
         </div>
