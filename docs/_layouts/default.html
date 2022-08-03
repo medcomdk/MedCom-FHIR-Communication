@@ -13,8 +13,9 @@
       .dropbtn {
         background-color: #4CAF50;
         color: white;
-        padding: 16px;
+        padding: 10px;
         font-size: 16px;
+        min-width: 260px;
         border: none;
         cursor: pointer;
       }
@@ -66,10 +67,16 @@
           <div class="dropdown">
           <button class="dropbtn">Menu</button>
           <div class="dropdown-content">
-            <a href="{{ site.menuurl_item1 }}">{{ site.menutxt_item1 }}</a>
-            <a href="{{ site.menuurl_item2 }}">{{ site.menutxt_item2 }}</a>
-            <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/">Z</a>
-            <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#About">About</a>
+            {% if site.menuurl_item1 %}
+              <a href="{{ site.menuurl_item1 }}">{{ site.menutxt_item1 }}</a>
+            {% endif %}
+            {% if site.menuurl_item2 %}
+              <a href="{{ site.menuurl_item2 }}">{{ site.menutxt_item2 }}</a>
+            {% endif %}
+            {% if site.menuurl_item3 %}
+              <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/">Z</a>
+            {% endif %}
+              <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/#About">About</a>
           </div>
         </div>
         <hr/>
