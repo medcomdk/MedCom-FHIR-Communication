@@ -105,18 +105,18 @@ Realiable Messaging is the way to secure that important information sent through
 A message sent from the Sending Ecosystem to the intended Receiving Ecosystem can be well received but the returned acknowledgement can be lost. When discovering that the Sending Ecosystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. That message can be lost and again the Sending Ecosystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending Ecosystem and the message transaction will be fulfilled. The Receiving Ecosystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
 
-**This ruleset is a generic ruleset governing the principles of Reliable Messaging:**
-
-- A Sending Ecosystem **SHALL** send a MedCom Message with a flag indicating that it expects an acknowledgement on the MedCom Message
-- A Receiving Ecosystem **SHALL** return an MedCom acknowledgement on a received MedCom Message with a flag indicating that it expects a MedCom acknowledgement on the MedCom Message
-- A Sending Ecosystem **SHALL** be able to handle an unacknowledged MedCom Message
--- A Sending Ecosystem **SHALL** resend the MedCom Message, when the expected MedCom acknowledgement is not received within a timelimit of 15 minutes
--- A Sending Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend MedCom Message
--- A Sending Ecosystem **SHALL NOT** resend the MedCom Message more than 2 times, when the expected acknowledgement is not received
-- A Receiving Ecosystem **SHALL** be able to receive a MedCom Message as a duplicate
--- A Receiving Ecosystem **SHALL NOT** present the end-user for a duplicate of a MedCom Message.
--- A Receiving Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend acknowledgement
--- A Receiving Ecosystem **SHALL** return the same MedCom acknowledgement content on a received MedCom Message as it returned on the first received copy of the MedCom Message
+|**This ruleset is a generic ruleset governing the principles of Reliable Messaging:**|
+|:---|
+| A Sending Ecosystem **SHALL** send a MedCom Message with a flag indicating that it expects an acknowledgement on the MedCom Message|
+| A Receiving Ecosystem **SHALL** return an MedCom acknowledgement on a received MedCom Message with a flag indicating that it expects a MedCom acknowledgement on the MedCom Message|
+| A Sending Ecosystem **SHALL** be able to handle an unacknowledged MedCom Message|
+| A Sending Ecosystem **SHALL** resend the MedCom Message, when the expected MedCom acknowledgement is not received within a timelimit of 15 minutes|
+| A Sending Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend MedCom Message|
+| A Sending Ecosystem **SHALL NOT** resend the MedCom Message more than 2 times, when the expected acknowledgement is not received|
+| A Receiving Ecosystem **SHALL** be able to receive a MedCom Message as a duplicate|
+| A Receiving Ecosystem **SHALL NOT** present the end-user for a duplicate of a MedCom Message|
+| A Receiving Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend acknowledgement|
+| A Receiving Ecosystem **SHALL** return the same MedCom acknowledgement content on a received MedCom Message as it returned on the first received copy of the MedCom Message|
 
 A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
 
@@ -130,6 +130,7 @@ The different types of Reliable Messaging scenarios are:
 - Scenario # 2a - (Re) Sending Unchanged Message
 - Scenario # 2b - Message is sent normally, acknowledgement is lost along the way
 - Scenario # 2c - (Re) Sending Modified Message
+<br>
 <br>
 
 #### Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request (Google translated)
@@ -172,6 +173,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
 - MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
   - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
+<br>
 
 ### 2.3.1 Reliable Messaging using VANSenvelope
 VANSenvelope is also developed to support Reliable Messaging.
@@ -218,32 +220,26 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 [Reliable Messaging using MedCom FHIR MessagingMedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
 ## 3.4 Reliable Messaging using MedCom FHIR Messaging
-
+<br>
 
 # 4. Governance for MedCom FHIR Messages
-
 How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
 
 ![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
 
 As shown in the diagram above there are 4 MedCom profiled FHIR resources involved in a message:
-
 - A MedComMessagingMessage is a Bundle resource of type "message"
-
 - The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
-
 - The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
   - a source organization called a MedComMessagingOrganization, which is an Organization resource
   - a destination organization also a MedComMessagingOrganization, which too is an Organization resource
-
 - The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
+<br>
 
 ## 4.1 MedComMessagingMessage (Bundle)
-
 A Bundle resource of type "message", which is a container for a collection of other resources.
 
 ## 4.2 Scope and Usage
-
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
 [Bundle in FHIR R4](http://hl7.org/fhir/R4/Bundle.html)
