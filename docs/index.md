@@ -11,7 +11,9 @@
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
 
 ---
+
 [Governance Terms](/assets/documents/01-1-Governance_Terms.md)
+
 ---
 
 # 1. Introduction to Governance for MedCom FHIR®© Messaging
