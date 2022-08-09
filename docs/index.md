@@ -124,19 +124,19 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 
 This section provides a description of the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages see the description in the detailed sections of the respective chapters for these subjects.
 
+The different types of Reliable Messaging scenarios are: 
 - Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request
 - Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request
 - Scenario # 2a - (Re) Sending Unchanged Message
 - Scenario # 2b - Message is sent normally, acknowledgement is lost along the way
 - Scenario # 2c - (Re) Sending Modified Message
+<br>
 
 #### Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request (Google translated)
-
 An unsolicidated message or request message is sent with a new request for a positive acknowledgement from the Sending System to a Receiving System.
 The Receiving System **SHALL** always send a positive acknowledgement to the Sending System.
 
 #### Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
-
 Duplication of an unchanged message can be done in one of the following ways:
 
 - An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a message in scenario 1a.
@@ -147,18 +147,15 @@ The messages are completely identical and as a consequence the message with requ
 The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa. The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. If the Sending System of the message has received acknowledgement already after the Receiving System's acknowledgement of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgement. The Sending System **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
 
 #### Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
-
 Correct retransmission of a message.
 The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
 Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
 
 #### Scenario # 2b - Message is sent normally, acknowledgement is lost along the way (Google translated)
-
 As Scenario # 1a, but where acknowledgement is lost along the way from the Sending System to the Receiving System.
 The shipping pattern is like Scenario # 2a.
 
 #### Scenario # 2c - (Re-) Sending Modified Message (Google translated)
-
 If the content of the letter part is changed, the message is considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
 Resubmissions are always done manually.
 
@@ -166,7 +163,6 @@ For historical reasons, there has been no requirement to use positive acknowledg
 For a number of standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
 
 ## 2.3 VANSEnvelope
-
 The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
 
 MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are shipped as "application/fhir+xml" or "application/fhir+json"
@@ -178,7 +174,6 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
   - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
 ### 2.3.1 Reliable Messaging using VANSenvelope
-
 VANSenvelope is also developed to support Reliable Messaging.
 VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
@@ -190,7 +185,6 @@ The details on how to setup Reliable Messaging using VANSEnvelope can be found [
 ---
 
 # 3. Governance for MedCom FHIR Messaging
-
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2. 
@@ -204,8 +198,7 @@ The events supported in MedCom FHIR Messaging, along with the resources that are
 
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
-### Basic Danish Messaging Assumptions [TBD]
-
+## 3.1 Basic Danish Messaging Assumptions [TBD]
 This specification assumes that content will be delivered from one application to another by some delivery mechanism, and then one or more responses will be returned to the source application.
 
 In Denmark this specification rules the exchange of messages through the Danish Messaging Network, currently known as VANS, and using the central organization register, SOR, for delivering the virtual adressing information.
@@ -214,21 +207,18 @@ The agreements around the content of the messages and the behavior of the two ap
 
 This specification ignores the existence of interface engines and message transfer agents that exist between the source and destination. Either they are transparent to the message/transaction content and irrelevant to this specification, or they are actively involved in manipulating the message content (in particular, the source and destination headers are often changed). If these middleware agents are modifying the message content, then they become responsible for honoring the contract that applies (including applicable profiles) in both directions.
 
-### Message Exchange Patterns
-
+## 3.2 Message Exchange Patterns
 Each MedCom FHIR message has one or more response messages. There **SHALL** be at least one response message, an acknowledgement message, so that the sender can know, that the message was properly received. 
 
 Multiple response messages **SHALL NOT** be returned for messages of consequence, and **SHOULD** not be returned for notifications.
 
 In principle, source applications **SHOULD** not wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
 
-### Reliable Messaging using MedCom FHIR Messaging
-
+## 3.3 Reliable Messaging using MedCom FHIR Messaging
 [Reliable Messaging using MedCom FHIR MessagingMedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
-### Reliable Messaging using MedCom FHIR Messaging
+## 3.4 Reliable Messaging using MedCom FHIR Messaging
 
----
 
 # 4. Governance for MedCom FHIR Messages
 
@@ -248,11 +238,11 @@ As shown in the diagram above there are 4 MedCom profiled FHIR resources involve
 
 - The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
 
-### MedComMessagingMessage (Bundle)
+## 4.1 MedComMessagingMessage (Bundle)
 
 A Bundle resource of type "message", which is a container for a collection of other resources.
 
-### Scope and Usage
+## 4.2 Scope and Usage
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
@@ -278,18 +268,18 @@ One common operation performed with resources is to gather a collection of resou
 
 <!-- [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md) -->
 
-### Narrative Texts
+## 4.3 Narrative Texts
 
 A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
 Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
 
 Narratives contains two sub elements, status and div.
 
-#### The status element
+### 4.3.1 The status element
 
 [TBD]
 
-#### The div element
+### 4.3.2 The div element
 
 The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
 
@@ -309,7 +299,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
 
-### MessageHeader
+## 4.4 MessageHeader
 
 <p align="left">
   <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png">
@@ -333,33 +323,33 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [MessageHeader in FHIR R4](http://hl7.org/fhir/R4/messageheader.html)
 
-### Identifiers
+## 4.5 Identifiers
 
 [Identifiers](/assets/documents/MessageHeader_Identifiers.md)
 
-### Timestamps
+## 4.6 Timestamps
 
 [Timestamps](/assets/documents/MessageHeader_Timestamps.md)
 
-### Messaging rules
+## 4.7 Messaging rules
 
 [Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
 [Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
 
-### Acnowledgment rules
+## 4.8 Acnowledgment rules
 
 [Acnowledgment rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
 [Acnowledgment rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
 
-## MustSupport
+## 4.9 MustSupport
 
 [MustSupport](/assets/documents/MustSupport.md)
 
-## Provenance
+## 4.10 Provenance
 
 Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
 
-### Scope and Usage
+### 4.10.1 Scope and Usage
 
 The Provenance resource tracks information about the activity that created, revised, deleted, or signed a version of a resource, describing the entities and agents involved. This information can be used to form assessments about its quality, reliability, trustworthiness, or to provide pointers for where to go to further investigate the origins of the resource and the information in it.
 
