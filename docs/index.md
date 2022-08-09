@@ -199,10 +199,7 @@ Multiple response messages **SHALL NOT** be returned for messages of consequence
 In principle, source applications **SHOULD** not wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
 
 ## 3.3 Reliable Messaging using MedCom FHIR Messaging
-[Reliable Messaging using MedCom FHIR MessagingMedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
-
-## 3.4 Reliable Messaging using MedCom FHIR Messaging
-<br>
+[Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
 # 4. Governance for MedCom FHIR Messages
 How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
