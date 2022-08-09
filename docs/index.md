@@ -1,6 +1,7 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 
 - [1. Introduction](#1-introduction-to-governance-for-medcom-fhir®©-messaging)
+  - [1.1 Terms used in Governance for MedCom FHIR®© Massaging](#11-terms-used-in-governance-for-medcom-fhir®©-messaging)
 - [2. Governance for the Network Layer](#2-governance-for-network-layer)
   - [VANSEnvelope](#vansenvelope)
   - [Reliable Messaging](#reliable-messaging)
@@ -52,7 +53,7 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 ---
 
-## Terms used in Governance for MedCom FHIR®© Messaging
+## 1.1 Terms used in Governance for MedCom FHIR®© Messaging
 
 (to be further expanded and detailed)
 
@@ -84,18 +85,18 @@ To be able to communicate a specific MedCom FHIR messagetype both senders and re
 
 The Sending system **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
-## Asynchronous Messaging
+## 2.1 Asynchronous Messaging
 
 In Asynchronous messaging, the Receiving System dispatches the acknowledgement of the message immediately, and responds to the Sending System separately. The Receiving System may respond more than once to any given message.
 When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
 
-## Reliable Messaging
+## 2.2 Reliable Messaging
 
 A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
 
 Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
 
-**Generic Reliable Messaging Model**
+<b>Generic Reliable Messaging Model</b>
 
 ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/reliable-messaging-principle.png "reliablemessaging")
 
@@ -119,7 +120,7 @@ Any of these events can happen over time and therefore Reliable Messaging define
 
 A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
 
-### Different Reliable Messaging scenarios
+### 2.2.1 Different Reliable Messaging scenarios
 
 This section provides a description of the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages see the description in the detailed sections of the respective chapters for these subjects.
 
@@ -164,7 +165,7 @@ Resubmissions are always done manually.
 For historical reasons, there has been no requirement to use positive acknowledgements, which is why Scenario # 1a can in practice be run as Scenario # 1b. The Sending System may therefore experience that there is no acknowledgement of a message, and it is not recommended to make program logic that sends messages.
 For a number of standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
 
-## VANSEnvelope
+## 2.3 VANSEnvelope
 
 The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
 
@@ -176,7 +177,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
   - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
-### Reliable Messaging using VANSenvelope
+### 2.3.1 Reliable Messaging using VANSenvelope
 
 VANSenvelope is also developed to support Reliable Messaging.
 VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
