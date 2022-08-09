@@ -1,7 +1,6 @@
 <!-- # Governance for MedCom FHIR®© Messaging -->
 
 - [1. Introduction](#1-introduction-to-governance-for-medcom-fhir®©-messaging)
-  - [1.1 Terms used in Governance for MedCom FHIR®© Massaging](#11-terms-used-in-governance-for-medcom-fhir®©-messaging)
 - [2. Governance for the Network Layer](#2-governance-for-network-layer)
   - [2.1 Asynchronous messaging](#21-asynchronous-messaging)
   - [2.2 Reliable Messaging](#22-reliable-messaging)
@@ -11,6 +10,8 @@
 - [5. Governance for Test and Certification](#5-governance-for-test-and-certification)
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
 
+---
+[Governance Terms](/assets/documents/01-1-Governance_Terms.md)
 ---
 
 # 1. Introduction to Governance for MedCom FHIR®© Messaging
@@ -52,8 +53,6 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
-[Governance Terms](/assets/documents/01-1-Governance_Terms.md)
-=======
 ---
 
 # 2. Governance for Network Layer
