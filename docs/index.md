@@ -14,7 +14,6 @@
 
 [Governance Terms](/assets/documents/01-1-Governance_Terms.md)
 
----
 
 # 1. Introduction to Governance for MedCom FHIR®© Messaging
 
@@ -55,7 +54,7 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
----
+
 
 # 2. Governance for Network Layer
 
@@ -166,7 +165,6 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 
 The details on how to setup Reliable Messaging using VANSEnvelope can be found [here](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
----
 
 # 3. Governance for MedCom FHIR Messaging
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
