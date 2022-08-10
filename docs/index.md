@@ -6,6 +6,9 @@
   - [2.2 Reliable Messaging](#22-reliable-messaging)
   - [2.3 Vansenvelope](#23-vansenvelope)
 - [3. Governance for MedComFHIR Messaging](#3-governance-for-medcom-fhir-messaging)
+  - [3.1 Basic Danish Mmessaging Assumptions](#31-basic-danish-messaging-assumptions-tbd)
+  - [3.2 Message exchange patterns](#32-message-exchange-patterns)
+  - [3.3 Reliable Messaging using MedCom FHIR Messaging](#33-reliable-messaging-using-medcom-fhir-messaging)
 - [4. Governance for MedCom FHIR Messages](#4-governance-for-medcom-fhir-messages)
 - [5. Governance for Test and Certification](#5-governance-for-test-and-certification)
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
@@ -55,15 +58,19 @@ The Sending system **SHALL** validate the message before dispatching it. Validat
 
 ## 2.1 Asynchronous Messaging
 
+MedCom FHIR Messaging is based on Asynchronous Messaging.
+
 In Asynchronous messaging, a Sending Ecosystem dispatches an unsolicited message to a Receiving Ecosystem possibly through several intermediate hubs, and besides from sending an possibly requested acknowledgement immediately as a response, the Receiving Ecosystem responds to the Sending System separately. The Receiving Ecosystem may respond more than once to any given message.
 
 ## 2.2 Reliable Messaging
+
+MedCom FHIR Messaging uses Reliable Messaging.
 
 A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
 
 Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
 
-<b>Generic Reliable Messaging Model</b>
+_**_Generic Reliable Messaging Model_**_
 
 ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/reliable-messaging-principle.png "reliablemessaging")
 
@@ -98,8 +105,6 @@ The different types of Reliable Messaging scenarios are:
 - Scenario # 2a - (Re) Sending Unchanged Message
 - Scenario # 2b - Message is sent normally, acknowledgement is lost along the way
 - Scenario # 2c - (Re) Sending Modified Message
-<br>
-<br>
 
 #### 2.2.1.1 Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request (Google translated)
 
@@ -147,7 +152,6 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
 - MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
   - [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   - [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
-<br>
 
 ### 2.3.1 Reliable Messaging using VANSenvelope
 
@@ -210,7 +214,6 @@ As shown in the diagram above there are 4 MedCom profiled FHIR resources involve
   - a source organization called a MedComMessagingOrganization, which is an Organization resource
   - a destination organization also a MedComMessagingOrganization, which too is an Organization resource
 - The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
-<br>
 
 ## 4.1 MedComMessagingMessage (Bundle)
 
