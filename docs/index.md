@@ -1,4 +1,4 @@
-<!-- # Governance for MedCom FHIR®© Messaging -->
+# Governance for MedCom FHIR®© Messaging
 
 - [1. Introduction](#1-introduction-to-governance-for-medcom-fhir®©-messaging)
 - [2. Governance for the Network Layer](#2-governance-for-network-layer)
@@ -14,7 +14,7 @@
 
 [Governance Terms](/assets/documents/01-1-Governance_Terms.md)
 
-# 1. Introduction to Governance for MedCom FHIR®© Messaging
+## 1. Introduction to Governance for MedCom FHIR®© Messaging
 
 On this page you can find information about how MedCom has profiled the [HL7 FHIR®© Messaging Framework](http://hl7.org/fhir/R4/messaging.html) to work in a Danish context.
 Governance for MedCom HL7 FHIR®© Messaging describes the basic ruleset of how MedCom Messages shall be exchanged in the Danish Healthcare Messaging Network.
@@ -43,7 +43,7 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
-# 2. Governance for Network Layer
+## 2. Governance for Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
@@ -159,7 +159,7 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 
 The details on how to setup Reliable Messaging using VANSEnvelope can be found [here](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
-# 3. Governance for MedCom FHIR Messaging
+## 3. Governance for MedCom FHIR Messaging
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
@@ -196,7 +196,7 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 
 [Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
-# 4. Governance for MedCom FHIR Messages
+## 4. Governance for MedCom FHIR Messages
 
 How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
 
@@ -261,7 +261,7 @@ The XHTML content **SHALL NOT** contain a head, a body element, external stylesh
 
 The div element **SHALL** have some non-whitespace content (text or an image).
 
-**General Narrative Text Rules**
+### 4.3.3 General Narrative Text Rules
 
 - All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
 - The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
@@ -345,7 +345,7 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 [HL7 FHIR®© description of Provenance](http://hl7.org/fhir/R4/provenance.html)
 
-# 5. Governance for Test and Certification
+## 5. Governance for Test and Certification
 
 All profiles **SHALL** be validated with the FHIR validator
 
@@ -353,7 +353,7 @@ All profiles **SHALL** be validated with TouchStone
 
 **Insert requirements from the test and certification process here**
 
-# 6. Governance for Release Notes
+## 6. Governance for Release Notes
 
 Updates in the latest release.
 
