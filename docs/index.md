@@ -362,6 +362,8 @@ Provenance resources are a record-keeping assertion that gathers information abo
 - MedCom FHIR Messages **SHALL** contain one bundled MedComMessagingProvenance resource for each message exchange the message has been involved in
 - MedCom FHIR Messages **SHALL** contain no more than two bundled MedComMessagingProvenance resource when acknowledging a message
 
+<br>
+
 <p align="left">
   <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png">
 </p>
