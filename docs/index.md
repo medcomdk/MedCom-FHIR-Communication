@@ -351,10 +351,10 @@ All profiles **SHALL** be validated with the FHIR validator
 
 All profiles **SHALL** be validated with TouchStone
 
-**Insert requirements from the test and certification process here**
+_**Insert requirements from the test and certification process here**_
 
 ## 6. Governance for Release Notes
 
 Updates in the latest release.
 
-**Insert requirements from Release Notes**
+_**Insert requirements from Release Notes**_
