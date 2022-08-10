@@ -150,7 +150,7 @@ For a number of standards, however, there is an explicit requirement for a posit
 
 The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
 
-MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are shipped as "application/fhir+xml" or "application/fhir+json"
+MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope whether they are shipped as "application/fhir+xml" or "application/fhir+json"
 
 - The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
@@ -160,13 +160,13 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
 
 ### 2.3.1 Reliable Messaging using VANSenvelope
 
-VANSenvelope is also developed to support Reliable Messaging.
+VANSenvelope is developed to support Reliable Messaging.
 VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
 - The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   - [VANS ENVELOPE specification (Danish)](https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf)
 
-The details on how to setup Reliable Messaging using VANSEnvelope can be found [here](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
+[Tap here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
 ## 3. Governance for MedCom FHIR Messaging
 
@@ -203,11 +203,14 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 
 ## 3.3 Reliable Messaging using MedCom FHIR Messaging
 
-[Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
+FHIR Messaging is developed to support Reliable Messaging.
+MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
+
+[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
 ## 4. Governance for MedCom FHIR Messages
 
-How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model.
+Below you see the basic MedCom FHIR Messaging Model.
 
 As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
 
