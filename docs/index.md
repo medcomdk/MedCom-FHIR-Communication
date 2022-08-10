@@ -14,8 +14,8 @@
 
 [Governance Terms](/assets/documents/01-1-Governance_Terms.md)
 
-
 # 1. Introduction to Governance for MedCom FHIR®© Messaging
+
 On this page you can find information about how MedCom has profiled the [HL7 FHIR®© Messaging Framework](http://hl7.org/fhir/R4/messaging.html) to work in a Danish context.
 Governance for MedCom HL7 FHIR®© Messaging describes the basic ruleset of how MedCom Messages shall be exchanged in the Danish Healthcare Messaging Network.
 The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR®© Communication Rules for FHIR Messaging.These “MedCom FHIR®© Messaging Governance rules” are intended to clarify the use of MedCom’s FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as ”Syntax & Communication Rules”.
@@ -43,9 +43,8 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
-
-
 # 2. Governance for Network Layer
+
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
 To be able to communicate over the VANS Network, both senders and receivers **SHALL** have an EAN number issued by the SOR.
@@ -55,10 +54,11 @@ To be able to communicate a specific MedCom FHIR messagetype both senders and re
 The Sending system **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
 ## 2.1 Asynchronous Messaging
-In Asynchronous messaging, the Receiving System dispatches the acknowledgement of the message immediately, and responds to the Sending System separately. The Receiving System may respond more than once to any given message.
-When a message is received, a receiver can determine from the content of the message header whether it's a new message to process, or a response to a message that has already been sent.
+
+In Asynchronous messaging, a Sending Ecosystem dispatches an unsolicited message to a Receiving Ecosystem possibly through several intermediate hubs, and besides from sending an possibly requested acknowledgement immediately as a response, the Receiving Ecosystem responds to the Sending System separately. The Receiving Ecosystem may respond more than once to any given message.
 
 ## 2.2 Reliable Messaging
+
 A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
 
 Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
@@ -74,16 +74,16 @@ Any of these events can happen over time and therefore Reliable Messaging define
 
 |**This ruleset is a generic ruleset governing the principles of Reliable Messaging:**|
 |:---|
-| A Sending Ecosystem **SHALL** send a MedCom Message with a flag indicating that it expects an acknowledgement on the MedCom Message|
-| A Receiving Ecosystem **SHALL** return an MedCom acknowledgement on a received MedCom Message with a flag indicating that it expects a MedCom acknowledgement on the MedCom Message|
-| A Sending Ecosystem **SHALL** be able to handle an unacknowledged MedCom Message|
-| A Sending Ecosystem **SHALL** resend the MedCom Message, when the expected MedCom acknowledgement is not received within a timelimit of 15 minutes|
-| A Sending Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend MedCom Message|
-| A Sending Ecosystem **SHALL NOT** resend the MedCom Message more than 2 times, when the expected acknowledgement is not received|
-| A Receiving Ecosystem **SHALL** be able to receive a MedCom Message as a duplicate|
-| A Receiving Ecosystem **SHALL NOT** present the end-user for a duplicate of a MedCom Message|
-| A Receiving Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend acknowledgement|
-| A Receiving Ecosystem **SHALL** return the same MedCom acknowledgement content on a received MedCom Message as it returned on the first received copy of the MedCom Message|
+| A Sending Ecosystem **SHALL** send a Message with a flag indicating that it expects an Acknowledgement on the Message|
+| A Receiving Ecosystem **SHALL** return an Acknowledgement on a received Message with a flag indicating that it expects a acknowledgement on the Message|
+| A Sending Ecosystem **SHALL** be able to handle an unacknowledged Message|
+| A Sending Ecosystem **SHALL** resend the Message, when the expected acknowledgement is not received within a timelimit of 15 minutes|
+| A Sending Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend Message|
+| A Sending Ecosystem **SHALL NOT** resend the Message more than 2 times, when the expected Acknowledgement is not received|
+| A Receiving Ecosystem **SHALL** be able to receive a Message as a duplicate|
+| A Receiving Ecosystem **SHALL NOT** present the end-user for a duplicate of a Message|
+| A Receiving Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend Acknowledgement|
+| A Receiving Ecosystem **SHALL** return the same Acknowledgement content on a received Message as it returned on the first received copy of the Message|
 
 A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
 
@@ -91,7 +91,8 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 
 This section provides a description of the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages see the description in the detailed sections of the respective chapters for these subjects.
 
-The different types of Reliable Messaging scenarios are: 
+The different types of Reliable Messaging scenarios are:
+
 - Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request
 - Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request
 - Scenario # 2a - (Re) Sending Unchanged Message
@@ -101,10 +102,12 @@ The different types of Reliable Messaging scenarios are:
 <br>
 
 #### 2.2.1.1 Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request (Google translated)
+
 An unsolicidated message or request message is sent with a new request for a positive acknowledgement from the Sending System to a Receiving System.
 The Receiving System **SHALL** always send a positive acknowledgement to the Sending System.
 
 #### 2.2.1.2 Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
+
 Duplication of an unchanged message can be done in one of the following ways:
 
 - An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a message in scenario 1a.
@@ -115,15 +118,18 @@ The messages are completely identical and as a consequence the message with requ
 The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa. The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. If the Sending System of the message has received acknowledgement already after the Receiving System's acknowledgement of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgement. The Sending System **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
 
 #### 2.2.1.3 Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
+
 Correct retransmission of a message.
 The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
 Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
 
 #### 2.2.1.4 Scenario # 2b - Message is sent normally, acknowledgement is lost along the way (Google translated)
+
 As Scenario # 1a, but where acknowledgement is lost along the way from the Sending System to the Receiving System.
 The shipping pattern is like Scenario # 2a.
 
 #### 2.2.1.5 Scenario # 2c - (Re-) Sending Modified Message (Google translated)
+
 If the content of the letter part is changed, the message is considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
 Resubmissions are always done manually.
 
@@ -131,6 +137,7 @@ For historical reasons, there has been no requirement to use positive acknowledg
 For a number of standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
 
 ## 2.3 VANSEnvelope
+
 The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
 
 MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are shipped as "application/fhir+xml" or "application/fhir+json"
@@ -143,6 +150,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope wether they are sh
 <br>
 
 ### 2.3.1 Reliable Messaging using VANSenvelope
+
 VANSenvelope is also developed to support Reliable Messaging.
 VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
@@ -151,11 +159,11 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 
 The details on how to setup Reliable Messaging using VANSEnvelope can be found [here](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
 
-
 # 3. Governance for MedCom FHIR Messaging
+
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
-FHIR Resources can be used in a traditional messaging context, much like HL7 v2. 
+FHIR Resources can be used in a traditional messaging context, much like HL7 v2.
 <!-- Applications asserting conformance to this framework claim to be conformant to "FHIR messaging". -->
 
 In FHIR messaging, a "request message" or an "unsolicidated message" is sent from a source application (Sending System) to a destination application (Receiving System) when an event happens. Events mostly correspond to things that happen in the real world.
@@ -167,6 +175,7 @@ The events supported in MedCom FHIR Messaging, along with the resources that are
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
 ## 3.1 Basic Danish Messaging Assumptions [TBD]
+
 This specification assumes that content will be delivered from one application to another by some delivery mechanism, and then one or more responses will be returned to the source application.
 
 In Denmark this specification rules the exchange of messages through the Danish Messaging Network, currently known as VANS, and using the central organization register, SOR, for delivering the virtual adressing information.
@@ -176,21 +185,25 @@ The agreements around the content of the messages and the behavior of the two ap
 This specification ignores the existence of interface engines and message transfer agents that exist between the source and destination. Either they are transparent to the message/transaction content and irrelevant to this specification, or they are actively involved in manipulating the message content (in particular, the source and destination headers are often changed). If these middleware agents are modifying the message content, then they become responsible for honoring the contract that applies (including applicable profiles) in both directions.
 
 ## 3.2 Message Exchange Patterns
-Each MedCom FHIR message has one or more response messages. There **SHALL** be at least one response message, an acknowledgement message, so that the sender can know, that the message was properly received. 
+
+Each MedCom FHIR message has one or more response messages. There **SHALL** be at least one response message, an acknowledgement message, so that the sender can know, that the message was properly received.
 
 Multiple response messages **SHALL NOT** be returned for messages of consequence, and **SHOULD** not be returned for notifications.
 
 In principle, source applications **SHOULD** not wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
 
 ## 3.3 Reliable Messaging using MedCom FHIR Messaging
+
 [Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
 # 4. Governance for MedCom FHIR Messages
+
 How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
 
 ![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
 
 As shown in the diagram above there are 4 MedCom profiled FHIR resources involved in a message:
+
 - A MedComMessagingMessage is a Bundle resource of type "message"
 - The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
 - The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
@@ -200,9 +213,11 @@ As shown in the diagram above there are 4 MedCom profiled FHIR resources involve
 <br>
 
 ## 4.1 MedComMessagingMessage (Bundle)
+
 A Bundle resource of type "message", which is a container for a collection of other resources.
 
 ## 4.2 Scope and Usage
+
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
 [Bundle in FHIR R4](http://hl7.org/fhir/R4/Bundle.html)
@@ -248,9 +263,9 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 **General Narrative Text Rules**
 
-- All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element 
-- The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions. 
-- The narrative **SHALL** reflect the impact of all modifier extensions. 
+- All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
+- The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
+- The narrative **SHALL** reflect the impact of all modifier extensions.
 
 [Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative)
 
