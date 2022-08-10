@@ -333,6 +333,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 [TBD]
 
 [Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
+
 [Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
 
 ## 4.5 Acnowledgement rules
@@ -340,6 +341,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 [TBD]
 
 [Acnowledgement rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
+
 [Acnowledgement rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
 
 ## 4.6 MustSupport
