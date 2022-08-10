@@ -94,6 +94,9 @@ Any of these events can happen over time and therefore Reliable Messaging define
 
 A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
 
+- [2.3.1 Reliable Messaging using VANSEnvelope](#231-reliable-messaging-using-vansenvelope)
+- [3.3 Reliable Messaging using MedCom FHIR Messaging](#33-reliable-messaging-using-medcom-fhir-messaging)
+
 ### 2.2.1 Different Reliable Messaging scenarios
 
 This section provides a description of the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages see the description in the detailed sections of the respective chapters for these subjects.
