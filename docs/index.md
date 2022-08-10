@@ -70,7 +70,7 @@ A key part of the Messaging Network is to provide funcionality for Reliable Mess
 
 Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
 
-_**_Generic Reliable Messaging Model_**_
+_**Generic Reliable Messaging Model**_
 
 ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/reliable-messaging-principle.png "reliablemessaging")
 
@@ -79,7 +79,9 @@ Realiable Messaging is the way to secure that important information sent through
 A message sent from the Sending Ecosystem to the intended Receiving Ecosystem can be well received but the returned acknowledgement can be lost. When discovering that the Sending Ecosystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. That message can be lost and again the Sending Ecosystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending Ecosystem and the message transaction will be fulfilled. The Receiving Ecosystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
 
-|**This ruleset is a generic ruleset governing the principles of Reliable Messaging:**|
+## 2.2.1 Generic ruleset governing the principles of Reliable Messaging
+
+|**Generic ruleset governing the principles of Reliable Messaging**|
 |:---|
 | A Sending Ecosystem **SHALL** send a Message with a flag indicating that it expects an Acknowledgement on the Message|
 | A Receiving Ecosystem **SHALL** return an Acknowledgement on a received Message with a flag indicating that it expects a acknowledgement on the Message|
@@ -97,24 +99,24 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 - [2.3.1 Reliable Messaging using VANSEnvelope](#231-reliable-messaging-using-vansenvelope)
 - [3.3 Reliable Messaging using MedCom FHIR Messaging](#33-reliable-messaging-using-medcom-fhir-messaging)
 
-### 2.2.1 Different Reliable Messaging scenarios
+### 2.2.2 Different Reliable Messaging scenarios
 
 This section provides a description of the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages see the description in the detailed sections of the respective chapters for these subjects.
 
 The different types of Reliable Messaging scenarios are:
 
-- Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request
-- Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request
-- Scenario # 2a - (Re) Sending Unchanged Message
-- Scenario # 2b - Message is sent normally, acknowledgement is lost along the way
-- Scenario # 2c - (Re) Sending Modified Message
+- Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request
+- Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request
+- Scenario #3 - (Re-)Sending Unchanged Message
+- Scenario #4 - Message is sent normally, acknowledgement is lost along the way
+- Scenario #5 - (Re-)Sending Modified Message
 
-#### 2.2.1.1 Scenario # 1a - Normally successful unsolicidated message or request message flow with acknowledgement request (Google translated)
+#### 2.2.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request (Google translated)
 
-An unsolicidated message or request message is sent with a new request for a positive acknowledgement from the Sending System to a Receiving System.
+An unsolicited message or request message is sent with a new request for a positive acknowledgement from the Sending System to a Receiving System.
 The Receiving System **SHALL** always send a positive acknowledgement to the Sending System.
 
-#### 2.2.1.2 Scenario # 1b - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
+#### 2.2.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
 
 Duplication of an unchanged message can be done in one of the following ways:
 
@@ -125,23 +127,23 @@ The messages are completely identical and as a consequence the message with requ
 
 The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa. The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. If the Sending System of the message has received acknowledgement already after the Receiving System's acknowledgement of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgement. The Sending System **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
 
-#### 2.2.1.3 Scenario # 2a - (Re) Sending Unchanged Message (Google translated)
+#### 2.2.2.3 Scenario #3 - (Re) Sending Unchanged Message (Google translated)
 
 Correct retransmission of a message.
-The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario # 1a or # 1b.
+The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. The message is sent and acknowledged as a completely new message according to Scenario #1 or Scenario #2.
 Re-dispatches are always done manually and should be in accordance with the normal response time for the specific message flow.
 
-#### 2.2.1.4 Scenario # 2b - Message is sent normally, acknowledgement is lost along the way (Google translated)
+#### 2.2.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way (Google translated)
 
-As Scenario # 1a, but where acknowledgement is lost along the way from the Sending System to the Receiving System.
-The shipping pattern is like Scenario # 2a.
+As Scenario #1, but where acknowledgement is lost along the way from the Sending System to the Receiving System.
+The shipping pattern is like Scenario #3.
 
-#### 2.2.1.5 Scenario # 2c - (Re-) Sending Modified Message (Google translated)
+#### 2.2.2.5 Scenario #5 - (Re-) Sending Modified Message (Google translated)
 
 If the content of the letter part is changed, the message is considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
 Resubmissions are always done manually.
 
-For historical reasons, there has been no requirement to use positive acknowledgements, which is why Scenario # 1a can in practice be run as Scenario # 1b. The Sending System may therefore experience that there is no acknowledgement of a message, and it is not recommended to make program logic that sends messages.
+For historical reasons, there has been no requirement to use positive acknowledgements, which is why Scenario #1 can in practice be run as Scenario #2. The Sending System may therefore experience that there is no acknowledgement of a message, and it is not recommended to make program logic that sends messages.
 For a number of standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
 
 ## 2.3 VANSEnvelope
@@ -173,7 +175,7 @@ This Governance for MedCom FHIR Messaging includes the corresponding OIOXML vers
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2.
 <!-- Applications asserting conformance to this framework claim to be conformant to "FHIR messaging". -->
 
-In FHIR messaging, a "request message" or an "unsolicidated message" is sent from a source application (Sending System) to a destination application (Receiving System) when an event happens. Events mostly correspond to things that happen in the real world.
+In FHIR messaging, a "request message" or an "unsolicited message" is sent from a source application (Sending System) to a destination application (Receiving System) when an event happens. Events mostly correspond to things that happen in the real world.
 
 The message consists of a Bundle identified by the type "message", with the first resource in the Bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the Bundle depend on the type of the message, eg. in which context a message is triggered.
 
