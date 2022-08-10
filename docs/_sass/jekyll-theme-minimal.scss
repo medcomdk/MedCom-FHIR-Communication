@@ -3,27 +3,25 @@
 
 body {
   background-color: #fff;
-  padding:3%;
+  padding:75px;
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#333333;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#2c415C;
-  margin:15px 0 10px 0;
-  // margin:20 0 0 20px;
-}
-
-ul, ol{
-  margin: 0 0 0px;
-}
-
-p, table, pre, dl {
+  color:#2C415C;
   margin:0 0 5px;
 }
 
-h1, h2, h3 {
+ul, ol{
+  margin: 0 0 0;
+}
+p,table, pre, dl {
+  margin:0 0 20px;
+}
+
+h1, h2, h3,h4 {
   line-height:1.1;
 }
 
@@ -32,11 +30,11 @@ h1 {
 }
 
 h2 {
-  color:#2c415C;
+  color:#2C415C;
 }
 
 h3, h4, h5, h6 {
-  color:#2c415C;
+  color:#2C415C;
 }
 
 a {
@@ -45,8 +43,9 @@ a {
 }
 
 a:hover, a:focus {
-  color:#2c415C;
-  font-weight: underline;
+  color:#2C415C;
+  text-decoration: underline;
+
 }
 
 a small {
