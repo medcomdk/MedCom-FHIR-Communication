@@ -290,6 +290,8 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 ## 4.3 MessageHeader
 
+[TBD]
+
 <p align="left">
   <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png">
 </p>
@@ -316,23 +318,33 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 ## 4.3.2 Identifiers
 
+[TBD]
+
 [Identifiers](/assets/documents/MessageHeader_Identifiers.md)
 
 ## 4.3.3 Timestamps
 
+[TBD]
+
 [Timestamps](/assets/documents/MessageHeader_Timestamps.md)
 
 ## 4.4 Messaging rules
+
+[TBD]
 
 [Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
 [Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
 
 ## 4.5 Acnowledgement rules
 
+[TBD]
+
 [Acnowledgement rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
 [Acnowledgement rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
 
 ## 4.6 MustSupport
+
+[TBD]
 
 [MustSupport](/assets/documents/MustSupport.md)
 
@@ -364,14 +376,14 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 ## 5. Governance for Test and Certification
 
-All profiles **SHALL** be validated with the FHIR validator
+All message solutions developed on the basis of MedCom FHIR Messing profiles **SHALL** be validated with the FHIR validator
 
-All profiles **SHALL** be validated with TouchStone
+All message solutions developed on the basis of MedCom FHIR Messing profiles **SHALL** be validated with MedComs TouchStone Certification Suites
 
 _**Insert requirements from the test and certification process here**_
 
 ## 6. Governance for Release Notes
 
-Updates in the latest release.
+All changes in the MedCom FHIR Specifications **SHALL** be described in a release note following that specific version of the specification.
 
 _**Insert requirements from Release Notes**_
