@@ -6,7 +6,7 @@
   - [2.2 Reliable Messaging](#22-reliable-messaging)
   - [2.3 Vansenvelope](#23-vansenvelope)
 - [3. Governance for MedComFHIR Messaging](#3-governance-for-medcom-fhir-messaging)
-  - [3.1 Basic Danish Mmessaging Assumptions](#31-basic-danish-messaging-assumptions-tbd)
+  - [3.1 Basic Danish Messaging Assumptions](#31-basic-danish-messaging-assumptions-tbd)
   - [3.2 Message exchange patterns](#32-message-exchange-patterns)
   - [3.3 Reliable Messaging using MedCom FHIR Messaging](#33-reliable-messaging-using-medcom-fhir-messaging)
 - [4. Governance for MedCom FHIR Messages](#4-governance-for-medcom-fhir-messages)
@@ -74,7 +74,7 @@ _**_Generic Reliable Messaging Model_**_
 
 ![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/reliable-messaging-principle.png "reliablemessaging")
 
-Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending system and its Messagehandler (MSH), to a Receiving Ecosystem, the Receiving System and its Messagehandler (MSH), or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
+Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending system and its MSH, to a Receiving Ecosystem, the Receiving System and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
 A message sent from the Sending Ecosystem to the intended Receiving Ecosystem can be well received but the returned acknowledgement can be lost. When discovering that the Sending Ecosystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. That message can be lost and again the Sending Ecosystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending Ecosystem and the message transaction will be fulfilled. The Receiving Ecosystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
@@ -202,11 +202,9 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 
 ## 4. Governance for MedCom FHIR Messages
 
-How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model:
+How is a MedCom FHIR Messages constructed, what parts does it consist of? Below you see the basic MedCom Messaging Model.
 
-![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
-
-As shown in the diagram above there are 4 MedCom profiled FHIR resources involved in a message:
+As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
 
 - A MedComMessagingMessage is a Bundle resource of type "message"
 - The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
@@ -215,17 +213,21 @@ As shown in the diagram above there are 4 MedCom profiled FHIR resources involve
   - a destination organization also a MedComMessagingOrganization, which too is an Organization resource
 - The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
 
+![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
+
 ## 4.1 MedComMessagingMessage (Bundle)
 
 A Bundle resource of type "message", which is a container for a collection of other resources.
 
-## 4.2 Scope and Usage
+## 4.1.1 Scope and Usage
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
 [Bundle in FHIR R4](http://hl7.org/fhir/R4/Bundle.html)
 
-| **MedComMessingMessage Rules**|
+## 4.1.2 MedComMessingMessage Rules
+
+| MedComMessingMessage Rules|
 |:---|
 | A MedCom FHIR Message **SHALL** be a Bundle resource of type "message" |
 | A MedCom FHIR Message **SHALL** contain at least one bundled MedComMessagingHeader resource |
@@ -241,22 +243,22 @@ One common operation performed with resources is to gather a collection of resou
 | A MedCom FHIR Message **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
 | The MedComMessagingHeader resource **SHALL** contain a Narrative text |
 
-[Detailed description for MedCom Messaging](https://medcomdk.github.io/dk-medcom-messaging/)
+[Tab here to see the detailed description for MedCom Messaging](https://medcomdk.github.io/dk-medcom-messaging/)
 
 <!-- [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md) -->
 
-## 4.3 Narrative Texts
+## 4.2 Narrative Texts
 
 A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
 Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
 
 Narratives contains two sub elements, status and div.
 
-### 4.3.1 The status element
+### 4.2.1 The status element
 
 [TBD]
 
-### 4.3.2 The div element
+### 4.2.2 The div element
 
 The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
 
@@ -264,7 +266,7 @@ The XHTML content **SHALL NOT** contain a head, a body element, external stylesh
 
 The div element **SHALL** have some non-whitespace content (text or an image).
 
-### 4.3.3 General Narrative Text Rules
+### 4.2.3 General Narrative Text Rules
 
 - All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
 - The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
@@ -276,7 +278,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
 
-## 4.4 MessageHeader
+## 4.3 MessageHeader
 
 <p align="left">
   <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png">
@@ -286,7 +288,9 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedComMessageHeader")
 -->
 
-| **MedComMessageHeader Rules**|
+## 4.3.1 MedComMessageHeader Rules
+
+| MedComMessageHeader Rules|
 |:---|
 | The MedComMessagingHeader resource **SHALL** be the first resource in a MedCom Message Bundle |
 | The MedComMessagingHeader resource **SHALL** contain an event of the MedCom Message (eg. the type of the message) |
@@ -300,33 +304,33 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [MessageHeader in FHIR R4](http://hl7.org/fhir/R4/messageheader.html)
 
-## 4.5 Identifiers
+## 4.3.2 Identifiers
 
 [Identifiers](/assets/documents/MessageHeader_Identifiers.md)
 
-## 4.6 Timestamps
+## 4.3.3 Timestamps
 
 [Timestamps](/assets/documents/MessageHeader_Timestamps.md)
 
-## 4.7 Messaging rules
+## 4.4 Messaging rules
 
 [Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
 [Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
 
-## 4.8 Acnowledgment rules
+## 4.5 Acnowledgement rules
 
-[Acnowledgment rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
-[Acnowledgment rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
+[Acnowledgement rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
+[Acnowledgement rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
 
-## 4.9 MustSupport
+## 4.6 MustSupport
 
 [MustSupport](/assets/documents/MustSupport.md)
 
-## 4.10 Provenance
+## 4.7 Provenance
 
 Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
 
-### 4.10.1 Scope and Usage
+### 4.7.1 Scope and Usage
 
 The Provenance resource tracks information about the activity that created, revised, deleted, or signed a version of a resource, describing the entities and agents involved. This information can be used to form assessments about its quality, reliability, trustworthiness, or to provide pointers for where to go to further investigate the origins of the resource and the information in it.
 
