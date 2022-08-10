@@ -218,6 +218,8 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
   - a destination organization also a MedComMessagingOrganization, which too is an Organization resource
 - The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
 
+<br>
+
 ![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
 
 ## 4.1 MedComMessagingMessage (Bundle)
