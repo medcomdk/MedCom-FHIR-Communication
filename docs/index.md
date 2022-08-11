@@ -282,7 +282,9 @@ One common operation performed with resources is to gather a collection of resou
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedComMessageHeader")
 -->
 
-## 4.2.1 MedComMessageHeader Rules
+### 4.2.1 Scope and Usage
+
+### 4.2.2 MedComMessageHeader Rules
 
 | MedComMessageHeader Rules|
 |:---|
@@ -298,13 +300,13 @@ One common operation performed with resources is to gather a collection of resou
 
 [MessageHeader in FHIR R4](http://hl7.org/fhir/R4/messageheader.html)
 
-## 4.2.2 Identifiers
+### 4.2.3 Identifiers
 
 [TBD]
 
 [Identifiers](/assets/documents/MessageHeader_Identifiers.md)
 
-## 4.2.3 Timestamps
+### 4.2.4 Timestamps
 
 [TBD]
 
@@ -314,13 +316,17 @@ One common operation performed with resources is to gather a collection of resou
 
 [TBD]
 
+### 4.3.1 Scope and Usage
+
+This profile describes the Organization resource that **shall** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **shall** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **shall** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
+
 [MedComMessagingOrganization in MedComMessingMessage IG](https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-organization.html)
 
 <br>
 
-<p align="left">
-  <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingOrganization.png">
-</p>
+### 4.3.2 MedComMessagingOrganization Rules
+
+[TBD]
 
 ## 4.4 MedComMessagingProvenance
 
@@ -331,6 +337,10 @@ Provenance of a resource is a record that describes entities and processes invol
 The Provenance resource tracks information about the activity that created, revised, deleted, or signed a version of a resource, describing the entities and agents involved. This information can be used to form assessments about its quality, reliability, trustworthiness, or to provide pointers for where to go to further investigate the origins of the resource and the information in it.
 
 Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
+
+### 4.4.2 Rules
+
+[TBD]
 
 - MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingProvenance resource
 - MedCom FHIR Messages **SHALL** contain one bundled MedComMessagingProvenance resource for each message exchange the message has been involved in
@@ -356,6 +366,14 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 [MustSupport](/assets/documents/MustSupport.md)
 
+### 4.5.1 Scope and Usage
+
+[TBD]
+
+### 4.5.2 Rules
+
+[TBD]
+
 ## 4.6 Narrative Texts
 
 A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
@@ -375,7 +393,11 @@ The XHTML content **SHALL NOT** contain a head, a body element, external stylesh
 
 The div element **SHALL** have some non-whitespace content (text or an image).
 
-### 4.6.3 General Narrative Text Rules
+### 4.6.3 Scope and Usage
+
+[TBD]
+
+### 4.6.4 General Narrative Text Rules
 
 - All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
 - The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
