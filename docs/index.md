@@ -275,13 +275,11 @@ One common operation performed with resources is to gather a collection of resou
 
 <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">Tab here to see the detailed description for MedComMessageHeader in MedComMessingMessage IG</a>
 
-<p align="left">
-  <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png">
-</p>
-
-<!--
-![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedComMessageHeader")
--->
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
+<figcaption text-align="left"><b>Figure 3: MedComMessageHeader</b></figcaption>
+</figure>
+<br>
 
 ### 4.2.1 Scope and Usage
 
@@ -345,15 +343,13 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 <br>
 
-<p align="left">
-  <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png">
-</p>
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png" target="_blank"> <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png" alt="MedComMessagingProvenance"  style="width:100%" id="Fig1" style="align-left"></a>
+<figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
+</figure>
+<br>
 
 <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-provenance.html" target="_blank">Tab here to see the detailed description for MedComMessagingProvenance in MedComMessingMessage IG</a>
-
-<!--
-![alt text](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png "MedCom Messaging Provenance key concepts(Remote)")
--->
 
 [MedComs use of Provenance](/assets/documents/Provenance.md)
 
