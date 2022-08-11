@@ -5,7 +5,7 @@ Reliable Messaging in VANSEnvelope
 The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is shown below:
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="assets/images/reliable-messaging-vansenvelope_1160x625.png" target="_blank"> <img src="assets/images/reliable-messaging-vansenvelope_1160x625.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
+<a href="../images/reliable-messaging-vansenvelope_1160x625.png" target="_blank"> <img src="../images/reliable-messaging-vansenvelope_1160x625.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Reliable Messaging - VANSEnvelope </b></figcaption>
 </figure>
 <br>
