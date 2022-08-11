@@ -1,5 +1,7 @@
 # Governance for MedCom FHIR®© Messaging
 
+**Table of Content**
+
 - [1. Introduction](#1-introduction-to-governance-for-medcom-fhir®©-messaging)
 - [2. Governance for the Network Layer](#2-governance-for-network-layer)
   - [2.1 Asynchronous messaging](#21-asynchronous-messaging)
@@ -72,7 +74,11 @@ Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** 
 
 _**Generic Reliable Messaging Model**_
 
-![reliable-messaging-principle](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/reliable-messaging-principle.png "reliablemessaging")
+<figure>
+<img src="../images/reliable-messaging-principle.png" alt="reliable messaging principle"  style="width:100%" id="Fig1">
+<figcaption text-align="center"><b>Figre 1: Generic Reliable Messaging Model </b></figcaption>
+</figure>
+<br>
 
 Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending system and its MSH, to a Receiving Ecosystem, the Receiving System and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
@@ -81,7 +87,7 @@ Any of these events can happen over time and therefore Reliable Messaging define
 
 ## 2.2.1 Generic ruleset governing the principles of Reliable Messaging
 
-|**Generic ruleset governing the principles of Reliable Messaging**|
+|Generic ruleset governing the principles of Reliable Messaging|
 |:---|
 | A Sending Ecosystem **SHALL** send a Message with a flag indicating that it expects an Acknowledgement on the Message|
 | A Receiving Ecosystem **SHALL** return an Acknowledgement on a received Message with a flag indicating that it expects a acknowledgement on the Message|
