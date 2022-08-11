@@ -10,6 +10,7 @@ When reliable messaging is implemented , the Receiver **SHALL** check the incomi
 | Both Bundle.id and MessageHeader.id have already been received  | The original response has been lost (failed to return to the request issuer), and the original response **SHALL** be resent|
 | MessageHeader.id has already been received, but Bundle.id is new | A previously seen message has been resubmitted for processing again. The server may either reprocess the message, or reject the message|
 | The Bundle.id has already been received, but the MessageHeader.id is new | This is an error - Bundle.id values **MUST** never be reused |
+
 <br>
 
 The duration period for caching does generally not need to be very long. At a minimum, it could be 1 minute longer than the timeout of the sending system, though it may need to be longer depending on the re-sending policies of the sending system.
@@ -52,9 +53,9 @@ This section provides a description of the different types of Reliable Messaging
 
 - Scenario #1 - Normally successful unsolicidated message or request message flow with acknowledgement request
 - Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request
-- Scenario #3 - (Re) Sending Unchanged Message
+- Scenario #3 - (Re-)Sending Unchanged Message
 - Scenario #4 - Message is sent normally, acknowledgement is lost along the way
-- Scenario #5 - (Re) Sending Modified Message
+- Scenario #5 - (Re-)Sending Modified Message
 
 #### Scenario #1 - Normally successful unsolicidated message or request message flow with acknowledgement request (Google translated)
 
