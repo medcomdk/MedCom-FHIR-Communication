@@ -78,7 +78,7 @@ _**Generic Reliable Messaging Model**_
 <a href="assets/images/reliable-messaging-principle.png" target="blank"> <img src="assets/images/reliable-messaging-principle.png" alt="reliable messaging principle"  style="width:100%" id="Fig1" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 1: Generic Reliable Messaging Model </b></figcaption>
 </figure>
-<br>
+<br><br>
 
 Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending system and its MSH, to a Receiving Ecosystem, the Receiving System and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
