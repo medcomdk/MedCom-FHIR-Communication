@@ -238,7 +238,7 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 
 ## 4.1 MedComMessagingMessage (Bundle)
 
-A Bundle resource of type "message", which is a container for a collection of other resources.
+MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
 
 ## 4.1.1 Scope and Usage
 
@@ -268,40 +268,11 @@ One common operation performed with resources is to gather a collection of resou
 
 <!-- [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md) -->
 
-## 4.2 Narrative Texts
-
-A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
-Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
-
-Narratives contains two sub elements, status and div.
-
-### 4.2.1 The status element
+## 4.2 MessageHeader
 
 [TBD]
 
-### 4.2.2 The div element
-
-The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
-
-The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
-
-The div element **SHALL** have some non-whitespace content (text or an image).
-
-### 4.2.3 General Narrative Text Rules
-
-- All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
-- The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
-- The narrative **SHALL** reflect the impact of all modifier extensions.
-
-[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative)
-
-[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)
-
-[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
-
-## 4.3 MessageHeader
-
-[TBD]
+[MessageHeader in MedComMessingMessage IG](https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html)
 
 <p align="left">
   <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png">
@@ -311,7 +282,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png "MedComMessageHeader")
 -->
 
-## 4.3.1 MedComMessageHeader Rules
+## 4.2.1 MedComMessageHeader Rules
 
 | MedComMessageHeader Rules|
 |:---|
@@ -327,45 +298,35 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [MessageHeader in FHIR R4](http://hl7.org/fhir/R4/messageheader.html)
 
-## 4.3.2 Identifiers
+## 4.2.2 Identifiers
 
 [TBD]
 
 [Identifiers](/assets/documents/MessageHeader_Identifiers.md)
 
-## 4.3.3 Timestamps
+## 4.2.3 Timestamps
 
 [TBD]
 
 [Timestamps](/assets/documents/MessageHeader_Timestamps.md)
 
-## 4.4 Messaging rules
+## 4.3 MedComMessagingOrganization
 
 [TBD]
 
-[Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
+[MedComMessagingOrganization in MedComMessingMessage IG](https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-organization.html)
 
-[Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
+<br>
 
-## 4.5 Acnowledgement rules
+<p align="left">
+  <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingOrganization.png">
+</p>
 
-[TBD]
-
-[Acnowledgement rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
-
-[Acnowledgement rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
-
-## 4.6 MustSupport
-
-[TBD]
-
-[MustSupport](/assets/documents/MustSupport.md)
-
-## 4.7 Provenance
+## 4.4 MedComMessagingProvenance
 
 Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
 
-### 4.7.1 Scope and Usage
+### 4.4.1 Scope and Usage
 
 The Provenance resource tracks information about the activity that created, revised, deleted, or signed a version of a resource, describing the entities and agents involved. This information can be used to form assessments about its quality, reliability, trustworthiness, or to provide pointers for where to go to further investigate the origins of the resource and the information in it.
 
@@ -388,6 +349,59 @@ Provenance resources are a record-keeping assertion that gathers information abo
 [MedComs use of Provenance](/assets/documents/Provenance.md)
 
 [HL7 FHIR®© description of Provenance](http://hl7.org/fhir/R4/provenance.html)
+
+## 4.5 MustSupport
+
+[TBD]
+
+[MustSupport](/assets/documents/MustSupport.md)
+
+## 4.6 Narrative Texts
+
+A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
+
+Narratives contains two sub elements, status and div.
+
+### 4.6.1 The status element
+
+[TBD]
+
+### 4.6.2 The div element
+
+The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
+
+The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
+
+The div element **SHALL** have some non-whitespace content (text or an image).
+
+### 4.6.3 General Narrative Text Rules
+
+- All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
+- The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
+- The narrative **SHALL** reflect the impact of all modifier extensions.
+
+[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative)
+
+[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)
+
+[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
+
+## 4.7 Messaging rules
+
+[TBD]
+
+[Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
+
+[Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
+
+## 4.8 Acnowledgement rules
+
+[TBD]
+
+[Acnowledgement rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
+
+[Acnowledgement rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
 
 ## 5. Governance for Test and Certification
 
