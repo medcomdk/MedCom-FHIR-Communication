@@ -229,7 +229,12 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 
 <br>
 
-![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)
+<!--![The basic MedCom Messaging Model](https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png)-->
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png" target="blank"> <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
+<figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
+</figure>
+<br>
 
 ## 4.1 MedComMessagingMessage (Bundle)
 
