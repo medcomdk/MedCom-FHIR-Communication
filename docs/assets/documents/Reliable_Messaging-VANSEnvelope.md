@@ -53,11 +53,11 @@ When Reliable Messaging is implemented , the Receiver **SHALL** check the incomi
 
 This section provides a description of the different types of Reliable Messaging scenarios.
 
-Scenario #1 - Normally successful unsolicidated VANSEnvelope or request message flow with VANSEnvelopeAcknowledgement request
-Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request
-Scenario #3 - (Re-)Sending Unchanged VANSEnvelope
-Scenario #4 - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way
-Scenario #5 - (Re-)Sending Modified VANSEnvelope
+- Scenario #1 - Normally successful unsolicidated VANSEnvelope or request message flow with VANSEnvelopeAcknowledgement request
+- Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request
+- Scenario #3 - (Re-)Sending Unchanged VANSEnvelope
+- Scenario #4 - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way
+- Scenario #5 - (Re-)Sending Modified VANSEnvelope
 
 ### Scenario #1 - Normally successful unsolicidated VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request (Google translated)
 
