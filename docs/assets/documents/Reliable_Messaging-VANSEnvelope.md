@@ -78,13 +78,13 @@ The Receiving System **SHALL** ignore the contents of the duplicate instances of
 ### Scenario #3 - (Re) Sending Unchanged VANSEnvelope (Google translated)
 
 Correct retransmission of a message A.
-The Sending System **SHALL** form a new VANSEnvelope with a new ID and time of dispatch. Since there has been no change in the Message content section, the rest of the VANSEnvelope remains identical. The VANSEnvelope is sent and VANSEnvelopeAcknowledged as a completely new VANSEnvelope according to Scenario # 1a or # 1b.
+The Sending System **SHALL** form a new VANSEnvelope with a new ID and time of dispatch. Since there has been no change in the Message content section, the rest of the VANSEnvelope remains identical. The VANSEnvelope is sent and VANSEnvelopeAcknowledged as a completely new VANSEnvelope according to Scenario #1 or # 1b.
 Re-dispatches are always done manually and should be in accordance with the normal response time for the specific VANSEnvelope flow.
 
 ### Scenario #4 - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way (Google translated)
 
-As Scenario # 1a, but where VANSEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
-The shipping pattern is like Scenario # 2a.
+As Scenario #1, but where VANSEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
+The shipping pattern is like Scenario #3.
 
 ### Scenario #5 - (Re-) Sending Modified Message (Google translated)
 
