@@ -74,8 +74,8 @@ Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** 
 
 _**Generic Reliable Messaging Model**_
 
-<figure>
-<img src="assets/images/reliable-messaging-principle.png" alt="reliable messaging principle"  style="width:100%" id="Fig1">
+<figure style:"margin-left: 0px; margin-right: 0px;">
+<a href="assets/images/reliable-messaging-principle.png" target="blank"> <img src="assets/images/reliable-messaging-principle.png" alt="reliable messaging principle"  style="width:100%" id="Fig1" style="float:left"></a>
 <figcaption text-align="left"><b>Figure 1: Generic Reliable Messaging Model </b></figcaption>
 </figure>
 <br>
