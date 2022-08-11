@@ -94,6 +94,8 @@ Any of these events can happen over time and therefore Reliable Messaging define
 | A Receiving Ecosystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend Acknowledgement|
 | A Receiving Ecosystem **SHALL** return the same Acknowledgement content on a received Message as it returned on the first received copy of the Message|
 
+<br>
+
 A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
 
 - [2.3.1 Reliable Messaging using VANSEnvelope](#231-reliable-messaging-using-vansenvelope)
