@@ -424,9 +424,9 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [TBD]
 
-[Acnowledgement rules (Danish)](/assets/documents/Rules_acknowledgement-DA.md)
+[Acnowledgement rules (Danish)](/assets/documents/Rules_Acknowledgement-DA.md)
 
-[Acnowledgement rules (English)](/assets/documents/Rules_acknowledgement-EN.md)
+[Acnowledgement rules (English)](/assets/documents/Rules_Acknowledgement-EN.md)
 
 ## 5. Governance for Test and Certification
 
