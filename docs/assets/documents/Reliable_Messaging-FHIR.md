@@ -1,8 +1,8 @@
-# Reliable Messaging using MedCom FHIR Messaging
-
-_**Work in progress**_
+# Reliable Messaging using MedCom FHIR Messaging (Work in progress)
 
 When reliable messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
+
+<br>
 
 | Case                                                            | Description                 |
 |:----------------------------------------------------------------|:---------------------------|
