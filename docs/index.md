@@ -1,4 +1,4 @@
-# Governance for MedCom FHIR®© Messaging
+<h1> Governance for MedCom FHIR®© Messaging</h1>
 
 **Table of Content**
 
