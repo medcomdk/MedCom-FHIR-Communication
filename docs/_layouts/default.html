@@ -11,16 +11,6 @@
 {% seo %}
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-   <script>
-      function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-      }
-    </script>
   <style>
         /* Add a black background color to the top navigation */
       .topnav {
@@ -156,7 +146,9 @@
                 <i class="fa fa-bars"></i>
           </div>
           <p/>
+          <hr/>
         </strong>
+      
       </section>
         <!-- <strong>
         <div class="dropdown">
@@ -207,7 +199,7 @@
       <!-- <h3 align="left">{{ site.description }}</h3> -->
       
       {{ content }}
-
+    
       </section>
         <!--footer-->
         <!--
@@ -240,5 +232,15 @@
       </section>
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    <script>
+      function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+      }
+    </script>
   </body>
 </html>

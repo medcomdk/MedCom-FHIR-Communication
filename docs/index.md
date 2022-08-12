@@ -1,7 +1,6 @@
-<h1> Governance for MedCom FHIR®© Messaging</h1>
+# Governance for MedCom FHIR®© Messaging
 
 **Table of Content**
-
 - [1. Introduction](#1-introduction-to-governance-for-medcom-fhir®©-messaging)
 - [2. Governance for the Network Layer](#2-governance-for-network-layer)
   - [2.1 Asynchronous messaging](#21-asynchronous-messaging)
