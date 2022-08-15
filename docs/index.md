@@ -1,4 +1,5 @@
 # Governance for MedCom FHIR®© Messaging
+<hr/>
 
 **Table of Content**
 - [1. Introduction](#1-introduction-to-governance-for-medcom-fhir®©-messaging)
