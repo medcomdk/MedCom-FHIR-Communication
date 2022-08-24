@@ -342,9 +342,8 @@ The MedComMessagingProvenance resource tracks information about the activity tha
 Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
 
 <br>
-
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html#scope-and-usage" target="_blank"> <img src="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html#scope-and-usage" alt="MedComMessagingProvenance"  style="width:100%" id="Fig1" style="align-left"></a>
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
 </figure>
 <br>
