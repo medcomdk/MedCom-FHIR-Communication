@@ -230,7 +230,7 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 <br>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/index.html#general-messaging-model" target="blank"> <img src="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/index.html#general-messaging-model" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
+<a href="C:\Git_hub\MedCom-FHIR-Communication\docs\assets\images\MessagingModel.png" target="blank"> <img src="C:\Git_hub\MedCom-FHIR-Communication\docs\assets\images\MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
 </figure>
 <br>
