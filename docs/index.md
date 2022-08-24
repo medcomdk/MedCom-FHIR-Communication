@@ -230,7 +230,7 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 <br>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png" target="blank"> <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
+<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/index.html#general-messaging-model" target="blank"> <img src="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/index.html#general-messaging-model" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
 </figure>
 <br>
@@ -344,7 +344,7 @@ Provenance resources are a record-keeping assertion that gathers information abo
 <br>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png" target="_blank"> <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png" alt="MedComMessagingProvenance"  style="width:100%" id="Fig1" style="align-left"></a>
+<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html#scope-and-usage" target="_blank"> <img src="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html#scope-and-usage" alt="MedComMessagingProvenance"  style="width:100%" id="Fig1" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
 </figure>
 <br>
