@@ -16,6 +16,10 @@
   - [4.2 MedComMessagingMessageHeader](#42-messageheader)
   - [4.3 MedComMessagingOrganization](#43-medcommessagingorganization)
   - [4.4 MedComMessagingProvenance](#44-medcommessagingprovenance)
+  - [4.5 MustSupport](#45-mustsupport)
+  - [4.6 Narrative Texts](#46-narrative-texts)
+  - [4.7 Messaging Rules](#47-messaging-rules-google-translated)
+  - [4.8 Acnowledgement Rules](#48-acnowledgement-rules-google-translated)
 - [5. Governance for Test and Certification](#5-governance-for-test-and-certification)
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
 
