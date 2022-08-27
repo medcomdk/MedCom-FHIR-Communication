@@ -41,10 +41,44 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 
 ### 3.4.1 Sending to a primary receiver
 
+When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
+
 ### 3.4.2 Sending to a primary receiver with an already known copyreciver
 
-### 3.4.3 Sending to a copyreceiver in relation to the 
+When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
 
-### 3.4.4 Sending a copy of a message
+When also sending to a copyreciver the Receiving Organization representing this **SHALL** be pointed out/referenced by destination:cc/receiver in MedComMessagingMessageHeader.
 
-### 3.4.5 Forwarding a message
+Both elements **SHALL** be represented.
+
+### 3.4.3 Sending a copy of a message
+
+A CopyReceiver is a ccreceiver of the same message dispatched transaction to a primary receiver.
+
+A Forwardreceiver is a fwdreceiver of a message dispatched transaction unlinked to the original message transaction
+
+#### 3.4.4.1 Sending to a copyreceiver while also sending to a Primary receiver
+
+A message to a copyreceiver is as the name says a copy of the original message.
+
+Sending to a copyreceiver is handled on different levels:
+
+- VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
+- MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a copyreceiver element to the stack of MedComMessagingProvenances.
+- MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
+- MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
+
+#### 3.4.4.2 Forwarding a message
+
+A forwarded message to a new receiver not present in the construction and dispatching of the original message.
+
+Forwarding is handled on different levels
+
+- VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
+- MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a forwarding element to the stack of MedComMessagingProvenances.
+- MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
+- MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
+
+## 3.5 Handling receiving scenarios
+
+
