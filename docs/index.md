@@ -377,32 +377,44 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 ## 4.5 MustSupport
 
-[TBD]
+Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
-[MustSupport](/assets/documents/MustSupport.md)
+For this reason, the specification itself never labels any elements as MustSupport. This is done in StructureDefinitions, where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this could involve expectations around what a system must store, display, allow data capture of, include in decision logic, pass on to other data consumers, etc.
+
+Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
 
 ### 4.5.1 Scope and Usage
 
-[TBD]
+In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG
 
 ### 4.5.2 Rules
 
-[TBD]
+In MedCom FHIR Messaging MustSupport requires that a system 
+
+- **SHALL** store,
+- **SHALL** display
+- **SHOULD** include in decision logic
+- **MAY** pass on to other data consumers
 
 ## 4.6 Narrative Texts
 
-A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need to encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
-Contained resources do not have narrative, but their content SHALL be represented in the ressource container.
+A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative **SHALL** encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+Contained resources do not have narrative, but their content **SHALL** be represented in the ressource container.
 
 Narratives contains two sub elements, status and div.
 
 ### 4.6.1 The status element
 
 [TBD]
+The code system http://hl7.org/fhir/narrative-status defines the codes for the status element.
+
+In MedCom FHIR Messages The code **SHALL** always be: "additional" meaning that the it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
+
+A narrative in MedCom FHIR Messages **SHALL NEVER** be of code: empty. 
 
 ### 4.6.2 The div element
 
-The contents of the div element are an XHTML fragment that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
+The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
 
 The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
 
@@ -411,6 +423,7 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 ### 4.6.3 Scope and Usage
 
 [TBD]
+The narrative element is a human-readable summary of the resource (essential clinical and business information)
 
 ### 4.6.4 General Narrative Text Rules
 
@@ -424,9 +437,20 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
 
-## 4.7 Messaging rules
+## 4.7 Messaging rules (Google translated)
 
 [TBD]
+
+| ID | Rule |
+|:------| :-----|
+| MR1.S | An acknowledgment must always be requested on a FHIR message |
+| MR2.S | A message is marked as sent and received when an AA acknowledgment has been received |
+| MR3.S | A message is marked as failed when a negative AR acknowledgment has been received |
+| MR4.S | A message is marked as failed when a negative AE acknowledgment has been received |
+| MR5.R | A message must be resent x times upon receipt of an AE Acknowledgment |
+| MR6.R | A message must be re-sent x times in the event of failure to receive an Acknowledgment |
+| MR7.R | A message that is resent must always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
+| MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
 
 [Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
 
