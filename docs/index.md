@@ -456,9 +456,18 @@ The narrative element is a human-readable summary of the resource (essential cli
 
 [Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
 
-## 4.8 Acnowledgement rules
+## 4.8 Acnowledgement rules (Google translated)
 
 [TBD]
+
+| ID | Rules |
+|:------| :-----|
+| KR1.R | A FHIR message must always be acknowledged |
+| KR2.R | An acknowledgment message must never be acknowledged |
+| KR3.R | If no errors are found while receiving a message, a positive acknowledgment is made with AA |
+| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative acknowledgment is made with AE |
+| KR5.R | If a message validates negatively against the standard's profiling, it is acknowledged negatively with AR |
+| KR6.S | If an acknowledgment of a message is not received within xx minutes, the original message is marked for resending |
 
 [Acnowledgement rules (Danish)](/assets/documents/Rules_Acknowledgement-DA.md)
 
