@@ -1,12 +1,12 @@
-# Messaging rules
+# Messaging rules (Google translated)
 
-| ID    | Regel |
+| ID | Rule |
 |:------| :-----|
-| MR1.S | Der skal altid anmodes om kvittering på en FHIR-meddelelse |
-| MR2.S | En meddelelse markeres som sendt og modtaget, når der er modtaget en AA kvittering |
-| MR3.S | En meddelelse markeres som fejlet, når der er modtaget en negativ AR kvittering |
-| MR4.S | En meddelelse markeres som fejlet, når der er modtaget en negativ AE kvittering |
-| MR5.R | En meddelelse må forsøges gensendt x gange ved modtagelse af en AE Kvittering |
-| MR6.R | En meddelelse må forsøges gensendt x gange ved manglende modtagelse af en Kvittering |
-| MR7.R | En meddelelse, der gensendes, skal altid opdateres med ny timestamp=Bundle.timestamp og ny kuvertid=Bundle.id |
-| MR8.R | En meddelelse er en dublet, hvis den indeholder samme MessageHeader.Id som en tidligere modta-get meddelelse |
+| MR1.S | An acknowledgment must always be requested on a FHIR message |
+| MR2.S | A message is marked as sent and received when an AA acknowledgment has been received |
+| MR3.S | A message is marked as failed when a negative AR acknowledgment has been received |
+| MR4.S | A message is marked as failed when a negative AE acknowledgment has been received |
+| MR5.R | A message must be resent x times upon receipt of an AE Acknowledgment |
+| MR6.R | A message must be re-sent x times in the event of failure to receive an Acknowledgment |
+| MR7.R | A message that is resent must always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
+| MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
