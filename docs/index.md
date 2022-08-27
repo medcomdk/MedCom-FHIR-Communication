@@ -53,12 +53,19 @@ In the following we follow a top-down approach by addressing shipping over the N
 A MedCom FHIR Message Standard is the term for a collection of documentation covering most aspects of the standard.
 
 1. Clinical Documentation
+
 1.1. Clinical description
+
 1.2. Use Cases
+
 2. Technical Documentation
+
 2.1. One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.)
+
 3. Additional Documentation
+
 3.1 A GitHub Page linking it all together with further descriptions and specifications
+
 3.2 This Governance
 
 An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all these parts of the documentation laid out for the MedCom FHIR Message Standard.
