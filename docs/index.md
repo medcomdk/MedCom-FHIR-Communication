@@ -11,6 +11,8 @@
   - [3.1 Basic Danish Messaging Assumptions](#31-basic-danish-messaging-assumptions-tbd)
   - [3.2 Message exchange patterns](#32-message-exchange-patterns)
   - [3.3 Reliable Messaging using MedCom FHIR Messaging](#33-reliable-messaging-using-medcom-fhir-messaging)
+  - [3.7 Messaging Rules](#37-messaging-rules-google-translated)
+  - [3.8 Acnowledgement Rules](#38-acnowledgement-rules-google-translated)
 - [4. Governance for MedCom FHIR Messages](#4-governance-for-medcom-fhir-messages)
   - [4.1 MedComMessagingMessage (Bundle)](#41-medcommessagingmessage-bundle)
   - [4.2 MedComMessagingMessageHeader](#42-messageheader)
@@ -18,8 +20,6 @@
   - [4.4 MedComMessagingProvenance](#44-medcommessagingprovenance)
   - [4.5 MustSupport](#45-mustsupport)
   - [4.6 Narrative Texts](#46-narrative-texts)
-  - [4.7 Messaging Rules](#47-messaging-rules-google-translated)
-  - [4.8 Acnowledgement Rules](#48-acnowledgement-rules-google-translated)
 - [5. Governance for Test and Certification](#5-governance-for-test-and-certification)
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
 
@@ -239,6 +239,42 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 
 [Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
 
+## 3.7 Messaging rules (Google translated)
+
+[TBD]
+
+| ID | Rule |
+|:------| :-----|
+| MR1.S | An acknowledgment must always be requested on a FHIR message |
+| MR2.S | A message is marked as sent and received when an AA acknowledgment has been received |
+| MR3.S | A message is marked as failed when a negative AR acknowledgment has been received |
+| MR4.S | A message is marked as failed when a negative AE acknowledgment has been received |
+| MR5.R | A message must be resent x times upon receipt of an AE Acknowledgment |
+| MR6.R | A message must be re-sent x times in the event of failure to receive an Acknowledgment |
+| MR7.R | A message that is resent must always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
+| MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
+
+[Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
+
+[Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
+
+## 3.8 Acnowledgement rules (Google translated)
+
+[TBD]
+
+| ID | Rules |
+|:------| :-----|
+| KR1.R | A FHIR message must always be acknowledged |
+| KR2.R | An acknowledgment message must never be acknowledged |
+| KR3.R | If no errors are found while receiving a message, a positive acknowledgment is made with AA |
+| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative acknowledgment is made with AE |
+| KR5.R | If a message validates negatively against the standard's profiling, it is acknowledged negatively with AR |
+| KR6.S | If an acknowledgment of a message is not received within xx minutes, the original message is marked for resending |
+
+[Acnowledgement rules (Danish)](/assets/documents/Rules_Acknowledgement-DA.md)
+
+[Acnowledgement rules (English)](/assets/documents/Rules_Acknowledgement-EN.md)
+
 ## 4. Governance for MedCom FHIR Messages
 
 Below you see the basic MedCom FHIR Messaging Model.
@@ -444,42 +480,6 @@ The narrative element is a human-readable summary of the resource (essential cli
 [NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)
 
 [Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
-
-## 4.7 Messaging rules (Google translated)
-
-[TBD]
-
-| ID | Rule |
-|:------| :-----|
-| MR1.S | An acknowledgment must always be requested on a FHIR message |
-| MR2.S | A message is marked as sent and received when an AA acknowledgment has been received |
-| MR3.S | A message is marked as failed when a negative AR acknowledgment has been received |
-| MR4.S | A message is marked as failed when a negative AE acknowledgment has been received |
-| MR5.R | A message must be resent x times upon receipt of an AE Acknowledgment |
-| MR6.R | A message must be re-sent x times in the event of failure to receive an Acknowledgment |
-| MR7.R | A message that is resent must always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
-| MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
-
-[Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
-
-[Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
-
-## 4.8 Acnowledgement rules (Google translated)
-
-[TBD]
-
-| ID | Rules |
-|:------| :-----|
-| KR1.R | A FHIR message must always be acknowledged |
-| KR2.R | An acknowledgment message must never be acknowledged |
-| KR3.R | If no errors are found while receiving a message, a positive acknowledgment is made with AA |
-| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative acknowledgment is made with AE |
-| KR5.R | If a message validates negatively against the standard's profiling, it is acknowledged negatively with AR |
-| KR6.S | If an acknowledgment of a message is not received within xx minutes, the original message is marked for resending |
-
-[Acnowledgement rules (Danish)](/assets/documents/Rules_Acknowledgement-DA.md)
-
-[Acnowledgement rules (English)](/assets/documents/Rules_Acknowledgement-EN.md)
 
 ## 4.9 Governance for displaying MedCom FHIR Messaging
 
