@@ -1,7 +1,7 @@
 # Governance for MedCom FHIR®© Messaging
+<hr/>
 
 **Table of Content**
-
 - [1. Introduction](#1-introduction-to-governance-for-medcom-fhir®©-messaging)
 - [2. Governance for the Network Layer](#2-governance-for-network-layer)
   - [2.1 Asynchronous messaging](#21-asynchronous-messaging)
@@ -230,7 +230,7 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 <br>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png" target="blank"> <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" target="blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
 </figure>
 <br>
@@ -336,9 +336,8 @@ The MedComMessagingProvenance resource tracks information about the activity tha
 Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
 
 <br>
-
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png" target="_blank"> <img src="https://build.fhir.org/ig/hl7dk/dk-medcom-messaging/MedComMessagingProvenance.png" alt="MedComMessagingProvenance"  style="width:100%" id="Fig1" style="align-left"></a>
+<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
 </figure>
 <br>
