@@ -48,6 +48,21 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 <!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
+### 1.1 What is a MedCom FHIR Message Standard
+
+A MedCom FHIR Message Standard is the term for a collection of documentation covering most aspects of the standard.
+
+1. Clinical Documentation
+1.1. Clinical description
+1.2. Use Cases
+2. Technical Documentation
+2.1. One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.)
+3. Additional Documentation
+3.1 A GitHub Page linking it all together with further descriptions and specifications
+3.2 This Governance
+
+An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all these parts of the documentation laid out for the MedCom FHIR Message Standard.
+
 ## 2. Governance for Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
@@ -56,7 +71,7 @@ To be able to communicate over the VANS Network, both senders and receivers **SH
 
 To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **SHALL** be registered in SOR with that messagetype and version.
 
-The Sending system **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
+The Sending application **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
 ## 2.1 Asynchronous Messaging
 
@@ -78,7 +93,7 @@ Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** 
 </figure>
 <br>
 
-Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending system and its MSH, to a Receiving Ecosystem, the Receiving System and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
+Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending application and its MSH, to a Receiving Ecosystem, the Receiving System and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
 A message sent from the Sending Ecosystem to the intended Receiving Ecosystem can be well received but the returned acknowledgement can be lost. When discovering that the Sending Ecosystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. That message can be lost and again the Sending Ecosystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending Ecosystem and the message transaction will be fulfilled. The Receiving Ecosystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
@@ -261,11 +276,13 @@ One common operation performed with resources is to gather a collection of resou
 | One of the two bundled MedComMessagingOrganization resources **SHALL** represent the Receiver Organization pointed to by the MedComMessagingHeader.destination:primary sliced element |
 | A MedCom FHIR Message **MAY** contain more bundled MedComMessagingOrganization resources |
 | The MedComMessagingHeader resource **MAY** include a list of carbon-copy receiver organizations pointed to by the MedComMessagingHeader.destination:cc sliced element(s) |
-| The bundled MedComMessagingOrganization resource **MAY** represent one of the carbon-copy receiver Organizations pointed to by the MedComMessagingHeader.destination:cc sliced element |
+| If there exists one or more destination:cc elements, these **SHALL** be represented as bundled MedComMessagingOrganization resource(s) each one of the carbon-copy receiver Organizations pointed to by the MedComMessagingHeader.destination:cc sliced element |
 | A MedCom FHIR Message **SHALL** contain at least one bundled MedComCorePatient resource |
 | A MedCom FHIR Message **SHALL** contain at least one bundled MedComMessagingProvenance resource |
 | A MedCom FHIR Message **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader |
 | The MedComMessagingHeader resource **SHALL** contain a Narrative text |
+| A MedCom FHIR Message **SHALL** be validated before disptching of the message |
+| A MedCom FHIR Message **SHALL** be validated on reception of the message in the Receiving Apllication|
 
 <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Tab here to see the detailed description for MedCom Messaging</a>
 
@@ -423,7 +440,23 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 [Acnowledgement rules (English)](/assets/documents/Rules_Acknowledgement-EN.md)
 
-## 5. Governance for Test and Certification
+## 4.9 Governance for displaying MedCom FHIR Messaging
+
+All elements marked as MustSupport **SHALL** be presented or easily accessed on the display of the reader of a received message.
+
+The message as a whole coherent object **SHALL** be present for easy access for the reader.
+
+The receiving application **SHALL** be able to show only relevant information for the different receiver roles in the receiving organization, eg. only persons in clinical roles **SHALL** be able to read clinical content
+
+## 5.0 Governance for Terminiology
+
+The term Terminology is in this governance a term covering all kins of terminology, classifications, enumerations and qualifiers.
+
+All elements of a MedCom FHIR Message **SHALL** be compliant with the terminologies that are pointed out by these elements.
+
+All Terminologies that are not implicitly present in the specification of an element are present in the Terminology IG and this Terminology IG **SHALL** be 
+
+## x. Governance for Test and Certification
 
 All message solutions developed on the basis of MedCom FHIR Messing profiles **SHALL** be validated with the FHIR validator
 
@@ -431,7 +464,7 @@ All message solutions developed on the basis of MedCom FHIR Messing profiles **S
 
 _**Insert requirements from the test and certification process here**_
 
-## 6. Governance for Release Notes
+## y. Governance for Release Notes
 
 All changes in the MedCom FHIR Specifications **SHALL** be described in a release note following that specific version of the specification.
 
