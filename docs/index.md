@@ -60,7 +60,7 @@ A MedCom FHIR Message Standard is the term for a collection of documentation cov
 
 2. Technical Documentation
 
-2.1. One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.). These cover what in former MedCom non-FIR standards rules regarding syntax and qualifiers
+2.1. One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.). These cover what in former MedCom non-FIR standards rules regarding syntax and qualifiers.
 
 3. Additional Documentation
 
