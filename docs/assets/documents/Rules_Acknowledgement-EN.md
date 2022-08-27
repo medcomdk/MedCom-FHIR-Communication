@@ -1,10 +1,12 @@
-# Acknowledgment rules (to be translated)
+# Acknowledgment rules (Google translated)
 
-| ID    | Rule |
+[TBD]
+
+| ID | Rules |
 |:------| :-----|
-| KR1.R | Der skal altid kvitteres på en FHIR-meddelelse |
-| KR2.R | Der må aldrig kvitteres på en kvitteringsmeddelelse |
-| KR3.R | Hvis der ikke findes fejl under modtagelse af en meddelelse, kvitteres der positivt med AA |
-| KR4.R | Hvis der sker en teknisk fejl i modtagersystemet under modtagelse af en meddelelse, kvitteres der negativt med AE |
-| KR5.R | Hvis en meddelelse validerer negativt mod standardens profilering, kvitteres der negativt med AR |
-| KR6.S | Hvis en kvittering på en meddelelse ikke er modtaget inden xx minutter, markeres den originale med-delelse til genafsendelse |
+| KR1.R | A FHIR message must always be acknowledged |
+| KR2.R | An acknowledgment message must never be acknowledged |
+| KR3.R | If no errors are found while receiving a message, a positive acknowledgment is made with AA |
+| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative acknowledgment is made with AE |
+| KR5.R | If a message validates negatively against the standard's profiling, it is acknowledged negatively with AR |
+| KR6.S | If an acknowledgment of a message is not received within xx minutes, the original message is marked for resending |
