@@ -176,6 +176,8 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 
 ## 3. Governance for MedCom FHIR Messaging
 
+[Temporary file: Governance for MedCom FHIR Messaging](/assets/documents/03Governance4FHIR-Messaging.md)
+
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2.
