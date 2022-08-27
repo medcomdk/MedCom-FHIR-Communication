@@ -13,9 +13,9 @@
   - [3.3 Reliable Messaging using MedCom FHIR Messaging](#33-reliable-messaging-using-medcom-fhir-messaging)
 - [4. Governance for MedCom FHIR Messages](#4-governance-for-medcom-fhir-messages)
   - [4.1 MedComMessagingMessage (Bundle)](#41-medcommessagingmessage-bundle)
-  - [4.2 MessageHeader](#42-messageheader)
-  - [4.3 medcommessagingorganization](#43-medcommessagingorganization)
-  - [4.4 medcommessagingprovenance](#44-medcommessagingprovenance)
+  - [4.2 MedComMessagingMessageHeader](#42-messageheader)
+  - [4.3 MedComMessagingOrganization](#43-medcommessagingorganization)
+  - [4.4 MedComMessagingProvenance](#44-medcommessagingprovenance)
 - [5. Governance for Test and Certification](#5-governance-for-test-and-certification)
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
 
@@ -292,7 +292,7 @@ One common operation performed with resources is to gather a collection of resou
 
 <!-- [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md) -->
 
-## 4.2 MessageHeader
+## 4.2 MedComMessagingMessageHeader
 
 [TBD]
 
@@ -310,7 +310,7 @@ The MedComMessageHeader profile is a resource that **shall** be used in all MedC
 
 The element event **shall** be defined in accordance with the type of standard the message concerns e.g., HospitalNotification and CareCommunication. Due to the different requirements for each standard, it **shall** be expected that the MedComMessagingMessageHeader is inherited in each standard.
 
-### 4.2.2 MedComMessageHeader Rules
+### 4.2.2 MedComMessagingMessageHeader Rules
 
 | MedComMessageHeader Rules|
 |:---|
