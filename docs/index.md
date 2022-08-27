@@ -303,17 +303,11 @@ The element event **shall** be defined in accordance with the type of standard t
 
 [MessageHeader in FHIR R4](http://hl7.org/fhir/R4/messageheader.html)
 
-### 4.2.3 Identifiers
+### 4.2.3 Identifiers and Timestamps
 
 [TBD]
 
-[Identifiers](/assets/documents/MessageHeader_Identifiers.md)
-
-### 4.2.4 Timestamps
-
-[TBD]
-
-[Timestamps](/assets/documents/MessageHeader_Timestamps.md)
+[Identifiers](/assets/documents/MessageHeader_Identifiers_Timestamps.md)
 
 ## 4.3 MedComMessagingOrganization
 
