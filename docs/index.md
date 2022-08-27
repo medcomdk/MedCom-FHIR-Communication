@@ -12,6 +12,10 @@
   - [3.2 Message exchange patterns](#32-message-exchange-patterns)
   - [3.3 Reliable Messaging using MedCom FHIR Messaging](#33-reliable-messaging-using-medcom-fhir-messaging)
 - [4. Governance for MedCom FHIR Messages](#4-governance-for-medcom-fhir-messages)
+  - [4.1 MedComMessagingMessage (Bundle)](#41-medcommessagingmessage-bundle)
+  - [4.2 MessageHeader](#42-messageheader)
+  - [4.3 medcommessagingorganization](#43-medcommessagingorganization)
+  - [4.4 medcommessagingprovenance](#44-medcommessagingprovenance)
 - [5. Governance for Test and Certification](#5-governance-for-test-and-certification)
 - [6. Governance for Release Notes](#6-governance-for-release-notes)
 
