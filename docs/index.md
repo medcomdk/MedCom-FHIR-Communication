@@ -79,7 +79,7 @@ To be able to communicate over the VANS Network, both senders and receivers **SH
 
 To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **SHALL** be registered in SOR with that messagetype and version.
 
-The Sending application **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
+The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
 ## 2.1 Asynchronous Messaging
 
@@ -93,7 +93,7 @@ MedCom FHIR Messaging uses Reliable Messaging.
 
 A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
 
-Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
+Sending and Receiving EcoSystems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="assets/images/reliable-messaging-principle_1160x763.png" target="_blank"> <img src="assets/images/reliable-messaging-principle_1160x763.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
@@ -101,7 +101,7 @@ Sending and Receiving Systems when acting in FHIR MEssaging scenarios **SHALL** 
 </figure>
 <br>
 
-Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending EcoSystem, the Sending application and its MSH, to a Receiving EcoSystem, the Receiving Application and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
+Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending EcoSystem, the Sending Application and its MSH, to a Receiving EcoSystem, the Receiving Application and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
 A message sent from the Sending EcoSystem to the intended Receiving EcoSystem can be well received but the returned acknowledgement can be lost. When discovering that the Sending EcoSystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. That message can be lost and again the Sending EcoSystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending EcoSystem and the message transaction will be fulfilled. The Receiving EcoSystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
