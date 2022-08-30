@@ -398,8 +398,6 @@ The element event **shall** be defined in accordance with the type of standard t
 
 This profile describes the Organization resource that **shall** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **shall** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **shall** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
 
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-organization.html" target="_blank">Tab here to see the detailed description for MedComMessagingOrganization in MedComMessingMessage IG</a>
-
 <br>
 
 ### 4.3.2 MedComMessagingOrganization Rules
@@ -415,6 +413,7 @@ Provenance of a resource is a record that describes entities and processes invol
 | Links for MedComMessagingProvenance|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
+| [MedComs use of Provenance](/assets/documents/Provenance.md) |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
 <br>
@@ -431,12 +430,6 @@ Provenance resources are a record-keeping assertion that gathers information abo
 <figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
 </figure>
 <br>
-
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-provenance.html" target="_blank">Tab here to see the detailed description for MedComMessagingProvenance in MedComMessingMessage IG</a>
-
-[MedComs use of Provenance](/assets/documents/Provenance.md)
-
-[HL7 FHIR®© description of Provenance](http://hl7.org/fhir/R4/provenance.html)
 
 ### 4.4.2 Rules
 
