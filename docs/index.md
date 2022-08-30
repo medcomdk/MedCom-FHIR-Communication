@@ -254,9 +254,11 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 | MR7.R | A message that is resent **SHALL** always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
 | MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
 
+<!--
 [Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
 
 [Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
+-->
 
 ## 3.8 Acnowledgement rules (Google translated)
 
@@ -271,9 +273,11 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 | KR5.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
 | KR6.S | If an acknowledgment of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
+<!--
 [Acnowledgement rules (Danish)](/assets/documents/Rules_Acknowledgement-DA.md)
 
 [Acnowledgement rules (English)](/assets/documents/Rules_Acknowledgement-EN.md)
+-->
 
 ## 4. Governance for MedCom FHIR Messages
 
@@ -300,13 +304,17 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 
 MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
 
+<hr>
+<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank">Tab here to see the detailed specification for MedComMessingMessage in MedComMessingMessage IG</a>
+
+<hr>
+<a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Bundle in FHIR R4</a>
+<hr>
+<br>
+
 ## 4.1.1 Scope and Usage
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
-
-<a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Bundle in FHIR R4</a>
-<br>
-
 
 ## 4.1.2 MedComMessingMessage Rules
 
@@ -336,7 +344,7 @@ One common operation performed with resources is to gather a collection of resou
 
 [TBD]
 
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">Tab here to see the detailed description for MedComMessageHeader in MedComMessingMessage IG</a>
+<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">Tab here to see the detailed specification for MedComMessageHeader in MedComMessingMessage IG</a>
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
