@@ -310,7 +310,7 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
 
-| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Bundle in FHIR R4</a> |
+| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
 <br>
 
@@ -346,12 +346,19 @@ One common operation performed with resources is to gather a collection of resou
 
 [TBD]
 
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank">Tab here to see the detailed specification for MedComMessageHeader in MedComMessingMessage IG</a>
-
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 3: MedComMessageHeader</b></figcaption>
 </figure>
+
+<br>
+
+| Links for MedComMessagingMessageHeader|
+|:---|
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
+
+| <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
+
 <br>
 
 ### 4.2.1 Scope and Usage
