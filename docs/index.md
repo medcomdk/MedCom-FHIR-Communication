@@ -304,12 +304,12 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 
 MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
 
-<hr>
-<a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank">Tab here to see the detailed specification for MedComMessingMessage in MedComMessingMessage IG</a>
+| Links for MedComMessingMessage|
+|:---|
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank">Tab here to see the detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
 
-<hr>
-<a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Bundle in FHIR R4</a>
-<hr>
+| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Bundle in FHIR R4</a> |
+
 <br>
 
 ## 4.1.1 Scope and Usage
