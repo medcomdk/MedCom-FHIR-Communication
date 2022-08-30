@@ -447,6 +447,14 @@ For this reason, the specification itself never labels any elements as MustSuppo
 
 Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
 
+<br>
+
+| Links for MustSupport|
+|:---|
+| <a href="http://hl7.org/fhir/R4/MustSupport.html" target="_blank">Detailed specification for MustSupport in FHIR R4</a> |
+
+<br>
+
 ### 4.5.1 Scope and Usage
 
 In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG
