@@ -309,7 +309,7 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 | Links for MedComMessingMessage|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
-
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Tab here to see the detailed description for MedCom Messaging</a> |
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
 <br>
@@ -337,10 +337,6 @@ One common operation performed with resources is to gather a collection of resou
 | The MedComMessagingHeader resource **SHALL** contain a Narrative text |
 | A MedCom FHIR Message **SHALL** be validated before disptching of the message |
 | A MedCom FHIR Message **SHALL** be validated on reception of the message in the Receiving Apllication|
-
-<a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Tab here to see the detailed description for MedCom Messaging</a>
-
-<!-- [Permalink here](https://github.com/hl7dk/dk-medcom-messaging/blob/b23dfe00cba8aba273ca08ab7eead8228952f6c4/input/pagecontent/index.md) -->
 
 ## 4.2 MedComMessagingMessageHeader
 
