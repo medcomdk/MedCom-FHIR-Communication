@@ -309,7 +309,7 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 | Links for MedComMessingMessage|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
-| <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Tab here to see the detailed description for MedCom Messaging</a> |
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Detailed page for MedCom Messaging</a> |
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
 <br>
@@ -352,7 +352,7 @@ One common operation performed with resources is to gather a collection of resou
 | Links for MedComMessagingMessageHeader|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
-
+| [MedComMessageHeader](/assets/documents/MessageHeader.md) |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 <br>
@@ -375,10 +375,6 @@ The element event **shall** be defined in accordance with the type of standard t
 | The MedComMessagingHeader resource **MAY** include a list of carbon-copy receiver organizations pointed to by the MedComMessagingHeader.destination:cc sliced element(s) |
 | MedCom FHIR Messages **SHALL** contain one bundled focused resource pointed to by the MedComMessagingHeader pointed to by the MedComMessagingHeader.focus element |
 
-[MedComMessageHeader](/assets/documents/MessageHeader.md)
-
-[MessageHeader in FHIR R4](http://hl7.org/fhir/R4/messageheader.html)
-
 ### 4.2.3 Identifiers and Timestamps
 
 [TBD]
@@ -388,6 +384,15 @@ The element event **shall** be defined in accordance with the type of standard t
 ## 4.3 MedComMessagingOrganization
 
 [TBD]
+
+<br>
+
+| Links for MedComMessagingOrganization|
+|:---|
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
+| <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
+
+<br>
 
 ### 4.3.1 Scope and Usage
 
@@ -404,6 +409,15 @@ This profile describes the Organization resource that **shall** be used in all M
 ## 4.4 MedComMessagingProvenance
 
 Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
+
+<br>
+
+| Links for MedComMessagingProvenance|
+|:---|
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
+| <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
+
+<br>
 
 ### 4.4.1 Scope and Usage
 
