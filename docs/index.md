@@ -16,6 +16,7 @@
   * [3.7 Messaging Rules](#44-fhir-messaging-rules-google-translated)
   * [3.8 Acnowledgement Rules](#45-fhir-messaging-acnowledgement-rules-google-translated)
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
+
 <!-- 
   * [4.1 MedComMessagingMessage (Bundle)](#51-medcommessagingmessage-bundle)
   * [4.2 MedComMessagingMessageHeader](#52-medcommessagingmessageheader)
@@ -74,7 +75,7 @@ Sending and Receiving EcoSystems when acting in FHIR MEssaging scenarios **SHALL
 
 These scenarios are laid out as generic scenarios and later specified as how they will work out in a VANSEnvelope context and as how they will work out in a MedCom FHIR Messaging context.
 
-[Reliable Messaging in general](./assets/documents/Reliable%20Messaging%20generic.md)
+[Reliable Messaging in general](/assets/documents/Reliable%20Messaging%20generic.md)
 
 ## 2.1 Generic ruleset governing the principles of Reliable Messaging
 
