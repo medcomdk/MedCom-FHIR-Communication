@@ -58,26 +58,17 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 ### 1.1 What is a MedCom FHIR Message Standard
 
-A MedCom FHIR Message Standard is the term for a collection of documentation covering most aspects of the standard.
-
-1. Clinical Documentation
-  1.1. Clinical description
-  1.2. Use Cases
-2. Technical Documentation
-  2.1. One or more FHIR IGs (the specific Profile IG for the standard, the inherited Profile IGs within this standard and supporting IGs for the standard, Terminology IG for instance.). These cover what in former MedCom non-FIR standards were specific rules regarding syntax and qualifiers.
-3. Additional Documentation
-  3.1 A GitHub Page linking it all together with further descriptions and specifications
-  3.2 This Governance
-
-An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all these parts of the documentation laid out for the MedCom FHIR Message Standard.
+An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all the parts of the documentation laid out for the MedCom FHIR Message Standard and described here: [Dcumentation for the MedCom FHIR Message Standard](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
 
 ## 2. Governance for Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
-To be able to communicate over the VANS Network, both senders and receivers **SHALL** have an EAN number issued by the SOR.
+To be able to communicate over the VANS Network, both senders and receivers **SHALL** have an GLN number issued by the SOR. [Link for SOR]()
 
 To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **SHALL** be registered in SOR with that messagetype and version.
+
+The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
 The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
@@ -281,6 +272,7 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 
 ## 4. Governance for MedCom FHIR Messages
 
+<!-- 
 Below you see the basic MedCom FHIR Messaging Model.
 
 As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
@@ -300,8 +292,13 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 </figure>
 <br>
 
+-->
+
 ## 4.1 MedComMessagingMessage (Bundle)
 
+An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
+[MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessage-bundle)
+<!-- 
 MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
 
 <br>
@@ -317,6 +314,7 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 ## 4.1.1 Scope and Usage
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
+-->
 
 ## 4.1.2 MedComMessingMessage Rules
 
@@ -352,7 +350,7 @@ One common operation performed with resources is to gather a collection of resou
 | Links for MedComMessagingMessageHeader|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
-| [MedComMessageHeader](/assets/documents/MessageHeader.md) |
+| [MedComMessageHeader](/assets/documents/MedComMessagingMessageHeader.md) |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 <br>
@@ -413,7 +411,7 @@ Provenance of a resource is a record that describes entities and processes invol
 | Links for MedComMessagingProvenance|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
-| [MedComs use of Provenance](/assets/documents/Provenance.md) |
+| [MedComs use of Provenance](/assets/documents/MedComMessagingProvenance.md) |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
 <br>
