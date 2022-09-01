@@ -11,17 +11,16 @@
 
 ## 5. Governance for MedCom FHIR Messages
 
-<!-- 
 Below you see the basic MedCom FHIR Messaging Model.
 
 As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
 
-- A MedComMessagingMessage is a Bundle resource of type "message"
-- The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
-- The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
-  - a source organization called a MedComMessagingOrganization, which is an Organization resource
-  - a destination organization also a MedComMessagingOrganization, which too is an Organization resource
-- The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
+* A MedComMessagingMessage is a Bundle resource of type "message"
+* The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
+* The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
+  * a source organization called a MedComMessagingOrganization, which is an Organization resource
+  * a destination organization also a MedComMessagingOrganization, which too is an Organization resource
+* The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
 
 <br>
 
@@ -30,8 +29,6 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 <figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
 </figure>
 <br>
-
--->
 
 ## 5.1 MedComMessagingMessage (Bundle)
 
@@ -255,4 +252,3 @@ The narrative element is a human-readable summary of the resource (essential cli
 |[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
 |[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
 |[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
-
