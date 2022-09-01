@@ -1,4 +1,4 @@
-# &nbsp; &nbsp;
+# 4. Governance for MedCom FHIR Messaging
 
 ## Table of content
 
@@ -10,8 +10,6 @@
   * [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
   * [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules-google-translated)
   * [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules-google-translated)
-
-## 4. Governance for MedCom FHIR Messaging
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
