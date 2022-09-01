@@ -136,5 +136,5 @@ For a number of the old MedComs Messaging Standards, however, there is an explic
 
 | Links for specific ruleset of Reliable Messaging|
 |:---|
-|[Reliable Messaging in VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)|
-|[Reliable Messaging in MedCom FHIR Messaging](/assets/documents/043_Reliable_Messaging-FHIR.md)|
+|[Reliable Messaging in VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)|
+|[Reliable Messaging in MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)|
