@@ -1,7 +1,7 @@
 # Reliable Messaging in general
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="assets/images/reliable-messaging-principle_1160x763.png" target="_blank"> <img src="assets/images/reliable-messaging-principle_1160x763.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
+<a href="../images/reliable-messaging-principle_1160x763.png" target="_blank"> <img src="../images/reliable-messaging-principle_1160x763.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Generic Reliable Messaging Model </b></figcaption>
 </figure>
 <br>
@@ -57,4 +57,3 @@ Resubmissions are always done manually.
 
 For historical reasons, there has been no requirement to use positive acknowledgements, which is why Scenario #1 can in practice be run as Scenario #2. The Sending EcoSystem may therefore experience that there is no acknowledgement of a message, and it is not recommended to make program logic that sends messages.
 For a number of standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
-
