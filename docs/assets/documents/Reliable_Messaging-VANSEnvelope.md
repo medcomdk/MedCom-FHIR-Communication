@@ -96,3 +96,8 @@ A VANSEnvelopeAcknowledgement consists of the following elements:
 <figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable vansenvelope acknowledgement </b></figcaption>
 </figure>
 <br>
+
+| Links for Reliable Messaging|
+|:---|
+|[Reliable Messaging in general](Reliable_Messaging-In-General.md)|
+|[Reliable Messaging in MedCom FHIR Messaging](Reliable_Messaging-FHIR.md)|
