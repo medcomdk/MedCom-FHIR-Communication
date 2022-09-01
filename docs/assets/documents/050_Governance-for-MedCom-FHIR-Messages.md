@@ -87,8 +87,8 @@ An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow t
 
 | Links for MedComMessagingMessageHeader|
 |:---|
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader" target="_blank">MedComMessagingMessageHeader in MedCom Message</a> |
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
-| [MedComMessageHeader](MedComMessagingMessageHeader.md) |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 <br>
@@ -126,6 +126,7 @@ An inherited instance profile of MedComMessagingOrganization **SHALL** follow th
 
 | Links for MedComMessagingOrganization|
 |:---|
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/#14-medcommessagingorganization" target="_blank">MedComMessagingOrganization in MedCom Message</a> |
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
@@ -149,7 +150,7 @@ Provenance of a resource is a record that describes entities and processes invol
 
 | Links for MedComMessagingProvenance|
 |:---|
-|[MedComMessagingProvenance in MedCom Messaging](https://medcomdk.github.io/dk-medcom-messaging/assets/documents/#15-medcommessagingprovenance)|
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/#15-medcommessagingprovenance" target="_blank">MedComMessagingProvenance in MedCom Messaging</a> |
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
