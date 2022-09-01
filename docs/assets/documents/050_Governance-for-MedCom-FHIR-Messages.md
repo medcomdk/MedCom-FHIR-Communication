@@ -24,12 +24,6 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 
 <br>
 
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" target="blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MessagingModel.png" alt="The basic MedCom Messaging Model"  style="width:100%" id="Fig2" style="align-left"></a>
-<figcaption text-align="left"><b>Figure 2: The basic MedCom Messaging Model</b></figcaption>
-</figure>
-<br>
-
 ## 5.1 MedComMessagingMessage (Bundle)
 
 An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
@@ -78,13 +72,6 @@ One common operation performed with resources is to gather a collection of resou
 An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow the generic concept of the MedComMessagingMessageHeader as outlined here:
 [MedComMessagingMessageHeader in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader)
 
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
-<figcaption text-align="left"><b>Figure 3: MedComMessageHeader</b></figcaption>
-</figure>
-
-<br>
-
 | Links for MedComMessagingMessageHeader|
 |:---|
 | <a href="https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader" target="_blank">MedComMessagingMessageHeader in MedCom Message</a> |
@@ -95,9 +82,9 @@ An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow t
 
 #### 5.2.1 MedComMessagingMessageHeader Rules
 
-The MedComMessageHeader profile is a resource that **shall** be used in all MedCom FHIR Messages. A MedComMessagingMessageHeader **shall** include a sender and receiver and it **may** include a carbon-copy receiver, however this is depended on type of standard. Each MedComMessagingMessageHeader **shall** include a globally unique id, which **shall** be used to reference the message in the message history from the MedComMessagingProvenance profile.
+The MedComMessageHeader profile is a resource that **SHALL** be used in all MedCom FHIR Messages. A MedComMessagingMessageHeader **SHALL** include a sender and receiver and it **may** include a carbon-copy receiver, however this is depended on type of standard. Each MedComMessagingMessageHeader **SHALL** include a globally unique id, which **SHALL** be used to reference the message in the message history from the MedComMessagingProvenance profile.
 
-The element event **shall** be defined in accordance with the type of standard the message concerns e.g., HospitalNotification and CareCommunication. Due to the different requirements for each standard, it **shall** be expected that the MedComMessagingMessageHeader is inherited in each standard.
+The element event **SHALL** be defined in accordance with the type of standard the message concerns e.g., HospitalNotification and CareCommunication. Due to the different requirements for each standard, it **SHALL** be expected that the MedComMessagingMessageHeader is inherited in each standard.
 
 | MedComMessageHeader Rules|
 |:---|
@@ -134,7 +121,7 @@ An inherited instance profile of MedComMessagingOrganization **SHALL** follow th
 
 #### 5.3.1 Scope and Usage
 
-This profile describes the Organization resource that **shall** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **shall** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **shall** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
+This profile describes the Organization resource that **SHALL** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **SHALL** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **SHALL** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
 
 <br>
 
@@ -162,13 +149,6 @@ The MedComMessagingProvenance resource tracks information about the activity tha
 
 Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
 
-<br>
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessagingProvenance.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
-<figcaption text-align="left"><b>Figure 4: MedComMessagingProvenance</b></figcaption>
-</figure>
-<br>
-
 #### 5.4.2 Rules
 
 [TBD]
@@ -179,13 +159,9 @@ Provenance resources are a record-keeping assertion that gathers information abo
 
 ### 5.5 MustSupport
 
-Labeling an element MustSupport means that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
+Labeling an element MustSupport means that implementations that produce or consume resources **SHALL** provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
-For this reason, the specification itself never labels any elements as MustSupport. This is done in StructureDefinitions, where the profile labels an element as mustSupport=true. When a profile does this, it SHALL also make clear exactly what kind of "support" is required, as this could involve expectations around what a system must store, display, allow data capture of, include in decision logic, pass on to other data consumers, etc.
-
-Note that an element that has the property IsModifier is not necessarily a "key" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.
-
-<br>
+br>
 
 #### 5.5.1 Scope and Usage
 
@@ -210,7 +186,7 @@ In MedCom FHIR Messaging MustSupport requires that a system
 
 ### 5.6 Narrative Texts
 
-A Narrative Text is a human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative **SHALL** encode all the structured data pointed out by the ∑-symbol and it is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
+The narrative text **SHALL** encode all the structured data pointed out by the ∑-symbol and it **SHALL** contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
 Contained resources do not have narrative, but their content **SHALL** be represented in the ressource container.
 
 Narratives contains two sub elements, status and div.
@@ -218,7 +194,6 @@ Narratives contains two sub elements, status and div.
 #### 5.6.1 The status element
 
 [TBD]
-The code system [narrative status](http://hl7.org/fhir/narrative-status) defines the codes for the status element.
 
 In MedCom FHIR Messages The code **SHALL** always be: "additional" meaning that the it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
 
@@ -228,22 +203,17 @@ A narrative in MedCom FHIR Messages **SHALL NEVER** be of code: empty.
 
 The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
 
-The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). This is to ensure that the content of the narrative is contained within the resource and that there is no active content. Such content would introduce security issues and potentially safety issues with regard to extracting text from the XHTML. Note that even with these restrictions, there are still several important security risks associated with displaying the narrative.
+The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). 
 
 The div element **SHALL** have some non-whitespace content (text or an image).
 
-#### 5.6.3 Scope and Usage
-
-[TBD]
-The narrative element is a human-readable summary of the resource (essential clinical and business information)
-
-#### 5.6.4 General Narrative Text Rules
+#### 5.6.3 General Narrative Text Rules
 
 * All resources in a MedComMessingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
 * The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
 * The narrative **SHALL** reflect the impact of all modifier extensions.
 
-#### 5.6.5 Links for Narrative Text
+#### 5.6.4 Links for Narrative Text
 
 | Links for Narrative Text|
 |:---|
