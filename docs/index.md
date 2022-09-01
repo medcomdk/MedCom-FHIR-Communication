@@ -30,7 +30,7 @@
 
 ### Terms used in Governance for MedCom FHIR®© Messaging
 
-[Tab here to get an overview of the Governance Terms](011_Governance_Terms.md)
+[Tab here to get an overview of the Governance Terms](/assets/documents/011_Governance_Terms.md)
 
 ---
 
@@ -376,7 +376,7 @@ Provenance of a resource is a record that describes entities and processes invol
 
 | Links for MedComMessagingProvenance|
 |:---|
-|[MedComMessagingProvenance in MedCom Messaging](https://medcomdk.github.io/dk-medcom-messaging/#15-medcommessagingprovenance)|
+|[MedComMessagingProvenance in MedCom Messaging](https://medcomdk.github.io/dk-medcom-messaging/assets/documents/#15-medcommessagingprovenance)|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
