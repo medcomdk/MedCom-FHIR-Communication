@@ -62,8 +62,8 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 
 | Links for specific ruleset of Reliable Messaging|
 |:---|
-|[Reliable Messaging using VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)|
-|[Reliable Messaging using MedCom FHIR Messaging](/assets/documents/043_Reliable_Messaging-FHIR.md)|
+|[Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)|
+|[Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)|
 
 ## 2.2 Different Reliable Messaging scenarios
 
