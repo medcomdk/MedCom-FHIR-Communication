@@ -2,7 +2,16 @@
 
 ## Table of content
 
-## Reliable Messaging in general
+* [](#20-reliable-messaging-in-general)
+* [](#21-generic-ruleset-governing-the-principles-of-reliable-messaging)
+* [](#22-different-reliable-messaging-scenarios)
+  * [](#221-scenario-1---normally-successful-unsolicited-message-or-request-message-flow-with-acknowledgement-request-google-translated)
+  * [](#222-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request-google-translated)
+  * [](#223-scenario-3---re-sending-unchanged-message-google-translated)
+  * [](#224-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way-google-translated)
+  * [](#225-scenario-5---re--sending-modified-message-google-translated)
+
+## 2.0 Reliable Messaging in general
 
 Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending EcoSystem, the Sending Application and its MSH, to a Receiving EcoSystem, the Receiving Application and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
@@ -24,7 +33,43 @@ Any of these events can happen over time and therefore Reliable Messaging define
 </figure>
 <br>
 
-## 1.0 Different Reliable Messaging scenarios
+MedCom FHIR Messaging uses Reliable Messaging.
+
+A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
+
+Sending and Receiving EcoSystems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
+
+These scenarios are laid out as generic scenarios and later specified as how they will work out in a VANSEnvelope context and as how they will work out in a MedCom FHIR Messaging context.
+
+| Links for Reliable Messaging|
+|:---|
+| [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)|
+
+## 2.1 Generic ruleset governing the principles of Reliable Messaging
+
+|Generic ruleset governing the principles of Reliable Messaging|
+|:---|
+| A Sending EcoSystem **SHALL** send a Message with a flag indicating that it expects an Acknowledgement on the Message|
+| A Sending EcoSystem **SHALL** be able to handle an unacknowledged Message|
+| A Sending EcoSystem **SHALL** resend the Message, when the expected Acknowledgement is not received within a timelimit of 15 minutes|
+| A Sending EcoSystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend Message|
+| A Sending EcoSystem **SHALL NOT** resend the Message more than 2 times, when the expected Acknowledgement is not received|
+| A Receiving EcoSystem **SHALL** return an Acknowledgement on a received Message with a flag indicating that it expects an Acknowledgement on the Message|
+| A Receiving EcoSystem **SHALL** be able to receive a Message as a duplicate|
+| A Receiving EcoSystem **SHALL NOT** present the end-user for a duplicate of a Message|
+| A Receiving EcoSystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend Acknowledgement|
+| A Receiving EcoSystem **SHALL** return the same Acknowledgement content on a received Message as it returned on the first received copy of the Message|
+
+<br>
+
+A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
+
+| Links for specific ruleset of Reliable Messaging|
+|:---|
+|[2.3.1 Reliable Messaging using VANSEnvelope](#32-reliable-messaging-using-vansenvelope)|
+|[3.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)|
+
+## 2.2 Different Reliable Messaging scenarios
 
 This section provides a description of the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages see the description in the detailed sections of the respective chapters for these subjects.
 
@@ -36,13 +81,13 @@ The different types of Reliable Messaging scenarios are:
 * Scenario #4 - Message is sent normally, acknowledgement is lost along the way
 * Scenario #5 - (Re-)Sending Modified Message
 
-### 1.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request (Google translated)
+### 2.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request (Google translated)
 
 An unsolicited message or request message is sent with a new request for a positive acknowledgement from the Sending EcoSystem to a Receiving EcoSystem.
 
 The Receiving EcoSystem **SHALL** always send a positive acknowledgement to the Sending EcoSystem.
 
-### 1.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
+### 2.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request (Google translated)
 
 Duplication of an unchanged message can be done in one of the following ways:
 
@@ -61,7 +106,7 @@ If the Sending EcoSystem of the message has received acknowledgement already aft
 
 The Sending EcoSystem **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
 
-### 1.3 Scenario #3 - (Re) Sending Unchanged Message (Google translated)
+### 2.2.3 Scenario #3 - (Re) Sending Unchanged Message (Google translated)
 
 Correct retransmission of a message.
 
@@ -73,13 +118,13 @@ The message **SHALL** sent and acknowledged as a completely new message accordin
 
 Re-dispatches are always done manually and **SHALL** be in accordance with the normal response time for the specific message flow.
 
-### 1.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way (Google translated)
+### 2.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way (Google translated)
 
 As Scenario #1, but where acknowledgement is lost along the way from the Sending EcoSystem to the Receiving EcoSystem.
 
 The shipping pattern is like Scenario #3.
 
-### 1.5 Scenario #5 - (Re-) Sending Modified Message (Google translated)
+### 2.2.5 Scenario #5 - (Re-) Sending Modified Message (Google translated)
 
 If the content of the letter part is changed, the message **SHALL** be considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
 
