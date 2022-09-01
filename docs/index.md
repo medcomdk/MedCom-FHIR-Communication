@@ -84,7 +84,7 @@ These scenarios are laid out as generic scenarios and later specified as how the
 
 | Links for Reliable Messaging|
 |:---|
-| [Reliable Messaging in general](/assets/documents/Reliable%20Messaging%20generic.md) |
+| [Reliable Messaging in general](/assets/documents/Reliable_Messaging-In-General.md) |
 
 ## 2.1 Generic ruleset governing the principles of Reliable Messaging
 
