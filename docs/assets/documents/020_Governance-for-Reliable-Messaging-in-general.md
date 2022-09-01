@@ -2,14 +2,14 @@
 
 ## Table of content
 
-* [](#20-reliable-messaging-in-general)
-* [](#21-generic-ruleset-governing-the-principles-of-reliable-messaging)
-* [](#22-different-reliable-messaging-scenarios)
-  * [](#221-scenario-1---normally-successful-unsolicited-message-or-request-message-flow-with-acknowledgement-request-google-translated)
-  * [](#222-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request-google-translated)
-  * [](#223-scenario-3---re-sending-unchanged-message-google-translated)
-  * [](#224-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way-google-translated)
-  * [](#225-scenario-5---re--sending-modified-message-google-translated)
+* [2.0 Reliable Messaging in general](#20-reliable-messaging-in-general)
+* [2.1 Generic ruleset governing the principles of Reliable Messaging](#21-generic-ruleset-governing-the-principles-of-reliable-messaging)
+* [2.2 Different Reliable Messaging scenarios](#22-different-reliable-messaging-scenarios)
+  * [2.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request](#221-scenario-1---normally-successful-unsolicited-message-or-request-message-flow-with-acknowledgement-request-google-translated)
+  * [2.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#222-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request-google-translated)
+  * [2.2.3 Scenario #3 - (Re) Sending Unchanged Message](#223-scenario-3---re-sending-unchanged-message-google-translated)
+  * [2.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#224-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way-google-translated)
+  * [2.2.5 Scenario #5 - (Re-) Sending Modified Message](#225-scenario-5---re--sending-modified-message-google-translated)
 
 ## 2.0 Reliable Messaging in general
 
