@@ -1,5 +1,15 @@
 # Reliable Messaging using MedCom FHIR Messaging (Work in progress)
 
+Reliable Messaging in MedCom FHIR Messaging follows the principles laid out in [Reliable Messaging in general](Reliable_Messaging-In-General.md)
+
+The Reliable Messaging Model and how the flow is laid out using FHIR is shown below:
+
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="../images/reliable-messaging-fhir_1160x625.png" target="_blank"> <img src="../images/reliable-messaging-fhir_1160x625.png" alt="reliable messaging fhir" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
+<figcaption text-align="left"><b>Figure 1: Reliable Messaging - FHIR </b></figcaption>
+</figure>
+<br>
+
 When reliable messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. The correct action to take depends on what is received:
 
 <br>
@@ -19,18 +29,12 @@ Applications that implement reliable messaging declare their reliable cache peri
 
 ## MedCom FHIR Reliable Messaging Model
 
-The Reliable Messaging Model and how the flow is laid out using FHIR is shown below:
-
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/reliable-messaging-fhir_1160x625.png" target="_blank"> <img src="../images/reliable-messaging-fhir_1160x625.png" alt="reliable messaging fhir" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
-<figcaption text-align="left"><b>Figure 1: Reliable Messaging - FHIR </b></figcaption>
-</figure>
-<br>
-
+<!-- 
 Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending Ecosystem, the Sending system and its Messagehandler (MSH), to a Receiving Ecosystem, the Receiving System and its Messagehandler (MSH), or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
 A message sent from the Sending Ecosystem to the intended Receiving Ecosystem can be well received but the returned acknowledgement can be lost. When discovering that the Sending Ecosystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. That message can be lost and again the Sending Ecosystem will not know whether that the message has been received or not. It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending Ecosystem and the message transaction will be fulfilled. The Receiving Ecosystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
+-->
 
 **This ruleset is a generic ruleset governing the principles of Reliable Messaging:**
 
