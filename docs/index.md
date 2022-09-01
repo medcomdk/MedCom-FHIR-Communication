@@ -86,15 +86,3 @@ Governance for displaying MedCom FHIR Messaging covers the basic demands for a s
 ## 7.0 Governance for Terminology
 
 [Governance for Terminology](/assets//documents/070_Governance-for-Terminology.md)
-
-The term Terminology is in this governance a term covering all kinds of terminology, classifications, enumerations and qualifiers.
-
-All elements of a MedCom FHIR Message **SHALL** be compliant with the terminologies that are pointed out by these elements.
-
-All Terminologies that are not implicitly present in the specification of an element are present in the Terminology IG and this Terminology IG **SHALL** be
-
-### 7.1 Links for Terminology
-
-| Links for Terminology|
-|:---|
-|<a href="http://hl7.org/fhir/R4/terminology-service.html" target="_blank">Detailed specification for Terminology in FHIR R4</a>
