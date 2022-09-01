@@ -8,7 +8,7 @@
 * [2. Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
 * [3. Governance for the Network Layer](#3-governance-for-network-layer)
   * [3.1 Vansenvelope](#31-vansenvelope)
-  * [3.2 Vansenvelope](#32-reliable-messaging-using-vansenvelope)
+  * [3.2 Reliable Messaging using Vansenvelope](#32-reliable-messaging-using-vansenvelope)
 * [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
   * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
   * [4.2 Message exchange patterns](#42-message-exchange-patterns)
