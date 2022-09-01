@@ -233,7 +233,7 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 
 ## 5. Governance for MedCom FHIR Messages
 
-[Governance for MedCom FHIR Messages](050_Governance-for-MedCom-FHIR-Messages.md)
+[Governance for MedCom FHIR Messages](/assets/documents/050_Governance-for-MedCom-FHIR-Messages.md)
 
 <!-- 
 Below you see the basic MedCom FHIR Messaging Model.
