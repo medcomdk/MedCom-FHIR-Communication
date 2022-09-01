@@ -27,8 +27,8 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope whether they are s
 * The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf" target="_blank">VANS ENVELOPE specification (Danish)</a>
 * MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
-  * [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
-  * [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
+  * [Network Envelope (Danish)](FHIRMessages_NetworkEnvelopes_DA.md)
+  * [Network Envelope (English)](FHIRMessages_NetworkEnvelopes_EN.md)
 
 ## 3.2 Reliable Messaging using VANSenvelope
 
@@ -38,5 +38,5 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 * The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf" target="_blank">VANS ENVELOPE specification (Danish)</a>
 
-[Tap here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)
+[Tap here to see how to setup Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)
 
