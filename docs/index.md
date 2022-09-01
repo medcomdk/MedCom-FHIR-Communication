@@ -16,6 +16,7 @@
   * [4.7 Messaging Rules](#44-fhir-messaging-rules-google-translated)
   * [4.8 Acnowledgement Rules](#45-fhir-messaging-acnowledgement-rules-google-translated)
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
+* [6. Governance for MedCom Terminolgy](#60-governance-for-terminiology)
 
 <!-- 
   * [1.2 Asynchronous messaging](#12-asynchronous-messaging)
@@ -27,7 +28,7 @@
   * [4.6 Narrative Texts](#56-narrative-texts)
 -->
 
----
+## Terms used in Governance for MedCom FHIR®© Messaging
 
 [Governance Terms](/assets/documents/01-1-Governance_Terms.md)
 
@@ -466,11 +467,13 @@ The narrative element is a human-readable summary of the resource (essential cli
 * The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
 * The narrative **SHALL** reflect the impact of all modifier extensions.
 
-[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative)
+#### 5.6.5 Links for Narrative Text
 
-[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)
-
-[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)
+| Links for Narrative Text|
+|:---|
+|[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
+|[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
+|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
 
 ### 5.9 Governance for displaying MedCom FHIR Messaging
 
@@ -487,6 +490,12 @@ The term Terminology is in this governance a term covering all kins of terminolo
 All elements of a MedCom FHIR Message **SHALL** be compliant with the terminologies that are pointed out by these elements.
 
 All Terminologies that are not implicitly present in the specification of an element are present in the Terminology IG and this Terminology IG **SHALL** be
+
+#### 6.0.1 Links for Terminiology
+
+| Links for Terminiology|
+|:---|
+|[Terminiology description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
 
 ## x. Governance for Test and Certification (To be moved)
 
