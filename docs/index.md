@@ -255,7 +255,6 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 </figure>
 <br>
 
--->
 
 ### 5.1 MedComMessagingMessage (Bundle)
 
@@ -480,7 +479,11 @@ The narrative element is a human-readable summary of the resource (essential cli
 |[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
 |[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
 
+-->
+
 ## 6.0 Governance for displaying MedCom FHIR Messaging
+
+[Governance for displaying MedCom FHIR Messaging](/assets/documents/060_Governance-for-displaying-MedCom-FHIR-Messaging.md)
 
 All elements marked as MustSupport **SHALL** be presented or easily accessed on the display of the reader of a received message.
 
