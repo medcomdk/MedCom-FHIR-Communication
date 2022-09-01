@@ -28,9 +28,9 @@
   * [4.6 Narrative Texts](#56-narrative-texts)
 -->
 
-## Terms used in Governance for MedCom FHIR®© Messaging
+### Terms used in Governance for MedCom FHIR®© Messaging
 
-[Governance Terms](/assets/documents/01-1-Governance_Terms.md)
+[Tab here to get an overview of the Governance Terms](011_Governance_Terms.md)
 
 ---
 
@@ -59,9 +59,9 @@ The "Governance for MedCom FHIR®© Messaging" must ensure a uniform use of MedC
 
 In the following we follow a top-down approach by addressing shipping over the Network Layer and its ruleset first, then the logistics for MedCom FHIR Messaging and last cover the basic ruleset of how to compose a MedCom FHIR message.
 
-<!-- [Introduction details (Danish)](/assets/documents/01-Introduction.md)-->
+<!-- [Introduction details (Danish)](01-Introduction.md)-->
 
-<!-- [Generelle tekniske use cases](/assets/documents/Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
+<!-- [Generelle tekniske use cases](Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
 ### 1.1 What is a MedCom FHIR Message Standard
 
@@ -85,7 +85,7 @@ These scenarios are laid out as generic scenarios and later specified as how the
 
 | Links for Reliable Messaging|
 |:---|
-| [Reliable Messaging in general](/assets/documents/Reliable_Messaging-In-General.md) |
+| [Reliable Messaging in general](020_Governance-for-Reliable-Messaging-in-general) |
 
 ## 2.1 Generic ruleset governing the principles of Reliable Messaging
 
@@ -132,8 +132,8 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope whether they are s
 * The enveloping of MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf" target="_blank">VANS ENVELOPE specification (Danish)</a>
 * MedCom FHIR Messages **SHALL** follow the metadata specification outlined in
-  * [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
-  * [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
+  * [Network Envelope (Danish)](FHIRMessages_NetworkEnvelopes_DA.md)
+  * [Network Envelope (English)](FHIRMessages_NetworkEnvelopes_EN.md)
 
 ### 3.2 Reliable Messaging using VANSenvelope
 
@@ -143,11 +143,11 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 * The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf" target="_blank">VANS ENVELOPE specification (Danish)</a>
 
-[Tap here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
+[Tap here to see how to setup Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)
 
 ## 4. Governance for MedCom FHIR Messaging
 
-[Governance for MedCom FHIR Messaging](/assets/documents/04Governance4FHIR-Messaging.md)
+[Governance for MedCom FHIR Messaging](04_Governance4FHIR-Messaging.md)
 
 <!-- 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
@@ -159,7 +159,7 @@ In FHIR messaging, a "request message" or an "unsolicited message" is sent from 
 
 The message consists of a Bundle identified by the type "message", with the first resource in the Bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the Bundle depend on the type of the message, eg. in which context a message is triggered.
 
-The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](/assets/documents/MedCom-FHIR-Messaging-Events.md).
+The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](MedCom-FHIR-Messaging-Events.md).
 
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
@@ -188,7 +188,7 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 FHIR Messaging is developed to support Reliable Messaging.
 MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
-[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
+[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)
 
 ### 4.4 FHIR Messaging rules (Google translated)
 
@@ -206,9 +206,9 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 | MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
 
 <!--
-[Messaging rules (Danish)](/assets/documents/Rules_Messaging-DA.md)
+[Messaging rules (Danish)](Rules_Messaging-DA.md)
 
-[Messaging rules (English)](/assets/documents/Rules_Messaging-EN.md)
+[Messaging rules (English)](Rules_Messaging-EN.md)
 -->
 
 ### 4.5 FHIR Messaging Acnowledgement rules (Google translated)
@@ -225,9 +225,9 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 | KR6.S | If an acknowledgment of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
 <!--
-[Acnowledgement rules (Danish)](/assets/documents/Rules_Acknowledgement-DA.md)
+[Acnowledgement rules (Danish)](Rules_Acknowledgement-DA.md)
 
-[Acnowledgement rules (English)](/assets/documents/Rules_Acknowledgement-EN.md)
+[Acnowledgement rules (English)](Rules_Acknowledgement-EN.md)
 -->
 
 ## 5. Governance for MedCom FHIR Messages
@@ -257,7 +257,7 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 ### 5.1 MedComMessagingMessage (Bundle)
 
 An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
-[MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessage-bundle)
+[MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
 
 <!-- 
 MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
@@ -301,8 +301,8 @@ One common operation performed with resources is to gather a collection of resou
 
 [TBD]
 
-An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
-[MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessage-bundle)
+An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow the generic concept of the MedComMessagingMessageHeader as outlined here:
+[MedComMessagingMessageHeader in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader)
 
 <!-- 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
@@ -315,7 +315,7 @@ An inherited instance profile of MedComMessagingMessage **SHALL** follow the gen
 | Links for MedComMessagingMessageHeader|
 |:---|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
-| [MedComMessageHeader](/assets/documents/MedComMessagingMessageHeader.md) |
+| [MedComMessageHeader](MedComMessagingMessageHeader.md) |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 <br>
@@ -343,7 +343,7 @@ The element event **shall** be defined in accordance with the type of standard t
 
 [TBD]
 
-[Identifiers](/assets/documents/MessageHeader_Identifiers_Timestamps.md)
+[Identifiers](MessageHeader_Identifiers_Timestamps.md)
 
 ### 5.3 MedComMessagingOrganization
 
@@ -376,8 +376,8 @@ Provenance of a resource is a record that describes entities and processes invol
 
 | Links for MedComMessagingProvenance|
 |:---|
+|[MedComMessagingProvenance in MedCom Messaging](https://medcomdk.github.io/dk-medcom-messaging/#15-medcommessagingprovenance)|
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
-| [MedComs use of Provenance](/assets/documents/MedComMessagingProvenance.md) |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
 <br>
@@ -413,12 +413,6 @@ Note that an element that has the property IsModifier is not necessarily a "key"
 
 <br>
 
-| Links for MustSupport|
-|:---|
-| <a href="http://hl7.org/fhir/R4/MustSupport.html" target="_blank">Detailed specification for MustSupport in FHIR R4</a> |
-
-<br>
-
 #### 5.5.1 Scope and Usage
 
 In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG
@@ -431,6 +425,14 @@ In MedCom FHIR Messaging MustSupport requires that a system
 * **SHALL** display
 * **SHOULD** include in decision logic
 * **MAY** pass on to other data consumers
+
+#### 5.5.3 Links
+
+| Links for MustSupport|
+|:---|
+| <a href="http://hl7.org/fhir/R4/MustSupport.html" target="_blank">Detailed specification for MustSupport in FHIR R4</a> |
+
+<br>
 
 ### 5.6 Narrative Texts
 
@@ -483,7 +485,7 @@ The message as a whole coherent object **SHALL** be present for easy access for 
 
 The receiving application **SHALL** be able to show only relevant information for the different receiver roles in the receiving organization, eg. only persons in clinical roles **SHALL** be able to read clinical content
 
-### 6.0 Governance for Terminiology
+### 6.0 Governance for Terminology
 
 The term Terminology is in this governance a term covering all kins of terminology, classifications, enumerations and qualifiers.
 
@@ -491,22 +493,8 @@ All elements of a MedCom FHIR Message **SHALL** be compliant with the terminolog
 
 All Terminologies that are not implicitly present in the specification of an element are present in the Terminology IG and this Terminology IG **SHALL** be
 
-#### 6.0.1 Links for Terminiology
+#### 6.0.1 Links for Terminology
 
-| Links for Terminiology|
+| Links for Terminology|
 |:---|
-|[Terminiology description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
-
-## x. Governance for Test and Certification (To be moved)
-
-All message solutions developed on the basis of MedCom FHIR Messing profiles **SHALL** be validated with the FHIR validator
-
-All message solutions developed on the basis of MedCom FHIR Messing profiles **SHALL** be validated with MedComs TouchStone Certification Suites
-
-_**Insert requirements from the test and certification process here**_
-
-## y. Governance for Release Notes (To be moved)
-
-All changes in the MedCom FHIR Specifications **SHALL** be described in a release note following that specific version of the specification.
-
-_**Insert requirements from Release Notes**_
+|<a href="http://hl7.org/fhir/R4/terminology-service.html" target="_blank">Detailed specification for Terminology in FHIR R4</a>

@@ -2,13 +2,13 @@
 
 Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending EcoSystem, the Sending Application and its MSH, to a Receiving EcoSystem, the Receiving Application and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 
-A message sent from the Sending EcoSystem to the intended Receiving EcoSystem can be well received but the returned acknowledgement can be lost. 
+A message sent from the Sending EcoSystem to the intended Receiving EcoSystem can be well received but the returned acknowledgement can be lost.
 
-When discovering that the Sending EcoSystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message. 
+When discovering that the Sending EcoSystem after a well-agreed mutual time hasn't received the acknowledgement, it therefore has to resend the message.
 
-That message can be lost and again the Sending EcoSystem will not know whether that the message has been received or not. 
+That message can be lost and again the Sending EcoSystem will not know whether that the message has been received or not.
 
-It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending EcoSystem and the message transaction will be fulfilled. 
+It will then have to resend the message again. This time it will be received and acknowledged as before and the acknowledgement will eventually reach the original Sending EcoSystem and the message transaction will be fulfilled.
 
 The Receiving EcoSystem will in the last event recognize the message as a duplicat and will return exactly the same acknowledgement content as the first time it received the message.
 
@@ -47,13 +47,13 @@ Duplication of an unchanged message can be done in one of the following ways:
 
 The messages are completely identical and as a consequence the message with request for positive acknowledgement arrives at the Receiving EcoSystem more than once.
 
-The Receiving EcoSystem **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. 
+The Receiving EcoSystem **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message.
 
-A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa. 
+A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa.
 
-The Receiving EcoSystem **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. 
+The Receiving EcoSystem **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place.
 
-If the Sending EcoSystem of the message has received acknowledgement already after the Receiving EcoSystem's acknowledgement of a message's first instance, the Sending EcoSystem **SHALL** similarly ignore the duplicate instances of the acknowledgement. 
+If the Sending EcoSystem of the message has received acknowledgement already after the Receiving EcoSystem's acknowledgement of a message's first instance, the Sending EcoSystem **SHALL** similarly ignore the duplicate instances of the acknowledgement.
 
 The Sending EcoSystem **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
 
@@ -61,7 +61,7 @@ The Sending EcoSystem **SHALL** never display multiple instances of the same ack
 
 Correct retransmission of a message.
 
-The Sending EcoSystem **SHALL** form a new envelope with a new ID and time of dispatch. 
+The Sending EcoSystem **SHALL** form a new envelope with a new ID and time of dispatch.
 
 Since there has been no change in the letter section, the rest of the message **SHALL** remain identical.
 
@@ -85,7 +85,7 @@ For historical reasons, there has been no requirement to use positive acknowledg
 
 The Sending EcoSystem may therefore experience that there is no acknowledgement of a message, and it is not recommended to make program logic that sends messages.
 
-For a number of the old MedComs Messaging Standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case. 
+For a number of the old MedComs Messaging Standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
 
 <a href="https://svn.medcom.dk/svn/releases/MedComs%20Standardkatalog.xlsx" target="_blank">Link to MedComs Messaging Standards Standard Catalogue (in Danish) </a>
 
