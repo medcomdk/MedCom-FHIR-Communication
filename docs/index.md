@@ -146,12 +146,13 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 
 ## 4. Governance for MedCom FHIR Messaging
 
-[Temporary file: Governance for MedCom FHIR Messaging](/assets/documents/03Governance4FHIR-Messaging.md)
+[Governance for MedCom FHIR Messaging](/assets/documents/04Governance4FHIR-Messaging.md)
 
+<!-- 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
 FHIR Resources can be used in a traditional messaging context, much like HL7 v2.
-<!-- Applications asserting conformance to this framework claim to be conformant to "FHIR messaging". -->
+Applications asserting conformance to this framework claim to be conformant to "FHIR messaging". 
 
 In FHIR messaging, a "request message" or an "unsolicited message" is sent from a source application (Sending Application) to a destination application (Receiving Application) when an event happens. Events mostly correspond to things that happen in the real world.
 
@@ -178,6 +179,8 @@ Each MedCom FHIR message has one or more response messages. There **SHALL** be a
 Multiple response messages **SHALL NOT** be returned for messages of consequence, and **SHOULD** not be returned for notifications.
 
 In principle, source applications **SHOULD** not wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
+
+-->
 
 ### 4.3 Reliable Messaging using MedCom FHIR Messaging
 
