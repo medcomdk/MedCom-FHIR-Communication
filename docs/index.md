@@ -107,7 +107,7 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 
 | Links for specific ruleset of Reliable Messaging|
 |:---|
-|[2.3.1 Reliable Messaging using VANSEnvelope](#321-reliable-messaging-using-vansenvelope)|
+|[2.3.1 Reliable Messaging using VANSEnvelope](#32-reliable-messaging-using-vansenvelope)|
 |[3.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)|
 
 ## 3. Governance for Network Layer
