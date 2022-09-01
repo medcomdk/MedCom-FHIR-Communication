@@ -7,12 +7,10 @@
 * [1. Introduction to Governance for MedCom FHIR®© Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
 * [2. Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
 * [3. Governance for the Network Layer](#3-governance-for-network-layer)
-  * [3.1 Vansenvelope](#31-vansenvelope)
-  * [3.2 Reliable Messaging using Vansenvelope](#32-reliable-messaging-using-vansenvelope)
 * [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
 * [6 Governance for displaying MedCom FHIR Messaging](#60-governance-for-displaying-medcom-fhir-messaging)
-* [7. Governance for MedCom Terminolgy](#70-governance-for-terminiology)
+* [7. Governance for MedCom Terminology](#70-governance-for-terminology)
 
 <!-- 
   * [1.2 Asynchronous messaging](#12-asynchronous-messaging)
@@ -71,41 +69,7 @@ In Asynchronous messaging, a Sending EcoSystem dispatches an unsolicited message
 
 ## 2 Governance for Reliable Messaging in general
 
-MedCom FHIR Messaging uses Reliable Messaging.
-
-A key part of the Messaging Network is to provide funcionality for Reliable Messaging.
-
-Sending and Receiving EcoSystems when acting in FHIR MEssaging scenarios **SHALL** support the Reliable Messaging scenarios outlined in the following section.
-
-These scenarios are laid out as generic scenarios and later specified as how they will work out in a VANSEnvelope context and as how they will work out in a MedCom FHIR Messaging context.
-
-| Links for Reliable Messaging|
-|:---|
-| [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)|
-
-## 2.1 Generic ruleset governing the principles of Reliable Messaging
-
-|Generic ruleset governing the principles of Reliable Messaging|
-|:---|
-| A Sending EcoSystem **SHALL** send a Message with a flag indicating that it expects an Acknowledgement on the Message|
-| A Sending EcoSystem **SHALL** be able to handle an unacknowledged Message|
-| A Sending EcoSystem **SHALL** resend the Message, when the expected Acknowledgement is not received within a timelimit of 15 minutes|
-| A Sending EcoSystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend Message|
-| A Sending EcoSystem **SHALL NOT** resend the Message more than 2 times, when the expected Acknowledgement is not received|
-| A Receiving EcoSystem **SHALL** return an Acknowledgement on a received Message with a flag indicating that it expects an Acknowledgement on the Message|
-| A Receiving EcoSystem **SHALL** be able to receive a Message as a duplicate|
-| A Receiving EcoSystem **SHALL NOT** present the end-user for a duplicate of a Message|
-| A Receiving EcoSystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resend Acknowledgement|
-| A Receiving EcoSystem **SHALL** return the same Acknowledgement content on a received Message as it returned on the first received copy of the Message|
-
-<br>
-
-A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope will be explained later in this Governance.
-
-| Links for specific ruleset of Reliable Messaging|
-|:---|
-|[2.3.1 Reliable Messaging using VANSEnvelope](#32-reliable-messaging-using-vansenvelope)|
-|[3.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)|
+[Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)
 
 ## 3. Governance for Network Layer
 
