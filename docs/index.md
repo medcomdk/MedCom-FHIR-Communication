@@ -85,7 +85,7 @@ These scenarios are laid out as generic scenarios and later specified as how the
 
 | Links for Reliable Messaging|
 |:---|
-| [Reliable Messaging in general](/assets/documents/20_Governance-for-Reliable-Messaging-in-general) |
+| [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general) |
 
 ## 2.1 Generic ruleset governing the principles of Reliable Messaging
 
@@ -231,6 +231,8 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 -->
 
 ## 5. Governance for MedCom FHIR Messages
+
+[Governance for MedCom FHIR Messages](050_Governance-for-MedCom-FHIR-Messages.md)
 
 <!-- 
 Below you see the basic MedCom FHIR Messaging Model.
@@ -477,7 +479,7 @@ The narrative element is a human-readable summary of the resource (essential cli
 |[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
 |[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
 
-### 5.9 Governance for displaying MedCom FHIR Messaging
+## 6.0 Governance for displaying MedCom FHIR Messaging
 
 All elements marked as MustSupport **SHALL** be presented or easily accessed on the display of the reader of a received message.
 
@@ -485,7 +487,7 @@ The message as a whole coherent object **SHALL** be present for easy access for 
 
 The receiving application **SHALL** be able to show only relevant information for the different receiver roles in the receiving organization, eg. only persons in clinical roles **SHALL** be able to read clinical content
 
-### 6.0 Governance for Terminology
+## 7.0 Governance for Terminology
 
 The term Terminology is in this governance a term covering all kins of terminology, classifications, enumerations and qualifiers.
 
@@ -493,7 +495,7 @@ All elements of a MedCom FHIR Message **SHALL** be compliant with the terminolog
 
 All Terminologies that are not implicitly present in the specification of an element are present in the Terminology IG and this Terminology IG **SHALL** be
 
-#### 6.0.1 Links for Terminology
+### 7.1 Links for Terminology
 
 | Links for Terminology|
 |:---|

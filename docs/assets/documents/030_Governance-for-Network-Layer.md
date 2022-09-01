@@ -1,4 +1,4 @@
-## 3. Governance for Network Layer
+# 3. Governance for Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
@@ -10,7 +10,7 @@ The Sending EcoSystem **SHALL** validate the message before dispatching it. Vali
 
 The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
-### 3.1 VANSEnvelope
+## 3.1 VANSEnvelope
 
 The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
 
@@ -22,7 +22,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope whether they are s
   * [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   * [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
-### 3.2 Reliable Messaging using VANSenvelope
+## 3.2 Reliable Messaging using VANSenvelope
 
 VANSenvelope is developed to support Reliable Messaging.
 VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messaging functionality.

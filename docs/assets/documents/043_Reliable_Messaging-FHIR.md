@@ -10,7 +10,7 @@ The Reliable Messaging Model and how the flow is laid out using FHIR is shown be
 </figure>
 <br>
 
-When reliable messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages. 
+When reliable messaging is implemented , the Receiver **SHALL** check the incoming Bundle.id and MessageHeader.id against a cache of previously received messages.
 
 The correct action to take depends on what is received:
 
@@ -77,13 +77,13 @@ Duplication of an unchanged message can be done in one of the following ways:
 
 The messages are completely identical and as a consequence the message with request for positive acknowledgement arrives at the Receiving System more than once.
 
-The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message. 
+The Receiving System **SHALL** ignore the contents of the duplicate instances of the message, but **SHALL** acknowledge a duplicate message in the same way as the original message.
 
-A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa. 
+A positive acknowledgement may not be sent first and then a negative acknowledgement or vice versa.
 
-The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place. 
+The Receiving System **SHALL** never display several instances of a message in a message overview, but **SHALL** log in a system log that reception of a duplicate message has taken place.
 
-If the Sending System of the message has received acknowledgement already after the Receiving System's acknowledgement of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgement. 
+If the Sending System of the message has received acknowledgement already after the Receiving System's acknowledgement of a message's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the acknowledgement.
 
 The Sending System **SHALL** never display multiple instances of the same acknowledgement in a message summary, but **SHALL** log in a system log that acknowledgement of a duplicate has taken place.
 
@@ -91,7 +91,7 @@ The Sending System **SHALL** never display multiple instances of the same acknow
 
 Correct retransmission of a message.
 
-The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical. 
+The Sending System **SHALL** form a new envelope with a new ID and time of dispatch. Since there has been no change in the letter section, the rest of the message remains identical.
 
 The message is sent and acknowledged as a completely new message according to Scenario #1 or # 1b.
 
