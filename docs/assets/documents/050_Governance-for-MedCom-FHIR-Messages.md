@@ -120,7 +120,7 @@ The element event **shall** be defined in accordance with the type of standard t
 [TBD]
 
 An inherited instance profile of MedComMessagingOrganization **SHALL** follow the generic concept of the MedComMessagingOrganization as outlined here:
-[MedComMessagingOrganization in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingorganization)
+[MedComMessagingOrganization in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#14-medcommessagingorganization)
 
 <br>
 
