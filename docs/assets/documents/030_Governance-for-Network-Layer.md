@@ -10,7 +10,7 @@
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
-To be able to communicate over the VANS Network, both senders and receivers **SHALL** have an GLN number issued by the SOR. [Link for SOR](https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering)
+To be able to communicate over the VANS Network, both senders and receivers **SHALL** have an GLN number issued by the SOR. <a href="https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering" target="_blank">Link for SOR (Danish)</a>
 
 To be able to communicate a specific MedCom FHIR messagetype both senders and receivers **SHALL** be registered in SOR with that messagetype and version.
 
@@ -38,5 +38,5 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 * The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf" target="_blank">VANS ENVELOPE specification (Danish)</a>
 
-[Tap here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/Reliable_Messaging-VANSEnvelope.md)
+[Tap here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)
 
