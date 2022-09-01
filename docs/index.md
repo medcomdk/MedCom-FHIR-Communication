@@ -1,7 +1,5 @@
 # Governance for MedCom FHIR®© Messaging (Work-in-progress)
 
-<hr/>
-
 ## Table of Content
 
 * [1. Introduction to Governance for MedCom FHIR®© Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
@@ -12,21 +10,9 @@
 * [6 Governance for displaying MedCom FHIR Messaging](#60-governance-for-displaying-medcom-fhir-messaging)
 * [7. Governance for MedCom Terminology](#70-governance-for-terminology)
 
-<!-- 
-  * [1.2 Asynchronous messaging](#12-asynchronous-messaging)
-  * [4.1 MedComMessagingMessage (Bundle)](#51-medcommessagingmessage-bundle)
-  * [4.2 MedComMessagingMessageHeader](#52-medcommessagingmessageheader)
-  * [4.3 MedComMessagingOrganization](#53-medcommessagingorganization)
-  * [4.4 MedComMessagingProvenance](#54-medcommessagingprovenance)
-  * [4.5 MustSupport](#55-mustsupport)
-  * [4.6 Narrative Texts](#56-narrative-texts)
--->
-
 ### Terms used in Governance for MedCom FHIR®© Messaging
 
 [Tab here to get an overview of the Governance Terms](/assets/documents/011_Governance_Terms.md)
-
----
 
 ## 1. Introduction to Governance for MedCom FHIR Messaging
 
@@ -67,23 +53,33 @@ MedCom FHIR Messaging is based on Asynchronous Messaging.
 
 In Asynchronous messaging, a Sending EcoSystem dispatches an unsolicited message to a Receiving EcoSystem possibly through several intermediate hubs, and besides from sending an possibly requested acknowledgement immediately as a response, the Receiving EcoSystem responds to the Sending EcoSystem separately. The Receiving EcoSystem may respond more than once to any given message.
 
-## 2 Governance for Reliable Messaging in general
+## 2. Governance for Reliable Messaging in general
+
+Governance for Reliable Messaging in general lays the grounds for Governance for Reliable Messaging using VANSenvelope and Governance for Reliable Messaging using FHIR. It's the generic ruleset, which the 2 other rulesets are defined from.
 
 [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)
 
 ## 3. Governance for Network Layer
 
+Governance for Network Layer covers rulesets for VANSEnvelope and Reliable Messaging using VANSenvelope.
+
 [Governance for Network Layer](/assets/documents/030_Governance-for-Network-Layer.md)
 
 ## 4. Governance for MedCom FHIR Messaging
+
+Governance for MedCom FHIR Messaging covers Reliable Messaging using MedCom FHIR Messaging, sending and receiving scenarios, and rulesets for FHIR Messaging and FHIR Messaging Acnowledgement.
 
 [Governance for MedCom FHIR Messaging](/assets/documents/040_Governance4FHIR-Messaging.md)
 
 ## 5. Governance for MedCom FHIR Messages
 
+Governance for MedCom FHIR Messages covers the basic ruleset for a MedCom FHIR Message, MedComMessagingMessage and its content, MedComMessagingMessageHeader, MedComMessagingOrganization and MedComMessagingProvenance
+
 [Governance for MedCom FHIR Messages](/assets/documents/050_Governance-for-MedCom-FHIR-Messages.md)
 
 ## 6.0 Governance for displaying MedCom FHIR Messaging
+
+Governance for displaying MedCom FHIR Messaging covers the basic demands for a sending system to be able to display before sending and the basic demands for a receiving system to be able to display after having received a MedComMessagingMessage.
 
 [Governance for displaying MedCom FHIR Messaging](/assets/documents/060_Governance-for-displaying-MedCom-FHIR-Messaging.md)
 
@@ -91,7 +87,7 @@ In Asynchronous messaging, a Sending EcoSystem dispatches an unsolicited message
 
 [Governance for Terminology](/assets//documents/070_Governance-for-Terminology.md)
 
-The term Terminology is in this governance a term covering all kins of terminology, classifications, enumerations and qualifiers.
+The term Terminology is in this governance a term covering all kinds of terminology, classifications, enumerations and qualifiers.
 
 All elements of a MedCom FHIR Message **SHALL** be compliant with the terminologies that are pointed out by these elements.
 
