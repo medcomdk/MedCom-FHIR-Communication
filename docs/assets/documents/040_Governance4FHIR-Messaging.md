@@ -1,5 +1,12 @@
 # &nbsp; &nbsp;
 
+* [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
+  * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
+  * [4.2 Message exchange patterns](#42-message-exchange-patterns)
+  * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
+  * [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
+  * [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
+  
 ## 4. Governance for MedCom FHIR Messaging
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
