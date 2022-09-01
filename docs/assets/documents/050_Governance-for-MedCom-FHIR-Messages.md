@@ -1,4 +1,13 @@
-# 5. Governance for MedCom FHIR Messages
+#
+
+* [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
+* [5.1. MedComMessagingMessage-bundle](#51-medcommessagingmessage-bundle)
+  * [5.1.2 MedComMessingMessage-rules](#512-medcommessingmessage-rules)
+* [5.2 MedComMessagingMessageHeader](#52-medcommessagingmessageheader)
+* [5.3 MedComMessagingOrganization](#53-medcommessagingorganization)
+* [5.4 MedComMessagingProvenance](#54-medcommessagingprovenance)
+
+## 5. Governance for MedCom FHIR Messages
 
 <!-- 
 Below you see the basic MedCom FHIR Messaging Model.
