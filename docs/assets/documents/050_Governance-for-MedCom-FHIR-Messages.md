@@ -35,7 +35,6 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
 [MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
 
-
 MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
 
 <br>
@@ -51,7 +50,6 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 ## 4.1.1 Scope and Usage
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
--->
 
 ### 5.1.2 MedComMessingMessage Rules
 
@@ -80,7 +78,6 @@ One common operation performed with resources is to gather a collection of resou
 An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow the generic concept of the MedComMessagingMessageHeader as outlined here:
 [MedComMessagingMessageHeader in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader)
 
-<!-- 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" target="_blank"> <img src="https://medcomdk.github.io/MedCom-FHIR-Communication/assets/images/MedComMessageHeader.png" alt="MedComMessageHeader"  style="width:100%" id="Fig1" style="align-left"></a>
 <figcaption text-align="left"><b>Figure 3: MedComMessageHeader</b></figcaption>
@@ -95,9 +92,6 @@ An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow t
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 <br>
-
-### 4.2.1 Scope and Usage
--->
 
 #### 5.2.1 MedComMessagingMessageHeader Rules
 
@@ -124,6 +118,9 @@ The element event **shall** be defined in accordance with the type of standard t
 ### 5.3 MedComMessagingOrganization
 
 [TBD]
+
+An inherited instance profile of MedComMessagingOrganization **SHALL** follow the generic concept of the MedComMessagingOrganization as outlined here:
+[MedComMessagingOrganization in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingorganization)
 
 <br>
 
