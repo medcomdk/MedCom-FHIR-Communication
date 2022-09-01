@@ -1,4 +1,8 @@
-# Reliable Messaging in general
+# &nbsp; &nbsp;
+
+## Table of content
+
+## Reliable Messaging in general
 
 Realiable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending EcoSystem, the Sending Application and its MSH, to a Receiving EcoSystem, the Receiving Application and its MSH, or is handled safely manually. In every part of a message chain something go wrong and Reliable Messaging is developed to handle that.
 

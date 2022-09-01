@@ -1,4 +1,12 @@
-# 3. Governance for Network Layer
+# &nbsp; &nbsp;
+
+## Table of content
+
+* [3. Governance for Network Layer](#3-governance-for-network-layer)
+* [3.1 VANSEnvelope](#31-vansenvelope)
+* [3.2 Reliable Messaging using VANSenvelope](#32-reliable-messaging-using-vansenvelope)
+
+## 3. Governance for Network Layer
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
