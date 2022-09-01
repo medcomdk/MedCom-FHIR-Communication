@@ -10,11 +10,6 @@
   * [3.1 Vansenvelope](#31-vansenvelope)
   * [3.2 Reliable Messaging using Vansenvelope](#32-reliable-messaging-using-vansenvelope)
 * [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
-  * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
-  * [4.2 Message exchange patterns](#42-message-exchange-patterns)
-  * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
-  * [4.7 Messaging Rules](#44-fhir-messaging-rules-google-translated)
-  * [4.8 Acnowledgement Rules](#45-fhir-messaging-acnowledgement-rules-google-translated)
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
 * [6 Governance for displaying MedCom FHIR Messaging](#60-governance-for-displaying-medcom-fhir-messaging)
 * [7. Governance for MedCom Terminolgy](#70-governance-for-terminiology)
@@ -182,7 +177,7 @@ Multiple response messages **SHALL NOT** be returned for messages of consequence
 
 In principle, source applications **SHOULD** not wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
 
--->
+
 
 ### 4.3 Reliable Messaging using MedCom FHIR Messaging
 
@@ -206,11 +201,9 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 | MR7.R | A message that is resent **SHALL** always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
 | MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
 
-<!--
 [Messaging rules (Danish)](Rules_Messaging-DA.md)
 
 [Messaging rules (English)](Rules_Messaging-EN.md)
--->
 
 ### 4.5 FHIR Messaging Acnowledgement rules (Google translated)
 
@@ -225,7 +218,6 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 | KR5.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
 | KR6.S | If an acknowledgment of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
-<!--
 [Acnowledgement rules (Danish)](Rules_Acknowledgement-DA.md)
 
 [Acnowledgement rules (English)](Rules_Acknowledgement-EN.md)

@@ -8,7 +8,9 @@
   * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
   * [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
   * [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
-  
+  * [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules-google-translated)
+  * [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules-google-translated)
+
 ## 4. Governance for MedCom FHIR Messaging
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
@@ -93,3 +95,43 @@ Forwarding is handled on different levels
 ### 4.5 Handling receiving scenarios
 
 Lorem ipsum
+
+### 4.6 FHIR Messaging rules (Google translated)
+
+[TBD]
+
+| ID | Rule |
+|:------| :-----|
+| MR1.S | An acknowledgment **SHALL** always be requested on a FHIR message |
+| MR2.S | A message **SHALL** be marked as sent and received when an AA acknowledgment has been received |
+| MR3.S | A message **SHALL** be marked as failed when a negative AR acknowledgment has been received |
+| MR4.S | A message **SHALL** be marked as failed when a negative AE acknowledgment has been received |
+| MR5.R | A message **SHALL** not be resent more than 3 times upon receipt of an AE Acknowledgment |
+| MR6.R | A message **SHALL** be re-sent more than 3 times in the event of failure to receive an Acknowledgment |
+| MR7.R | A message that is resent **SHALL** always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
+| MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
+
+<!--
+[Messaging rules (Danish)](Rules_Messaging-DA.md)
+
+[Messaging rules (English)](Rules_Messaging-EN.md)
+-->
+
+### 4.7 FHIR Messaging Acnowledgement rules (Google translated)
+
+[TBD]
+
+| ID | Rules |
+|:------| :-----|
+| KR1.R | A FHIR message **SHALL** always be acknowledged |
+| KR2.R | An acknowledgment message **SHALL** never be acknowledged |
+| KR3.R | If no errors are found while receiving a message, a positive acknowledgment **SHALL** be made with AA |
+| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative acknowledgment **SHALL** be made with AE |
+| KR5.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
+| KR6.S | If an acknowledgment of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
+
+<!--
+[Acnowledgement rules (Danish)](Rules_Acknowledgement-DA.md)
+
+[Acnowledgement rules (English)](Rules_Acknowledgement-EN.md)
+-->
