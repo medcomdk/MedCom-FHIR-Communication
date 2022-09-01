@@ -12,7 +12,7 @@ The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is 
 
 When Reliable Messaging is implemented , the Receiver **SHALL** check the incoming EnvelopeIdentifier and Message/MetaInformation/Identifier (hereafter MessageIdentifier) against a cache of previously received VANSEnvelopes. The correct action to take depends on what is received:
 
-| Case                                                            | Description                 |
+| Case                                                            | Description                |
 |:----------------------------------------------------------------|:---------------------------|
 | Both EnvelopeIdentifier and MessageIdentifier have not been received       | This is the normal case, and the message **SHALL** be processed            |
 | Both EnvelopeIdentifier and MessageIdentifier have already been received   | The original VANSEnvelope server may either reprocess the message, or reject the message|
