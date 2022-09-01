@@ -1,8 +1,6 @@
 # Governance of Terminologies
 
-All CodeSystems, ValueSets and ConceptMaps will have a status, version, and a latest changed date. The status indicates if the CodeSystems, ValueSets or ConceptMaps is draft, active, or retired. If the status is active the terminology is ready for use. 
-
-There may be multiple versions of the same CodeSystems, ValueSets or ConceptMaps, but only one will be active. Version and date will together indicate the newest version. Under the ‘Previous versions’ the historical changes to the CodeSystems, ValueSets or ConceptMaps can be seen [Work in progress]. 
+All CodeSystems, ValueSets and ConceptMaps will have a status, and a latest changed date. The status indicates if the CodeSystems, ValueSets or ConceptMaps is draft, active, or retired. If the status is active the terminology is ready for use. 
 
 No updates will be made without consulting relevant working groups beforehand. 
 
@@ -13,11 +11,11 @@ However, codes in CodeSystems may be deprecated with a deprecation date and new 
 
 ## ValueSets
 
-As a starting point all ValueSets are extensionally defined, which means that codes from CodeSystems are explicitly listed in each ValueSet. Therefore, will ValueSets not automatically be expanded when a CodeSystem is, it requires a change in the ValueSet.
+Some ValueSets are intensional defined, meaning that all codes from a CodeSystem is included. Whenever the CodeSystem is updated, so is the ValueSet. For intensional defined ValueSets, there will always only be one active ValueSets, with a date for latest update. ValueSets used to describe the content of a message, such as [MedComCareCommunicationCategoryCodes](https://build.fhir.org/ig/medcomdk/dk-medcom-terminology/ValueSet-medcom-careCommunication-categories.html)
 
-A ValueSet may be more or less static. ValueSets used for messaging purposes will rarely change, whereas ValueSets used to describe the content of a message may change more frequently, depending on the requirement of the project. No changes will be made without consulting relevant working groups. In exceptional cases, it is possible to specify when defining a value set that it must not be changed or versioned.
+Other ValueSets are extensional defined, meaning that means that codes from CodeSystems are explicitly listed in each ValueSet. Therefore, will ValueSets not automatically be expanded when a CodeSystem is, it requires a change in the ValueSet. These ValueSets are used to describe the codes used for routing of a message and the logical setup within a system, such as [MedComHospitalNotificationMessageActivityCodes](https://build.fhir.org/ig/medcomdk/dk-medcom-terminology/ValueSet-medcom-hospitalNotification-messageActivities.html). There may be more than one active ValueSet, as changes may take time to implement. 
 
-Value Sets are valid until the date of a newer version of this ValueSet is reached, then the newer version is valid. If a code in a CodeSystem is deprecated, a new version of the ValueSet is created, which will be valid.
+In exceptional cases, it is possible to specify when defining a ValueSet that must not be changed or versioned.
 
 ## ConceptMaps
 
