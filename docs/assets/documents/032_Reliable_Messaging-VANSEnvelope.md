@@ -44,13 +44,13 @@ Duplication of an unchanged VANSEnvelope can be done in one of the following way
 
 The VANSEnvelopes are completely identical and as a consequence the VANSEnvelope with request for positive VANSEnvelopeAcknowledgement arrives at the Receiving System more than once.
 
-The Receiving System **SHALL** ignore the contents of the duplicate instances of the VANSEnvelope, but **SHALL** acknowledge a duplicate VANSEnvelope in the same way as the original VANSEnvelope. 
+The Receiving System **SHALL** ignore the contents of the duplicate instances of the VANSEnvelope, but **SHALL** acknowledge a duplicate VANSEnvelope in the same way as the original VANSEnvelope.
 
-A positive VANSEnvelopeAcknowledgement may not be sent first and then a negative VANSEnvelopeAcknowledgement or vice versa. 
+A positive VANSEnvelopeAcknowledgement may not be sent first and then a negative VANSEnvelopeAcknowledgement or vice versa.
 
-The Receiving System **SHALL** never display several instances of a VANSEnvelope in a VANSEnvelope overview, but **SHALL** log in a system log that reception of a duplicate VANSEnvelope has taken place. 
+The Receiving System **SHALL** never display several instances of a VANSEnvelope in a VANSEnvelope overview, but **SHALL** log in a system log that reception of a duplicate VANSEnvelope has taken place.
 
-If the Sending System of the VANSEnvelope has received VANSEnvelopeAcknowledgement already after the Receiving System's VANSEnvelopeAcknowledgement of a VANSEnvelope's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the VANSEnvelopeAcknowledgement. 
+If the Sending System of the VANSEnvelope has received VANSEnvelopeAcknowledgement already after the Receiving System's VANSEnvelopeAcknowledgement of a VANSEnvelope's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the VANSEnvelopeAcknowledgement.
 
 The Sending System **SHALL** never display multiple instances of the same VANSEnvelopeAcknowledgement in a VANSEnvelope summary, but **SHALL** log in a system log that VANSEnvelopeAcknowledgement of a duplicate has taken place.
 
@@ -58,7 +58,7 @@ The Sending System **SHALL** never display multiple instances of the same VANSEn
 
 Correct retransmission of a message A.
 
-The Sending System **SHALL** form a new VANSEnvelope with a new ID and time of dispatch. 
+The Sending System **SHALL** form a new VANSEnvelope with a new ID and time of dispatch.
 
 Since there has been no change in the Message content section, the rest of the VANSEnvelope **SHALL** remain identical.
 
