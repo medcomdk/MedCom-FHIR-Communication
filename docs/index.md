@@ -8,7 +8,8 @@
 * [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
 * [6 Governance for displaying MedCom FHIR Messaging](#60-governance-for-displaying-medcom-fhir-messaging)
-* [7. Governance for MedCom Terminology](#70-governance-for-terminology)
+* [7. Governance for MedCom Terminology](#70-governance-for-medcom-fhir-terminology)
+* [8. Governance for MedCom Terminology Server](#80-governance-for-medcom-fhir-terminology-server)
 
 ### Terms used in Governance for MedCom FHIR®© Messaging
 
@@ -83,6 +84,12 @@ Governance for displaying MedCom FHIR Messaging covers the basic demands for a s
 
 [Governance for displaying MedCom FHIR Messaging](/assets/documents/060_Governance-for-displaying-MedCom-FHIR-Messaging.md)
 
-## 7.0 Governance for Terminology
+## 7.0 Governance for MedCom FHIR Terminology
+
+Governance for MedCom FHIR Terminology covers Codesystems, Valuesets and ConceptMaps, which are published through our MedCom FHIR Terminology IG and hosted on a our MedCom FHIR Terminology Server. Governance for the MedCom FHIR Terminology Server will 
 
 [Governance for Terminology](/assets//documents/070_Governance-for-Terminology.md)
+
+## 8.0 Governance for MedCom FHIR Terminology Server
+
+Governance for the MedCom FHIR Terminology Server will appear hear when published.
