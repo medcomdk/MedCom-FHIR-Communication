@@ -41,10 +41,6 @@ Sending and Receiving EcoSystems when acting in FHIR MEssaging scenarios **SHALL
 
 These scenarios are laid out as generic scenarios and later specified as how they will work out in a VANSEnvelope context and as how they will work out in a MedCom FHIR Messaging context.
 
-| Links for Reliable Messaging|
-|:---|
-| [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)|
-
 ## 2.1 Generic ruleset governing the principles of Reliable Messaging
 
 |Generic ruleset governing the principles of Reliable Messaging|
@@ -66,8 +62,8 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 
 | Links for specific ruleset of Reliable Messaging|
 |:---|
-|[2.3.1 Reliable Messaging using VANSEnvelope](#32-reliable-messaging-using-vansenvelope)|
-|[3.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)|
+|[Reliable Messaging using VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)|
+|[Reliable Messaging using MedCom FHIR Messaging](/assets/documents/043_Reliable_Messaging-FHIR.md)|
 
 ## 2.2 Different Reliable Messaging scenarios
 
@@ -140,5 +136,5 @@ For a number of the old MedComs Messaging Standards, however, there is an explic
 
 | Links for specific ruleset of Reliable Messaging|
 |:---|
-|[Reliable Messaging in VANSEnvelope](Reliable_Messaging-VANSEnvelope.md)|
-|[Reliable Messaging in MedCom FHIR Messaging](Reliable_Messaging-FHIR.md)|
+|[Reliable Messaging in VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)|
+|[Reliable Messaging in MedCom FHIR Messaging](/assets/documents/043_Reliable_Messaging-FHIR.md)|
