@@ -4,7 +4,6 @@
 
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
 * [5.1. MedComMessagingMessage-bundle](#51-medcommessagingmessage-bundle)
-  * [5.1.2 MedComMessingMessage-rules](#512-medcommessingmessage-rules)
 * [5.2 MedComMessagingMessageHeader](#52-medcommessagingmessageheader)
 * [5.3 MedComMessagingOrganization](#53-medcommessagingorganization)
 * [5.4 MedComMessagingProvenance](#54-medcommessagingprovenance)
@@ -40,10 +39,6 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
 
 <br>
-
-## 4.1.1 Scope and Usage
-
-One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
 
 ### 5.1.2 MedComMessingMessage Rules
 
@@ -143,12 +138,6 @@ Provenance of a resource is a record that describes entities and processes invol
 
 <br>
 
-#### 5.4.1 Scope and Usage
-
-The MedComMessagingProvenance resource tracks information about the activity that created, revised, deleted, or signed a version of a resource, describing the entities and agents involved. This information can be used to form assessments about its quality, reliability, trustworthiness, or to provide pointers for where to go to further investigate the origins of the resource and the information in it.
-
-Provenance resources are a record-keeping assertion that gathers information about the context in which the information in a resource was obtained. Provenance resources are prepared by the application that initiates the create/update etc. of the resource. An AuditEvent resource contains overlapping information, but is created as events occur, to track and audit the events. AuditEvent resources are often (though not exclusively) created by the application responding to the read/query/create/update/etc. event.
-
 #### 5.4.2 Rules
 
 [TBD]
@@ -162,10 +151,6 @@ Provenance resources are a record-keeping assertion that gathers information abo
 Labeling an element MustSupport means that implementations that produce or consume resources **SHALL** provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
 br>
-
-#### 5.5.1 Scope and Usage
-
-In MedCom FHIR Messaging MustSupport denotes the MedCom FHIR Message. While FHIR resources can contain a lot of different elements, a MedCom FHIR Message is defined to be exactly what is outlined by the MustSupport flag in the IG
 
 #### 5.5.2 Rules
 
