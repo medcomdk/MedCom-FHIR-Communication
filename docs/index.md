@@ -59,13 +59,13 @@ The "Governance for MedCom FHIR®© Messaging" must ensure a uniform use of MedC
 
 In the following we follow a top-down approach by addressing shipping over the Network Layer and its ruleset first, then the logistics for MedCom FHIR Messaging and last cover the basic ruleset of how to compose a MedCom FHIR message.
 
-<!-- [Introduction details (Danish)](01-Introduction.md)-->
+<!-- [Introduction details (Danish)](/assets/documents/1-Introduction.md)-->
 
 <!-- [Generelle tekniske use cases](Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
 ### 1.1 What is a MedCom FHIR Message Standard
 
-An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all the parts of the documentation laid out for the MedCom FHIR Message Standard and described here: [Dcumentation for the MedCom FHIR Message Standard](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
+An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all the parts of the documentation laid out for the MedCom FHIR Message Standard and described here: [Documentation for the MedCom FHIR Message Standard](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
 
 ### 1.2 Asynchronous Messaging
 
@@ -85,7 +85,7 @@ These scenarios are laid out as generic scenarios and later specified as how the
 
 | Links for Reliable Messaging|
 |:---|
-| [Reliable Messaging in general](020_Governance-for-Reliable-Messaging-in-general) |
+| [Reliable Messaging in general](/assets/documents/20_Governance-for-Reliable-Messaging-in-general) |
 
 ## 2.1 Generic ruleset governing the principles of Reliable Messaging
 
@@ -143,11 +143,11 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 * The use of Reliable Messaging functionality when shipping MedCom FHIR Messages **SHALL** follow the VANS ENVELOPE specification outlined in
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation/Den%20gode%20VANSEnvelope.pdf" target="_blank">VANS ENVELOPE specification (Danish)</a>
 
-[Tap here to see how to setup Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)
+[Tap here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)
 
 ## 4. Governance for MedCom FHIR Messaging
 
-[Governance for MedCom FHIR Messaging](04_Governance4FHIR-Messaging.md)
+[Governance for MedCom FHIR Messaging](/assets/documents/040_Governance4FHIR-Messaging.md)
 
 <!-- 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
@@ -188,7 +188,7 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 FHIR Messaging is developed to support Reliable Messaging.
 MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
-[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)
+[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](/assets/documents/043_Reliable_Messaging-FHIR.md)
 
 ### 4.4 FHIR Messaging rules (Google translated)
 
