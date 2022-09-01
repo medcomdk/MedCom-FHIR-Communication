@@ -22,7 +22,7 @@ In FHIR messaging, a "request message" or an "unsolicited message" is sent from 
 
 The message consists of a Bundle identified by the type "message", with the first resource in the Bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the Bundle depend on the type of the message, eg. in which context a message is triggered.
 
-The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](/assets/documents/MedCom-FHIR-Messaging-Events.md).
+The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](MedCom-FHIR-Messaging-Events.md).
 
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
@@ -48,7 +48,7 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 FHIR Messaging is developed to support Reliable Messaging.
 MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
-[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](/assets/documents/Reliable_Messaging-FHIR.md)
+[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)
 
 ### 4.4 Handling sending scenarios
 
@@ -76,10 +76,10 @@ A message to a copyreceiver is as the name says a copy of the original message.
 
 Sending to a copyreceiver is handled on different levels:
 
-- VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
-- MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a copyreceiver element to the stack of MedComMessagingProvenances.
-- MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
-- MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
+* VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
+* MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a copyreceiver element to the stack of MedComMessagingProvenances.
+* MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
+* MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
 
 ##### 4.4.3.2 Forwarding a message
 
@@ -87,10 +87,10 @@ A forwarded message to a new receiver not present in the construction and dispat
 
 Forwarding is handled on different levels
 
-- VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
-- MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a forwarding element to the stack of MedComMessagingProvenances.
-- MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
-- MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
+* VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
+* MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a forwarding element to the stack of MedComMessagingProvenances.
+* MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
+* MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
 
 ### 4.5 Handling receiving scenarios
 
@@ -111,11 +111,9 @@ Lorem ipsum
 | MR7.R | A message that is resent **SHALL** always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
 | MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
 
-<!--
 [Messaging rules (Danish)](Rules_Messaging-DA.md)
 
-[Messaging rules (English)](Rules_Messaging-EN.md)
--->
+<!-- [Messaging rules (English)](Rules_Messaging-EN.md) -->
 
 ### 4.7 FHIR Messaging Acnowledgement rules (Google translated)
 
@@ -130,8 +128,6 @@ Lorem ipsum
 | KR5.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
 | KR6.S | If an acknowledgment of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
-<!--
 [Acnowledgement rules (Danish)](Rules_Acknowledgement-DA.md)
 
-[Acnowledgement rules (English)](Rules_Acknowledgement-EN.md)
--->
+<!-- [Acnowledgement rules (English)](Rules_Acknowledgement-EN.md) -->
