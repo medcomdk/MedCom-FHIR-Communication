@@ -35,7 +35,7 @@ As shown in the diagram below there are 4 MedCom profiled FHIR resources involve
 An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
 [MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
 
-<!-- 
+
 MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
 
 <br>
