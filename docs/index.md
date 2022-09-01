@@ -5,19 +5,20 @@
 ## Table of Content
 
 * [1. Introduction to Governance for MedCom FHIR®© Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
-  * [1.2 Asynchronous messaging](#12-asynchronous-messaging)
 * [2. Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
 * [3. Governance for the Network Layer](#3-governance-for-network-layer)
-  * [3.2 Vansenvelope](#32-vansenvelope)
+  * [3.1 Vansenvelope](#31-vansenvelope)
+  * [3.2 Vansenvelope](#32-reliable-messaging-using-vansenvelope)
 * [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
-  * [3.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
-  * [3.2 Message exchange patterns](#42-message-exchange-patterns)
-  * [3.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
-  * [3.7 Messaging Rules](#44-fhir-messaging-rules-google-translated)
-  * [3.8 Acnowledgement Rules](#45-fhir-messaging-acnowledgement-rules-google-translated)
+  * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
+  * [4.2 Message exchange patterns](#42-message-exchange-patterns)
+  * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
+  * [4.7 Messaging Rules](#44-fhir-messaging-rules-google-translated)
+  * [4.8 Acnowledgement Rules](#45-fhir-messaging-acnowledgement-rules-google-translated)
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
 
 <!-- 
+  * [1.2 Asynchronous messaging](#12-asynchronous-messaging)
   * [4.1 MedComMessagingMessage (Bundle)](#51-medcommessagingmessage-bundle)
   * [4.2 MedComMessagingMessageHeader](#52-medcommessagingmessageheader)
   * [4.3 MedComMessagingOrganization](#53-medcommessagingorganization)
@@ -65,7 +66,7 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all the parts of the documentation laid out for the MedCom FHIR Message Standard and described here: [Dcumentation for the MedCom FHIR Message Standard](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
 
-## 1.2 Asynchronous Messaging
+### 1.2 Asynchronous Messaging
 
 MedCom FHIR Messaging is based on Asynchronous Messaging.
 
@@ -121,7 +122,7 @@ The Sending EcoSystem **SHALL** validate the message before dispatching it. Vali
 
 The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
-## 3.2 VANSEnvelope
+### 3.1 VANSEnvelope
 
 The VANSenvelope is developed to contain xml-based or other non-edifact messagetypes over the VANS Network
 
@@ -133,7 +134,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSenvelope whether they are s
   * [Network Envelope (Danish)](/assets/documents/FHIRMessages_NetworkEnvelopes_DA.md)
   * [Network Envelope (English)](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md)
 
-### 3.2.1 Reliable Messaging using VANSenvelope
+### 3.2 Reliable Messaging using VANSenvelope
 
 VANSenvelope is developed to support Reliable Messaging.
 VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
