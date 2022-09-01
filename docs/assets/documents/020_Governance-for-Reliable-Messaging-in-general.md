@@ -1,4 +1,4 @@
-# &nbsp; &nbsp;
+# 2.0 Governance for Reliable Messaging in general
 
 ## Table of content
 
