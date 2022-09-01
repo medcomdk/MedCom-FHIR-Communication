@@ -16,7 +16,8 @@
   * [4.7 Messaging Rules](#44-fhir-messaging-rules-google-translated)
   * [4.8 Acnowledgement Rules](#45-fhir-messaging-acnowledgement-rules-google-translated)
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
-* [6. Governance for MedCom Terminolgy](#60-governance-for-terminiology)
+* [6 Governance for displaying MedCom FHIR Messaging](#60-governance-for-displaying-medcom-fhir-messaging)
+* [7. Governance for MedCom Terminolgy](#70-governance-for-terminiology)
 
 <!-- 
   * [1.2 Asynchronous messaging](#12-asynchronous-messaging)
@@ -488,6 +489,8 @@ The message as a whole coherent object **SHALL** be present for easy access for 
 The receiving application **SHALL** be able to show only relevant information for the different receiver roles in the receiving organization, eg. only persons in clinical roles **SHALL** be able to read clinical content
 
 ## 7.0 Governance for Terminology
+
+[Governance for Terminology](/assets//documents/070_Governance-for-Terminology.md)
 
 The term Terminology is in this governance a term covering all kins of terminology, classifications, enumerations and qualifiers.
 
