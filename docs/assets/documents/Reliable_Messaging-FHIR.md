@@ -95,3 +95,8 @@ Resubmissions are always done manually.
 
 For historical reasons, there has been no requirement to use positive acknowledgements, which is why Scenario #1 can in practice be run as Scenario #2. The Sending System may therefore experience that there is no acknowledgement of a message, and it is not recommended to make program logic that sends messages.
 For a number of standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
+
+| Links for Reliable Messaging|
+|:---|
+|[Reliable Messaging in general](Reliable_Messaging-In-General.md)|
+|[Reliable Messaging in VANSEnvelope](Reliable_Messaging-VANSEnvelope.md)|
