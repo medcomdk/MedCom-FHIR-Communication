@@ -269,7 +269,7 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 ## 4.1.1 Scope and Usage
 
 One common operation performed with resources is to gather a collection of resources into a single instance with containing context. In FHIR this is referred to as "bundling" the resources together. These resource bundles are useful for a variety of different reasons, including sending a set of resources as part of a message exchange (see Messaging)
--->
+
 
 ### 5.1.2 MedComMessingMessage Rules
 
@@ -315,7 +315,7 @@ An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow t
 <br>
 
 ### 4.2.1 Scope and Usage
--->
+
 
 #### 5.2.1 MedComMessagingMessageHeader Rules
 
