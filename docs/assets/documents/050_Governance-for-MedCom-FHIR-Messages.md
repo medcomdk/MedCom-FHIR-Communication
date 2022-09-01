@@ -1,4 +1,4 @@
-# &nbsp; &nbsp;
+# 5. Governance for MedCom FHIR Messages
 
 ## Table of content
 
@@ -8,37 +8,10 @@
 * [5.3 MedComMessagingOrganization](#53-medcommessagingorganization)
 * [5.4 MedComMessagingProvenance](#54-medcommessagingprovenance)
 
-## 5. Governance for MedCom FHIR Messages
-
-Below you see the basic MedCom FHIR Messaging Model.
-
-As shown in the diagram below there are 4 MedCom profiled FHIR resources involved in a MedCom FHIR Message:
-
-* A MedComMessagingMessage is a Bundle resource of type "message"
-* The MedComMessagingMessage's first resource is a MedComMessagingMesssageHeader, which is a MesssageHeader resource
-* The MedComMessagingMesssageHeader points to at least two organizations for the MedComMessagingMessage:
-  * a source organization called a MedComMessagingOrganization, which is an Organization resource
-  * a destination organization also a MedComMessagingOrganization, which too is an Organization resource
-* The MedComMessagingMessage's MedComMessagingProvennance, which is a Provennance resource
-
-<br>
-
 ## 5.1 MedComMessagingMessage (Bundle)
 
 An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
 [MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
-
-MedComMessagingMessage is a Bundle resource of type "message", which is a container for a collection of other resources.
-
-<br>
-
-| Links for MedComMessingMessage|
-|:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
-| <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Detailed page for MedCom Messaging</a> |
-| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
-
-<br>
 
 ### 5.1.2 MedComMessingMessage Rules
 
@@ -60,9 +33,15 @@ MedComMessagingMessage is a Bundle resource of type "message", which is a contai
 | A MedCom FHIR Message **SHALL** be validated before disptching of the message |
 | A MedCom FHIR Message **SHALL** be validated on reception of the message in the Receiving Apllication|
 
-### 5.2 MedComMessagingMessageHeader
+### 5.1.2 MedComMessingMessage Links
 
-[TBD]
+| Links for MedComMessingMessage|
+|:---|
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Detailed page for MedCom Messaging</a> |
+| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
+
+### 5.2 MedComMessagingMessageHeader
 
 An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow the generic concept of the MedComMessagingMessageHeader as outlined here:
 [MedComMessagingMessageHeader in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader)
@@ -93,18 +72,22 @@ The element event **SHALL** be defined in accordance with the type of standard t
 
 #### 5.2.2 Identifiers and Timestamps
 
-[TBD]
-
 [Identifiers](MessageHeader_Identifiers_Timestamps.md)
 
 ### 5.3 MedComMessagingOrganization
 
-[TBD]
-
 An inherited instance profile of MedComMessagingOrganization **SHALL** follow the generic concept of the MedComMessagingOrganization as outlined here:
 [MedComMessagingOrganization in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#14-medcommessagingorganization)
 
+This profile describes the Organization resource that **SHALL** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **SHALL** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **SHALL** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
+
 <br>
+
+#### 5.3.1 MedComMessagingOrganization Rules
+
+[TBD]
+
+#### 5.3.2 MedComMessagingOrganization Links
 
 | Links for MedComMessagingOrganization|
 |:---|
@@ -114,21 +97,15 @@ An inherited instance profile of MedComMessagingOrganization **SHALL** follow th
 
 <br>
 
-#### 5.3.1 Scope and Usage
-
-This profile describes the Organization resource that **SHALL** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **SHALL** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **SHALL** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
-
-<br>
-
-#### 5.3.2 MedComMessagingOrganization Rules
-
-[TBD]
-
 ### 5.4 MedComMessagingProvenance
 
-Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. Provenance statement indicates clinical significance in terms of confidence in authenticity, reliability, and trustworthiness, integrity, and stage in lifecycle (e.g. Document Completion - has the artifact been legally authenticated), all of which may impact security, privacy, and trust policies.
+#### 5.4.1 MedComMessagingProvenance Rules
 
-<br>
+* MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingProvenance resource
+* MedCom FHIR Messages **SHALL** contain one bundled MedComMessagingProvenance resource for each message exchange the message has been involved in
+* MedCom FHIR Messages **SHALL** contain no more than two bundled MedComMessagingProvenance resource when acknowledging a message
+
+#### 5.4.2 MedComMessagingProvenance Links
 
 | Links for MedComMessagingProvenance|
 |:---|
@@ -137,14 +114,6 @@ Provenance of a resource is a record that describes entities and processes invol
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
 <br>
-
-#### 5.4.2 Rules
-
-[TBD]
-
-* MedCom FHIR Messages **SHALL** contain at least one bundled MedComMessagingProvenance resource
-* MedCom FHIR Messages **SHALL** contain one bundled MedComMessagingProvenance resource for each message exchange the message has been involved in
-* MedCom FHIR Messages **SHALL** contain no more than two bundled MedComMessagingProvenance resource when acknowledging a message
 
 ### 5.5 MustSupport
 
@@ -177,8 +146,6 @@ Contained resources do not have narrative, but their content **SHALL** be repres
 Narratives contains two sub elements, status and div.
 
 #### 5.6.1 The status element
-
-[TBD]
 
 In MedCom FHIR Messages The code **SHALL** always be: "additional" meaning that the it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
 
