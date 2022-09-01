@@ -1,6 +1,6 @@
 # Reliable Messaging using VANSEnvelope
 
-Reliable Messaging in VANSEnvelope follows the principles laid out in [Reliable Messaging in general](Reliable_Messaging-In-General.md)
+Reliable Messaging in VANSEnvelope follows the principles laid out in [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)
 
 The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is shown below:
 
