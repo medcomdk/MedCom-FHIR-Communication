@@ -1,42 +1,12 @@
 # Reliable Messaging using VANSEnvelope
 
-Reliable Messaging in VANSEnvelope
+Reliable Messaging in VANSEnvelope follows the principles laid out in [Reliable Messaging in general](Reliable_Messaging-In-General.md)
 
 The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is shown below:
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/reliable-messaging-vansenvelope_1160x625.png" target="_blank"> <img src="../images/reliable-messaging-vansenvelope_1160x625.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1: Reliable Messaging - VANSEnvelope </b></figcaption>
-</figure>
-<br>
-
-A VansEnvelope consists of the following elements:
-
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/vansenvelope_schema-reliable.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
-<figcaption text-align="left"><b>Figure 2: Reliable Messaging - reliable vansenvelope schema </b></figcaption>
-</figure>
-<br>
-
-A VansEnvelope's Reliale Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
-
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/vansenvelope_schema-reliable-type.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable-type.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
-<figcaption text-align="left"><b>Figure 3: Reliable Messaging - reliable vansenvelope type </b></figcaption>
-</figure>
-<br>
-
-Reliable Messaging in VANSEnvelope is the default mode, but can explicitly be turned on and off by setting this VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
-
-In FHIR Messaging this element **SHALL** be "reliable" or left in default mode.
-
-When "reliable" the receiver of the VANSEnvelope **SHALL** send a VANSEnvelopeAcknowledgement return to the original Sender.
-
-A VANSEnvelopeAcknowledgement consists of the following elements:
-
-<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/vansenvelope_schema-acknowledgement.png" target="_blank"> <img src="../images/vansenvelope_schema-acknowledgement.png" alt="vansenvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
-<figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable vansenvelope acknowledgement </b></figcaption>
 </figure>
 <br>
 
@@ -90,3 +60,39 @@ The shipping pattern is like Scenario #3.
 
 If the content of the Message content part is changed, the VANSEnvelope is considered a completely new VANSEnvelope and consequently change of both EnvelopeIdentifier, MessageIdentifier and timestamp **SHALL** be made, where relevant.
 Resubmissions **SHALL** always done manually.
+
+## VansEnvelope Reliable Messaging Elements
+
+### VansEnvelope Reliable Messaging Elements
+
+A VansEnvelope consists of the following elements:
+
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="../images/vansenvelope_schema-reliable.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
+<figcaption text-align="left"><b>Figure 2: Reliable Messaging - reliable vansenvelope schema </b></figcaption>
+</figure>
+<br>
+
+A VansEnvelope's Reliale Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
+
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="../images/vansenvelope_schema-reliable-type.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable-type.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
+<figcaption text-align="left"><b>Figure 3: Reliable Messaging - reliable vansenvelope type </b></figcaption>
+</figure>
+<br>
+
+Reliable Messaging in VANSEnvelope is the default mode, but can explicitly be turned on and off by setting this VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
+
+In FHIR Messaging this element **SHALL** be "reliable" or left in default mode.
+
+### VANSEnvelopeAcknowledgement Reliable Messaging Elements
+
+When "reliable" the receiver of the VANSEnvelope **SHALL** send a VANSEnvelopeAcknowledgement return to the original Sender.
+
+A VANSEnvelopeAcknowledgement consists of the following elements:
+
+<figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
+<a href="../images/vansenvelope_schema-acknowledgement.png" target="_blank"> <img src="../images/vansenvelope_schema-acknowledgement.png" alt="vansenvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
+<figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable vansenvelope acknowledgement </b></figcaption>
+</figure>
+<br>
