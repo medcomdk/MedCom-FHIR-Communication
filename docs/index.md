@@ -1,21 +1,21 @@
-# Governance for MedCom FHIR®© Messaging (Work-in-progress)
+# Governance for MedCom FHIR®© Messaging
 
 ## Table of Content
 
-* [1. Introduction to Governance for MedCom FHIR®© Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
-* [2. Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
-* [3. Governance for the Network Layer](#3-governance-for-network-layer)
-* [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
-* [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
-* [6 Governance for displaying MedCom FHIR Messaging](#60-governance-for-displaying-medcom-fhir-messaging)
-* [7. Governance for MedCom Terminology](#70-governance-for-medcom-fhir-terminology)
-* [8. Governance for MedCom Terminology Server](#80-governance-for-medcom-fhir-terminology-server)
+* [1 Introduction to Governance for MedCom FHIR®© Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
+* [2 Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
+* [3 Governance for the Network Layer](#3-governance-for-network-layer)
+* [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
+* [5 Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
+* [6 Governance for displaying MedCom FHIR Messaging](#6-governance-for-displaying-medcom-fhir-messaging)
+* [7 Governance for MedCom Terminology](#7-governance-for-medcom-fhir-terminology)
+* [8 Governance for MedCom Terminology Server](#8-governance-for-medcom-fhir-terminology-server)
 
 ### Terms used in Governance for MedCom FHIR®© Messaging
 
 [Tab here to get an overview of the Governance Terms](/assets/documents/011_Governance_Terms.md)
 
-## 1. Introduction to Governance for MedCom FHIR Messaging
+## 1 Introduction to Governance for MedCom FHIR Messaging
 
 On this page you can find information about how MedCom has profiled the [HL7 FHIR®© Messaging Framework](http://hl7.org/fhir/R4/messaging.html) to work in a Danish context.
 Governance for MedCom HL7 FHIR®© Messaging describes the basic ruleset of how MedCom Messages shall be exchanged in the Danish Healthcare Messaging Network.
@@ -54,42 +54,42 @@ MedCom FHIR Messaging is based on Asynchronous Messaging.
 
 In Asynchronous messaging, a Sending EcoSystem dispatches an unsolicited message to a Receiving EcoSystem possibly through several intermediate hubs, and besides from sending an possibly requested acknowledgement immediately as a response, the Receiving EcoSystem responds to the Sending EcoSystem separately. The Receiving EcoSystem may respond more than once to any given message.
 
-## 2. Governance for Reliable Messaging in general
+## 2 Governance for Reliable Messaging in general
 
 Governance for Reliable Messaging in general lays the grounds for Governance for Reliable Messaging using VANSenvelope and Governance for Reliable Messaging using FHIR. It's the generic ruleset, which the 2 other rulesets are defined from.
 
 [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)
 
-## 3. Governance for Network Layer
+## 3 Governance for Network Layer
 
 Governance for Network Layer covers rulesets for VANSEnvelope and Reliable Messaging using VANSenvelope.
 
 [Governance for Network Layer](/assets/documents/030_Governance-for-Network-Layer.md)
 
-## 4. Governance for MedCom FHIR Messaging
+## 4 Governance for MedCom FHIR Messaging
 
 Governance for MedCom FHIR Messaging covers Reliable Messaging using MedCom FHIR Messaging, sending and receiving scenarios, and rulesets for FHIR Messaging and FHIR Messaging Acnowledgement.
 
 [Governance for MedCom FHIR Messaging](/assets/documents/040_Governance4FHIR-Messaging.md)
 
-## 5. Governance for MedCom FHIR Messages
+## 5 Governance for MedCom FHIR Messages
 
 Governance for MedCom FHIR Messages covers the basic ruleset for a MedCom FHIR Message, MedComMessagingMessage and its content, MedComMessagingMessageHeader, MedComMessagingOrganization and MedComMessagingProvenance
 
 [Governance for MedCom FHIR Messages](/assets/documents/050_Governance-for-MedCom-FHIR-Messages.md)
 
-## 6.0 Governance for displaying MedCom FHIR Messaging
+## 6 Governance for displaying MedCom FHIR Messaging
 
 Governance for displaying MedCom FHIR Messaging covers the basic demands for a sending system to be able to display before sending and the basic demands for a receiving system to be able to display after having received a MedComMessagingMessage.
 
 [Governance for displaying MedCom FHIR Messaging](/assets/documents/060_Governance-for-displaying-MedCom-FHIR-Messaging.md)
 
-## 7.0 Governance for MedCom FHIR Terminology
+## 7 Governance for MedCom FHIR Terminology
 
 Governance for MedCom FHIR Terminology covers Codesystems, Valuesets and ConceptMaps, which are published through our MedCom FHIR Terminology IG and hosted on a our MedCom FHIR Terminology Server. Governance for the MedCom FHIR Terminology Server will 
 
 [Governance for Terminology](/assets//documents/070_Governance-for-Terminology.md)
 
-## 8.0 Governance for MedCom FHIR Terminology Server
+## 8 Governance for MedCom FHIR Terminology Server
 
 Governance for the MedCom FHIR Terminology Server will appear hear when published.
