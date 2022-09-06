@@ -2,7 +2,7 @@
 
 ## Table of content
 
-* [4. Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
+* [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
   * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
   * [4.2 Message exchange patterns](#42-message-exchange-patterns)
   * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
@@ -92,7 +92,8 @@ Forwarding is handled on different levels
 
 ### 4.5 Handling receiving scenarios
 
-Lorem ipsum
+[TBD]
+A receiver **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
 
 ### 4.6 FHIR Messaging rules (Google translated)
 
