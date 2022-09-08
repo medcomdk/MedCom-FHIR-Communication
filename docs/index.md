@@ -2,7 +2,7 @@
 
 ## Table of Content
 
-* [1 Introduction to Governance for MedCom FHIR®© Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
+* [1 Introduction to Governance for MedCom FHIR Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
 * [2 Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
 * [3 Governance for the Network Layer](#3-governance-for-network-layer)
 * [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
@@ -11,32 +11,32 @@
 * [7 Governance for MedCom Terminology](#7-governance-for-medcom-fhir-terminology)
 * [8 Governance for MedCom Terminology Server](#8-governance-for-medcom-fhir-terminology-server)
 
-### Terms used in Governance for MedCom FHIR®© Messaging
+### Terms used in Governance for MedCom FHIR Messaging
 
 [Tab here to get an overview of the Governance Terms](/assets/documents/011_Governance_Terms.md)
 
 ## 1 Introduction to Governance for MedCom FHIR Messaging
 
-On this page you can find information about how MedCom has profiled the [HL7 FHIR®© Messaging Framework](http://hl7.org/fhir/R4/messaging.html) to work in a Danish context.
-Governance for MedCom HL7 FHIR®© Messaging describes the basic ruleset of how MedCom Messages shall be exchanged in the Danish Healthcare Messaging Network.
-The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR®© Communication Rules for FHIR Messaging.These “MedCom FHIR®© Messaging Governance rules” are intended to clarify the use of MedCom’s FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as ”Syntax & Communication Rules”.
+On this page you can find information about how MedCom has profiled the [HL7 FHIR Messaging Framework](http://hl7.org/fhir/R4/messaging.html) to work in a Danish context.
+Governance for MedCom HL7 FHIR Messaging describes the basic ruleset of how MedCom Messages shall be exchanged in the Danish Healthcare Messaging Network.
+The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR Communication Rules for FHIR Messaging.These “MedCom FHIR Messaging Governance rules” are intended to clarify the use of MedCom’s FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as ”Syntax & Communication Rules”.
 
-It is the intention that the “MedCom FHIR®© Messaging Governance rules” together with MedCom’s standards for the individual messages form the full and sufficient basis for implementing MedCom’s healthcare messages.The governance rules must thus be able to function as “chief judge”, where there is doubt about the practical application of MedCom’s FHIR messages.
+It is the intention that the “MedCom FHIR Messaging Governance rules” together with MedCom’s standards for the individual messages form the full and sufficient basis for implementing MedCom’s healthcare messages.The governance rules must thus be able to function as “chief judge”, where there is doubt about the practical application of MedCom’s FHIR messages.
 
-The “Governance for MedCom FHIR®© Messaging” ensures a uniform use of MedCom’s FHIR messages to the health and social domains in Denmark.
+The “Governance for MedCom FHIR Messaging” ensures a uniform use of MedCom’s FHIR messages to the health and social domains in Denmark.
 In the following we follow a top-down approach by initially addressing shipping over the Network Layer and its ruleset, then the logistics for MedCom FHIR Messaging and lastly the basic ruleset of how to compose a MedCom FHIR message.
 
-What you will find here is, how MedCom has profiled the HL7 FHIR®© Messaging Framework to work in a Danish context.
+What you will find here is, how MedCom has profiled the HL7 FHIR Messaging Framework to work in a Danish context.
 
-Governance for MedCom HL7 FHIR®© Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
+Governance for MedCom HL7 FHIR Messaging is the basic ruleset of how MedCom Messages must be exhanged in the Danish Healthcare Messaging Network.
 
-The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR®© Communication Rules for FHIR Messaging can be found on the <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR®© R4 Messaging Website</a>.
+The Danish ruleset is based on both the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging and the general HL7 FHIR Communication Rules for FHIR Messaging can be found on the <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR R4 Messaging Website</a>.
 
-These "MedCom FHIR®© Messaging Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
+These "MedCom FHIR Messaging Governance rules" are intended to clarify the use of MedCom's FHIR messages for the health and social area. Formerly these kind of rules for other MedCom Messaging paradigms were known as 'Syntax & Communication Rules'
 
 It is the intention that the governance rules together with MedCom's standards for the individual messages form the full and sufficient basis for implementing MedCom's healthcare messages.The governance rules must thus be able to function as “chief judge”, where there is doubt about the practical application of MedCom's FHIR messages.
 
-The "Governance for MedCom FHIR®© Messaging" must ensure a uniform use of MedCom's FHIR messages to the health and social area domains in Denmark.
+The "Governance for MedCom FHIR Messaging" must ensure a uniform use of MedCom's FHIR messages to the health and social area domains in Denmark.
 
 In the following we follow a top-down approach by addressing shipping over the Network Layer and its ruleset first, then the logistics for MedCom FHIR Messaging and last cover the basic ruleset of how to compose a MedCom FHIR message.
 
