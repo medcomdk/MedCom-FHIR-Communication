@@ -117,6 +117,8 @@ This profile describes the Organization resource that **SHALL** be used in all M
 
 ### 5.5 MustSupport
 
+Unless otherwise stated, the following criteria apply to elements marked as “Must Support” in MedCom's Implementation Guides:
+
 Labeling an element MustSupport means that implementations that produce or consume resources **SHALL** provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
 br>
@@ -125,10 +127,31 @@ br>
 
 In MedCom FHIR Messaging MustSupport requires that a system
 
-* **SHALL** store,
-* **SHALL** display
-* **SHOULD** include in decision logic
-* **MAY** pass on to other data consumers
+* **SHALL** store the data,
+* **SHALL** be able to display the data
+* **SHOULD** include data in decision logic
+* **MAY** pass data on to other data consumers
+
+Systems supporting the profile **MUST NOT** ignore the field.
+
+Systems receiving or consuming a resource instance:
+
+**MUST** be able to process the field’s content when it is present
+**MUST** process the content according to the rules defined for the profile
+**MUST NOT** fail when the value is not present.
+
+Systems sending or creating a resource instance
+
+**SHOULD** populate the element when the information is available
+**MUST** populate the element according to the rules defined for the profile
+
+For technical profiles
+For Logical Models
+Functional Analysis MUST consider the data element as defined
+
+“Must Support” elements that are used in an implementation MUST inherit the behaviour and constraints defined for the data element
+“Must Support” elements not needed in a particular implementation MAY be excluded from implementation but such exclusion MUST be described
+Derived implementations SHOULD inherit the field’s “Must Support” flag
 
 #### 5.5.3 Links
 
