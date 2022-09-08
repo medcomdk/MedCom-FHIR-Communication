@@ -15,6 +15,18 @@
 
 [Tab here to get an overview of the Governance Terms](/assets/documents/011_Governance_Terms.md)
 
+### Special Terms used in FHIR Governance
+
+This specification uses the conformance verbs SHALL, SHOULD, and MAY as defined in RFC 2119. Unlike RFC 2119, however, this specification allows that different applications might not be able to interoperate because of how they use optional features. In particular:
+
+* **SHALL**: (or “REQUIRED” or “MUST”) an absolute requirement for all implementations
+* **SHALL NOT**: (or "MUST NOT") an absolute prohibition against inclusion for all implementations
+* **SHOULD/SHOULD NOT**: (or “RECOMMENDED”/“NOT RECOMMENDED”) A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course
+* **MAY**: (or "OPTIONAL") This is truly optional language for an implementation; can be included or omitted as the implementer decides with no implications
+
+This convention is in compliance with HL7 FHIR use of the terms.
+[Click here to go to HL7 FHIR's conformance rules - conformance language](http://www.hl7.org/fhir/conformance-rules.html#conflang)
+
 ## 1 Introduction to Governance for MedCom FHIR Messaging
 
 On this page you can find information about how MedCom has profiled the [HL7 FHIR Messaging Framework](http://hl7.org/fhir/R4/messaging.html) to work in a Danish context.
