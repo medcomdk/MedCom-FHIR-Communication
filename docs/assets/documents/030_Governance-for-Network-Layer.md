@@ -4,7 +4,7 @@
 
 * [3.1 VANSEnvelope](#31-vansenvelope)
 * [3.2 Reliable Messaging using VANSenvelope](#32-reliable-messaging-using-vansenvelope)
-* [3.3 VANSEnvelope](#33-sending-medcom-fhir-messages)
+* [3.3 Sending MedCom FHIR messages in VANSEnvelope](#33-sending-medcom-fhir-messages)
 
 <br>
 <hr>
