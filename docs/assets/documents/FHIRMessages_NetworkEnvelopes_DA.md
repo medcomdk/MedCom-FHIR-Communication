@@ -2,7 +2,7 @@
 
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
 
-## Table of Content
+## Table of contents
 
 [1. Indledning][1] <br/>
 [2. Forsendelseskuverter][2] <br/>
@@ -21,9 +21,9 @@
 
 MedComs FHIR\-meddelelser vil undervejs i deres forsendelsesforløb blive indpakket og optræde i forskellige kuvertformater.
 
-Pt. vil afsendelse ske i det eksisterende VANS\-net og dermed med brug af VANSenvelope medmindre andet er specificeret under den enkelte standard. Modtagelse kan være både i VANSenvelope eller i anden modtagelseskuvert, f.eks. KOMBITs BeskedFordeler kuvert.
+Pt. vil afsendelse ske i det eksisterende VANS\-net og dermed med brug af VANSenvelope medmindre andet er specificeret under den enkelte standard. Modtagelse kan være både i VANSenvelope eller i anden modtagelseskuvert, f.eks. KOMBITs BeskedFordeler-kuvert.
 
-Obs. Når moderniseret infrastruktur bliver implementeret, vil den trække på en ny forsendelseskuvert, der vil erstatte VANSenvelope, så dette dokument vil til den tid blive opdateret med det nye kuvertformat. I en overgangsperiode vil både VANSenvelope og den nye kuvert blive anvendt, men der vil komme tydelige præciseringer af, hvorledes dette kommer til at foregå.
+>Obs.: Når moderniseret infrastruktur bliver implementeret, vil den trække på en ny forsendelseskuvert, der vil erstatte VANSenvelope, så dette dokument vil til den tid blive opdateret med det nye kuvertformat. I en overgangsperiode vil både VANSenvelope og den nye kuvert blive anvendt, men der vil komme tydelige præciseringer af, hvorledes dette kommer til at foregå.
 
 ---
 
@@ -52,7 +52,7 @@ afhængigt af, hvilket format FHIR\-meddelelsen er formateret i.
 
 #### Format
 
-Format bliver samme som "Standard type" i MedComs standardkatalog og defineres for alle FHIR\-standarder til "HL7".
+Format bliver samme som "Standard-type" i MedComs standardkatalog og defineres for alle FHIR\-standarder til "HL7".
 
 ---
 

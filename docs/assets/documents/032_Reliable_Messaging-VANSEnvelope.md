@@ -42,9 +42,9 @@ Duplication of an unchanged VANSEnvelope can be done in one of the following way
 - An error may have occurred in the flow from the Sending System to the Receiving System with subsequent duplication of a VANSEnvelope in scenario 1a.
 - The Sending System may inadvertently send a duplicate of VANSEnvelope
 
-The VANSEnvelopes are completely identical and as a consequence the VANSEnvelope with request for positive VANSEnvelopeAcknowledgement arrives at the Receiving System more than once.
+The VANSEnvelopes are completely identical and as a consequence, the VANSEnvelope with request for positive VANSEnvelopeAcknowledgement arrives at the Receiving System more than once.
 
-The Receiving System **SHALL** ignore the contents of the duplicate instances of the VANSEnvelope, but **SHALL** acknowledge a duplicate VANSEnvelope in the same way as the original VANSEnvelope.
+The Receiving System **SHALL** ignore the contents of the duplicate instances of the VANSEnvelope but **SHALL** acknowledge a duplicate VANSEnvelope in the same way as the original VANSEnvelope.
 
 A positive VANSEnvelopeAcknowledgement may not be sent first and then a negative VANSEnvelopeAcknowledgement or vice versa.
 
@@ -52,11 +52,11 @@ The Receiving System **SHALL** never display several instances of a VANSEnvelope
 
 If the Sending System of the VANSEnvelope has received VANSEnvelopeAcknowledgement already after the Receiving System's VANSEnvelopeAcknowledgement of a VANSEnvelope's first instance, the Sending System **SHALL** similarly ignore the duplicate instances of the VANSEnvelopeAcknowledgement.
 
-The Sending System **SHALL** never display multiple instances of the same VANSEnvelopeAcknowledgement in a VANSEnvelope summary, but **SHALL** log in a system log that VANSEnvelopeAcknowledgement of a duplicate has taken place.
+The Sending System **SHALL** never display multiple instances of the same VANSEnvelopeAcknowledgement in a VANSEnvelope summary but **SHALL** log in a system log that VANSEnvelopeAcknowledgement of a duplicate has taken place.
 
 ### Scenario #3 - (Re) Sending Unchanged VANSEnvelope (Google translated)
 
-Correct retransmission of a message A.
+Correct retransmission of message A.
 
 The Sending System **SHALL** form a new VANSEnvelope with a new ID and time of dispatch.
 
@@ -64,19 +64,19 @@ Since there has been no change in the Message content section, the rest of the V
 
 The VANSEnvelope **SHALL** be sent and VANSEnvelopeAcknowledged as a completely new VANSEnvelope according to Scenario #1 or # 1b.
 
-Re-dispatches **SHALL** always done manually and **SHOULD** be in accordance with the normal response time for the specific VANSEnvelope flow.
+Re-dispatches **SHALL** always be done manually and **SHOULD** be in accordance with the normal response time for the specific VANSEnvelope flow.
 
-### Scenario #4 - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way (Google translated)
+### Scenario #4 - VANSEnvelope is sent normally, but VANSEnvelopeAcknowledgement is lost along the way (Google translated)
 
-As Scenario #1, but where VANSEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
+Like in Scenario #1, but where VANSEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
 
 The shipping pattern is like Scenario #3.
 
 ### Scenario #5 - (Re-) Sending Modified Message (Google translated)
 
-If the content of the Message content part is changed, the VANSEnvelope is considered a completely new VANSEnvelope and consequently change of both EnvelopeIdentifier, MessageIdentifier and timestamp **SHALL** be made, where relevant.
+If the content of the Message content part is changed, the VANSEnvelope is considered a completely new VANSEnvelope and consequently change of both EnvelopeIdentifier, MessageIdentifier and timestamp **SHALL** be made if relevant.
 
-Resubmissions **SHALL** always done manually.
+Resubmissions **SHALL** always be done manually.
 
 ## VansEnvelope Reliable Messaging Elements
 
@@ -86,31 +86,31 @@ A VansEnvelope consists of the following elements:
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/vansenvelope_schema-reliable.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
-<figcaption text-align="left"><b>Figure 2: Reliable Messaging - reliable vansenvelope schema </b></figcaption>
+<figcaption text-align="left"><b>Figure 2: Reliable Messaging - reliable VANSEnvelope tables </b></figcaption>
 </figure>
 <br>
 
-A VansEnvelope's Reliale Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
+A VansEnvelope's Reliable Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/vansenvelope_schema-reliable-type.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable-type.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
-<figcaption text-align="left"><b>Figure 3: Reliable Messaging - reliable vansenvelope type </b></figcaption>
+<figcaption text-align="left"><b>Figure 3: Reliable Messaging - reliable VANSEnvelope type </b></figcaption>
 </figure>
 <br>
 
-Reliable Messaging in VANSEnvelope is the default mode, but can explicitly be turned on and off by setting this VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
+Reliable Messaging in VANSEnvelope is the default mode but can explicitly be turned on and off by setting the VANSEnvelope/Message/MetaInformation/Transport/Type-element to "reliable" or "unreliable".
 
-In FHIR Messaging this element **SHALL** be "reliable" or left in default mode.
+In FHIR Messaging, this element **SHALL** be "reliable" or left in default mode.
 
 ### VansEnvelope VANSEnvelopeAcknowledgement Reliable Messaging Elements
 
-When "reliable" the receiver of the VANSEnvelope **SHALL** send a VANSEnvelopeAcknowledgement return to the original Sender.
+When "reliable", the receiver of the VANSEnvelope **SHALL** send a VANSEnvelopeAcknowledgement return to the original Sender.
 
 A VANSEnvelopeAcknowledgement consists of the following elements:
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/vansenvelope_schema-acknowledgement.png" target="_blank"> <img src="../images/vansenvelope_schema-acknowledgement.png" alt="vansenvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
-<figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable vansenvelope acknowledgement </b></figcaption>
+<figcaption text-align="left"><b>Figure 4: Reliable Messaging - reliable VANSEnvelope acknowledgement </b></figcaption>
 </figure>
 <br>
 
