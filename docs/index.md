@@ -92,11 +92,11 @@ Governance for MedCom FHIR Messages covers the basic ruleset for a MedCom FHIR M
 
 [Click here to go to Governance for MedCom FHIR Messages](/assets/documents/050_Governance-for-MedCom-FHIR-Messages.md)
 
-## 6 Governance for displaying MedCom FHIR Messaging
+## 6 Governance for displaying MedCom FHIR Messages
 
 Governance for displaying MedCom FHIR Messaging covers the basic demands for a sending system to be able to display before sending and the basic demands for a receiving system to be able to display after having received a MedComMessagingMessage.
 
-[Click here to go to Governance for displaying MedCom FHIR Messaging](/assets/documents/060_Governance-for-displaying-MedCom-FHIR-Messaging.md)
+[Click here to go to Governance for displaying MedCom FHIR Messages](/assets/documents/060_Governance-for-displaying-MedCom-FHIR-Messages.md)
 
 ## 7 Governance for MedCom FHIR Terminology
 
