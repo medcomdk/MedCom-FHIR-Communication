@@ -1,4 +1,5 @@
 # Governance for MedCom FHIR®© Messaging
+
 <hr>
 
 ## Table of contents
@@ -15,7 +16,7 @@
 
 <hr>
 
-## Terms 
+## Terms
 
 ### Terms used in Governance for MedCom FHIR Messaging
 
@@ -23,15 +24,15 @@
 
 ### Special Terms used in Governance for MedCom FHIR Messaging
 
-MedCom adopts the normative words defined in IETF Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels (BCP-14) (currently RFC 2119 and RFC 8174), certain words indicate whether a specific content of the Technical Framework is normative: either required (e.g., “must”, “required”, “shall”) or optional (e.g., “may”, “recommended”). Informative content does not contain these key words. 
+MedCom adopts the normative words defined in IETF Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels (BCP-14) (currently RFC 2119 and RFC 8174), certain words indicate whether a specific content of the Technical Framework is normative: either required (e.g., “must”, “required”, “shall”) or optional (e.g., “may”, “recommended”). Informative content does not contain these key words.
 
-<a href="https://www.rfc-editor.org/info/rfc2119" target="_blank">Click here to go to RFC 2119</a>
+<a href="https://www.rfc-editor.org/info/rfc2119" target="_blank">Click here to go to RFC 2119 (opens up in a new tab)</a>
 
 RFC 2119 specifies common key words that may be used in protocol specifications.
 
-RFC 8174 aims to reduce the ambiguity by clarifying that only UPPERCASE usage of the key words have the defined special meanings. 
+RFC 8174 aims to reduce the ambiguity by clarifying that only UPPERCASE usage of the key words have the defined special meanings.
 
-<a href="https://www.rfc-editor.org/info/rfc8174" target="_blank">Click here to go to RFC 8174</a>
+<a href="https://www.rfc-editor.org/info/rfc8174" target="_blank">Click here to go to RFC 8174 (opens up in a new tab)</a>
 
 This specification uses the conformance verbs SHALL, SHOULD, and MAY as defined in RFC 2119. Unlike RFC 2119, however, this specification allows that different applications might not be able to interoperate because of how they use optional features. In particular:
 
@@ -44,16 +45,16 @@ This specification uses the conformance verbs SHALL, SHOULD, and MAY as defined 
 
 This convention is in compliance with HL7 FHIR use of the terms.
 
-[Click here to go to HL7 FHIR's conformance rules - conformance language](http://www.hl7.org/fhir/conformance-rules.html#conflang)
+<a href="http://www.hl7.org/fhir/conformance-rules.html#conflang" target="_blank">Click here to go to HL7 FHIR's conformance rules - conformance language (opens up in a new tab)</a>
 
 ## 1 Introduction to Governance for MedCom FHIR Messaging
 
-On this page, you can find information about how MedCom has profiled the <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Messaging Framework</a> to work in a Danish context.
+On this page, you can find information about how MedCom has profiled the <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Messaging Framework (opens up in a new tab)</a> to work in a Danish context.
 Governance for MedCom HL7 FHIR Messaging describes the basic ruleset of how MedCom Messages must be exchanged in the Danish Healthcare Messaging Network.
 The Danish ruleset is based on both:
 
-* the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging 
-* the general <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Communication Rules for FHIR Messaging</a>.
+* the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging
+* the general <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Communication Rules for FHIR Messaging (opens up in a new tab)</a>.
 
 <br>
 
@@ -62,7 +63,6 @@ These “MedCom FHIR Messaging Governance rules” are intended to clarify the u
 It is the intention that the “MedCom FHIR Messaging Governance rules” together with MedCom’s standards for the individual messages form the full and sufficient basis for implementing MedCom’s healthcare messages. Thus, the governance rules must be able to function as “a chief judge”, where there is doubt about the practical application of MedCom’s FHIR messages.
 
 In the following, we follow a top-down approach by initially addressing shipping over the Network Layer and its ruleset, followed by the logistics for MedCom FHIR Messaging and lastly the basic ruleset of how to compose a MedCom FHIR message.
-
 
 <!-- The “Governance for MedCom FHIR Messaging” ensures uniform use of MedCom’s FHIR messages to the health and social domains in Denmark. -->
 
@@ -83,9 +83,10 @@ In the following we follow a top-down approach by addressing shipping over the N
 <!-- [Generelle tekniske use cases](Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
 ### 1.1 What is a MedCom FHIR Message Standard? {#11-what-is-a-medcom-fhir-message-standard}
+
 An implementer of a MedCom FHIR Message Standard **MUST** be compliant with all parts of the documentation laid out for the MedCom FHIR Message Standard.
 
-You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle" target="_blank">Documentation for the MedCom FHIR Message Standard</a>.
+You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle" target="_blank">Documentation for the MedCom FHIR Message Standard (opens up in a new tab)</a>
 
 ### 1.2 Asynchronous Messaging
 
