@@ -2,10 +2,11 @@
 
 ## Table of contents
 
-* [3. Governance for Network Layer](#3-governance-for-network-layer)
 * [3.1 VANSEnvelope](#31-vansenvelope)
 * [3.2 Reliable Messaging using VANSenvelope](#32-reliable-messaging-using-vansenvelope)
+* [3.3 VANSEnvelope](#33-sending-medcom-fhir-messages)
 
+<br>
 <hr>
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
@@ -38,3 +39,7 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation" target="_blank">VANS ENVELOPE specification (Danish)(opens up in a new tab)</a>
 
 [Click here to see how to setup Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)
+
+## 3.3 Sending MedCom FHIR messages
+
+Text around sending to both primary and cc destinations.
