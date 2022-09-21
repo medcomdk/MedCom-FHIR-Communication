@@ -127,12 +127,9 @@ br>
 
 In MedCom FHIR Messaging MustSupport requires that a system
 
-* **SHALL** store the data,
-* **SHALL** be able to display the data
-* **SHOULD** include data in decision logic
-* **MAY** pass data on to other data consumers
-
 Systems supporting the profile **MUST NOT** ignore the field.
+
+**For technical profiles**
 
 Systems receiving or consuming a resource instance:
 
@@ -145,7 +142,6 @@ Systems sending or creating a resource instance
 **SHOULD** populate the element when the information is available
 **MUST** populate the element according to the rules defined for the profile
 
-For technical profiles
 For Logical Models
 Functional Analysis MUST consider the data element as defined
 
