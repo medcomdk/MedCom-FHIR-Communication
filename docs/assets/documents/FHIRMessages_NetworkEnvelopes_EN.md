@@ -2,7 +2,7 @@
 
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
 
-## Table of Content
+## Table of contents
 
 [1. Introduction](#introduction) <br/>
 [2. Shipping envelopes](#shipping-envelopes) <br/>
@@ -21,11 +21,9 @@
 
 MedCom's FHIR messages will be wrapped and appear in various envelope formats during their shipping process.
 
-Pt. shipping will take place in the existing VANS network and thus with the use of VANSenvelope unless otherwise specified under the individual standard. Reception can be both in VANSenvelope or in another reception envelope, e.g. KOMBITs BeskedFordeler envelope.
+At present, shipping will take place in the existing VANS network and thus with the use of VANSenvelope unless otherwise specified under the individual standard. Reception can be both in VANSenvelope or in another reception envelope, e.g. KOMBIT's BeskedFordeler envelope.
 
-Obs. When modernized infrastructure is implemented, it will draw on a new shipping envelope that will replace VANSenvelope, so this document will by that time be updated with the new envelope format. For a transitional period, both VANSenvelope and the new envelope will be used, but there will be clear clarifications of how this will take place.
-
----
+>Note: When modernized infrastructure is implemented, it will draw on a new shipping envelope that will replace VANSenvelope, so this document will by that time be updated with the new envelope format. For a transitional period, both VANSenvelope and the new envelope will be used, but there will be clear clarifications of how this will take place.
 
 ---
 
@@ -41,26 +39,26 @@ The elements contained are:
 - Name
 - Version
 
-MedCom's FHIR-messages **SHALL** be handled like all other messages in VANSenvelope by  base64-encoding the message in the element "VANSEnvelope/Message/Data/"
+MedCom's FHIR messages **SHALL** be handled like all other messages in VANSenvelope by  base64-encoding the message in the element "VANSEnvelope/Message/Data/"
 
 In the Transport element, "VANSEnvelope/Message/MetaInformation/Transport", the "TransformMessage" element is handled as usual, while "ServiceTag" with the attribute name = "MCM:MIME" **SHALL** be specified with one of the following values:
 
 - application/fhir+xml
 - application/fhir+json
 
-depending on the format in which the FHIR-message is formatted.
+depending on the format the FHIR message is formatted.
 
 ---
 
 #### Format
 
-Format **SHALL** be the same as "Standard type" in MedCom's Standards Directory and **SHALL** be defined for all FHIR-standards as "HL7".
+Format **SHALL** be the same as "Standard type" in MedCom's Standards Directory and **SHALL** be defined for all FHIR standards as "HL7".
 
 ---
 
 #### Name
 
-Name **SHALL** be the same as "Type nr." in MedCom's Standards Directory and will thus vary from messagetype to messagetype. Name **SHALL** be prefixed with MCM: and will otherwise be able to be postfixed with statistical variants of a given messagetype. Known from GGOP, this outcome space can e.g. be GGOP1, GGOP2 and GGOP3. Similar constructions will occur as long as FHIR-messages are transported in the VANSenvelope.
+Name **SHALL** be the same as "Type nr." in MedCom's Standards Directory and will thus vary from message type to message type. Name **SHALL** be prefixed with MCM: and will otherwise be able to be postfixed with statistical variants of a given message type. Known from GGOP, this outcome space can e.g. be GGOP1, GGOP2 and GGOP3. Similar constructions will occur as long as FHIR messages are transported in the VANSenvelope.
 
 ---
 
