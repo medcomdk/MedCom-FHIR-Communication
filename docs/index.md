@@ -3,6 +3,7 @@
 
 ## Table of contents
 
+* [Terms](#terms)
 * [1 Introduction to Governance for MedCom FHIR Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
 * [2 Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
 * [3 Governance for the Network Layer](#3-governance-for-network-layer)
@@ -14,11 +15,13 @@
 
 <hr>
 
+## Terms 
+
 ### Terms used in Governance for MedCom FHIR Messaging
 
 [Click here to go to an overview of the Governance Terms](/assets/documents/011_Governance_Terms.md)
 
-### Special Governance Terms used in Governance for MedCom FHIR Messaging
+### Special Terms used in Governance for MedCom FHIR Messaging
 
 MedCom adopts the normative words defined in IETF Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels (BCP-14) (currently RFC 2119 and RFC 8174), certain words indicate whether a specific content of the Technical Framework is normative: either required (e.g., “must”, “required”, “shall”) or optional (e.g., “may”, “recommended”). Informative content does not contain these key words. 
 
