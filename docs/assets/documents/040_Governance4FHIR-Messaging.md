@@ -3,13 +3,13 @@
 ## Table of content
 
 * [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
-  * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
-  * [4.2 Message exchange patterns](#42-message-exchange-patterns)
-  * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
-  * [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
-  * [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
-  * [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules-google-translated)
-  * [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules-google-translated)
+* [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
+* [4.2 Message exchange patterns](#42-message-exchange-patterns)
+* [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
+* [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
+* [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
+* [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules)
+* [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules-google-translated)
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
@@ -54,7 +54,13 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 
 When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
 
-#### 4.4.2 Sending to a primary receiver with an already known copyreciver
+#### 4.4.2 Sending a copy of a message
+
+A CopyReceiver is a ccreceiver of the same message dispatched transaction to a primary receiver.
+
+A Forwardreceiver is a fwdreceiver of a message dispatched transaction unlinked to the original message transaction
+
+#### 4.4.3 Sending to a primary receiver with an already known copyreciver
 
 When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
 
@@ -62,22 +68,17 @@ When also sending to a copyreciver the Receiving Organization representing this 
 
 Both elements **SHALL** be represented.
 
-#### 4.4.3 Sending a copy of a message
-
-A CopyReceiver is a ccreceiver of the same message dispatched transaction to a primary receiver.
-
-A Forwardreceiver is a fwdreceiver of a message dispatched transaction unlinked to the original message transaction
-
 ##### 4.4.3.1 Sending to a copyreceiver while also sending to a Primary receiver
 
 A message to a copyreceiver is as the name says a copy of the original message.
 
 Sending to a copyreceiver is handled on different levels:
 
-* VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
+* MedComFHIRMessage: As the message is regarded as a new message, the Bundle.id **SHALL** be a new unique id different form the original MedComFHIRMessage and Bundle.Timestamp **SHALL** reflect the time of creation of this Bundle.
 * MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a copyreceiver element to the stack of MedComMessagingProvenances.
-* MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
-* MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
+* MedComFHIRMessage: The MedComMessagingProvenance's Provenance.occurredDateTime og Provenance.recorded **SHALL** reflect the sending time of the message.
+* MedComFHIRMessage: The MedComMessagingMessageHeader and other entry.ressources **SHALL NOT** be changed.
+* VANSenvelope: The VANSEnvelope **SHALL** be created with the copyreceiver's GLN as the receiving EAN and the ?????
 
 ##### 4.4.3.2 Forwarding a message
 
@@ -93,22 +94,24 @@ Forwarding is handled on different levels
 ### 4.5 Handling receiving scenarios
 
 [TBD]
-A receiver **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
+A Receiving Ecosystem **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
+As the information about what kind of MedComFHIRMessage that is received
+That means that the Receiving Ecosystem **SHALL** be ?????
 
-### 4.6 FHIR Messaging rules (Google translated)
+### 4.6 FHIR Messaging rules
 
 [TBD]
 
 | ID | Rule |
 |:------| :-----|
-| MR1.S | An acknowledgment **SHALL** always be requested on a FHIR message |
-| MR2.S | A message **SHALL** be marked as sent and received when an AA acknowledgment has been received |
-| MR3.S | A message **SHALL** be marked as failed when a negative AR acknowledgment has been received |
-| MR4.S | A message **SHALL** be marked as failed when a negative AE acknowledgment has been received |
-| MR5.R | A message **SHALL** not be resent more than 3 times upon receipt of an AE Acknowledgment |
-| MR6.R | A message **SHALL** be re-sent more than 3 times in the event of failure to receive an Acknowledgment |
-| MR7.R | A message that is resent **SHALL** always be updated with new timestamp=Bundle.timestamp and new envelope time=Bundle.id |
-| MR8.R | A message is a duplicate if it contains the same MessageHeader.Id as a previously received message |
+| MR1.S | A MedCom FHIR Acknowledgement **SHALL** always be requested on a MedCom FHIR Message |
+| MR2.S | A MedCom FHIR Message **SHALL** be marked as sent and received when an MedCom FHIR AA Acknowledgement has been received |
+| MR3.S | A MedCom FHIR Message **SHALL** be marked as failed when a negative MedCom FHIR AR Acknowledgement has been received |
+| MR4.S | A MedCom FHIR Message **SHALL** be marked as failed when a negative MedCom FHIR AE Acknowledgement has been received |
+| MR5.R | A MedCom FHIR Message **SHALL** not be resent more than 3 times upon receipt of an MedCom FHIR AE Acknowledgement |
+| MR6.R | A MedCom FHIR Message **SHALL NOT** be re-sent more than 3 times in the event of failure to receive an MedCom FHIR AE Acknowledgement |
+| MR7.R | A MedCom FHIR Message that is resent **SHALL** always be updated with new timestamp=Provenance.timestamps and new envelopeid=Bundle.id |
+| MR8.R | A MedCom FHIR Message is a duplicate if it contains the same MessageHeader.Id as a previously received MedCom FHIR Message |
 
 [Messaging rules (Danish)](Rules_Messaging-DA.md)
 
@@ -121,11 +124,11 @@ A receiver **SHALL** be able to handle that it is either a Primary Receiver or a
 | ID | Rules |
 |:------| :-----|
 | KR1.R | A FHIR message **SHALL** always be acknowledged |
-| KR2.R | An acknowledgment message **SHALL** never be acknowledged |
-| KR3.R | If no errors are found while receiving a message, a positive acknowledgment **SHALL** be made with AA |
-| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative acknowledgment **SHALL** be made with AE |
+| KR2.R | An Acknowledgement message **SHALL** never be acknowledged |
+| KR3.R | If no errors are found while receiving a message, a positive Acknowledgement **SHALL** be made with AA |
+| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative Acknowledgement **SHALL** be made with AE |
 | KR5.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
-| KR6.S | If an acknowledgment of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
+| KR6.S | If an Acknowledgement of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
 [Acnowledgement rules (Danish)](Rules_Acknowledgement-DA.md)
 
