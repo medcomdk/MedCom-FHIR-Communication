@@ -4,7 +4,7 @@
 
 * [1. Introduction](#introduction)
 * [2. Shipping envelopes](#shipping-envelopes)
-* [2.1 VANSEnvelope](#vansenvelope))
+* [2.1 VANSEnvelope](#vansenvelope)
 * [3. FHIR message types](#medcom-fhir-message-types)
 * [3.1 CareCommunication](#carecommunication)
 * [3.2 HospitalNotification](#hospitalnotification)
