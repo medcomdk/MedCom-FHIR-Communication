@@ -82,11 +82,11 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 <!-- [Generelle tekniske use cases](Generelle-tekniske-use-cases-v1.0.0-b2.md) -->
 
-### 1.1 What is a MedCom FHIR Message Standard? {#11-what-is-a-medcom-fhir-message-standard}
+### 1.1 What is a MedCom FHIR Message Standard?
 
 An implementer of a MedCom FHIR Message Standard **MUST** be compliant with all parts of the documentation laid out for the MedCom FHIR Message Standard.
 
-You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle" target="_blank">Documentation for the MedCom FHIR Message Standard (opens up in a new tab)</a>
+You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle" target="_blank"> Documentation for the MedCom FHIR Message Standard (opens up in a new tab)</a>
 
 ### 1.2 Asynchronous Messaging
 
