@@ -43,3 +43,7 @@ VANSenvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 ## 3.3 Sending MedCom FHIR messages
 
 Text around sending to both primary and cc destinations.
+
+Sending MedCom FHIR messages over the VANS Network requires the sending system to handle the following:
+
+1. A Sending Ecosystem **MUST** 
