@@ -140,7 +140,8 @@ Governance for the MedCom FHIR Terminology Server will appear here when publishe
 
 ## 9 Governance for MedCom Versioning
 
-MedComFHIRMessages are versioned with Semver 2.0 [Link to Semver 2.0 (opens in a new tab)](https://www.semver.org)
+ MedComFHIRMessages and its documentation are versioned with Semver 2.0
+ <a href="https://www.semver.org" target="_blank">Link for Semver 2.0(opens up in a new tab)</a>
 
 [Click here to go to Governance for MedCom Versioning.](/assets/documents/090_Governance-for-MedCom-Versioning.md)
 
