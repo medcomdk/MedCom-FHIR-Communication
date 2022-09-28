@@ -132,7 +132,7 @@ Governance for displaying MedCom FHIR Messaging covers the basic demands for a s
 
 Governance for MedCom FHIR Terminology covers Codesystems, Valuesets and ConceptMaps, which are published through our MedCom FHIR Terminology IG and hosted on a MedCom FHIR Terminology Server.
 
-[Click here to go to Governance for Terminology.](/assets//documents/070_Governance-for-Terminology.md)
+[Click here to go to Governance for Terminology.](/assets/documents/070_Governance-for-Terminology.md)
 
 ## 8 Governance for MedCom FHIR Terminology Server
 
@@ -142,13 +142,7 @@ Governance for the MedCom FHIR Terminology Server will appear here when publishe
 
 MedComFHIRMessages are versioned with Semver 2.0 [Link to Semver 2.0](www.semver.com)
 
-MedComFHIRMessages version changes on Major and Minor Level **SHALL** only be changed following a process of change requests.
-
-MedComFHIRMessages version changes on Patch Level **May** be handled by MedCom following a process of change requests for typos, precisioning of documentation.
-
-MedCom **SHALL NOT** use version changes on Patch Level to introduce changes that are not backlevel compatible. 
-
-MedCom **SHALL NOT** use version changes on Patch Level to introduce new functionalities that are not backlevel compatible.
+[Click here to go to Governance for Terminology.](/assets/documents/080_MedCom-Versioning.md)
 
 ## 10 Governance for MedCom process of change requests
 
