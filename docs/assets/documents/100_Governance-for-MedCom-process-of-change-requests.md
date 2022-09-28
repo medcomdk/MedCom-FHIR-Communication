@@ -8,6 +8,8 @@ Change reuests regarding FHIR Messaging **sHALL** be reported through one of the
 * submit an issue to the relevant GitHub repository of the documentation
 * write an email to [fhir@medcom.dk](mailto:fhir@medcom.dk) describing the request
 
+<br>
+
 Change requests **SHOULD** be described with:
 
 * a good descriptive headline
