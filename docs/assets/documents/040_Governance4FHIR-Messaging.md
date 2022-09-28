@@ -54,11 +54,11 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 
 When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
 
-#### 4.4.2 Sending a copy of a message
+#### 4.4.2 Sending copies of a message
 
 A CopyReceiver is a ccreceiver of the same message dispatched transaction to a primary receiver.
 
-A Forwardreceiver is a fwdreceiver of a message dispatched transaction unlinked to the original message transaction
+A Forwardreceiver is a fwdreceiver of a message dispatched transaction at a different time compared with the original message transaction.
 
 #### 4.4.3 Sending to a primary receiver with an already known copyreciver
 
