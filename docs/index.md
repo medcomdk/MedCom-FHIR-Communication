@@ -13,10 +13,12 @@
 * [6 Governance for displaying MedCom FHIR Messages](#6-governance-for-displaying-medcom-fhir-messages)
 * [7 Governance for MedCom Terminology](#7-governance-for-medcom-fhir-terminology)
 * [8 Governance for MedCom Terminology Server](#8-governance-for-medcom-fhir-terminology-server)
+* [9 Governance-for MedCom versioning](#9-governance-for-medcom-versioning)
+* [10 Governance-for MedCom process of change requests](#10-governance-for-medcom-process-of-change-requests)
 
 <hr>
 
-## Terms
+## Terms [](#terms--link-to-here "link to here")
 
 ### Terms used in Governance for MedCom FHIR Messaging
 
