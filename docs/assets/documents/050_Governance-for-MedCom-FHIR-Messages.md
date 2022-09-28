@@ -72,7 +72,7 @@ The element event **SHALL** be defined in accordance with the type of standard t
 
 #### 5.2.2 Identifiers and Timestamps
 
-[Identifiers](MessageHeader_Identifiers_Timestamps.md)
+[Click here to go to Governance for Identifiers](052.2_MessageHeader_Identifiers_Timestamps.md)
 
 ### 5.3 MedComMessagingOrganization
 
