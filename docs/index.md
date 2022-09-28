@@ -18,7 +18,9 @@
 
 <hr>
 
-## Terms [](#terms--link-to-here "link to here")
+## Terms
+
+![/assets/images/Link-Icon.jpg](#terms "link to here")
 
 ### Terms used in Governance for MedCom FHIR Messaging
 
