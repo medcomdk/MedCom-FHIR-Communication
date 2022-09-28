@@ -79,13 +79,20 @@ The element event **SHALL** be defined in accordance with the type of standard t
 An inherited instance profile of MedComMessagingOrganization **SHALL** follow the generic concept of the MedComMessagingOrganization as outlined here:
 [MedComMessagingOrganization in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#14-medcommessagingorganization)
 
-This profile describes the Organization resource that **SHALL** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **SHALL** include both a SOR and EAN/GLN identifier. MedComMessagingOrganization **SHALL** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
+This profile describes the Organization resource that **SHALL** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **SHALL** include both a SOR and an EAN/GLN identifier. MedComMessagingOrganization **SHALL** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
 
 <br>
 
 #### 5.3.1 MedComMessagingOrganization Rules
 
 [TBD]
+A MedComMessagingOrganization that is referenced as a "primary" receiver **SHALL** never be used also to reference a "cc-receiver" in the same FHIRMessage.
+
+A MedComMessagingOrganization that is referenced as either a "primary" receiver or a "cc-receiver" **MAY** be used to reference organization entities used otherwhere in a FHIRMessage.
+
+A MedComMessagingOrganization **SHALL** include both a SOR and an EAN/GLN identifier.
+
+A MedComMessagingOrganization **MAY** include more identifiers. These Identifiers **SHOULD NOT** be expected to introduce application logic for the receiver(s) of the FHIRMessage.
 
 #### 5.3.2 MedComMessagingOrganization Links
 
