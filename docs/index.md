@@ -149,4 +149,4 @@ Governance for the MedCom FHIR Terminology Server will appear here when publishe
 
 Change reuests regarding FHIR Messaging **SHALL** be reported through one of the following channels:
 
-[Click here to go to Governance for MedCom process of change requests.](/assets/documents/10_Governance-for-MedCom-process-of-change-requests.md)
+[Click here to go to Governance for MedCom process of change requests.](/assets/documents/100_Governance-for-MedCom-process-of-change-requests.md)
