@@ -1,6 +1,8 @@
 # 9 Governance for MedCom Versioning
 
-MedComFHIRMessages are versioned with Semver 2.0 [Link to Semver 2.0](www.semver.com)
+MedComFHIRMessages are versioned with Semver 2.0 [Link to Semver 2.0](https://www.semver.org)
+
+<br>
 
 MedComFHIRMessages version changes on Major and Minor Level **SHALL** only be changed following a process of change requests.
 
