@@ -145,7 +145,7 @@ Governance for the MedCom FHIR Terminology Server will appear here when publishe
 
 [Click here to go to Governance for MedCom Versioning.](/assets/documents/090_Governance-for-MedCom-Versioning.md)
 
-## 10 Governance for MedCom process of change requests
+## 10 Governance for MedCom process of change requests and improvements
 
 Change reuests regarding FHIR Messaging **SHALL** be reported through one of the following channels:
 
