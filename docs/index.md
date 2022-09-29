@@ -20,7 +20,7 @@
 
 ## Terms
 
-![/assets/images/Link-Icon.jpg](#terms "link to here")
+<!-- ![/assets/images/Link-Icon.jpg](#terms "link to here") -->
 
 ### Terms used in Governance for MedCom FHIR Messaging
 
@@ -55,9 +55,10 @@ This convention is in compliance with HL7 FHIR use of the terms.
 
 On this page, you can find information about how MedCom has profiled the <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Messaging Framework (opens up in a new tab)</a> to work in a Danish context.
 Governance for MedCom HL7 FHIR Messaging describes the basic ruleset of how MedCom Messages must be exchanged in the Danish Healthcare Messaging Network.
-The Danish ruleset is based on both:
+The Danish ruleset is based on:
 
-* the ruleset for the Danish VANS Network, the Danish profiling of FHIR messaging
+* the ruleset for the Danish VANS Network
+* the Danish profiling of FHIR messaging
 * the general <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Communication Rules for FHIR Messaging (opens up in a new tab)</a>.
 
 <br>
