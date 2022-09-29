@@ -58,9 +58,13 @@ Accordingly a MedComMessagingProvenance instance **SHALL** be populated with an 
 
 #### 4.4.2 Sending copies of a MedComMessagingMessage
 
-A CopyReceiver is a ccreceiver of the same message dispatched transaction to a primary receiver.
+A CarbonCopy-message is a MedComMessagingMessage sent to a copy receiver of the exact same MedComMessagingMessage transaction dispatched to a primary receiver.
 
-A Forwardreceiver is a fwdreceiver of a message dispatched transaction at a different time compared with the original message transaction.
+A Forward-message is a MedComMessagingMessage sent to a copy receiver of a MedComMessagingMessage at a different time compared with the original MedComMessagingMessage transaction. A Forward-message is a MedComMessagingMessage that might differ in content with the original MedComMessagingMessage.
+
+When sending a copy of an original MedComMessagingMessage, either exact copy (CC) or partially copy (fwd), the sending application **SHALL** make a copy of the original MedComMessagingMessage and it **SHALL** send the copy as a new MedComMessagingMessage.
+
+That means that the demands of a Bundle and MedComMessagingMessageHeader applies to the new MedComMessagingMessage and that a new MedComMessagingProvenance **SHALL** be made reflecting the kind of copy message that is sent.
 
 #### 4.4.3 Sending to a primary receiver with an already known copyreciver
 
@@ -68,7 +72,7 @@ When sending to a primary receiver the Receiving Organization **SHALL** be point
 
 When also sending to a copyreciver the Receiving Organization representing this **SHALL** be pointed out/referenced by destination:cc/receiver in MedComMessagingMessageHeader.
 
-Both elements **SHALL** be represented in the same 
+Both elements **SHALL** be represented in both MedComMessagingMessages, so that the receivers of a MedComMessagingMessage will know who was the primary receiver and who was the copy receiver(s).
 
 ##### 4.4.3.1 Sending to a copyreceiver while also sending to a Primary receiver
 
@@ -94,8 +98,8 @@ A forwarded message to a new receiver not present in the construction and dispat
 
 Forwarding is handled on different levels
 
-* VANSenvelope: The VANSEnvelope **SHALL** be made with the copyreceiver's GLN as the receiving EAN.
-* MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a forwarding element to the stack of MedComMessagingProvenances.
+* VANSenvelope: The VANSEnvelope **SHALL** be made with the forwardreceiver's GLN as the receiving EAN.
+* MedComFHIRMessage: A MedComMessagingProvenance with a forwarding activitycode **SHALL** be added to the stack of MedComMessagingProvenances in order to reflect the scenario 
 * MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
 * MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
 
