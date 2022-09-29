@@ -64,7 +64,7 @@ A Forward-message is a MedComMessagingMessage sent to a copy receiver of a MedCo
 
 When sending a copy of an original MedComMessagingMessage, either exact copy (CC) or partially copy (fwd), the sending application **SHALL** make a copy of the original MedComMessagingMessage and it **SHALL** send the copy as a new MedComMessagingMessage.
 
-That means that the demands of a Bundle and MedComMessagingMessageHeader applies to the new MedComMessagingMessage and that a new MedComMessagingProvenance **SHALL** be made reflecting the kind of copy message that is sent.
+That means that the requirements of a Bundle and MedComMessagingMessageHeader applies to the new MedComMessagingMessage and that a new MedComMessagingProvenance **SHALL** be made reflecting the kind of copy message that is sent and added to the MedComMessagingProvenance stack.
 
 #### 4.4.3 Sending to a primary receiver with an already known copyreciver
 
@@ -76,38 +76,45 @@ Both elements **SHALL** be represented in both MedComMessagingMessages, so that 
 
 ##### 4.4.3.1 Sending to a copyreceiver while also sending to a Primary receiver
 
-A message to a copyreceiver is as the name says a carbon copy of the original message.
+A MedComMessagingMessage to a copyreceiver is as the name says a carbon copy of the original MedComMessagingMessage.
+
+The MedComMessagingMessage that is sent to a ccreceiver **SHALL** be an exact copy of the original MedComMessagingMessage sent to the primary receiver, except for the unique ids in Bundle and MedComMessagingMessageHeader and the addition of a MedComMessagingProvenance instance.
 
 Sending to a copyreceiver is handled on different levels:
 
-* MedComFHIRMessage: As the message is regarded as a new message, the Bundle.id **SHALL** be a new unique id different form the original MedComFHIRMessage and Bundle.Timestamp **SHALL** reflect the time of creation of this Bundle.
-* MedComFHIRMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a copyreceiver element to the stack of MedComMessagingProvenances.
-* MedComFHIRMessage: The MedComMessagingProvenance's Provenance.occurredDateTime og Provenance.recorded **SHALL** reflect the sending time of the message.
-* MedComFHIRMessage: The MedComMessagingMessageHeader and other entry.ressources **SHALL NOT** be changed.
-* VANSenvelope: The VANSEnvelope **SHALL** be created with the copyreceiver's GLN as the receiving EAN and the ?????
-
-When sending to a ccreceiver the Receiving Organization **SHALL** be pointed out/referenced by destination:cc/receiver in MedComMessagingMessageHeader.
-
-The MedComMessagingMessage that is sent to a ccreceiver **SHALL** be an exact copy of the original MedComMessagingMessage sent to the primary receiver, except for the unique ids in Bundle and MedComMessagingMessageHeader.
-
-Accordingly a MedComMessagingProvenance instance **SHALL** be populated with an activitycode in this enumeration: new-message, reply-message, retract-message, modified-message.
+* MedComMessagingMessage: As the message is regarded as a new message, the Bundle.id **SHALL** be a new unique id different form the original MedComMessagingMessage and Bundle.Timestamp **SHALL** reflect the time of creation of this Bundle.
+* MedComMessagingMessage: The MedComMessagingMessageHeader.id **SHALL** be changed.
+* MedComMessagingMessage: Other MedComMessagingMessageHeader **SHALL NOT** be changed.
+* MedComMessagingMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a MedComMessagingMessage to the stack of MedComMessagingProvenances with a copyreceiver activitycode.
+* MedComMessagingMessage: The MedComMessagingProvenance's Provenance.occurredDateTime og Provenance.recorded **SHALL** reflect the sending time of the message.
+* MedComMessagingMessage: Other entry.ressources **SHALL NOT** be changed.
+* VANSenvelope: The VANSEnvelope **SHALL** be created with the copyreceiver's GLN as the receiving EAN.
 
 ##### 4.4.4 Forwarding a message
 
-A forwarded message to a new receiver not present in the construction and dispatching of the original message.
+A forwarded MedComMessagingMessage is a new MedComMessagingMessage to a new receiver, that was not present in the construction and dispatching of the original MedComMessagingMessage.
+
+The MedComMessagingMessage that is sent to a forwardreceiver **MAY** be an exact copy of the original MedComMessagingMessage sent to the primary receiver, except for the unique ids in Bundle and MedComMessagingMessageHeader and the addition of a MedComMessagingProvenance instance. 
+
+The forwarded MedComMessagingMessage **SHALL** include most of the original content of the original MedComMessagingMessage.
+
+The forwarded MedComMessagingMessage **MAY** add minor adjustments and minor new content.
 
 Forwarding is handled on different levels
 
-* VANSenvelope: The VANSEnvelope **SHALL** be made with the forwardreceiver's GLN as the receiving EAN.
-* MedComFHIRMessage: A MedComMessagingProvenance with a forwarding activitycode **SHALL** be added to the stack of MedComMessagingProvenances in order to reflect the scenario 
-* MedComFHIRMessage: The Messageheader **SHALL NOT** be changed
-* MedComFHIRMessage: The Bundle.id and Timestamp **SHALL** be changed
+* MedComMessagingMessage: As the message is regarded as a new message, the Bundle.id **SHALL** be a new unique id different form the original MedComMessagingMessage and Bundle.Timestamp **SHALL** reflect the time of creation of this Bundle.
+* MedComMessagingMessage: The MedComMessagingMessageHeader.id **SHALL** be changed.
+* MedComMessagingMessage: Other MedComMessagingMessageHeader **SHALL NOT** be changed.
+* MedComMessagingMessage: The MedComMessagingProvenance **SHALL** reflect the scenario by adding a MedComMessagingMessage to the stack of MedComMessagingProvenances with a forward activitycode.
+* MedComMessagingMessage: The MedComMessagingProvenance's Provenance.occurredDateTime og Provenance.recorded **SHALL** reflect the sending time of the message.
+* MedComMessagingMessage: Other entry.ressources **SHALL NOT** be changed.
+* VANSenvelope: The VANSEnvelope **SHALL** be created with the forwardreceiver's GLN as the receiving EAN.
 
 ### 4.5 Handling receiving scenarios
 
 [TBD]
 A Receiving Ecosystem **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
-As the information about what kind of MedComFHIRMessage that is received
+As the information about what kind of MedComMessagingMessage that is received
 That means that the Receiving Ecosystem **SHALL** be ?????
 
 ### 4.6 FHIR Messaging rules
