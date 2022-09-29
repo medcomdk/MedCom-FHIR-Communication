@@ -54,7 +54,9 @@ MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality
 
 When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
 
-#### 4.4.2 Sending copies of a message
+Accordingly a MedComMessagingProvenance instance **SHALL** be populated with an activitycode in this enumeration: new-message, reply-message, retract-message, modified-message.
+
+#### 4.4.2 Sending copies of a MedComMessagingMessage
 
 A CopyReceiver is a ccreceiver of the same message dispatched transaction to a primary receiver.
 
@@ -66,11 +68,11 @@ When sending to a primary receiver the Receiving Organization **SHALL** be point
 
 When also sending to a copyreciver the Receiving Organization representing this **SHALL** be pointed out/referenced by destination:cc/receiver in MedComMessagingMessageHeader.
 
-Both elements **SHALL** be represented.
+Both elements **SHALL** be represented in the same 
 
 ##### 4.4.3.1 Sending to a copyreceiver while also sending to a Primary receiver
 
-A message to a copyreceiver is as the name says a copy of the original message.
+A message to a copyreceiver is as the name says a carbon copy of the original message.
 
 Sending to a copyreceiver is handled on different levels:
 
@@ -80,7 +82,13 @@ Sending to a copyreceiver is handled on different levels:
 * MedComFHIRMessage: The MedComMessagingMessageHeader and other entry.ressources **SHALL NOT** be changed.
 * VANSenvelope: The VANSEnvelope **SHALL** be created with the copyreceiver's GLN as the receiving EAN and the ?????
 
-##### 4.4.3.2 Forwarding a message
+When sending to a ccreceiver the Receiving Organization **SHALL** be pointed out/referenced by destination:cc/receiver in MedComMessagingMessageHeader.
+
+The MedComMessagingMessage that is sent to a ccreceiver **SHALL** be an exact copy of the original MedComMessagingMessage sent to the primary receiver, except for the unique ids in Bundle and MedComMessagingMessageHeader.
+
+Accordingly a MedComMessagingProvenance instance **SHALL** be populated with an activitycode in this enumeration: new-message, reply-message, retract-message, modified-message.
+
+##### 4.4.4 Forwarding a message
 
 A forwarded message to a new receiver not present in the construction and dispatching of the original message.
 
