@@ -27,7 +27,7 @@
 
 MedCom adopts the normative words defined in IETF Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels (BCP-14) (currently RFC 2119 and RFC 8174), certain words indicate whether a specific content of the Technical Framework is normative: either required (e.g., “must”, “required”, “shall”) or optional (e.g., “may”, “recommended”). Informative content does not contain these key words.
 
-<a href="https://www.rfc-editor.org/info/rfc2119" target="_blank">Click here to go too RFC 2119</a>.
+<a href="https://www.rfc-editor.org/info/rfc2119" target="_blank">Click here to go to RFC 2119</a>.
 
 RFC 2119 specifies common key words that may be used in protocol specifications.
 
