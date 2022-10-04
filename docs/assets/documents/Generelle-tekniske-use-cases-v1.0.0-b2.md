@@ -1,4 +1,4 @@
-<hr/>
+
 # Generelle tekniske use cases for afsendelse og modtagelse af meddelelser, kvitteringer og kuverter 
 
 <p align="center">

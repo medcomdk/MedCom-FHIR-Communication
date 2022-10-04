@@ -7,7 +7,7 @@
 * [3.3 Sending MedCom FHIR messages in VANSEnvelope](#33-sending-medcom-fhir-messages)
 
 <br>
-<hr>
+
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
