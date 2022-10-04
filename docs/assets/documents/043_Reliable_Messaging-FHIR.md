@@ -6,7 +6,7 @@
         * [ 1.1.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#112-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request)
         * [1.1.3 Scenario #3 - (Re) Sending Unchanged Message](#113-scenario-3---re-sending-unchanged-message)
         * [1.1.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#114-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way)
-        * [1.1.5 Scenario #5 - (Re-) Sending Modified Message](#115-scenario-5---re--sending-modified-message)
+        * [1.1.5 Scenario #5 - (Re) Sending Modified Message](#115-scenario-5---re--sending-modified-message)
 
 
 Reliable Messaging in MedCom FHIR Messaging follows the principles laid out in [Reliable Messaging in general](Reliable_Messaging-In-General.md)
@@ -70,7 +70,7 @@ This section provides a description of the different types of Reliable Messaging
 - Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request
 - Scenario #3 - (Re-)Sending Unchanged Message
 - Scenario #4 - Message is sent normally, acknowledgement is lost along the way
-- Scenario #5 - (Re-)Sending Modified Message
+- Scenario #5 - (Re)Sending Modified Message
 
 #### 1.1.1 Scenario #1 - Normally successful unsolicidated message or request message flow with acknowledgement request
 
@@ -112,7 +112,7 @@ As Scenario #1, but where acknowledgement is lost along the way from the Sending
 
 The shipping pattern is like Scenario #3.
 
-#### 1.1.5 Scenario #5 - (Re-) Sending Modified Message
+#### 1.1.5 Scenario #5 - (Re) Sending Modified Message
 
 If the content of the letter part is changed, the message is considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, where relevant.
 
