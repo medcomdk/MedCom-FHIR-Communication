@@ -1,6 +1,5 @@
 # 4. Governance for MedCom FHIR Messaging
-
-## Table of content
+**Table of content**
 
 * [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
     * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)

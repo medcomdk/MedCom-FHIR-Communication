@@ -1,6 +1,6 @@
 # MedCom FHIR Messages And Network Envelopes
 
-## Table of contents
+**Table of contents**
 
 * [1. Introduction](#1-introduction)
 * [2. Shipping envelopes](#2-shipping-envelopes)

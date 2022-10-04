@@ -1,6 +1,6 @@
 # Reliable Messaging using VANSEnvelope
 
-## Table of contents
+**Table of contents**
 * [1 Different Reliable Messaging scenarios using VANSEnvelope](#1-different-reliable-messaging-scenarios-using-vansenvelope)
     * [1.1 Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request ](#11-scenario-1---normally-successful-unsolicited-vansenvelope-or-request-vansenvelope-flow-with-vansenvelopeacknowledgement-request)
     * [1.2 Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request ](#12-scenario-2---duplicate-of-an-unchanged-vansenvelope-with-a-positive-vansenvelopeacknowledgement-request)

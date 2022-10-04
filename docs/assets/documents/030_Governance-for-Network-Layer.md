@@ -1,6 +1,6 @@
 # 3. Governance for Network Layer
 
-## Table of contents
+**Table of contents**
 
 * [3.1 VANSEnvelope](#31-vansenvelope)
 * [3.2 Reliable Messaging using VANSenvelope](#32-reliable-messaging-using-vansenvelope)

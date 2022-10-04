@@ -2,7 +2,7 @@
 
 ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
 
-## Table of contents
+**Table of contents**
 
 * [1 Indledning](#1-indledning) <br/>
 * [2 Forsendelseskuverter](#2-forsendelseskuverter) <br/>

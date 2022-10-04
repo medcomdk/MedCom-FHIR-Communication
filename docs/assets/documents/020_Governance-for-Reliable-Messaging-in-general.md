@@ -1,6 +1,6 @@
 # Governance for Reliable Messaging in general
 
-## Table of contents
+**Table of contents**
 
 * [2 Reliable Messaging in general](#2-reliable-messaging-in-general)
   * [2.1 Generic ruleset governing the principles of Reliable Messaging](#21-generic-ruleset-governing-the-principles-of-reliable-messaging)
@@ -132,7 +132,9 @@ The Sending EcoSystem may therefore experience that there is no acknowledgement 
 
 For a number of the old MedComs Messaging Standards, however, there is an explicit requirement for a positive acknowledgement, see the documentation for the individual standards if this is the case.
 
-<a href="https://svn.medcom.dk/svn/releases/MedComs%20Standardkatalog.xlsx" target="_blank">Link to MedComs Messaging Standards Standard Catalogue (in Danish) </a>
+<a href="https://svn.medcom.dk/svn/releases/MedComs%20Standardkatalog.xlsx" target="_blank">Link til MedComs Standard Catalogue.</a> 
+ 
+ >Note: The standard cataloge is only available i danish.  
 
 | Links for specific ruleset of Reliable Messaging|
 |:---|

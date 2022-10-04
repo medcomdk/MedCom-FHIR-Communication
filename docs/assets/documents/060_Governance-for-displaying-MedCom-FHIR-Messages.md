@@ -1,6 +1,6 @@
 # 6 Governance for displaying MedCom FHIR Messages
 
-## Table of content
+**Table of content**
 
 All elements marked as MustSupport **SHALL** be presented or easily accessed on the display of the reader of a received message.
 
