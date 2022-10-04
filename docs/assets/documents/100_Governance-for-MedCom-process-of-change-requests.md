@@ -1,4 +1,4 @@
-# 10 Governance for MedCom process of change requests and improvements
+# Governance for MedCom process of change requests and improvements
 
 Stakeholders and vendors are alway welcome to submit requests for changes or improvements to the IG or other documentation.
 

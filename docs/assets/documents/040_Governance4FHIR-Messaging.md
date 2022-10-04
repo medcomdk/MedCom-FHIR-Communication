@@ -1,14 +1,17 @@
-# 4. Governance for MedCom FHIR Messaging
+# Governance for MedCom FHIR Messaging
 **Table of content**
-
-* [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
-    * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
-    * [4.2 Message exchange patterns](#42-message-exchange-patterns)
-    * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
-    * [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
-    * [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
-    * [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules)
-    * [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules)
+* [1 Basic Danish Messaging Assumptions](#1-basic-danish-messaging-assumptions-tbd)
+* [2 Message exchange patterns](#2-message-exchange-patterns)
+* [3 Reliable Messaging using MedCom FHIR Messaging](#3-reliable-messaging-using-medcom-fhir-messaging)
+* [4 Handling sending scenarios](#4-handling-sending-scenarios)
+    * [4.1 Scenario #1 Sending to a primary receiver](#41-scenario-1-sending-to-a-primary-receiver)
+    * [4.2 Scenario #2 Sending copies of a MedComMessagingMessage](#42-scenario-2-sending-copies-of-a-medcommessagingmessage)
+    * [4.3 Scenario #3 Sending to a primary receiver with an already known copyreciver](#43-scenario-3-sending-to-a-primary-receiver-with-an-already-known-copyreciver)
+    * [4.3.1 Scenario #3a Sending to a copyreceiver while also sending to a Primary receiver](#431-scenario-3a-sending-to-a-copyreceiver-while-also-sending-to-a-primary-receiver)
+    * [ 4.4 Scenario #4 Forwarding a message](#44-scenario-4-forwarding-a-message)
+* [5 Handling receiving scenarios](#5-handling-receiving-scenarios)
+* [6 MedCom FHIR Messaging rules](#6-fhir-messaging-rules)
+* [7 MedCom FHIR Messaging Acnowledgement rules](#7-fhir-messaging-acnowledgement-rules)
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
@@ -23,7 +26,7 @@ The events supported in MedCom FHIR Messaging, along with the resources that are
 
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
-### 4.1 Basic Danish Messaging Assumptions
+### 1 Basic Danish Messaging Assumptions
 
 This specification assumes that content will be delivered from one application to another by some delivery mechanism, and then one or more responses will be returned to the source application.
 
@@ -32,7 +35,7 @@ In Denmark this specification rules the exchange of messages through the Danish 
 The agreements around the content of the messages and the behavior of the two applications form the "contract" that describes the exchange. These contracts are exactly what MedCom delivers in the Danish Healthcare Domain and therefore MedCom adds regional and local agreements to the rules defined in the HL7 FHIR®© specification.
 toThis specification ignores the existence of interface engines and message transfer agents that exist between the source and destination. Either they are transparent to the message/transaction content and irrelevant to this specification, or they are actively involved in manipulating the message content (in particular, the source and destination headers are often changed). If these middleware agents are modifying the message content, then they become responsible for honoring the contract that applies (including applicable profiles) in both directions.
 
-### 4.2 Message Exchange Patterns
+### 2 Message Exchange Patterns
 
 Each MedCom FHIR message has one or more response messages. There **SHALL** be at least one response message, an acknowledgement message, so that the sender can know, that the message was properly received.
 
@@ -40,22 +43,22 @@ Multiple response messages **SHALL NOT** be returned for messages of consequence
 
 In principle, source applications **SHOULD** not wait for a response to a transaction before issuing a new transaction. However, in many cases, the messages in a given stream are dependent on each other, and must be sent and processed in order. In addition, some transfer methods may require sequential delivery of messages.
 
-### 4.3 Reliable Messaging using MedCom FHIR Messaging
+### 3 Reliable Messaging using MedCom FHIR Messaging
 
 FHIR Messaging is developed to support Reliable Messaging.
 MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
 [Click here to see how to set up Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)
 
-### 4.4 Handling sending scenarios
+### 4 Handling sending scenarios
 
-#### 4.4.1 Sending to a primary receiver
+#### 4.1 Scenario #1 Sending to a primary receiver
 
 When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
 
 Accordingly a MedComMessagingProvenance instance **SHALL** be populated with an activitycode in this enumeration: new-message, reply-message, retract-message, modified-message.
 
-#### 4.4.2 Sending copies of a MedComMessagingMessage
+#### 4.2 Scenario #2 Sending copies of a MedComMessagingMessage
 
 A CarbonCopy-message is a MedComMessagingMessage sent to a copy receiver of the exact same MedComMessagingMessage transaction dispatched to a primary receiver.
 
@@ -65,7 +68,7 @@ When sending a copy of an original MedComMessagingMessage, either exact copy (CC
 
 That means that the requirements of a Bundle and MedComMessagingMessageHeader applies to the new MedComMessagingMessage and that a new MedComMessagingProvenance **SHALL** be made reflecting the kind of copy message that is sent and added to the MedComMessagingProvenance stack.
 
-#### 4.4.3 Sending to a primary receiver with an already known copyreciver
+#### 4.3 Scenario #3 Sending to a primary receiver with an already known copyreciver
 
 When sending to a primary receiver the Receiving Organization **SHALL** be pointed out/referenced by destination:primary/receiver in MedComMessagingMessageHeader.
 
@@ -73,7 +76,7 @@ When also sending to a copyreciver the Receiving Organization representing this 
 
 Both elements **SHALL** be represented in both MedComMessagingMessages, so that the receivers of a MedComMessagingMessage will know who was the primary receiver and who was the copy receiver(s).
 
-##### 4.4.3.1 Sending to a copyreceiver while also sending to a Primary receiver
+##### 4.3.1 Scenario #3a Sending to a copyreceiver while also sending to a Primary receiver
 
 A MedComMessagingMessage to a copyreceiver is as the name says a carbon copy of the original MedComMessagingMessage.
 
@@ -89,7 +92,7 @@ Sending to a copyreceiver is handled on different levels:
 * MedComMessagingMessage: Other entry.ressources **SHALL NOT** be changed.
 * VANSenvelope: The VANSEnvelope **SHALL** be created with the copyreceiver's GLN as the receiving EAN.
 
-##### 4.4.4 Forwarding a message
+##### 4.4 Scenario #4 Forwarding a message
 
 A forwarded MedComMessagingMessage is a new MedComMessagingMessage to a new receiver, that was not present in the construction and dispatching of the original MedComMessagingMessage.
 
@@ -109,13 +112,13 @@ Forwarding is handled on different levels
 * MedComMessagingMessage: Other entry.ressources **SHALL NOT** be changed.
 * VANSenvelope: The VANSEnvelope **SHALL** be created with the forwardreceiver's GLN as the receiving EAN.
 
-### 4.5 Handling receiving scenarios
+### 5 Handling receiving scenarios
 
 A Receiving Ecosystem **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
 As the information about what kind of MedComMessagingMessage that is received
 That means that the Receiving Ecosystem **SHALL** be ?????
 
-### 4.6 FHIR Messaging rules
+### 6 FHIR Messaging rules
 
 
 | ID | Rule |
@@ -133,7 +136,7 @@ That means that the Receiving Ecosystem **SHALL** be ?????
 
 <!-- [Messaging rules (English)](Rules_Messaging-EN.md) -->
 
-### 4.7 FHIR Messaging Acnowledgement rules 
+### 7 FHIR Messaging Acnowledgement rules 
 
 | ID | Rules |
 |:------| :-----|

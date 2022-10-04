@@ -1,11 +1,10 @@
-# 7. Governance of MedCom FHIR Terminologies
+# Governance of MedCom FHIR Terminologies
 
 **Table of content**
-
-* [7.1 MedCom FHIR Codesystems](#71-medcom-fhir-codesystems)
-* [7.2 MedCom FHIR ValueSets](#72-medcom-fhir-valuesets)
-* [7.3 MedCom FHIR ConceptMaps](#73-medcom-fhir-conceptmaps)
-* [7.4 Links for MedCom FHIR Terminology](#74-links-for-medcom-fhir-terminology)
+* [1 MedCom FHIR Codesystems](#1-medcom-fhir-codesystems)
+* [2 MedCom FHIR ValueSets](#2-medcom-fhir-valuesets)
+* [3 MedCom FHIR ConceptMaps](#3-medcom-fhir-conceptmaps)
+* [4 Links for MedCom FHIR Terminology](#4-links-for-medcom-fhir-terminology)
 
 The term Terminology is in this governance a term covering all kinds of terminology, classifications, enumerations and qualifiers.
 
@@ -15,12 +14,12 @@ All CodeSystems, ValueSets and ConceptMaps will have a status, and a latest chan
 
 No updates will be made without consulting relevant working groups beforehand.
 
-### 7.1 MedCom FHIR CodeSystems
+### 1 MedCom FHIR CodeSystems
 
 No code in a CodeSystem will be deleted, nor will the meaning of a code be changed. Incompatible versions of a CodeSystem will have a unique name.
 However, codes in CodeSystems may be deprecated with a deprecation date and new codes may be added to the CodeSystem. In both cases will the version and date for latest change be updated.
 
-### 7.2 MedCom FHIR ValueSets
+### 2 MedCom FHIR ValueSets
 
 Some ValueSets are intensional defined, meaning that all codes from a CodeSystem is included. Whenever the CodeSystem is updated, so is the ValueSet. For intensional defined ValueSets, there will always only be one active ValueSets, with a date for latest update. ValueSets used to describe the content of a message, such as [Click here to read MedComCareCommunicationCategoryCodes](https://build.fhir.org/ig/medcomdk/dk-medcom-terminology/ValueSet-medcom-careCommunication-categories.html)
 
@@ -28,13 +27,13 @@ Other ValueSets are extensional defined, meaning that means that codes from Code
 
 In exceptional cases, it is possible to specify when defining a ValueSet that must not be changed or versioned.
 
-### 7.3 MedCom FHIR ConceptMaps
+### 3 MedCom FHIR ConceptMaps
 
 As for ValueSets, the ConceptMaps may be more or less static, where the once used for messaging purposes will rarely change, and the once used to describe the content of a message may change more frequently.
 
 A ConceptMap is valid until the date of a newer version of this ConceptMap is reached, then the newer version is valid. If a code in a CodeSystem is deprecated, a new version of the ConceptMaps is created, which will be valid.
 
-### 7.4 Links for MedCom FHIR Terminology
+### 4 Links for MedCom FHIR Terminology
 
 | Links for Terminology|
 |:---|

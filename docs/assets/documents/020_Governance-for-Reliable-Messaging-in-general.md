@@ -2,16 +2,16 @@
 
 **Table of contents**
 
-* [2 Reliable Messaging in general](#2-reliable-messaging-in-general)
-  * [2.1 Generic ruleset governing the principles of Reliable Messaging](#21-generic-ruleset-governing-the-principles-of-reliable-messaging)
-  * [2.2 Different Reliable Messaging scenarios](#22-different-reliable-messaging-scenarios)
-    * [2.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request](#221-scenario-1---normally-successful-unsolicited-message-or-request-message-flow-with-acknowledgement-request)
-    * [2.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#222-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request)
-    * [2.2.3 Scenario #3 - (Re) Sending Unchanged Message](#223-scenario-3---re-sending-unchanged-message)
-    * [2.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#224-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way)
-    * [2.2.5 Scenario #5 - (Re-) Sending Modified Message](#225-scenario-5---re--sending-modified-message)
+* [1 Reliable Messaging in general](#1-reliable-messaging-in-general)
+  * [1.1 Generic ruleset governing the principles of Reliable Messaging](#11-generic-ruleset-governing-the-principles-of-reliable-messaging)
+  * [1.2 Different Reliable Messaging scenarios](#12-different-reliable-messaging-scenarios)
+    * [1.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request](#121-scenario-1---normally-successful-unsolicited-message-or-request-message-flow-with-acknowledgement-request)
+    * [1.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#122-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request)
+    * [1.2.3 Scenario #3 - (Re) Sending Unchanged Message](#123-scenario-3---re-sending-unchanged-message)
+    * [1.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#124-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way)
+    * [1.2.5 Scenario #5 - (Re-) Sending Modified Message](#125-scenario-5---re--sending-modified-message)
 
-## 2 Reliable Messaging in general
+## 1 Reliable Messaging in general
 
 Reliable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending EcoSystem, the Sending Application and its MSH, to a Receiving EcoSystem, the Receiving Application and its MSH, or is handled safely manually. In every part of a message chain, something goes wrong and Reliable Messaging is developed to handle that.
 
@@ -41,7 +41,7 @@ Sending and Receiving EcoSystems when acting in FHIR Messaging scenarios **SHALL
 
 These scenarios are laid out as generic scenarios and later specified as how they will work out in a VANSEnvelope context and as how they will work out in a MedCom FHIR Messaging context.
 
-## 2.1 Generic ruleset governing the principles of Reliable Messaging
+## 1.1 Generic ruleset governing the principles of Reliable Messaging
 
 |Generic ruleset governing the principles of Reliable Messaging|
 |:---|
@@ -65,7 +65,7 @@ A specific ruleset for respectively the MedCom FHIR Message and the VANSEnvelope
 |[Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)|
 |[Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)|
 
-## 2.2 Different Reliable Messaging scenarios
+## 1.2 Different Reliable Messaging scenarios
 
 This section describes the different types of Reliable Messaging scenarios in generic terms. For specific handling of these scenarios for VANSEnvelope and FHIR Messages, please see the description in the detailed sections of the respective chapters for these subjects.
 
@@ -77,13 +77,13 @@ The different types of Reliable Messaging scenarios are:
 * Scenario #4 - Message is sent normally, acknowledgement is lost along the way
 * Scenario #5 - (Re-)Sending Modified Message
 
-### 2.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request 
+### 1.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request 
 
 An unsolicited message or request message is sent with a new request for a positive acknowledgement from the Sending EcoSystem to a Receiving EcoSystem.
 
 The Receiving EcoSystem **SHALL** always send a positive acknowledgement to the Sending EcoSystem.
 
-### 2.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request 
+### 1.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request 
 
 Duplication of an unchanged message can be done in one of the following ways:
 
@@ -102,7 +102,7 @@ If the Sending EcoSystem of the message has received acknowledgement already aft
 
 The Sending EcoSystem **SHALL** never display multiple instances of the same acknowledgement in a message summary but **SHALL** log into a system log where the acknowledgement of a duplicate has taken place.
 
-### 2.2.3 Scenario #3 - (Re) Sending Unchanged Message
+### 1.2.3 Scenario #3 - (Re) Sending Unchanged Message
 
 Correct retransmission of a message.
 
@@ -114,13 +114,13 @@ The message **SHALL** sent and acknowledged as a completely new message accordin
 
 Re-dispatches are always done manually and **SHALL** be in accordance with the normal response time for the specific message flow.
 
-### 2.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way
+### 1.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way
 
 As Scenario #1, but where acknowledgement is lost along the way from the Sending EcoSystem to the Receiving EcoSystem.
 
 The shipping pattern is like Scenario #3.
 
-### 2.2.5 Scenario #5 - (Re-) Sending Modified Message 
+### 1.2.5 Scenario #5 - (Re-) Sending Modified Message 
 
 If the content of the letter part is changed, the message **SHALL** be considered a completely new message with the consequent change of both EnvelopeId, LetterId and timestamp, if relevant.
 

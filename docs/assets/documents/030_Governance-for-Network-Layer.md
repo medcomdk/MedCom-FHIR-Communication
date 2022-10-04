@@ -1,9 +1,9 @@
-# 3. Governance for Network Layer
+# Governance for Network Layer
 
 **Table of contents**
-* [3.1 VANSEnvelope](#31-vansenvelope)
-* [3.2 Reliable Messaging using VANSEnvelope](#32-reliable-messaging-using-vansenvelope)
-* [3.3 Sending MedCom FHIR messages in VANSEnvelope](#33-sending-medcom-fhir-messages)
+* [1 VANSEnvelope](#1-vansenvelope)
+* [2 Reliable Messaging using VANSEnvelope](#2-reliable-messaging-using-vansenvelope)
+* [3 Sending MedCom FHIR messages in VANSEnvelope](#3-sending-medcom-fhir-messages)
 
 <br>
 
@@ -16,7 +16,7 @@ To be able to communicate a specific MedCom FHIR message type both senders and r
 
 The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
 
-## 3.1 VANSEnvelope
+## 1 VANSEnvelope
 
 The VANSEnvelope is developed to contain XML-based or other non-edifact message types over the VANS Network
 
@@ -28,7 +28,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSEnvelope whether they are s
   * [Danish:Network Envelope ](FHIRMessages_NetworkEnvelopes_DA.md)
   * [English:Network Envelope (English)](FHIRMessages_NetworkEnvelopes_EN.md)
 
-## 3.2 Reliable Messaging using VANSEnvelope
+## 2 Reliable Messaging using VANSEnvelope
 
 VANSEnvelope is developed to support Reliable Messaging.
 
@@ -39,7 +39,7 @@ VANSEnvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 
 [Click here to see how to setup Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)
 
-## 3.3 Sending MedCom FHIR messages
+## 3 Sending MedCom FHIR messages
 
 Text around sending to both primary and cc destinations.
 

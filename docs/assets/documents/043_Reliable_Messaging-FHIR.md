@@ -3,7 +3,7 @@
 * [1 MedCom FHIR Reliable Messaging Model](#1-medcom-fhir-reliable-messaging-model)
     * [1.1 Different Reliable Messaging scenarios](#11-different-reliable-messaging-scenarios)
         * [1.1.1 Scenario #1 - Normally successful unsolicidated message or request message flow with acknowledgement request](#111-scenario-1---normally-successful-unsolicidated-message-or-request-message-flow-with-acknowledgement-request)
-        * [ 1.1.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#112-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request)
+        * [1.1.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#112-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request)
         * [1.1.3 Scenario #3 - (Re) Sending Unchanged Message](#113-scenario-3---re-sending-unchanged-message)
         * [1.1.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#114-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way)
         * [1.1.5 Scenario #5 - (Re) Sending Modified Message](#115-scenario-5---re--sending-modified-message)
