@@ -4,16 +4,16 @@
 
 ## Table of contents
 
-[1 Indledning](#1-indledning) <br/>
-[2 Forsendelseskuverter](#2-forsendelseskuverter) <br/>
-[2.1 VANSenvelope](#21-vansenvelope) <br/>
-[2.1.1 Format](#211-format) <br/>
-[2.1.2 Name](#212-name) <br/>
-[2.1.3 Version](#213-version) <br/>
-[3. FHIR meddelelsestyper](#3-fhir-meddelelsestyper) <br/>
-[3.1 CareCommunication](#31-carecommunication) <br/>
-[3.2 HospitalNotification](#32-hospitalnotification)<br/>
-[3.3 Acknowledgment](#33-acknowledgement) <br/>
+* [1 Indledning](#1-indledning) <br/>
+* [2 Forsendelseskuverter](#2-forsendelseskuverter) <br/>
+ * [2.1 VANSenvelope](#21-vansenvelope) <br/>
+  * [2.1.1 Format](#211-format) <br/>
+  * [2.1.2 Name](#212-name) <br/>
+  * [2.1.3 Version](#213-version) <br/>
+* [3. FHIR meddelelsestyper](#3-fhir-meddelelsestyper) <br/>
+ * [3.1 CareCommunication](#31-carecommunication) <br/>
+ * [3.2 HospitalNotification](#32-hospitalnotification)<br/>
+ * [3.3 Acknowledgment](#33-acknowledgement) <br/>
 
 
 
