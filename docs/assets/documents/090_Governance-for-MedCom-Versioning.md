@@ -1,7 +1,7 @@
 # 9 Governance for MedCom Versioning
 
-MedComFHIRMessages and its documentation are versioned with Semver 2.0 
-<a href="https://www.semver.org" target="_blank">Link for Semver 2.0(opens up in a new tab)</a>
+MedComFHIRMessages and its documentation are versioned with semantic versioning 2.0.
+<a href="https://www.semver.org" target="_blank">Click here to read more about semantic versioning 2.0</a>
 
 <br>
 

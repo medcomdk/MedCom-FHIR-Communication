@@ -27,7 +27,7 @@
 
 MedCom adopts the normative words defined in IETF Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels (BCP-14) (currently RFC 2119 and RFC 8174), certain words indicate whether a specific content of the Technical Framework is normative: either required (e.g., “must”, “required”, “shall”) or optional (e.g., “may”, “recommended”). Informative content does not contain these key words.
 
-<a href="https://www.rfc-editor.org/info/rfc2119" target="_blank">Click here to go to RFC 2119</a>.
+<a href="https://www.rfc-editor.org/info/rfc2119" target="_blank">Click here to go too RFC 2119</a>.
 
 RFC 2119 specifies common key words that may be used in protocol specifications.
 
@@ -50,7 +50,7 @@ This convention is in compliance with HL7 FHIR use of the terms.
 
 ## 1 Introduction to Governance for MedCom FHIR Messaging
 
-On this page, you can find information about how MedCom has profiled the <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Messaging Framework (opens up in a new tab)</a> to work in a Danish context.
+On this page, you can find information about how MedCom has profiled the <a href="http://hl7.org/fhir/R4/messaging.html" target="_blank">HL7 FHIR Messaging Framework </a> to work in a Danish context.
 Governance for MedCom HL7 FHIR Messaging describes the basic ruleset of how MedCom Messages must be exchanged in the Danish Healthcare Messaging Network.
 The Danish ruleset is based on:
 
@@ -88,7 +88,7 @@ In the following we follow a top-down approach by addressing shipping over the N
 
 An implementer of a MedCom FHIR Message Standard **MUST** be compliant with all parts of the documentation laid out for the MedCom FHIR Message Standard.
 
-You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle" target="_blank"> Documentation for the MedCom FHIR Message Standard</a>
+You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#21-medcommessagingmessage-bundle" target="_blank"> Click here to read the documentation for the MedCom FHIR Message Standard</a>
 
 ### 1.2 Asynchronous Messaging
 
@@ -138,8 +138,8 @@ Governance for the MedCom FHIR Terminology Server will appear here when publishe
 
 ## 9 Governance for MedCom Versioning
 
- MedComFHIRMessages and its documentation are versioned with Semver 2.0
- <a href="https://www.semver.org" target="_blank">Link for Semver 2.0</a>
+ MedComFHIRMessages and its documentation are versioned with Semantic Versioning 2.0.
+ <a href="https://www.semver.org" target="_blank">Click here to read more about Semantic Versioning 2.0</a>
 
 [Click here to go to Governance for MedCom Versioning.](/assets/documents/090_Governance-for-MedCom-Versioning.md)
 

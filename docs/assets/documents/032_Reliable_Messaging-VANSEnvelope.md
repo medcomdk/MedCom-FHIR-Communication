@@ -2,7 +2,7 @@
 
 **Table of contents**
 * [1 Different Reliable Messaging scenarios using VANSEnvelope](#1-different-reliable-messaging-scenarios-using-vansenvelope)
-    * [1.1 Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request ](#11-scenario-1---normally-successful-unsolicited-vansenvelope-or-request-vansenvelope-flow-with-vansenvelopeacknowledgement-request)
+    * [1.1 Scenario #1 - Normally successful unsolicited VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request ](#11-scenario-1---normally-successful-unsolicited-vansenvelope-or-request-vansenvelope-flow-with-vansenvelopeacknowledgement-request)
     * [1.2 Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request ](#12-scenario-2---duplicate-of-an-unchanged-vansenvelope-with-a-positive-vansenvelopeacknowledgement-request)
     * [1.3 Scenario #3 - (Re) Sending Unchanged VANSEnvelope ](#13-scenario-3---re-sending-unchanged-vansenvelope)
     * [1.4 Scenario #4 - VANSEnvelope is sent normally, but VANSEnvelopeAcknowledgement is lost along the way](#14-scenario-4---vansenvelope-is-sent-normally-but-vansenvelopeacknowledgement-is-lost-along-the-way)
@@ -45,7 +45,7 @@ This section provides a description of the different types of Reliable Messaging
 - Scenario #4 - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way
 - Scenario #5 - (Re-)Sending Modified VANSEnvelope
 
-### 1.1 Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request 
+### 1.1 Scenario #1 - Normally successful unsolicited VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request 
 
 An unsolicited  VANSEnvelope is sent with a new request for a positive VANSEnvelopeAcknowledgement from the Sending System to a Receiving System.
 

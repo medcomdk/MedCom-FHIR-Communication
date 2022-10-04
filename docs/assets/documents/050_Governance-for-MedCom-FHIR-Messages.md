@@ -11,7 +11,7 @@
 ## 5.1 MedComMessagingMessage (Bundle)
 
 An inherited instance profile of MedComMessagingMessage **SHALL** follow the generic concept of the MedComMessagingMessage as outlined here:
-[MedComMessagingMessage (Bundle) in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#12-medcommessagingmessage-bundle)
+[Click here to read more about the MedComMessagingMessage (Bundle) in IG for MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#21-medcommessagingmessage-bundle)
 
 ### 5.1.2 MedComMessingMessage Rules
 
@@ -37,18 +37,18 @@ An inherited instance profile of MedComMessagingMessage **SHALL** follow the gen
 
 | Links for MedComMessingMessage|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
-| <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Detailed page for MedCom Messaging</a> |
-| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Detailed specification for Bundle in FHIR R4</a> |
+| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Click here to read a detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Click here to read a detailed page for MedCom Messaging</a> |
+| <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Click here to read a detailed specification for Bundle in FHIR R4</a> |
 
 ### 5.2 MedComMessagingMessageHeader
 
 An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow the generic concept of the MedComMessagingMessageHeader as outlined here:
-[MedComMessagingMessageHeader in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader)
+[Click here to read more about MedComMessagingMessageHeader in IG for MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader)
 
 | Links for MedComMessagingMessageHeader|
 |:---|
-| <a href="https://medcomdk.github.io/dk-medcom-messaging/#13-medcommessagingmessageheader" target="_blank">MedComMessagingMessageHeader in MedCom Message</a> |
+| <a href="https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#22-medcommessagingmessageheader" target="_blank">MedComMessagingMessageHeader in MedCom Message</a> |
 | <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
@@ -77,7 +77,7 @@ The element event **SHALL** be defined in accordance with the type of standard t
 ### 5.3 MedComMessagingOrganization
 
 An inherited instance profile of MedComMessagingOrganization **SHALL** follow the generic concept of the MedComMessagingOrganization as outlined here:
-[MedComMessagingOrganization in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/#14-medcommessagingorganization)
+[MedComMessagingOrganization in MedCom Message](https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#23-medcommessagingorganization)
 
 This profile describes the Organization resource that **SHALL** be used in all MedCom FHIR Messages. MedComMessagingOrganization inherits from MedComCoreOrganization as it **SHALL** include both a SOR and an EAN/GLN identifier. MedComMessagingOrganization **SHALL** be used to describe the sender and receiver organizations of all MedCom FHIR Messages.
 
@@ -85,7 +85,6 @@ This profile describes the Organization resource that **SHALL** be used in all M
 
 #### 5.3.1 MedComMessagingOrganization Rules
 
-[TBD]
 A MedComMessagingOrganization that is referenced as a "primary" receiver **SHALL** never be used also to reference a "cc-receiver" in the same FHIRMessage.
 
 A MedComMessagingOrganization that is referenced as either a "primary" receiver or a "cc-receiver" **MAY** be used to reference organization entities used otherwhere in a FHIRMessage.
@@ -128,7 +127,7 @@ Unless otherwise stated, the following criteria apply to elements marked as “M
 
 Labeling an element MustSupport means that implementations that produce or consume resources **SHALL** provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
-br>
+<br>
 
 #### 5.5.2 Rules
 

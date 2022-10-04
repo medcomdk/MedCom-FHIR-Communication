@@ -8,7 +8,7 @@
     * [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
     * [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
     * [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules)
-    * [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules-google-translated)
+    * [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules)
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
@@ -19,7 +19,7 @@ In FHIR messaging, a "request message" or an "unsolicited message" is sent from 
 
 The message consists of a Bundle identified by the type "message", with the first resource in the Bundle being a MessageHeader resource. The MessageHeader resource has a code - the message event - that identifies the nature of the message, and it also carries additional metadata. The other resources in the Bundle depend on the type of the message, eg. in which context a message is triggered.
 
-The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [MedCom FHIR Messaging events](MedCom-FHIR-Messaging-Events.md).
+The events supported in MedCom FHIR Messaging, along with the resources that are included in them, are defined in: [Click here to read tne MedCom FHIR Messaging events](MedCom-FHIR-Messaging-Events.md).
 
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
@@ -45,7 +45,7 @@ In principle, source applications **SHOULD** not wait for a response to a transa
 FHIR Messaging is developed to support Reliable Messaging.
 MedCom FHIR Messages **SHALL** make use of this Reliable Messaging functionality.
 
-[Tap here to see how to set up Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)
+[Click here to see how to set up Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)
 
 ### 4.4 Handling sending scenarios
 
