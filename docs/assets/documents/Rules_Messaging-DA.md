@@ -9,4 +9,4 @@
 | MR5.R | En meddelelse må forsøges gensendt x gange ved modtagelse af en AE Kvittering |
 | MR6.R | En meddelelse må forsøges gensendt x gange ved manglende modtagelse af en Kvittering |
 | MR7.R | En meddelelse, der gensendes, skal altid opdateres med ny timestamp=Bundle.timestamp og ny kuvertid=Bundle.id |
-| MR8.R | En meddelelse er en dublet, hvis den indeholder samme MessageHeader.Id som en tidligere modta-get meddelelse |
+| MR8.R | En meddelelse er en dublet, hvis den indeholder samme MessageHeader.Id som en tidligere modtaget meddelelse |
