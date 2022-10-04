@@ -1,7 +1,18 @@
 # Reliable Messaging using VANSEnvelope
 
 ## Table of contents
-* []()
+* [1 Different Reliable Messaging scenarios using VANSEnvelope](#1-different-reliable-messaging-scenarios-using-vansenvelope)
+    * [1.1 Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request ](#11-scenario-1---normally-successful-unsolicited-vansenvelope-or-request-vansenvelope-flow-with-vansenvelopeacknowledgement-request)
+    * [1.2 Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request ](#12-scenario-2---duplicate-of-an-unchanged-vansenvelope-with-a-positive-vansenvelopeacknowledgement-request)
+    * [1.3 Scenario #3 - (Re) Sending Unchanged VANSEnvelope ](#13-scenario-3---re-sending-unchanged-vansenvelope)
+    * [1.4 Scenario #4 - VANSEnvelope is sent normally, but VANSEnvelopeAcknowledgement is lost along the way](#14-scenario-4---vansenvelope-is-sent-normally-but-vansenvelopeacknowledgement-is-lost-along-the-way)
+    * [1.5 Scenario #5 - (Re-) Sending Modified Message ](#15-scenario-5---re--sending-modified-message)
+* [2 VansEnvelope Reliable Messaging Elements](#2-vansenvelope-reliable-messaging-elements)
+    * [2.2 VansEnvelope Reliable Messaging Message Elements](#22-vansenvelope-reliable-messaging-message-elements)
+    * [2.3 VansEnvelope VANSEnvelopeAcknowledgement Reliable Messaging Elements](#23-vansenvelope-vansenvelopeacknowledgement-reliable-messaging-elements)
+
+
+
 
 
 
@@ -34,13 +45,13 @@ This section provides a description of the different types of Reliable Messaging
 - Scenario #4 - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way
 - Scenario #5 - (Re-)Sending Modified VANSEnvelope
 
-### 1.1 Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request (Google translated)
+### 1.1 Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request 
 
 An unsolicited  VANSEnvelope is sent with a new request for a positive VANSEnvelopeAcknowledgement from the Sending System to a Receiving System.
 
 The Receiving System **SHALL** always send a positive VANSEnvelopeAcknowledgement to the Sending System.
 
-### 1.2 Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request (Google translated)
+### 1.2 Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request 
 
 Duplication of an unchanged VANSEnvelope can be done in one of the following ways:
 
@@ -59,7 +70,7 @@ If the Sending System of the VANSEnvelope has received VANSEnvelopeAcknowledgeme
 
 The Sending System **SHALL** never display multiple instances of the same VANSEnvelopeAcknowledgement in a VANSEnvelope summary but **SHALL** log in a system log that VANSEnvelopeAcknowledgement of a duplicate has taken place.
 
-### 1.3 Scenario #3 - (Re) Sending Unchanged VANSEnvelope (Google translated)
+### 1.3 Scenario #3 - (Re) Sending Unchanged VANSEnvelope 
 
 Correct retransmission of message A.
 
@@ -71,13 +82,13 @@ The VANSEnvelope **SHALL** be sent and VANSEnvelopeAcknowledged as a completely 
 
 Re-dispatches **SHALL** always be done manually and **SHOULD** be in accordance with the normal response time for the specific VANSEnvelope flow.
 
-### 1.3 Scenario #4 - VANSEnvelope is sent normally, but VANSEnvelopeAcknowledgement is lost along the way (Google translated)
+### 1.4 Scenario #4 - VANSEnvelope is sent normally, but VANSEnvelopeAcknowledgement is lost along the way 
 
 Like in Scenario #1, but where VANSEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
 
 The shipping pattern is like Scenario #3.
 
-### 1.4 Scenario #5 - (Re-) Sending Modified Message (Google translated)
+### 1.5 Scenario #5 - (Re-) Sending Modified Message 
 
 If the content of the Message content part is changed, the VANSEnvelope is considered a completely new VANSEnvelope and consequently change of both EnvelopeIdentifier, MessageIdentifier and timestamp **SHALL** be made if relevant.
 
@@ -121,5 +132,5 @@ A VANSEnvelopeAcknowledgement consists of the following elements (see <a href="#
 
 | Links for Reliable Messaging|
 |:---|
-|[Reliable Messaging in general](Reliable_Messaging-In-General.md)|
-|[Reliable Messaging in MedCom FHIR Messaging](/docs/assets/documents/043_Reliable_Messaging-FHIR.md)|
+|[Reliable Messaging in general](020_Governance-for-Reliable-Messaging-in-general.md)|
+|[Reliable Messaging in MedCom FHIR Messaging](043_Reliable_Messaging-FHIR.md)|
