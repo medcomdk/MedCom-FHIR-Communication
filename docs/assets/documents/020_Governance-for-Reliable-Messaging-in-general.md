@@ -1,17 +1,17 @@
-# 2.0 Governance for Reliable Messaging in general
+# Governance for Reliable Messaging in general
 
 ## Table of contents
 
-* [2.0 Reliable Messaging in general](#20-reliable-messaging-in-general)
-* [2.1 Generic ruleset governing the principles of Reliable Messaging](#21-generic-ruleset-governing-the-principles-of-reliable-messaging)
-* [2.2 Different Reliable Messaging scenarios](#22-different-reliable-messaging-scenarios)
-  * [2.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request](#221-scenario-1---normally-successful-unsolicited-message-or-request-message-flow-with-acknowledgement-request-google-translated)
-  * [2.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#222-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request-google-translated)
-  * [2.2.3 Scenario #3 - (Re) Sending Unchanged Message](#223-scenario-3---re-sending-unchanged-message-google-translated)
-  * [2.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#224-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way-google-translated)
-  * [2.2.5 Scenario #5 - (Re-) Sending Modified Message](#225-scenario-5---re--sending-modified-message-google-translated)
+* [2 Reliable Messaging in general](#2-reliable-messaging-in-general)
+  * [2.1 Generic ruleset governing the principles of Reliable Messaging](#21-generic-ruleset-governing-the-principles-of-reliable-messaging)
+  * [2.2 Different Reliable Messaging scenarios](#22-different-reliable-messaging-scenarios)
+    * [2.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request](#221-scenario-1---normally-successful-unsolicited-message-or-request-message-flow-with-acknowledgement-request-google-translated)
+    * [2.2.2 Scenario #2 - Duplicate an unchanged message with a positive acknowledgement request](#222-scenario-2---duplicate-an-unchanged-message-with-a-positive-acknowledgement-request-google-translated)
+    * [2.2.3 Scenario #3 - (Re) Sending Unchanged Message](#223-scenario-3---re-sending-unchanged-message-google-translated)
+    * [2.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#224-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way-google-translated)
+    * [2.2.5 Scenario #5 - (Re-) Sending Modified Message](#225-scenario-5---re--sending-modified-message-google-translated)
 
-## 2.0 Reliable Messaging in general
+## 2 Reliable Messaging in general
 
 Reliable Messaging is the way to secure that important information sent through messaging is handled thoroughly and either is sent from the Sending EcoSystem, the Sending Application and its MSH, to a Receiving EcoSystem, the Receiving Application and its MSH, or is handled safely manually. In every part of a message chain, something goes wrong and Reliable Messaging is developed to handle that.
 
@@ -26,10 +26,10 @@ It will then have to resend the message again. This time it will be received and
 The Receiving EcoSystem will in the last event recognize the message as a duplicate and will return exactly the same acknowledgement content as the first time it received the message.
 
 Any of these events can happen over time and therefore Reliable Messaging defines the ruleset used to govern these events.
-
+A generic model for Reriable Messaging is shown in <a href="#Fig1">Figure 1</a>. 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/reliable-messaging-principle_1160x763.png" target="_blank"> <img src="../images/reliable-messaging-principle_1160x763.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
-<figcaption text-align="left"><b>Figure 1: Generic Reliable Messaging Model (Click on the figure to open it in full screen)</b></figcaption>
+<figcaption text-align="left"><b>Figure 1: Generic Reliable Messaging Model </b></figcaption>
 </figure>
 <br>
 

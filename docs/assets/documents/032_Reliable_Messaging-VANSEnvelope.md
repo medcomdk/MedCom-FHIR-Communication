@@ -1,8 +1,13 @@
 # Reliable Messaging using VANSEnvelope
 
+## Table of contents
+* []()
+
+
+
 Reliable Messaging in VANSEnvelope follows the principles laid out in [Reliable Messaging in general](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md)
 
-The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is shown below:
+The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is shown in <a href="#Fig1">Figure 1</a>. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/reliable-messaging-vansenvelope_1160x625.png" target="_blank"> <img src="../images/reliable-messaging-vansenvelope_1160x625.png" alt="reliable messaging principle" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
@@ -10,7 +15,7 @@ The Reliable Messaging Model and how the flow is laid out using VANSEnvelope is 
 </figure>
 <br>
 
-When Reliable Messaging is implemented , the Receiver **SHALL** check the incoming EnvelopeIdentifier and Message/MetaInformation/Identifier (hereafter MessageIdentifier) against a cache of previously received VANSEnvelopes. The correct action to take depends on what is received:
+When Reliable Messaging is implemented, the Receiver **SHALL** check the incoming EnvelopeIdentifier and Message/MetaInformation/Identifier (hereafter MessageIdentifier) against a cache of previously received VANSEnvelopes. The correct action to take depends on what is received:
 
 | Case                                                            | Description                |
 |:----------------------------------------------------------------|:---------------------------|
@@ -19,7 +24,7 @@ When Reliable Messaging is implemented , the Receiver **SHALL** check the incomi
 | MessageIdentifier has already been received, but EnvelopeIdentifier is new | The original VANSEnvelopeAcknowledgement has been lost (failed to return to the request issuer) and thus the previously received Message in a VANSEnvelope has been resubmitted with a new EnvelopeIdentifier for processing again. The original VANSEnvelopeAcknowledgement **SHALL** be resent|
 | The EnvelopeIdentifier has already been received, but the MessageIdentifier is new | This is an error - EnvelopeIdentifier values **SHALL** never be reused. Receiver **MAY** return a Negative VANSEnvelopeAcknowledgement|
 
-## Different Reliable Messaging scenarios using VANSEnvelope
+## 1 Different Reliable Messaging scenarios using VANSEnvelope
 
 This section provides a description of the different types of Reliable Messaging scenarios.
 
@@ -29,13 +34,13 @@ This section provides a description of the different types of Reliable Messaging
 - Scenario #4 - VANSEnvelope is sent normally, VANSEnvelopeAcknowledgement is lost along the way
 - Scenario #5 - (Re-)Sending Modified VANSEnvelope
 
-### Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request (Google translated)
+### 1.1 Scenario #1 - Normally successful unsolicited  VANSEnvelope or request VANSEnvelope flow with VANSEnvelopeAcknowledgement request (Google translated)
 
 An unsolicited  VANSEnvelope is sent with a new request for a positive VANSEnvelopeAcknowledgement from the Sending System to a Receiving System.
 
 The Receiving System **SHALL** always send a positive VANSEnvelopeAcknowledgement to the Sending System.
 
-### Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request (Google translated)
+### 1.2 Scenario #2 - Duplicate of an unchanged VANSEnvelope with a positive VANSEnvelopeAcknowledgement request (Google translated)
 
 Duplication of an unchanged VANSEnvelope can be done in one of the following ways:
 
@@ -54,7 +59,7 @@ If the Sending System of the VANSEnvelope has received VANSEnvelopeAcknowledgeme
 
 The Sending System **SHALL** never display multiple instances of the same VANSEnvelopeAcknowledgement in a VANSEnvelope summary but **SHALL** log in a system log that VANSEnvelopeAcknowledgement of a duplicate has taken place.
 
-### Scenario #3 - (Re) Sending Unchanged VANSEnvelope (Google translated)
+### 1.3 Scenario #3 - (Re) Sending Unchanged VANSEnvelope (Google translated)
 
 Correct retransmission of message A.
 
@@ -66,23 +71,23 @@ The VANSEnvelope **SHALL** be sent and VANSEnvelopeAcknowledged as a completely 
 
 Re-dispatches **SHALL** always be done manually and **SHOULD** be in accordance with the normal response time for the specific VANSEnvelope flow.
 
-### Scenario #4 - VANSEnvelope is sent normally, but VANSEnvelopeAcknowledgement is lost along the way (Google translated)
+### 1.3 Scenario #4 - VANSEnvelope is sent normally, but VANSEnvelopeAcknowledgement is lost along the way (Google translated)
 
 Like in Scenario #1, but where VANSEnvelopeAcknowledgement is lost along the way from the Sending System to the Receiving System.
 
 The shipping pattern is like Scenario #3.
 
-### Scenario #5 - (Re-) Sending Modified Message (Google translated)
+### 1.4 Scenario #5 - (Re-) Sending Modified Message (Google translated)
 
 If the content of the Message content part is changed, the VANSEnvelope is considered a completely new VANSEnvelope and consequently change of both EnvelopeIdentifier, MessageIdentifier and timestamp **SHALL** be made if relevant.
 
 Resubmissions **SHALL** always be done manually.
 
-## VansEnvelope Reliable Messaging Elements
+## 2 VansEnvelope Reliable Messaging Elements
 
-### VansEnvelope Reliable Messaging Message Elements
+### 2.2 VansEnvelope Reliable Messaging Message Elements
 
-A VansEnvelope consists of the following elements:
+A VansEnvelope consists of the following elements (see <a href="#Fig2">Figure 2</a>.):
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/vansenvelope_schema-reliable.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
@@ -90,7 +95,7 @@ A VansEnvelope consists of the following elements:
 </figure>
 <br>
 
-A VansEnvelope's Reliable Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element:
+A VansEnvelope's Reliable Messaging part can be found in the VANSEnvelope/Message/MetaInformation/Transport/Type-element, which is shown in <a href="#Fig3">Figure 3</a>.:
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/vansenvelope_schema-reliable-type.png" target="_blank"> <img src="../images/vansenvelope_schema-reliable-type.png" alt="vansenvelope_schema-reliable" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
@@ -102,11 +107,11 @@ Reliable Messaging in VANSEnvelope is the default mode but can explicitly be tur
 
 In FHIR Messaging, this element **SHALL** be "reliable" or left in default mode.
 
-### VansEnvelope VANSEnvelopeAcknowledgement Reliable Messaging Elements
+### 2.3 VansEnvelope VANSEnvelopeAcknowledgement Reliable Messaging Elements
 
 When "reliable", the receiver of the VANSEnvelope **SHALL** send a VANSEnvelopeAcknowledgement return to the original Sender.
 
-A VANSEnvelopeAcknowledgement consists of the following elements:
+A VANSEnvelopeAcknowledgement consists of the following elements (see <a href="#Fig4">Figure 4</a>.):
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/vansenvelope_schema-acknowledgement.png" target="_blank"> <img src="../images/vansenvelope_schema-acknowledgement.png" alt="vansenvelope_schema-acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
@@ -117,4 +122,4 @@ A VANSEnvelopeAcknowledgement consists of the following elements:
 | Links for Reliable Messaging|
 |:---|
 |[Reliable Messaging in general](Reliable_Messaging-In-General.md)|
-|[Reliable Messaging in MedCom FHIR Messaging](Reliable_Messaging-FHIR.md)|
+|[Reliable Messaging in MedCom FHIR Messaging](/docs/assets/documents/043_Reliable_Messaging-FHIR.md)|
