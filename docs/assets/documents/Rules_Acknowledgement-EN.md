@@ -1,6 +1,4 @@
-# Acknowledgment rules (Google translated)
-
-[TBD]
+# Acknowledgment rules 
 
 | ID | Rules |
 |:------| :-----|
