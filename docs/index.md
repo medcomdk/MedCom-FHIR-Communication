@@ -14,6 +14,7 @@
 * [9 Governance-for MedCom versioning](#9-governance-for-medcom-versioning)
 * [10 Governance-for MedCom process of change requests](#10-governance-for-medcom-process-of-change-requests)
 
+<br>
 
 ## Terms
 
@@ -135,13 +136,6 @@ Governance for MedCom FHIR Terminology covers Codesystems, Valuesets and Concept
 ## 8 Governance for MedCom FHIR Terminology Server
 
 Governance for the MedCom FHIR Terminology Server will appear here when published.
-
-## 9 Governance for MedCom Versioning
-
- MedComFHIRMessages and its documentation are versioned with Semantic Versioning 2.0.
- <a href="https://www.semver.org" target="_blank">Click here to read more about Semantic Versioning 2.0</a>
-
-[Click here to go to Governance for MedCom Versioning.](/assets/documents/090_Governance-for-MedCom-Versioning.md)
 
 ## 10 Governance for MedCom process of change requests and improvements
 
