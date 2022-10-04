@@ -1,6 +1,6 @@
-# 7.0 Governance of MedCom FHIR Terminologies
+# 7. Governance of MedCom FHIR Terminologies
 
-## Table of content
+**Table of content**
 
 * [7.1 MedCom FHIR Codesystems](#71-medcom-fhir-codesystems)
 * [7.2 MedCom FHIR Valuesets](#72-medcom-fhir-valuesets)

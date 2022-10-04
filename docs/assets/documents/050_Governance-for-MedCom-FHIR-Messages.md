@@ -1,6 +1,6 @@
 # 5. Governance for MedCom FHIR Messages
 
-## Table of content
+**Table of content**
 
 * [5. Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
 * [5.1. MedComMessagingMessage-bundle](#51-medcommessagingmessage-bundle)
