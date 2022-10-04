@@ -4,20 +4,20 @@
 
 ## Table of contents
 
-[1. Indledning][1] <br/>
-[2. Forsendelseskuverter][2] <br/>
-[2.1 VANSenvelope][2.1] <br/>
-[2.1.1 Format][2.1.1] <br/>
-[2.1.2 Name][2.1.2] <br/>
-[2.1.3 Version][2.1.3] <br/>
-[3. FHIR meddelelsestyper][3] <br/>
-[3.1 CareCommunication][3.1] <br/>
-[3.2 HospitalNotification][3.2] <br/>
-[3.3 Acknowledgment][3.3] <br/>
+[1 Indledning](#1-indledning) <br/>
+[2 Forsendelseskuverter](#2-forsendelseskuverter) <br/>
+[2.1 VANSenvelope](#21-vansenvelope) <br/>
+[2.1.1 Format](#211-format) <br/>
+[2.1.2 Name](#212-name) <br/>
+[2.1.3 Version](#213-version) <br/>
+[3. FHIR meddelelsestyper](#3-fhir-meddelelsestyper) <br/>
+[3.1 CareCommunication](#31-carecommunication) <br/>
+[3.2 HospitalNotification](#32-hospitalnotification)<br/>
+[3.3 Acknowledgment](#33-acknowledgement) <br/>
 
----
 
-## Indledning
+
+## 1 Indledning
 
 MedComs FHIR\-meddelelser vil undervejs i deres forsendelsesforløb blive indpakket og optræde i forskellige kuvertformater.
 
@@ -25,11 +25,10 @@ Pt. vil afsendelse ske i det eksisterende VANS\-net og dermed med brug af VANSen
 
 >Obs.: Når moderniseret infrastruktur bliver implementeret, vil den trække på en ny forsendelseskuvert, der vil erstatte VANSenvelope, så dette dokument vil til den tid blive opdateret med det nye kuvertformat. I en overgangsperiode vil både VANSenvelope og den nye kuvert blive anvendt, men der vil komme tydelige præciseringer af, hvorledes dette kommer til at foregå.
 
----
 
-## Forsendelseskuverter
+## 2 Forsendelseskuverter
 
-### VANSenvelope
+### 2.1 VANSenvelope
 
 VANSenvelope indeholder ift. MedComs nye FHIR\-meddelelser 3 elementer(felter), som influeres af FHIR som ny meddelelsestype. Disse indeholdes i følgende overordnede element "VANSEnvelope/Message/MetaInformation/Document/".
 
@@ -48,33 +47,28 @@ I Transportelementet, "VANSEnvelope/Message/MetaInformation/Transport", håndter
 
 afhængigt af, hvilket format FHIR\-meddelelsen er formateret i.
 
----
 
-#### Format
+#### 2.1.1 Format
 
 Format bliver samme som "Standard-type" i MedComs standardkatalog og defineres for alle FHIR\-standarder til "HL7".
 
----
 
-#### Name
+#### 2.1.2 Name
 
 Name bliver samme som "Type nr." i MedComs standardkatalog og vil dermed variere fra meddelelsestype til meddelelsestype. Name prefixes med MCM: og vil i øvrigt kunne postfixes med statistiske varianter af en given meddelelsestype. Kendt fra GGOP kan dette udfaldsrum f.eks. være GGOP1, GGOP2 og GGOP3. Lignende konstruktioner vil forekomme så længe FHIR\-meddelelser transporteres i VANSenvelope.
 
----
 
-#### Version
+#### 2.1.3 Version
 
 Version bliver samme som "Version" i MedComs standardkatalog og vil dermed variere fra meddelelsesversion til meddelelsesversion.
 
----
 
-## FHIR meddelelsestyper
+## 3 FHIR meddelelsestyper
 
 Konkret betyder ovenstående for MedComs FHIR\-meddelelser dette
 
----
 
-### CareCommunication
+### 3.1 CareCommunication
 
 |||
 |:---|:---|
@@ -87,9 +81,8 @@ Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget 
 
 Name kan eksplicit tages fra følgende Valueset: [VANS StatisticalCode Combinations](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
 
----
 
-### HospitalNotification
+### 3.2 HospitalNotification
 
 |||
 |:---|:---|
@@ -103,9 +96,8 @@ Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget 
 
 Name kan eksplicit tages fra følgende Valueset: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
----
 
-### Acknowledgement
+### 3.3 Acknowledgement
 
 |||
 |:---|:---|

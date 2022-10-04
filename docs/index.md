@@ -1,7 +1,5 @@
 # Governance for MedCom FHIR®© Messaging
 
-<hr>
-
 ## Table of contents
 
 * [Terms](#terms)
@@ -16,7 +14,6 @@
 * [9 Governance-for MedCom versioning](#9-governance-for-medcom-versioning)
 * [10 Governance-for MedCom process of change requests](#10-governance-for-medcom-process-of-change-requests)
 
-<hr>
 
 ## Terms
 
