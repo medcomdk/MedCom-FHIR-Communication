@@ -1,4 +1,5 @@
-# Governance for MedCom FHIR Messaging
+# Governance for MedCom FHIR Message Exchange
+
 **Table of content**
 * [1 Basic Danish Messaging Assumptions](#1-basic-danish-messaging-assumptions-tbd)
 * [2 Message exchange patterns](#2-message-exchange-patterns)
