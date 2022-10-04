@@ -3,13 +3,13 @@
 ## Table of content
 
 * [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
-* [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
-* [4.2 Message exchange patterns](#42-message-exchange-patterns)
-* [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
-* [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
-* [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
-* [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules)
-* [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules-google-translated)
+    * [4.1 Basic Danish Messaging Assumptions](#41-basic-danish-messaging-assumptions-tbd)
+    * [4.2 Message exchange patterns](#42-message-exchange-patterns)
+    * [4.3 Reliable Messaging using MedCom FHIR Messaging](#43-reliable-messaging-using-medcom-fhir-messaging)
+    * [4.4 Handling sending scenarios](#44-handling-sending-scenarios)
+    * [4.5 Handling receiving scenarios](#45-handling-receiving-scenarios)
+    * [4.6 MedCom FHIR Messaging rules](#46-fhir-messaging-rules)
+    * [4.7 MedCom FHIR Messaging Acnowledgement rules](#47-fhir-messaging-acnowledgement-rules-google-translated)
 
 This Governance for MedCom FHIR Messaging includes the corresponding OIOXML version of certain MedCom FHIR Messages, that are developed with the FHIR Message as the definer of the content of the OIOXML version.
 
@@ -24,7 +24,7 @@ The events supported in MedCom FHIR Messaging, along with the resources that are
 
 The destination application processes the message and returns an acknowledgement message and maybe one or more response messages, which too are a Bundle of resources identified by the type "message", with the first resource in each Bundle being a MessageHeader resource with a response section that reports the outcome of processing the message and any additional response resources required.
 
-### 4.1 Basic Danish Messaging Assumptions [TBD]
+### 4.1 Basic Danish Messaging Assumptions
 
 This specification assumes that content will be delivered from one application to another by some delivery mechanism, and then one or more responses will be returned to the source application.
 
@@ -112,14 +112,12 @@ Forwarding is handled on different levels
 
 ### 4.5 Handling receiving scenarios
 
-[TBD]
 A Receiving Ecosystem **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
 As the information about what kind of MedComMessagingMessage that is received
 That means that the Receiving Ecosystem **SHALL** be ?????
 
 ### 4.6 FHIR Messaging rules
 
-[TBD]
 
 | ID | Rule |
 |:------| :-----|
@@ -132,13 +130,11 @@ That means that the Receiving Ecosystem **SHALL** be ?????
 | MR7.R | A MedCom FHIR Message that is resent **SHALL** always be updated with new timestamp=Provenance.timestamps and new envelopeid=Bundle.id |
 | MR8.R | A MedCom FHIR Message is a duplicate if it contains the same MessageHeader.Id as a previously received MedCom FHIR Message |
 
-[Messaging rules (Danish)](Rules_Messaging-DA.md)
+[Danish: Meddelelsesregler](Rules_Messaging-DA.md)
 
 <!-- [Messaging rules (English)](Rules_Messaging-EN.md) -->
 
-### 4.7 FHIR Messaging Acnowledgement rules (Google translated)
-
-[TBD]
+### 4.7 FHIR Messaging Acnowledgement rules 
 
 | ID | Rules |
 |:------| :-----|
@@ -149,6 +145,6 @@ That means that the Receiving Ecosystem **SHALL** be ?????
 | KR5.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
 | KR6.S | If an Acknowledgement of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
-[Acnowledgement rules (Danish)](Rules_Acknowledgement-DA.md)
+[Danish: Kvitteringsregler](Rules_Acknowledgement-DA.md)
 
 <!-- [Acnowledgement rules (English)](Rules_Acknowledgement-EN.md) -->

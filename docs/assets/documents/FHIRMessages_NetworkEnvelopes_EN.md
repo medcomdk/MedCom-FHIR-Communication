@@ -2,17 +2,19 @@
 
 ## Table of contents
 
-* [1. Introduction](#introduction)
-* [2. Shipping envelopes](#shipping-envelopes)
-* [2.1 VANSEnvelope](#vansenvelope)
+* [1. Introduction](#1-introduction)
+* [2. Shipping envelopes](#2-shipping-envelopes)
+    * [2.1 VANSEnvelope](#21-vansenvelope)
+        * [2.1.1 Format](#211-format)
+        * [2.1.2](#212-name)
+        * [2.1.3](#213-version)
 * [3. FHIR message types](#medcom-fhir-message-types)
-* [3.1 CareCommunication](#carecommunication)
-* [3.2 HospitalNotification](#hospitalnotification)
-* [3.3 Acknowledgment](#acknowledgement)
+    * [3.1 CareCommunication](#carecommunication)
+    * [3.2 HospitalNotification](#hospitalnotification)
+    * [3.3 Acknowledgment](#acknowledgement)
 
----
 
-## Introduction
+## 1 Introduction
 
 MedCom's FHIR messages will be wrapped and appear in various envelope formats during their shipping process.
 
@@ -20,11 +22,10 @@ At present, shipping will take place in the existing VANS network and thus with 
 
 >Note: When modernized infrastructure is implemented, it will draw on a new shipping envelope that will replace VANSEnvelope, so this document will by that time be updated with the new envelope format. For a transitional period, both VANSEnvelope and the new envelope will be used, but there will be clear clarifications of how this will take place.
 
----
 
-## Shipping envelopes
+## 2 Shipping envelopes
 
-### VANSEnvelope
+### 2.1 VANSEnvelope
 
 In relation to MedCom's new FHIR messages, VANSEnvelope contains 3 elements (fields) which are influenced by FHIR as a new message type. These are contained in the following parent element "VANSEnvelope/Message/MetaInformation/Document/".
 
@@ -41,35 +42,34 @@ In the Transport element, "VANSEnvelope/Message/MetaInformation/Transport", the 
 * application/fhir+xml
 * application/fhir+json
 
-depending on the format the FHIR message is formatted.
+Depending on the format the FHIR message is formatted.
 
----
 
-#### Format
+
+#### 2.1.1 Format
 
 Format **SHALL** be the same as "Standard type" in MedCom's Standards Directory and **SHALL** be defined for all FHIR standards as "HL7".
 
----
 
-#### Name
+#### 2.1.2 Name
 
 Name **SHALL** be the same as "Type nr." in MedCom's Standards Directory and will thus vary from message type to message type. Name **SHALL** be prefixed with MCM: and will otherwise be able to be postfixed with statistical variants of a given message type. Known from GGOP, this outcome space can e.g. be GGOP1, GGOP2 and GGOP3. Similar constructions will occur as long as FHIR messages are transported in the VANSEnvelope.
 
----
 
-#### Version
+
+#### 2.1.3 Version
 
 Version **MUST** be the same as "Version" in MedCom's standard directory and will thus vary from message version to message version.
 
----
 
-## MedCom FHIR message types
+
+## 3 MedCom FHIR message types
 
 Specifically, the above for MedCom's FHIR messages means this
 
----
 
-### CareCommunication
+
+### 3.1 CareCommunication
 
 |||
 |:---|:---|
@@ -85,9 +85,8 @@ Postfix Values for Name **MUST** be within this ValueSet, which is taken from: [
 
 The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
----
 
-### HospitalNotification
+### 3.2 HospitalNotification
 
 |||
 |:---|:---|
@@ -103,9 +102,8 @@ Postfix Values for Name **MUST** be within this ValueSet, which is taken from th
 
 The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
 
----
 
-### Acknowledgement
+### 3.3 Acknowledgement
 
 |||
 |:---|:---|
