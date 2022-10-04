@@ -1,15 +1,17 @@
 # Governance for Network Layer
 
 **Table of contents**
+
 * [1 VANSEnvelope](#1-vansenvelope)
 * [2 Reliable Messaging using VANSEnvelope](#2-reliable-messaging-using-vansenvelope)
 * [3 Sending MedCom FHIR messages in VANSEnvelope](#3-sending-medcom-fhir-messages)
+* [4 Receiving MedCom FHIR messages in VANSEnvelope](#4-receiving-medcom-fhir-messages)
 
 <br>
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
-To be able to communicate over the VANS Network, both senders and receivers **SHALL** have a GLN number issued by the SOR. <a href="https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering" target="_blank">Click her to open SOR </a>. The SOR is developed by The Danish Health Data Authority and therfore the informations in SOR are in Danish. 
+To be able to communicate over the VANS Network, both senders and receivers **SHALL** have a GLN number issued by the SOR. <a href="https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering" target="_blank">Click her to open SOR </a>. The SOR is developed by The Danish Health Data Authority and therfore the informations in SOR are in Danish.
 
 To be able to communicate a specific MedCom FHIR message type both senders and receivers **SHALL** be registered in SOR with that messagetype and version.
 
@@ -24,8 +26,9 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSEnvelope whether they are s
 * The enveloping of MedCom FHIR Messages **SHALL** follow the VANSEnvelope specification outlined in
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation" target="_blank"> Click here to read VANSEnvelope specification</a>. Please be aware that the VANSEnvelope specification is in danish.
 * MedCom FHIR Messages **SHALL** follow the metadata specification outlined in both danish and english:
-  * [Danish:Network Envelope ](FHIRMessages_NetworkEnvelopes_DA.md)
+  * [Danish:Network Envelope](FHIRMessages_NetworkEnvelopes_DA.md)
   * [English:Network Envelope (English)](FHIRMessages_NetworkEnvelopes_EN.md)
+* VANSEnvelopes **SHALL** only contain one MedCom FHIR Messages
 
 ## 2 Reliable Messaging using VANSEnvelope
 
@@ -40,8 +43,14 @@ VANSEnvelope containing FHIR Messages **SHALL** make use of this Reliable Messag
 
 ## 3 Sending MedCom FHIR messages
 
-Text around sending to both primary and cc destinations.
-
 Sending MedCom FHIR messages over the VANS Network requires the sending system to handle the following:
 
-1. A Sending Ecosystem **MUST** 
+When sending to both primary and cc destinations.
+
+1. A Sending Ecosystem **MUST** secure that the MedCom FHIR messages for primary and cc receivers differs on ID's as described in [Governance for MedCom FHIR Messaging](040_Governance4FHIR-Messaging.md)
+
+## 4 Receiving MedCom FHIR messages
+
+A Receiving Ecosystem **SHALL** be able to receive MedCom FHIR messages both as "application/fhir+xml" and "application/fhir+json"
+
+A Receiving Ecosystem **SHALL** be able to handle both primary and cc destinations and routing them to the right application
