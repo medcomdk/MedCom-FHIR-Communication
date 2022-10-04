@@ -6,7 +6,7 @@
 * [1 Introduction to Governance for MedCom FHIR Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
 * [2 Governance for Reliable Messaging in general](#2-governance-for-reliable-messaging-in-general)
 * [3 Governance for the Network Layer](#3-governance-for-network-layer)
-* [4 Governance for MedComFHIR Messaging](#4-governance-for-medcom-fhir-messaging)
+* [4 Governance for MedCom FHIR Message Exchange](#4-governance-for-medcom-fhir-message-exchange)
 * [5 Governance for MedCom FHIR Messages](#5-governance-for-medcom-fhir-messages)
 * [6 Governance for displaying MedCom FHIR Messages](#6-governance-for-displaying-medcom-fhir-messages)
 * [7 Governance for MedCom Terminology](#7-governance-for-medcom-fhir-terminology)
@@ -107,7 +107,7 @@ Governance for Network Layer covers rulesets for VANSEnvelope and Reliable Messa
 
 [Click here to go to Governance for Network Layer.](/assets/documents/030_Governance-for-Network-Layer.md)
 
-## 4 Governance for MedCom FHIR Messaging
+## 4 Governance for MedCom FHIR Message Exchange
 
 Governance for MedCom FHIR Messaging covers Reliable Messaging using MedCom FHIR Messaging, sending and receiving scenarios, and rulesets for FHIR Messaging and FHIR Messaging Acnowledgement.
 
