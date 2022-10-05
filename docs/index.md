@@ -136,4 +136,6 @@ Governance for the MedCom FHIR Terminology Server will appear here when publishe
 
 ## 9 Governance for concrete MedCom FHIR Message Standards
 
+Each MedCom FHIR Message will potentially add some specific Governance Rules to the mix of overall Governance Rules. These are handled on a separate page, to which the specific standard also will link to.
+
 [Click here to go to Governance for concrete MedCom FHIR Message Standards.](/assets/documents/090_Governance-for-concrete-standards.md)
