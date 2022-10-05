@@ -1,1 +1,1 @@
-# Governance or HospitalNotification
+# Governance for MedCom HospitalNotification
