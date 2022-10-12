@@ -52,7 +52,7 @@ An inherited instance profile of MedComMessagingMessage **SHALL** follow the gen
 
 | Links for MedComMessingMessage|
 |:---|
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Click here to read a detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging//StructureDefinition-medcom-messaging-message.html" target="_blank"> Click here to read a detailed specification for MedComMessingMessage in MedComMessingMessage IG</a> |
 | <a href="https://medcomdk.github.io/dk-medcom-messaging/" target="_blank">Click here to read a detailed page for MedCom Messaging</a> |
 | <a href="http://hl7.org/fhir/R4/Bundle.html" target="_blank">Click here to read a detailed specification for Bundle in FHIR R4</a> |
 
@@ -64,7 +64,7 @@ An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow t
 | Links for MedComMessagingMessageHeader|
 |:---|
 | <a href="https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#22-medcommessagingmessageheader" target="_blank">MedComMessagingMessageHeader in MedCom Message</a> |
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging//StructureDefinition-medcom-messaging-messageHeader.html" target="_blank"> Detailed specification for MedComMessageHeader in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/MessageHeader.html" target="_blank">Detailed specification for MessageHeader in FHIR R4</a> |
 
 <br>
@@ -113,7 +113,7 @@ A MedComMessagingOrganization **MAY** include more identifiers. These Identifier
 | Links for MedComMessagingOrganization|
 |:---|
 | <a href="https://medcomdk.github.io/dk-medcom-messaging/#14-medcommessagingorganization" target="_blank">MedComMessagingOrganization in MedCom Message</a> |
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-organization.html" target="_blank"> Detailed specification for MedComMessagingOrganization in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Organization.html" target="_blank">Detailed specification for Organization in FHIR R4</a> |
 
 <br>
@@ -131,7 +131,7 @@ A MedComMessagingOrganization **MAY** include more identifiers. These Identifier
 | Links for MedComMessagingProvenance|
 |:---|
 | <a href="https://medcomdk.github.io/dk-medcom-messaging/#15-medcommessagingprovenance" target="_blank">MedComMessagingProvenance in MedCom Messaging</a> |
-| <a href="https://build.fhir.org/ig/medcomdk/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
+| <a href="https://medcomfhir.dk/ig/dk-medcom-messaging/StructureDefinition-medcom-messaging-provenance.html" target="_blank"> Detailed specification for MedComMessagingProvenance in MedComMessingMessage IG</a> |
 | <a href="http://hl7.org/fhir/R4/Provenance.html" target="_blank">Detailed specification for Provenance in FHIR R4</a> |
 
 <br>
@@ -174,7 +174,7 @@ Derived implementations SHOULD inherit the field’s “Must Support” flag
 
 | Links for MustSupport|
 |:---|
-| <a href="http://hl7.org/fhir/R4/MustSupport.html" target="_blank">Detailed specification for MustSupport in FHIR R4</a> |
+| <a href="https://www.hl7.org/FHIR/conformance-rules.html#mustSupport" target="_blank">Detailed specification for MustSupport in FHIR R4</a> |
 
 <br>
 
@@ -209,6 +209,6 @@ The div element **SHALL** have some non-whitespace content (text or an image).
 
 | Links for Narrative Text|
 |:---|
-|[Narrative Text description in FHIR R4](http://hl7.org/fhir/R4/narrative.html#Narrative) |
-|[NarrativeStatus in FHIR R4](http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2)|
-|[Styling the XHTML in FHIR R4](http://hl7.org/fhir/R4/narrative.html#css)|
+|<a href="http://hl7.org/fhir/R4/narrative.html#Narrative" target ="_blank">Narrative Text description in FHIR R4</a>|
+|<a href="http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2" target="_blank">NarrativeStatus in FHIR R4</a>|
+|<a href ="http://hl7.org/fhir/R4/narrative.html#css" target="_blank">Styling the XHTML in FHIR R4</a>|

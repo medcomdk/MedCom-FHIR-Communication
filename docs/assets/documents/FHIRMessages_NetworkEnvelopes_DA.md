@@ -1,19 +1,19 @@
 # MedCom FHIR Messages And Network Envelopes
 
-![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR")
+<!-- ![alt text](https://medcomdk.github.io/MedCom-FHIR-Communication/fhir-logo.png "HL7 FHIR") -->
 
 **Table of contents**
 
 * [1 Indledning](#1-indledning) <br/>
 * [2 Forsendelseskuverter](#2-forsendelseskuverter) <br/>
- * [2.1 VANSenvelope](#21-vansenvelope) <br/>
-  * [2.1.1 Format](#211-format) <br/>
-  * [2.1.2 Name](#212-name) <br/>
-  * [2.1.3 Version](#213-version) <br/>
+  * [2.1 VANSenvelope](#21-vansenvelope) <br/>
+    * [2.1.1 Format](#211-format) <br/>
+    * [2.1.2 Name](#212-name) <br/>
+    * [2.1.3 Version](#213-version) <br/>
 * [3. FHIR meddelelsestyper](#3-fhir-meddelelsestyper) <br/>
- * [3.1 CareCommunication](#31-carecommunication) <br/>
- * [3.2 HospitalNotification](#32-hospitalnotification)<br/>
- * [3.3 Acknowledgment](#33-acknowledgement) <br/>
+  * [3.1 CareCommunication](#31-carecommunication) <br/>
+  * [3.2 HospitalNotification](#32-hospitalnotification)<br/>
+  * [3.3 Acknowledgment](#33-acknowledgement) <br/>
 
 
 
@@ -77,10 +77,9 @@ Konkret betyder ovenstående for MedComs FHIR\-meddelelser dette
 |Name    |"MCM:FDIS91#`<code>`" |
 |Version |"2.0.0"               |
 
-Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra: [CareCommunications ValueSet for categories](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-careCommunication-categories.html)
+Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra: <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/ValueSet-medcom-careCommunication-categories.html" target="_blank">CareCommunications ValueSet for categories</a>
 
-Name kan eksplicit tages fra følgende Valueset: [VANS StatisticalCode Combinations](https://build.fhir.org/ig/hl7dk/dk-medcom/CodeSystem-medcom-messaging-sorEdiSystem.html)
-
+Name kan eksplicit tages fra følgende Valueset: <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">VANS StatisticalCode Combinations</a>
 
 ### 3.2 HospitalNotification
 
@@ -92,9 +91,9 @@ Name kan eksplicit tages fra følgende Valueset: [VANS StatisticalCode Combinati
 |Name    |"MCM:FDIS20#`<code>`" |
 |Version |"2.0.0"               |
 
-Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra HospitalNotifications ValueSet: MedCom Hospital Notification Message Activity Codes:  [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-hospitalNotification-messageActivities.html)
+Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra HospitalNotifications ValueSet: <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/ValueSet-medcom-hospitalNotification-messageActivities.html" target="_blank">MedCom Hospital Notification Message Activity Codes</a>
 
-Name kan eksplicit tages fra følgende Valueset: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
+Name kan eksplicit tages fra følgende<a href="https://medcomfhir.dk/ig/dk-medcom-terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">ValueSet</a>.
 
 
 ### 3.3 Acknowledgement
@@ -106,9 +105,9 @@ Name kan eksplicit tages fra følgende Valueset: [https://build.fhir.org/ig/hl7d
 |Name    |"MCM:FCTL#`<code>`"   |
 |Version |"2.0.0"               |
 
-Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra Response Code ValueSet: Codes:  [http://hl7.org/fhir/R4/valueset-response-code.html](http://hl7.org/fhir/R4/valueset-response-code.html)
+Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra Response Code ValueSet: <a href="http://hl7.org/fhir/R4/valueset-response-code.html" target="_blank">Codes</a> 
 
-Name kan eksplicit tages fra følgende Valueset: [https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html](https://build.fhir.org/ig/hl7dk/dk-medcom/ValueSet-medcom-messaging-vansStatisticalCodeCombinations.html)
+Name kan eksplicit tages fra følgende <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">ValueSet</a>
 
 ---
 

@@ -10,8 +10,7 @@
 * [2 VansEnvelope Reliable Messaging Elements](#2-vansenvelope-reliable-messaging-elements)
     * [2.2 VansEnvelope Reliable Messaging Message Elements](#22-vansenvelope-reliable-messaging-message-elements)
     * [2.3 VansEnvelope VANSEnvelopeAcknowledgement Reliable Messaging Elements](#23-vansenvelope-vansenvelopeacknowledgement-reliable-messaging-elements)
-
-
+<br><br>
 
 
 
