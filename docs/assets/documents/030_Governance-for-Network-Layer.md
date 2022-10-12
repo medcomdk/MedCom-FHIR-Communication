@@ -27,7 +27,7 @@ MedCom FHIR Messages **SHALL** be enveloped in a VANSEnvelope whether they are s
   * <a href="https://svn.medcom.dk/svn/releases/Standarder/Den%20gode%20VANSEnvelope/Dokumentation" target="_blank"> Click here to read VANSEnvelope specification</a>. Please be aware that the VANSEnvelope specification is in danish.
 * MedCom FHIR Messages **SHALL** follow the metadata specification outlined in both danish and english:
   * [Danish:Network Envelope](FHIRMessages_NetworkEnvelopes_DA.md)
-  * [English:Network Envelope (English)](FHIRMessages_NetworkEnvelopes_EN.md)
+  * [English:Network Envelope](FHIRMessages_NetworkEnvelopes_EN.md)
 * VANSEnvelopes **SHALL** only contain one MedCom FHIR Messages
 
 ## 2 Reliable Messaging using VANSEnvelope
