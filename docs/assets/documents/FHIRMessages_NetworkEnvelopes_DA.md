@@ -77,9 +77,9 @@ Konkret betyder ovenstående for MedComs FHIR\-meddelelser dette
 |Name    |"MCM:FDIS91#`<code>`" |
 |Version |"2.0.0"               |
 
-Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra: <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/ValueSet-medcom-careCommunication-categories.html" target="_blank">CareCommunications ValueSet for categories</a>
+Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra: <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html" target="_blank">CareCommunications ValueSet for categories</a>
 
-Name kan eksplicit tages fra følgende Valueset: <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">VANS StatisticalCode Combinations</a>
+Name kan eksplicit tages fra følgende Valueset: <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">VANS StatisticalCode Combinations</a>
 
 ### 3.2 HospitalNotification
 
@@ -91,9 +91,9 @@ Name kan eksplicit tages fra følgende Valueset: <a href="https://medcomfhir.dk/
 |Name    |"MCM:FDIS20#`<code>`" |
 |Version |"2.0.0"               |
 
-Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra HospitalNotifications ValueSet: <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/ValueSet-medcom-hospitalNotification-messageActivities.html" target="_blank">MedCom Hospital Notification Message Activity Codes</a>
+Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra HospitalNotifications ValueSet: <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html" target="_blank">MedCom Hospital Notification Message Activity Codes</a>
 
-Name kan eksplicit tages fra følgende<a href="https://medcomfhir.dk/ig/dk-medcom-terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">ValueSet</a>.
+Name kan eksplicit tages fra følgende<a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">ValueSet</a>.
 
 
 ### 3.3 Acknowledgement
@@ -107,7 +107,7 @@ Name kan eksplicit tages fra følgende<a href="https://medcomfhir.dk/ig/dk-medco
 
 Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra Response Code ValueSet: <a href="http://hl7.org/fhir/R4/valueset-response-code.html" target="_blank">Codes</a> 
 
-Name kan eksplicit tages fra følgende <a href="https://medcomfhir.dk/ig/dk-medcom-terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">ValueSet</a>
+Name kan eksplicit tages fra følgende <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">ValueSet</a>
 
 ---
 

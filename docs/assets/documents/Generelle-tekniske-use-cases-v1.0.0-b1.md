@@ -420,4 +420,4 @@ Indsæt forklarende tekst til modtagelses use cases
 |Fejlet|Meddelelsen er sendt og ACK AE fejlkvittering modtaget, oprindelig meddelelse kan gensendes|
 |Permanent fejlende|- Meddelelsen er sendt og fejlkvittering af ACK AR modtaget, oprindelig meddelelse kan ikke gensendes, da den er markeret som havende en teknisk fejl- Kvittering på meddelelse er ikke modtaget, efter at meddelelsen har været gensendt 3 gange|
 
-[^1]: Use casene er udarbejdet med inspiration fra [KOMBIT’s metodehåndbog for use cases](https://www.kombit.dk/metodeh%C3%A5ndb%C3%B8ger)
+[^1]: Use casene er udarbejdet med inspiration fra <a href="https://www.kombit.dk/metodeh%C3%A5ndb%C3%B8ger" target="_blank">KOMBIT’s metodehåndbog for use cases</a>
