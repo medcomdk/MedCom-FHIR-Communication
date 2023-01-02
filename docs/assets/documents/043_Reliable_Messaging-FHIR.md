@@ -9,7 +9,7 @@
         * [1.1.5 Scenario #5 - (Re) Sending Modified Message](#115-scenario-5---re--sending-modified-message)
 
 
-Reliable Messaging in MedCom FHIR Messaging follows the principles laid out in [Reliable Messaging in general](Reliable_Messaging-In-General.md)
+Reliable Messaging in MedCom FHIR Messaging follows the principles laid out in [Reliable Messaging in general](020_Governance-for-Reliable-Messaging-in-general.md)
 
 The Reliable Messaging Model and how the flow is laid out using FHIR is shown in <a href="#Fig1">Figure 1</a>.
 

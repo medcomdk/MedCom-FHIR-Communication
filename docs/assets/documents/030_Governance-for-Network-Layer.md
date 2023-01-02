@@ -11,11 +11,11 @@
 
 The Danish Healthcare Messaging Network is currently the VANS Network on which the overall shipment of a message is handled through Asynchronous Messaging.
 
-To be able to communicate over the VANS Network, both senders and receivers **SHALL** have a GLN number issued by the SOR. <a href="https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering" target="_blank">Click her to open SOR </a>. The SOR is developed by The Danish Health Data Authority and therfore the informations in SOR are in Danish.
+To be able to communicate over the VANS Network, both senders and receivers **SHALL** have a GLN number issued by the SOR. <a href="https://sundhedsdatastyrelsen.dk/da/rammer-og-retningslinjer/organisationsregistrering" target="_blank">Click her to open SOR </a>. The SOR is developed by The Danish Health Data Authority and therefore the informations in SOR are in Danish.
 
 To be able to communicate a specific MedCom FHIR message type both senders and receivers **SHALL** be registered in SOR with that messagetype and version.
 
-The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and Coding Systems used in the message.
+The Sending EcoSystem **SHALL** validate the message before dispatching it. Validating a message **SHALL** include validating the correct use of the ValueSets and CodeSystems used in the message.
 
 ## 1 VANSEnvelope
 

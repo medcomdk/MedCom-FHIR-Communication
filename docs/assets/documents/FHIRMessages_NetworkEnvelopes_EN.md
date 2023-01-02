@@ -7,10 +7,10 @@
         * [2.1.1 Format](#211-format)
         * [2.1.2](#212-name)
         * [2.1.3](#213-version)
-* [3. FHIR message types](#medcom-fhir-message-types)
-    * [3.1 CareCommunication](#carecommunication)
-    * [3.2 HospitalNotification](#hospitalnotification)
-    * [3.3 Acknowledgment](#acknowledgement)
+* [3. MedCom FHIR message types](#3-medcom-fhir-message-types)
+    * [3.1 CareCommunication](#31-carecommunication)
+    * [3.2 HospitalNotification](#32-hospitalnotification)
+    * [3.3 Acknowledgment](#33-acknowledgement)
 
 
 ## 1 Introduction
