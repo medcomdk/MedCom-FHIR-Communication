@@ -47,7 +47,7 @@ These scenarios are laid out as generic scenarios and later specified as how the
 |:---|
 | A Sending EcoSystem **SHALL** send a Message with a flag indicating that it expects an Acknowledgement on the Message|
 | A Sending EcoSystem **SHALL** be able to handle an unacknowledged Message|
-| A Sending EcoSystem **SHALL** resend the Message, when the expected Acknowledgement is not received within a time limit of 15 minutes|
+| A Sending EcoSystem **SHALL** resend the Message, when the expected Acknowledgement is not received within a time limit of 30 minutes|
 | A Sending EcoSystem **SHALL** change the MessageEnvelopeId and the MessageSentTime of a resent Message|
 | A Sending EcoSystem **SHALL NOT** resend the Message more than 2 times, when the expected Acknowledgement is not received|
 | A Receiving EcoSystem **SHALL** return an Acknowledgement on a received Message with a flag indicating that it expects an Acknowledgement on the Message|
