@@ -7,4 +7,4 @@ Description: "Message events for MedCom messages"
 
 * #care-communication-message "Care Communication Message"
 * #hospital-notification-message "Hospital Notification Message"
-* #acknowledgment-message "Acknowledgment Message"
+* #acknowledgement-message "Acknowledgement Message"
