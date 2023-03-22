@@ -130,6 +130,12 @@ Governance for displaying MedCom FHIR Messaging covers the basic demands for a s
 
 [Click here to go to Governance for displaying MedCom FHIR Messages](/assets/documents/060_Governance-for-displaying-MedCom-FHIR-Messages.md)
 
+### 4.3 Governance for episode of care identifiers 
+
+An episode of care identifier (Danish: forløbsid) is used for linking messages exchanged during a message flow. When the episode of care identifier is received e.g. in a ReportOfAdmission (Danish: Indlæggelsesrapport), ProgressOfCarePlan (Danish: Plejeforløbsplan), HospitalNotification (Danish: Advis om sygehusophold) or a previous CareCommunication (Danish: Korrespondancemeddelelse), it must be returned.
+
+[Click here to reade more about episode of care identifiers](/assets/documents/080_Governance-for-episode-of-care-identifiers.md)
+
 ## 5 Terminology 
 
 ### 5.1 Governance for MedCom FHIR Terminology
