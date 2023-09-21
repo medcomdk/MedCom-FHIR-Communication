@@ -1,6 +1,6 @@
 # 1.1 Terms used in Governance for MedCom FHIR®© Messaging
 
-(to be further expanded and detailed)
+This page presents the most commonly used terms and abbreviations used to describe the Governance for MedCom FHIR messaging. In the table below, each term or abbreviation has an associated description that eloborates the meaning of the term. For some terms is a link provided, which includes more information about the term. 
 
 | Terms |Description|Link|
 |:------|:-----|:-----|

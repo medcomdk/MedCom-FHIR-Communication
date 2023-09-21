@@ -1,4 +1,4 @@
-# Acknowledgment rules
+# Acknowledgement rules
 
 | ID    | Regel |
 |:------| :-----|
