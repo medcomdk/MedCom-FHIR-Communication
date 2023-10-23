@@ -75,7 +75,7 @@ Konkret betyder ovenstående for MedComs FHIR\-meddelelser dette
 |Kuvert  |VANSenvelope          |
 |Format  |"HL7"                 |
 |Name    |"MCM:FDIS91#`<code>`" |
-|Version |"2.0.0"               |
+|Version |"3.0.0"               |
 
 Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra: <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html" target="_blank">CareCommunications ValueSet for categories</a>
 
@@ -89,7 +89,7 @@ Name kan eksplicit tages fra følgende Valueset: <a href="https://medcomfhir.dk/
 |Kuvert modtagelse |KOMBITs BeskedFordeler kuvert (EOJ)|
 |Format  |"HL7"                 |
 |Name    |"MCM:FDIS20#`<code>`" |
-|Version |"2.0.0"               |
+|Version |"3.0.0"               |
 
 Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra HospitalNotifications ValueSet: <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html" target="_blank">MedCom Hospital Notification Message Activity Codes</a>
 
