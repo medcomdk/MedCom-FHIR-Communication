@@ -10,12 +10,12 @@ Each MedCom FHIR Message will potentially add some specific Governance Rules to 
 
 ## 1 Acknowledgement
 
-[Click here to go to additional Governance for MedCom Acknowledgement.](/assets/documents/governance-for-acknowledgement.md)
+[Click here to go to additional Governance for MedCom Acknowledgement.](governance-for-acknowledgement.html)
 
 ## 2 CareCommunication
 
-[Click here to go to additional Governance for MedCom CareCommunication.](/assets/documents/governance-for-careCommunication.md)
+[Click here to go to additional Governance for MedCom CareCommunication.](governance-for-careCommunication.md)
 
 ## 3 HospitalNotification
 
-[Click here to go to additional Governance for MedCom HospitalNotification.](/assets/documents/governance-for-hospitalNotification.md)
+[Click here to go to additional Governance for MedCom HospitalNotification.](governance-for-hospitalNotification.md)
