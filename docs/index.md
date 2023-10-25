@@ -112,9 +112,9 @@ Reliable Messaging using MedCom FHIR Messaging describes different scenarios whe
 
 ## 4 MedCom FHIR Messages
 
-An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all parts of the documentation laid out for the MedCom FHIR Message framework.
+An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all parts of the documentation laid out for the MedCom FHIR Messaging framework.
 
-You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#21-medcommessagingmessage-bundle" target="_blank"> Click here to read the documentation for the MedCom FHIR Message framework</a>
+You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#21-medcommessagingmessage-bundle" target="_blank"> Click here to read the documentation for the MedCom FHIR Messaging framework</a>
 
 
 ### 4.1 Governance for MedCom FHIR Messages
