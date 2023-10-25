@@ -11,6 +11,7 @@
 * [4 MedCom FHIR Messages](#4-medcom-fhir-messages)
   + [4.1 Governance for MedCom FHIR Messages](#41-governance-for-medcom-fhir-messages)
   + [4.2 Governance for displaying MedCom FHIR Messages](#42-governance-for-displaying-medcom-fhir-messages)
+  + [4.3 Governance for EpisodeOfCare-identifier](#43-governance-for-episode-of-care-identifiers)
 * [5 Terminology](#5-terminology)
   + [5.1 Governance for MedCom FHIR Terminology](#51-governance-for-medcom-fhir-terminology)
   + [5.2 Governance for MedCom FHIR Terminology Server](#52-governance-for-medcom-fhir-terminology-server)
@@ -30,7 +31,7 @@ The Danish ruleset is based on:
 
 <br>
 
-These MedCom FHIR Messaging Governance rules are intended to clarify the use of MedCom’s FHIR messages for the health and social area. Formerly these kinds of rules for other MedCom Messaging paradigms were known as ”Syntax & Communication Rules”.
+These MedCom FHIR Messaging Governance rules are intended to clarify the use of MedCom’s FHIR messages for the health and social area. Formerly, these kinds of rules for other MedCom Messaging paradigms were known as ”Syntax & Communication Rules”.
 
 It is the intention that the MedCom FHIR Messaging Governance rules together with MedCom’s FHIR standards for the individual messages form the full and sufficient basis for implementing MedCom’s healthcare messages. Thus, the governance rules must be able to function as “a chief judge”, where there is doubt about the practical application of MedCom’s FHIR messages.
 
@@ -79,9 +80,7 @@ This convention is in compliance with HL7 FHIR use of the terms, which is descib
 
 ## 3 Message exchange
 
-MedCom FHIR Messaging is based on Asynchronous Messaging.
-
-In Asynchronous messaging, a Sending EcoSystem dispatches an unsolicited message to a Receiving EcoSystem possibly through several intermediate hubs. Besides sending a possibly requested acknowledgement immediately as a response, the Receiving EcoSystem responds to the Sending EcoSystem separately. The Receiving EcoSystem may respond more than once to any given message.
+MedCom FHIR Messaging is based on Asynchronous Messaging. In Asynchronous messaging, a Sending EcoSystem dispatches an unsolicited message to a Receiving EcoSystem possibly through several intermediate hubs. Besides sending a possibly requested acknowledgement immediately as a response, the Receiving EcoSystem responds to the Sending EcoSystem separately. The Receiving EcoSystem may respond more than once to any given message.
 
 When exchanging a MedCom FHIR message, it is allowed to send in a FHIR+JSON og FHIR+XML format, which is in alignment with HL7 FHIR. 
 
@@ -97,9 +96,9 @@ Governance for Network Layer covers rulesets for VANSEnvelope and Reliable Messa
 
 [Click here to go to Governance for Network Layer.](/assets/documents/030_Governance-for-Network-Layer.md)
 
-Reliable Messaging using VANSEnvelope describes different scenarios when using the VANSEnvelope. This is a profiling of the scenarios described in [Reliable Messaging in general.](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md) 
+Reliable Messaging using VANSEnvelope describes different scenarios when using the VANSEnvelope. This is a profiling of the scenarios described in [Reliable Messaging in general.](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md) mentioned in [section 3.1](#31-governance-for-reliable-messaging-in-general). 
 
-[Click here to see how to setup Reliable Messaging using VANSEnvelope](032_Reliable_Messaging-VANSEnvelope.md)
+[Click here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)
 
 ### 3.3 Governance for MedCom FHIR Message Exchange
 
@@ -107,15 +106,15 @@ Governance for MedCom FHIR Messaging covers Reliable Messaging using MedCom FHIR
 
 [Click here to go to Governance for MedCom FHIR Messaging.](/assets/documents/040_Governance4FHIR-Messaging.md)
 
-Reliable Messaging using MedCom FHIR Messaging describes different scenarios when using FHIR messages. This is a profiling of the scenarios described in [Reliable Messaging in general.](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md) 
+Reliable Messaging using MedCom FHIR Messaging describes different scenarios when using FHIR messages. This is a profiling of the scenarios described in [Reliable Messaging in general.](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md) mentioned in [section 3.1](#31-governance-for-reliable-messaging-in-general).
 
-[Click here to see how to apply Reliable Messaging using MedCom FHIR Messaging](043_Reliable_Messaging-VANSEnvelope.md)
+[Click here to see how to apply Reliable Messaging using MedCom FHIR Messaging](/assets/documents/043_Reliable_Messaging-VANSEnvelope.md)
 
 ## 4 MedCom FHIR Messages
 
-An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all parts of the documentation laid out for the MedCom FHIR Message Standard.
+An implementer of a MedCom FHIR Message Standard **SHALL** be compliant with all parts of the documentation laid out for the MedCom FHIR Messaging framework.
 
-You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#21-medcommessagingmessage-bundle" target="_blank"> Click here to read the documentation for the MedCom FHIR Message Standard</a>
+You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-messaging/assets/documents/Intro-Technical-Spec-ENG.html#21-medcommessagingmessage-bundle" target="_blank"> Click here to read the documentation for the MedCom FHIR Messaging framework</a>
 
 
 ### 4.1 Governance for MedCom FHIR Messages

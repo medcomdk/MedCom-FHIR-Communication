@@ -2,9 +2,9 @@
 
 * [1 Exchange of HospitalNotification message](#1-exchange-of-hospitalnotification-message)
   * [1.2 VANS-network and Municipality Message Publisher](#12-vans-network-and-municipality-message-publisher)
-    * [Type A](#type-a)
-    * [Type B](#type-b)
-    * [Type C](#type-c)
+    * [1.2.1 Type A](#121-type-a)
+    * [1.2.2 Type B](#122-type-b)
+    * [1.2.3 Type C](#123-type-c)
   * [1.3 Acknowledgements](#13-acknowledgements)
   * [1.4 Envelopes](#14-envelopes)
 * [2 HospitalNotification message](#2-hospitalnotification-message)
@@ -32,25 +32,17 @@ The flow of events and rules, when sending and receiving a HospitalNotification,
 |A Receiving EcoSystem **SHALL** wrap an Acknowledgement in a Beskedfordeler-envelope|
 |The Municipality Message Publisher **SHALL** unwrap an Acknowledgement in a Beskedfordeler-envelope|
 |The Municipality Message Publisher **SHALL** wrap an Acknowledgement in a VANS-envelope|
-|A Sending EcoSystem **SHALL** unwrap an Acknowledgement in a VANS-envelope|
+|A Sending EcoSystem **SHALL** unwrap a received Acknowledgement in a VANS-envelope|
 
 
-#### Type A
+#### 1.2.1 Type A
 A Type A system is, according to KOMBIT, a receiving system that shall receive and acknowledge. The acknowledgement of a Type A system is the basis for the Municipality Message Publisher to sent an Acknowledgement to the sending system. 
 
-(INSERT sequencediagram)
+#### 1.2.2 Type B
+A Type B system is according to KOMBIT a receiving system that shall receive and acknowledge. The acknowledgement of a Type B system isn't the basis for the Municipality Message Publisher to sent an Acknowledgement to the sending system. It will, though, be the basis of an internal root cause investigation.
 
-
-#### Type B
-A Type B system is according to KOMBIT a receiving system that shall receive and acknowledge. The acknowledgement of a Type B system isn't the basis for the Municipality Message Publisher to sent an Acknowledgement to the sending system.
-
-(INSERT sequencediagram)
-
-#### Type C
+#### 1.2.3 Type C
 A Type C system is according to KOMBIT a receiving system that is able to receive a HospitalNotification, but not to acknowledge it.
-
-(INSERT sequencediagram)
-
 
 ### 1.3 Acknowledgements
 

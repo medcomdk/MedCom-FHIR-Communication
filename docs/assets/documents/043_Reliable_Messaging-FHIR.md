@@ -52,7 +52,7 @@ Any of these events can happen over time and therefore Reliable Messaging define
 - A Sending Ecosystem **MUST** send a MedCom Message with a flag indicating that it expects an acknowledgement on the MedCom Message
 - A Receiving Ecosystem **MUST** return an MedCom acknowledgement on a received MedCom Message with a flag indicating that it expects a MedCom acknowledgement on the MedCom Message
 - A Sending Ecosystem **MUST** be able to handle an unacknowledged MedCom Message
--- A Sending Ecosystem **MUST** resend the MedCom Message, when the expected MedCom acknowledgement is not received within a timelimit of 30 minutes
+-- A Sending Ecosystem **MAY** resend the MedCom Message, when the expected MedCom acknowledgement is not received within a timelimit of 30 minutes
 -- A Sending Ecosystem **MUST** change the MessageEnvelopeId and the MessageSentTime of a resend MedCom Message
 -- A Sending Ecosystem **MUST NOT** resend the MedCom Message more than 2 times, when the expected acknowledgement is not received
 - A Receiving Ecosystem **MUST** be able to receive a MedCom Message as a duplicate

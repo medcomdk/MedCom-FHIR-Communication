@@ -5,8 +5,8 @@
 * [2. Shipping envelopes](#2-shipping-envelopes)
     * [2.1 VANSEnvelope](#21-vansenvelope)
         * [2.1.1 Format](#211-format)
-        * [2.1.2](#212-name)
-        * [2.1.3](#213-version)
+        * [2.1.2 Name](#212-name)
+        * [2.1.3 Version](#213-version)
 * [3. MedCom FHIR message types](#3-medcom-fhir-message-types)
     * [3.1 CareCommunication](#31-carecommunication)
     * [3.2 HospitalNotification](#32-hospitalnotification)
@@ -76,7 +76,7 @@ Specifically, the above for MedCom's FHIR messages means this
 |**Envelope Receiver**  |VANSEnvelope                           |
 |**Format**             |"HL7"                                  |
 |**Name**               |"MCM:FDIS91#`<postfix value>`"         |
-|**Version**            |"2.0.0"                                |
+|**Version**            |"3.0.0"                                |
 
 Name **MUST** explicitly be taken from the following ValueSet:<a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">CodeSystem-medcom-messaging-sorEdiSystem</a>
 
@@ -93,7 +93,7 @@ The combined Name+Postfix **MUST** explicitly conform with the following ValueSe
 |**Envelope Receiver**  |KOMBIT's BeskedFordeler Envelope (EOJ og andre kommunale systemer)  |
 |**Format**             |"HL7"                                   |
 |**Name**               |"MCM:FDIS20#`<postfix value>`"          |
-|**Version**            |"2.0.0"                                 |
+|**Version**            |"3.0.0"                                 |
 
 Name **MUST** explicitly be taken from the following ValueSet: <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">CodeSystem-medcom-messaging-sorEdiSystem</a>
 
