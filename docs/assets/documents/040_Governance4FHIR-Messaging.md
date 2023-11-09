@@ -114,6 +114,7 @@ Forwarding is handled on different levels
 * MedComMessagingMessage: Other entry.ressources **SHALL NOT** be changed.
 * VANSenvelope: The VANSEnvelope **SHALL** be created with the forwardreceiver's GLN as the receiving EAN.
 
+
 ## 5 Handling receiving scenarios
 
 A Receiving Ecosystem **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
@@ -145,8 +146,9 @@ That means that the Receiving Ecosystem **SHALL** be ?????
 | KR2.R | An Acknowledgement message **SHALL** never be acknowledged |
 | KR3.R | If no errors are found while receiving a message, a positive Acknowledgement **SHALL** be made with AA |
 | KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative Acknowledgement **SHALL** be made with AE |
-| KR5.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
-| KR6.S | If an Acknowledgement of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
+| KR5.R | If a technical error is resolved and the message can be loaded in, then the a positive Acknowledgement **SHALL**  be made with AA |
+| KR6.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
+| KR7.S | If an Acknowledgement of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
 [Danish: Kvitteringsregler](Rules_Acknowledgement-DA.md)
 

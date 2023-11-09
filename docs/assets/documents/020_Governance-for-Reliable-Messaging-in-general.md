@@ -10,6 +10,7 @@
     * [1.2.3 Scenario #3 - (Re) Sending Unchanged Message](#123-scenario-3---re-sending-unchanged-message)
     * [1.2.4 Scenario #4 - Message is sent normally, acknowledgement is lost along the way](#124-scenario-4---message-is-sent-normally-acknowledgement-is-lost-along-the-way)
     * [1.2.5 Scenario #5 - (Re-) Sending Modified Message](#125-scenario-5---re--sending-modified-message)
+  
 
 ## 1 Reliable Messaging in general
 
@@ -77,6 +78,7 @@ The different types of Reliable Messaging scenarios are:
 * Scenario #4 - Message is sent normally, acknowledgement is lost along the way
 * Scenario #5 - (Re-)Sending Modified Message
 
+
 ### 1.2.1 Scenario #1 - Normally successful unsolicited message or request message flow with acknowledgement request 
 
 An unsolicited message or request message is sent with a new request for a positive acknowledgement from the Sending EcoSystem to a Receiving EcoSystem.
@@ -135,6 +137,9 @@ For a number of the old MedComs Messaging Standards, however, there is an explic
 <a href="https://svn.medcom.dk/svn/releases/MedComs%20Standardkatalog.xlsx" target="_blank">Link til MedComs Standard Catalogue.</a> 
  
  >Note: The standard cataloge is only available i danish.  
+
+<!-- ### 1.2.6 Scenario #6 - Message is sent normaly, but reciver has technical problem 
+As Scenario #1, but where the receiver system has a technical problems an therfore cannot load the message in. The receiver **SHALL** send an Acknowledgement  -->
 
 | Links for specific ruleset of Reliable Messaging|
 |:---|
