@@ -146,7 +146,7 @@ That means that the Receiving Ecosystem **SHALL** be ?????
 | KR2.R | An Acknowledgement message **SHALL** never be acknowledged |
 | KR3.R | If no errors are found while receiving a message, a positive Acknowledgement **SHALL** be made with AA |
 | KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative Acknowledgement **SHALL** be made with AE |
-| KR5.R | If a technical error is resolved and the message can be loaded in, then the a positive Acknowledgement **SHALL**  be made with AA |
+| KR5.R | If a technical error from KR4.R is resolved and the message can be loaded in, then the a positive Acknowledgement **SHALL**  be made with AA |
 | KR6.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
 | KR7.S | If an Acknowledgement of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
