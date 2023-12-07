@@ -116,10 +116,12 @@ Forwarding is handled on different levels
 
 
 ## 5 Handling receiving scenarios
+There exists two types of receiver of the MedComMessagingMessage, respectively a Primary Receiver or a Copy Receiver. The information about what type of reciver the message is received by **SHALL** be defined in provenance. Both Primary and Copy receiver of the MedComMessage **SHALL** generate and send an MedCom Acknowledgement.
 
+<!-- 
 A Receiving Ecosystem **SHALL** be able to handle that it is either a Primary Receiver or a Copy Reciver.
 As the information about what kind of MedComMessagingMessage that is received
-That means that the Receiving Ecosystem **SHALL** be ?????
+That means that the Receiving Ecosystem **SHALL** be ????? -->
 
 ## 6 FHIR Messaging rules
 
@@ -134,7 +136,7 @@ That means that the Receiving Ecosystem **SHALL** be ?????
 | MR7.R | A MedCom FHIR Message that is resent **SHALL** always be updated with new timestamp=Provenance.timestamps and new envelopeid=Bundle.id |
 | MR8.R | A MedCom FHIR Message is a duplicate if it contains the same MessageHeader.Id as a previously received MedCom FHIR Message |
 
-[Danish: Meddelelsesregler](Rules_Messaging-DA.md)
+<!-- [Danish: Meddelelsesregler](Rules_Messaging-DA.md) -->
 
 <!-- [Messaging rules (English)](Rules_Messaging-EN.md) -->
 
@@ -145,11 +147,11 @@ That means that the Receiving Ecosystem **SHALL** be ?????
 | KR1.R | A FHIR message **SHALL** always be acknowledged |
 | KR2.R | An Acknowledgement message **SHALL** never be acknowledged |
 | KR3.R | If no errors are found while receiving a message, a positive Acknowledgement **SHALL** be made with AA |
-| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative Acknowledgement **SHALL** be made with AE |
-| KR5.R | If a technical error from KR4.R is resolved and the message can be loaded in, then the a positive Acknowledgement **SHALL**  be made with AA |
-| KR6.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AR |
+| KR4.R | If a technical error occurs in the receiver's system while receiving a message, a negative Acknowledgement **SHALL** be made with AR |
+| KR5.R | If a technical error from KR4.R is resolved and the message can be loaded Acknowledgement **SHALL**  be made with AA |
+| KR6.R | If a message validates negatively against the standard's profiling, it **SHALL** be acknowledged negatively with AE |
 | KR7.S | If an Acknowledgement of a message is not received within 30 minutes, the original message **MAY** be marked for resending |
 
-[Danish: Kvitteringsregler](Rules_Acknowledgement-DA.md)
+<!-- [Danish: Kvitteringsregler](Rules_Acknowledgement-DA.md) -->
 
 <!-- [Acnowledgement rules (English)](Rules_Acknowledgement-EN.md) -->
