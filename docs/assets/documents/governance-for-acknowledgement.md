@@ -1,9 +1,12 @@
 # Governance for MedCom Acknowledgement 
 
 **Table of content**
-
-
-
+* [1.MedComAcknowledgement message](#1-medcomacknowledgement-message)
+    * [1.1 MedComAcknowledgement profile](#11-medcomacknowledgement-profile)
+    * [1.2 MedComAcknowledgementMessageHeader](#12-medcomacknowledgementmessageheader)
+        * [1.2.1 MedComAcknowledgementOperationOutcome](#121-medcomacknowledgementoperationoutcome)
+    * [1.3 MedComAcknowledgementProvenance](#13-medcomacknowledgementprovenance)
+    * [1.4 Envelope](#14-envelope)
 
 
 
@@ -13,14 +16,50 @@ MedComAcknowledgement message follows the MedCom generic messaging model, except
 The structure and included profiles in MedCom Acknowledgement can be seen on <a href="#fig1">Figure 1: 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/MedComAcknowledgementMessage.svg" target="_blank"> <img src="../images/MedComAcknowledgementMessage.svg.svg" alt="The structure and included profiles in MedCom Acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="fig1"></a>
+<a href="../images/MedComAcknowledgementMessage.svg" target="_blank"> <img src="../images/MedComAcknowledgementMessage.svg" alt="The structure and included profiles in MedCom Acknowledgement" style="width:auto; margin-left:0px; margin-right:0px;" id="fig1"></a>
 <figcaption text-align="left"><b>Figure 1: The structure and included profiles in MedCom Acknowledgement.</b></figcaption>
 </figure>
 <br>
 
 
 ### 1.1 MedComAcknowledgement profile 
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-lc33{background-color:#2c415c;border-color:inherit;color:#ffffff;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;}}</style>
+<div class="tg-wrap">
+<table class="tg" style="undefined;table-layout: fixed; width: 817px" id="Tab1">
+<caption style="color:#2c415c;font-weight:bold"> Table 1: Overview of the Acknowledgement standard </caption>
+<colgroup>
+<col style="width: 145.88889px">
+<col style="width: 670.88889px">
+</colgroup>
+<thead>
+  <tr>
+    <th class="tg-lc33"><br><br><br><br><br><br>Rule name  </th>
+    <th class="tg-lc33"><br><br><br><br><br>Rules used to constrain the possibilities in a MedComAcknowledgementMessage </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky"><br><br><br><br><br>MedCom-acknowledgement-1  </td>
+    <td class="tg-0pky"><br><br><br><br>If the response.code is different than 'ok', a reference to an OperationOutcome resource shall be included. </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><br><br><br><br><br>MedCom-messaging- 3  </td>
+    <td class="tg-0pky"><br><br><br><br>The message header shall conform to medcom-messaging-acknowledgementHeader profile </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><br><br><br><br><br>Medcom-messaging- 4 </td>
+    <td class="tg-0pky"><br><br><br><br>The Acknowledgement entry shall contain at least two Provenance resource </td>
+  </tr>
+</tbody>
+</table></div>
 
 ### 1.2 MedComAcknowledgementMessageHeader 
 
