@@ -51,12 +51,8 @@ The structure and included profiles in MedCom Acknowledgement can be seen on <a 
     <td class="tg-0pky"><br><br><br><br>If the response.code is different than 'ok', a reference to an OperationOutcome resource shall be included. </td>
   </tr>
   <tr>
-    <td class="tg-0pky"><br><br><br><br><br>MedCom-messaging- 3  </td>
+    <td class="tg-0pky"><br><br><br><br><br>MedCom-acknowledgement-1  </td>
     <td class="tg-0pky"><br><br><br><br>The message header shall conform to medcom-messaging-acknowledgementHeader profile </td>
-  </tr>
-  <tr>
-    <td class="tg-0pky"><br><br><br><br><br>Medcom-messaging- 4 </td>
-    <td class="tg-0pky"><br><br><br><br>The Acknowledgement entry shall contain at least two Provenance resource </td>
   </tr>
 </tbody>
 </table></div>
@@ -76,7 +72,7 @@ MedCom has developed a ValueSet with predefined issues descriptions that can hel
 [Click here to se MedCom defined issue descriptions](https://medcomfhir.dk/ig/terminology/ValueSet-medcom-acknowledgement-issue-details.html)
 
 
-## 1.3 MedComAcknowledgementProvenance
+## 1.3 MedComMessagingProvenance
 When acknowledging a MedCom Message with an Acknowledgement, two Provenance instances SHALL be included; one describing the MedCom Message that is acknowledged and one describing the Acknowledgement. Therefore, an Acknowledgement Message will always contain two instances of Provenance resource.  
 
 Furthermore, all instances of the Provenance resource SHALL comply to the [MedComMessagingProvenance profile](https://medcomfhir.dk/ig/messaging/StructureDefinition-medcom-messaging-provenance.html)  
