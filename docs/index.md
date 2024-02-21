@@ -7,6 +7,7 @@
 * [3 Message exchange](#3-message-exchange)
   + [3.1 Governance for Reliable Messaging in general](#31-governance-for-reliable-messaging-in-general)
   + [3.2 Governance for Network Layer](#32-governance-for-network-layer)
+    * [3.2.1 VANSenvelope specifications](#321-vansenvelope-specifications)
   + [3.3 Governance for MedCom FHIR Message Exchange](#33-governance-for-medcom-fhir-message-exchange)
 * [4 MedCom FHIR Messages](#4-medcom-fhir-messages)
   + [4.1 Governance for MedCom FHIR Messages](#41-governance-for-medcom-fhir-messages)
@@ -99,6 +100,10 @@ Governance for Network Layer covers rulesets for VANSEnvelope and Reliable Messa
 Reliable Messaging using VANSEnvelope describes different scenarios when using the VANSEnvelope. This is a profiling of the scenarios described in [Reliable Messaging in general.](/assets/documents/020_Governance-for-Reliable-Messaging-in-general.md) mentioned in [section 3.1](#31-governance-for-reliable-messaging-in-general). 
 
 [Click here to see how to setup Reliable Messaging using VANSEnvelope](/assets/documents/032_Reliable_Messaging-VANSEnvelope.md)
+
+#### 3.2.1 VANSenvelope specifications
+
+[Click here to go to the specifications for VANSenvelope](/assets/documents/FHIRMessages_NetworkEnvelopes_EN.md).
 
 ### 3.3 Governance for MedCom FHIR Message Exchange
 
