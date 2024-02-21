@@ -50,11 +50,11 @@ All MedCom FHIR messages **SHALL** be acknowledged, which is also valid for a Ho
 
 ### 1.4 Envelopes
 
-When the HospitalNotification message is sent over the VANS-network, it **SHALL** be wrapped in a VANS-envelope [This page describes the use of VANS-envelope](/docs/assets/documents/030_Governance-for-Network-Layer.md)
+When the HospitalNotification message is sent over the VANS-network, it **SHALL** be wrapped in a VANS-envelope. [This page describes the use of VANS-envelope](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/030_Governance-for-Network-Layer.html).
 
 Values of fields used in a VANSenvelope **SHALL** obey to the [specifications described on the page for VANSenvelope](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html#32-hospitalnotification) for a HospitalNotification message.
 
-When the HospitalNotification message is sent over Municipality Message Publisher, it **SHALL** be in a beskedfordelerkuvert. [More information can be found on](kombit.dk)
+When the HospitalNotification message is sent over Municipality Message Publisher, it **SHALL** be in a beskedfordelerkuvert. [More information can be found on kombit.dk](kombit.dk)
 
 ## 2 HospitalNotification message
 

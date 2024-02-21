@@ -196,6 +196,6 @@ On <a href="#Fig9">Figure 9</a> is a simple illustration of the communication fl
 All MedCom FHIR messages **SHALL** be acknowledged. To acknowledge a CareCommunication message the [MedCom FHIR Acknowledgement](https://medcomdk.github.io/dk-medcom-acknowledgement/) standard **SHALL** be used.
 
 ### Envelope 
-Since the CareCommunication message is sent over the VANS-network, it **SHALL** be wrapped in a VANS-envelope [This page describes the use of VANSenvelope](/docs/assets/documents/030_Governance-for-Network-Layer.md)
+Since the CareCommunication message is sent over the VANS-network, it **SHALL** be wrapped in a VANS-envelope. [This page describes the use of VANS-envelope](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/030_Governance-for-Network-Layer.html).
 
 Values of fields used in a VANSenvelope **SHALL** obey to the [specifications described on the page for VANSenvelope](https://medcomdk.github.io/MedCom-FHIR-Communication/assets/documents/FHIRMessages_NetworkEnvelopes_EN.html#31-carecommunication) for a CareCommunication message.
