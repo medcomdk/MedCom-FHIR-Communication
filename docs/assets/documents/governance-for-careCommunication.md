@@ -58,7 +58,7 @@ It is optional for the system to support forwarding of a CareCommunication, howe
 It is optional for systems to support sending cancellations, however it is a requirement that all systems can receive and show cancellations as well as display in the user interface that a CareCommunication has been cancelled. 
 
 ##### Cancellation 
-A cancellation must be sent if a CareCommunication has been sent to an incorrect receiver, on a wrong personal identification number (cpr) or when a file with content on a wrong personal identification number (cpr) has been attached. When the system cancels a CareCommunication, the cancellation must both contain a reason for cancellation and a technical reference to the specific CareCommunication that is being cancelled. A simple illustration of a cancellation is illustrated on <a href="#Fig3">Figure 3</a>. 
+A cancellation must be sent if a CareCommunication has been sent to an incorrect receiver, on a wrong personal identification number (cpr) or when a file with content on a wrong personal identification number (cpr) has been attached. When the system cancels a CareCommunication, the cancellation must both contain a reason for cancellation and a technical reference to the specific CareCommunication that is being cancelled. A simple illustration of a cancellation can be seen on <a href="#Fig3">Figure 3</a>. 
 * A cancellation will at any time overrule any other CareCommunication status in a message thread (e.g. reply, forwarding and correction). If a cancellation is received the status of the entire message thread must be shown as ‘cancelled’. 
 * The user can only cancel a CareCommunication that the sender system itself has sent. 
 
@@ -68,7 +68,7 @@ A cancellation must be sent if a CareCommunication has been sent to an incorrect
 </figure>
 <br>
 
-* When a CareCommuncation is cancelled, in the middle of a message thread, the cancellation must point to the specific CareCommunication that is being cancelled as well as the reason for cancellation. The cancelled message segment, as well as previous and following message segments, must be part of the cancellation. The status of the entire message thread must be ‘cancelled’. 
+* When a CareCommuncation is cancelled, in the middle of a message thread, as illustrated on <a href="#Fig4">Figure 4</a>, the cancellation must point to the specific CareCommunication that is being cancelled as well as the reason for cancellation. The cancelled message segment, as well as previous and following message segments, must be part of the cancellation. The status of the entire message thread must be ‘cancelled’. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/Rules-cancel-reply" target="_blank"> <img src="../images/Rules-cancel-reply" alt="rules cancel reply" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
@@ -92,7 +92,7 @@ A cancellation must be sent if a CareCommunication has been sent to an incorrect
 It is optional for systems to support sending corrections, however it is a requirement that all systems can receive and show corrections as well as display in the user interface that a CareCommunication has been corrected.
 
 ##### Correction
-A correction must be sent if the user has a correction to category, topic, message text, sender’s signature, the content in an attached file and/or author information in relation to the attached file, such as author’s name and time of creation. When the system corrects a CareCommunication, the correction must both contain the corrections and a technical reference to the specific CareCommunication that is being corrected. 
+A correction must be sent if the user has a correction to category, topic, message text, sender’s signature, the content in an attached file and/or author information in relation to the attached file, such as author’s name and time of creation. When the system corrects a CareCommunication, the correction must both contain the corrections and a technical reference to the specific CareCommunication that is being corrected. A simple illustration of a correction can be seen on <a href="#Fig5">Figure 5</a>.
 * The user can only correct a CareCommunication that the sender system itself has sent. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
@@ -101,7 +101,7 @@ A correction must be sent if the user has a correction to category, topic, messa
 </figure>
 <br>
 
-* When a CareCommunication is corrected, in the middle of a message thread, the entire message thread including all message segments must be a part of the correction. The correction message itself must point to the specific message segment that is being corrected. 
+* When a CareCommunication is corrected, in the middle of a message thread, as illustrated on <a href="#Fig6">Figure 6</a>, the entire message thread including all message segments must be a part of the correction. The correction message itself must point to the specific message segment that is being corrected. 
 * When sending and receiving a correction the status of the entire message thread must be ‘corrected’. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
@@ -134,6 +134,7 @@ The following scenarios has been identified:
 The following paragraphs describes the rules for managing these scenarios if they occur. 
 
 ##### Parallel reply and cancellation or correction 
+On <a href="#Fig7">Figure 7</a> is a simple illustration of the communication flow for parallel reply and cancellation or correction.
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/Rules-parallel-reply-cancel" target="_blank"> <img src="../images/Rules-parallel-reply-cancel" alt="rules parallel reply and cancel" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig7"></a>
@@ -151,6 +152,8 @@ The following paragraphs describes the rules for managing these scenarios if the
 
 
 ##### Parallel cancellation and correction, including parallel cancellations and parallel corrections
+On <a href="#Fig8">Figure 8</a> is a simple illustration of the communication flow for parallel cancellation and correction.
+
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/Rules-parallel-cancel-correction" target="_blank"> <img src="../images/Rules-parallel-cancel-correction" alt="rules parallel cancel and correct" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig8"></a>
 <figcaption text-align="left"><b>Figure 8 shows the communication flow when the user of system A cancels/corrects a CareCommunication parallel to the user of system B sending a cancellation/correction.</b></figcaption>
@@ -177,6 +180,8 @@ The following paragraphs describes the rules for managing these scenarios if the
 * In cases where two corrections are sent in parallel (intersects each other), it is the responsibility of both parties to act as required.  
 
 ##### Parallel replies
+On <a href="#Fig9">Figure 9</a> is a simple illustration of the communication flow for parallel replies.
+
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/Rules-parallel-replies" target="_blank"> <img src="../images/Rules-parallel-replies" alt="rules parallel replies" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig9"></a>
 <figcaption text-align="left"><b>Figure 9 shows the communication flow when the user of system A and the user of system B in parallel replies to a sent CareCommunication</b></figcaption>
