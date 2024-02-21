@@ -34,7 +34,7 @@ It is a requirement that the system can send a reply to an already received Care
 * The previous message thread will still exist and communication in it is still possible. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-reply" target="_blank"> <img src="../images/Rules-reply" alt="rules reply" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
+<a href="../images/Rules-reply.png" target="_blank"> <img src="../images/Rules-reply.png" alt="rules reply" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig1"></a>
 <figcaption text-align="left"><b>Figure 1 shows the communications flow when replying to a CareCommunication. The lower reply of CC1 illustrates that the user of system B chooses to reply to a previously received CareCommunication and consequently a new message thread is created.</b></figcaption>
 </figure>
 <br>
@@ -49,7 +49,7 @@ It is optional for the system to support forwarding of a CareCommunication, howe
 * After forwarding a CareCommunication, the communication in the original message thread may continue and it will not technically be possible to see, in the original message thread, that a CareCommuncation has been forwarded. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-forward" target="_blank"> <img src="../images/Rules-forward" alt="rules forward" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
+<a href="../images/Rules-forward.png" target="_blank"> <img src="../images/Rules-forward.png" alt="rules forward" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
 <figcaption text-align="left"><b>Figure 2 shows the communication flow when forwarding a CareCommunication where the user of system B chooses to forward the previous message thread to system C.</b></figcaption>
 </figure>
 <br>
@@ -63,7 +63,7 @@ A cancellation must be sent if a CareCommunication has been sent to an incorrect
 * The user can only cancel a CareCommunication that the sender system itself has sent. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-cancel" target="_blank"> <img src="../images/Rules-cancel" alt="rules cancel" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
+<a href="../images/Rules-cancel.png" target="_blank"> <img src="../images/Rules-cancel.png" alt="rules cancel" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig3"></a>
 <figcaption text-align="left"><b>Figure 3 shows the communication flow when the user of system A cancels a CareCommuncation sent from system A.</b></figcaption>
 </figure>
 <br>
@@ -71,7 +71,7 @@ A cancellation must be sent if a CareCommunication has been sent to an incorrect
 * When a CareCommuncation is cancelled, in the middle of a message thread, as illustrated on <a href="#Fig4">Figure 4</a>, the cancellation must point to the specific CareCommunication that is being cancelled as well as the reason for cancellation. The cancelled message segment, as well as previous and following message segments, must be part of the cancellation. The status of the entire message thread must be ‘cancelled’. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-cancel-reply" target="_blank"> <img src="../images/Rules-cancel-reply" alt="rules cancel reply" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
+<a href="../images/Rules-cancel-reply.png" target="_blank"> <img src="../images/Rules-cancel-reply.png" alt="rules cancel reply" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig4"></a>
 <figcaption text-align="left"><b>Figure 4 shows the communication flow when the user of system A chooses to cancel a CareCommuncation that has already been replied. *CC2 will also be a part of the cancellation.</b></figcaption>
 </figure>
 <br>
@@ -96,7 +96,7 @@ A correction must be sent if the user has a correction to category, topic, messa
 * The user can only correct a CareCommunication that the sender system itself has sent. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-forward" target="_blank"> <img src="../images/Rules-forward" alt="rules forward" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig5"></a>
+<a href="../images/Rules-forward.png" target="_blank"> <img src="../images/Rules-forward.png" alt="rules forward" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig5"></a>
 <figcaption text-align="left"><b>Figure 5 shows the communication flow when the user of system A corrects a CareCommunication sent from system A.</b></figcaption>
 </figure>
 <br>
@@ -105,7 +105,7 @@ A correction must be sent if the user has a correction to category, topic, messa
 * When sending and receiving a correction the status of the entire message thread must be ‘corrected’. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-forward-reply" target="_blank"> <img src="../images/Rules-forward-reply" alt="rules forward reply" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig6"></a>
+<a href="../images/Rules-forward-reply.png" target="_blank"> <img src="../images/Rules-forward-reply.png" alt="rules forward reply" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig6"></a>
 <figcaption text-align="left"><b>Figure 6 shows the communication flow when the user of system A corrects a CareComunication sent previously in the message thread. *CC2 and CC3 will also be a part of the correction.</b></figcaption>
 </figure>
 <br> 
@@ -137,7 +137,7 @@ The following paragraphs describes the rules for managing these scenarios if the
 On <a href="#Fig7">Figure 7</a> is a simple illustration of the communication flow for parallel reply and cancellation or correction.
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-parallel-reply-cancel" target="_blank"> <img src="../images/Rules-parallel-reply-cancel" alt="rules parallel reply and cancel" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig7"></a>
+<a href="../images/Rules-parallel-reply-cancel.png" target="_blank"> <img src="../images/Rules-parallel-reply-cancel.png" alt="rules parallel reply and cancel" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig7"></a>
 <figcaption text-align="left"><b>Figure 7 shows the communication flow when the user of system A cancels/corrects a CareCommunication parallel to the user of system B sending a reply.</b></figcaption>
 </figure>
 <br> 
@@ -155,7 +155,7 @@ On <a href="#Fig7">Figure 7</a> is a simple illustration of the communication fl
 On <a href="#Fig8">Figure 8</a> is a simple illustration of the communication flow for parallel cancellation and correction.
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-parallel-cancel-correction" target="_blank"> <img src="../images/Rules-parallel-cancel-correction" alt="rules parallel cancel and correct" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig8"></a>
+<a href="../images/Rules-parallel-cancel-correction.png" target="_blank"> <img src="../images/Rules-parallel-cancel-correction.png" alt="rules parallel cancel and correct" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig8"></a>
 <figcaption text-align="left"><b>Figure 8 shows the communication flow when the user of system A cancels/corrects a CareCommunication parallel to the user of system B sending a cancellation/correction.</b></figcaption>
 </figure>
 <br> 
@@ -183,7 +183,7 @@ On <a href="#Fig8">Figure 8</a> is a simple illustration of the communication fl
 On <a href="#Fig9">Figure 9</a> is a simple illustration of the communication flow for parallel replies.
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
-<a href="../images/Rules-parallel-replies" target="_blank"> <img src="../images/Rules-parallel-replies" alt="rules parallel replies" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig9"></a>
+<a href="../images/Rules-parallel-replies.png" target="_blank"> <img src="../images/Rules-parallel-replies.png" alt="rules parallel replies" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig9"></a>
 <figcaption text-align="left"><b>Figure 9 shows the communication flow when the user of system A and the user of system B in parallel replies to a sent CareCommunication</b></figcaption>
 </figure>
 <br> 
