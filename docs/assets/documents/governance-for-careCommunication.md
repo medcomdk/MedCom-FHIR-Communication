@@ -29,8 +29,8 @@ The already defined requirements and recommendations, in the standard documentat
 #### Rules regarding reply
 It is a requirement that the system can send a reply to an already received CareCommunication. It is also a requirement that the system can receive and show a reply, including previous CareCommunications in the message thread as well as message segments and new attachments. 
 * Both sender and receiver of a CareCommunication may reply to it.
-* The user may reply to the latest sent or received CareCommunication or to a previously sent or received CareCommunication.
-* If the user replies to a previously sent or received CareCommunication only the previous CareCommunication, and the belonging message segments, must be included. Consequently, a new message thread, based on the new reply, must be created. 
+* The user may reply to the latest sent or received CareCommunication or to a previously sent or received CareCommunication, as illustrated on <a href="#Fig1">Figure 1</a>.
+* If the user replies to a previously sent or received CareCommunication only the previous CareCommunication, and the belonging message segments, must be included. Consequently, a new message thread, based on the new reply, must be created. On <a href="#Fig1">Figure 1</a>, the new message thread will include message CC1 and CC4.
 * The previous message thread will still exist and communication in it is still possible. 
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
@@ -40,7 +40,7 @@ It is a requirement that the system can send a reply to an already received Care
 <br>
 
 #### Rules regarding forwarding
-It is optional for the system to support forwarding of a CareCommunication, however it is a requirement that all systems can receive and show a forwarded CareCommunication. If the sender system supports forwarding the user must be able to forward the entire message thread which may consist of one or more CareCommunications and attachments. The system functionality where the user may choose and select which specified parts of the message thread that the user wishes to forward, is not required but optional. 
+It is optional for the system to support forwarding of a CareCommunication, however it is a requirement that all systems can receive and show a forwarded CareCommunication. If the sender system supports forwarding the user must be able to forward the entire message thread which may consist of one or more CareCommunications and attachments, which is illustrated on <a href="#Fig2">Figure 2</a>, where message CC1, CC2, and CC3 are forwarded in CC4. The system functionality where the user may choose and select which specified parts of the message thread that the user wishes to forward, is not required but optional. 
 * Both sender and receiver of a CareCommucation may forward it.
 * The user may forward the latest sent or received CareCommunication or a previously sent or received CareCommunication.
 * When a CareCommunication is forwarded, the sender of the forwarded CareCommunication is responsible for the content being forwarded as well as ensuring its relevance to the receiver. This both applies to attachments and message text. 
@@ -58,7 +58,7 @@ It is optional for the system to support forwarding of a CareCommunication, howe
 It is optional for systems to support sending cancellations, however it is a requirement that all systems can receive and show cancellations as well as display in the user interface that a CareCommunication has been cancelled. 
 
 ##### Cancellation 
-A cancellation must be sent if a CareCommunication has been sent to an incorrect receiver, on a wrong personal identification number (cpr) or when a file with content on a wrong personal identification number (cpr) has been attached. When the system cancels a CareCommunication, the cancellation must both contain a reason for cancellation and a technical reference to the specific CareCommunication that is being cancelled. 
+A cancellation must be sent if a CareCommunication has been sent to an incorrect receiver, on a wrong personal identification number (cpr) or when a file with content on a wrong personal identification number (cpr) has been attached. When the system cancels a CareCommunication, the cancellation must both contain a reason for cancellation and a technical reference to the specific CareCommunication that is being cancelled. A simple illustration of a cancellation is illustrated on <a href="#Fig3">Figure 3</a>. 
 * A cancellation will at any time overrule any other CareCommunication status in a message thread (e.g. reply, forwarding and correction). If a cancellation is received the status of the entire message thread must be shown as ‘cancelled’. 
 * The user can only cancel a CareCommunication that the sender system itself has sent. 
 
