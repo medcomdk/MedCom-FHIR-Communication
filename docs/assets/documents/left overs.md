@@ -2,9 +2,9 @@
 
 ## x. Governance for Test and Certification (To be moved)
 
-All message solutions developed on the basis of MedCom FHIR Messing profiles **SHALL** be validated with the FHIR validator.
+All message solutions developed on the basis of MedCom FHIR Messaging profiles **SHALL** be validated with the FHIR validator.
 
-All message solutions developed on the basis of MedCom FHIR Messing profiles **SHALL** be validated with MedComs TouchStone Certification Suites.
+All message solutions developed on the basis of MedCom FHIR Messaging profiles **SHALL** be validated with MedComs TouchStone Certification Suites.
 
 _**Insert requirements from the test and certification process here**_
 
