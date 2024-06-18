@@ -42,15 +42,15 @@ It is a requirement that a system can send a reply to an already received CareCo
 **Sender system**<br>
 3.	User of a sender system MUST be able to reply to a new CareCommunication or the latest received reply or forwarded CareCommunication, as illustrated with message CC1, CC2 and CC3 in <a href="#Fig1">Figure 1</a>. In these cases, the communication identifier MUST remain the same. 
 4.	User of a sender system SHOULD be able to reply to the latest message when the latest message is sent from the sender system itself. 
-5.	User of sender system SHOULD be able to reply to a message which isn’t the latest, as illustrated with message CC4 in <a href="#Fig1">Figure 1</a>. In this case, the system MUST NOT create a new message thread, and the communication identifier MUST NOT change. If the user replies to a previously sent or received CareCommunication only the previous message segments and associated Provenances MUST be included. 
+5. User of the sender system MUST NOT be able to reply to messages which isn't the latest. If this is necesary, a new message thread with a unique communication identifier must be created. 
 6.	When replying to a CareCommunication that already includes an attachment, only the identifier MUST be included in the reply, not the base64-encoded content. 
 
 **Receiver system**<br>
 7.	User of receiver system MUST be able to see the received replies in the same message thread as previous CareCommunication with identical communication identifier.
-8.	In cases where a CareCommunication does not arrive and an unknown message is afterwards included in a CareCommunication, the unknown message segment must be displayed to the user in the associated message thread, ordered by the timestamp from the message segment. It MUST be clear, that to the user, that an unread message is received.
-9.	In cases where a CareCommunication arrives in unexpected order the received messages MUST be displayed to the user in the associated message thread, ordered by the timestamp from the message segment. When a delayed CareCommunication appears, it MUST be displayed in the same message thread, It MUST be clear, that to the user, that an unread message is received. 
+8.	In cases where a CareCommunication does not arrive and an unknown message is afterwards included in a CareCommunication, the unknown message segment must be displayed to the user in the associated message thread, ordered by the timestamp from the message segment. It MUST be clear to the user that an unread message is received.
+9.	In cases where a CareCommunication arrives in unexpected order the received messages MUST be displayed to the user in the associated message thread, ordered by the timestamp from the message segment. When a delayed CareCommunication appears, it MUST be displayed in the same message thread. It MUST be clear to the user that an unread message is received. 
 10.	In cases where a CareCommunication is received with an unknown communication identifier, the message segments must be displayed to the user in a new message thread.
-11.	When two systems, at the same time, sends a reply to the same CareCommunication with the same communication identifier, both systems MUST handle receiving a reply that might not be the latest reply in the message thread in the system. This is managed by including the received CareCommunication in the same message thread as the sent CareCommunication. The flow for parallel sent CareCommunications is illustrated on <a href="#Fig2">Figure 2</a>.
+11.	When two systems, at the same time, sends a reply to the same CareCommunication with the same communication identifier, both systems MUST be able to handle receiving a reply which is not the latest reply in the message thread in the system. This is managed by including the received CareCommunication in the message thread with the same communication identifier. It MUST be clear to the user that an unread message is received. The flow for parallel sent CareCommunications is illustrated on <a href="#Fig2">Figure 2</a>.
 
 <figure style="margin-left: 0px; margin-right: 0px; width: 100%;">
 <a href="../images/Rules-parallel-replies.png" target="_blank"> <img src="../images/Rules-parallel-replies.png" alt="rules parallel replies" style="width:auto; margin-left:0px; margin-right:0px;" id="Fig2"></a>
@@ -89,7 +89,6 @@ It is optional for the system to support forwarding of a CareCommunication; howe
 
 ## Correction and cancellation
 Corrections and cancellations are not a part of the CareCommunication standard. If the user finds a mistake in a sent or received message, he or she is responsible for acting upon this and inform the involved parties. 
-
 
 # Acknowledgements
 All MedCom FHIR messages **SHALL** be acknowledged. To acknowledge a CareCommunication message the [MedCom FHIR Acknowledgement](https://medcomdk.github.io/dk-medcom-acknowledgement/) standard **SHALL** be used.
