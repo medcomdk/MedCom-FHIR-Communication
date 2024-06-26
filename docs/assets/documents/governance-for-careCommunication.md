@@ -31,6 +31,7 @@ A Provenance instance describes the activity of the current message, for example
 |medcom-carecommunication-1 | User of a sender system **SHALL** be able to send a new CareCommunication. The sender system **SHALL** include a unique communication identifier for the message thread. |
 
 **Receiver system**<br>
+
 |Rule name|Rules to contrain the use of new CareCommunications|
 |:---|:---|
 |medcom-carecommunication-2 | User of receiver systems **SHALL** be able to see a new CareCommunication is received in a new message thread. |
@@ -45,6 +46,7 @@ It is a requirement that a system can send a reply to an already received CareCo
 <br>
 
 **Sender system**<br>
+
 |Rule name|Rules to contrain the use of reply CareCommunications|
 |:---|:---|
 |medcom-carecommunication-3 | User of a sender system **SHALL** be able to reply to a new CareCommunication or the latest received reply or forwarded CareCommunication. In these cases, the communication identifier **SHALL** remain the same in the reply. |
