@@ -71,7 +71,7 @@ An inherited instance profile of MedComMessagingMessageHeader **SHALL** follow t
 
 #### 2.1 MedComMessagingMessageHeader Rules
 
-The MedComMessageHeader profile is a resource that **SHALL** be used in all MedCom FHIR Messages. A MedComMessagingMessageHeader **SHALL** include a sender and receiver and it **may** include a carbon-copy receiver, however this is depended on type of standard. Each MedComMessagingMessageHeader **SHALL** include a globally unique id, which **SHALL** be used to reference the message in the message history from the MedComMessagingProvenance profile.
+The MedComMessageHeader profile is a resource that **SHALL** be used in all MedCom FHIR Messages. A MedComMessagingMessageHeader **SHALL** include a sender and receiver and it **MAY** include a carbon-copy receiver, however this is depended on type of standard. Each MedComMessagingMessageHeader **SHALL** include a globally unique id, which **SHALL** be used to reference the message in the message history from the MedComMessagingProvenance profile.
 
 The element event **SHALL** be defined in accordance with the type of standard the message concerns e.g., HospitalNotification and CareCommunication. Due to the different requirements for each standard, it **SHALL** be expected that the MedComMessagingMessageHeader is inherited in each standard.
 
@@ -106,7 +106,7 @@ A MedComMessagingOrganization that is referenced as either a "primary" receiver 
 
 A MedComMessagingOrganization **SHALL** include both a SOR and an EAN/GLN identifier.
 
-A MedComMessagingOrganization **MAY** include more identifiers. These Identifiers **SHOULD NOT** be expected to introduce application logic for the receiver(s) of the FHIRMessage.
+A MedComMessagingOrganization **MAY** include more identifiers. These Identifiers ****SHOULD** NOT** be expected to introduce application logic for the receiver(s) of the FHIRMessage.
 
 #### 3.2 MedComMessagingOrganization Links
 
@@ -119,6 +119,7 @@ A MedComMessagingOrganization **MAY** include more identifiers. These Identifier
 <br>
 
 ### 4 MedComMessagingProvenance
+The Provenance resource tracks information about the activity what was created, revised, or deleted, while referencing the current message and previous messages if such exist. To identify the actual content of the message and time of activity, it is important to look in the resources carrying the clinical content, such as the Encounter for the HosptialNotification standard, and the Communication for the CareCommunication standard.
 
 #### 4.1 MedComMessagingProvenance Rules
 
@@ -140,15 +141,13 @@ A MedComMessagingOrganization **MAY** include more identifiers. These Identifier
 
 Unless otherwise stated, the following criteria apply to elements marked as “Must Support” in MedCom's Implementation Guides:
 
-Labeling an element MustSupport means that implementations that produce or consume resources **SHALL** provide "support" for the element in some meaningful way. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
+Labeling an element MustSupport means that implementations that produce or consume resources **SHALL** provide "support" for the element in some meaningful way, and is therefore a part of a standard. Because the base FHIR specification is intended to be independent of any particular implementation context, no elements are flagged as mustSupport=true as part of the base specification. This flag is intended for use in profiles that have a defined implementation context.
 
 <br>
 
 #### 5.1 MustSupport Rules
 
-In MedCom FHIR Messaging MustSupport requires that a system
-
-Systems supporting the profile **MUST NOT** ignore the field.
+In MedCom FHIR Messaging MustSupport requires that a system provides "support" for the element in some meaningful way. A meaningful way depends on the type of information, which will be expressed for each standard.
 
 **For technical profiles**
 
@@ -164,11 +163,11 @@ Systems sending or creating a resource instance
 **MUST** populate the element according to the rules defined for the profile
 
 For Logical Models
-Functional Analysis MUST consider the data element as defined
+Functional Analysis **MUST** consider the data element as defined
 
-“Must Support” elements that are used in an implementation MUST inherit the behaviour and constraints defined for the data element
-“Must Support” elements not needed in a particular implementation MAY be excluded from implementation but such exclusion MUST be described
-Derived implementations SHOULD inherit the field’s “Must Support” flag
+“Must Support” elements that are used in an implementation **MUST** inherit the behaviour and constraints defined for the data element
+“Must Support” elements not needed in a particular implementation MAY be excluded from implementation but such exclusion **MUST** be described
+Derived implementations **SHOULD** inherit the field’s “Must Support” flag
 
 #### 5.2 MustSupport Links
 
@@ -179,15 +178,17 @@ Derived implementations SHOULD inherit the field’s “Must Support” flag
 <br>
 
 ### 6 Narrative Texts
+The narrative text contains sufficient detail to make it "clinically safe" for a human to just read the narrative. 
 
-The narrative text **SHALL** encode all the structured data pointed out by the ∑-symbol and it **SHALL** contain sufficient detail to make it "clinically safe" for a human to just read the narrative.
-Contained resources do not have narrative, but their content **SHALL** be represented in the ressource container.
+The narrative text **SHALL** encode all the structured data pointed out by the ∑-symbol in combination with MustSupport. Elements only marked with the ∑-symbol, and not MustSupport are not expected to be a part of the narrative text. 
 
-Narratives contains two sub elements, status and div.
+Each resource, beside the MedComMessagingMessage, **SHALL** contain a narrative text in the element text, eventhough this element is not marked with MS or has a minimum cardinality of 1.
+
+Narratives contain two sub elements, status and div.
 
 #### 6.1 The status element
 
-In MedCom FHIR Messages The code **SHALL** always be: "additional" meaning that the it is covering the code: extension and allowing for more human readable text in the div element than is produced by: generated and extension.
+In MedCom FHIR Messages the status **SHALL** always be "generated" meaning that the narrative is generated from elements with ∑-symbol and MustSupport, or "extension" meaning that in addition to "generated", it is including extensions.
 
 A narrative in MedCom FHIR Messages **SHALL NEVER** be of code: empty.
 
@@ -197,13 +198,15 @@ The contents of the div element are XHTML fragments that **SHALL** contain only 
 
 The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). 
 
-The div element **SHALL** have some non-whitespace content (text or an image).
+If a resource includes a base-64-encoded attachment, this **SHALL NOT** be included in the narrative text, as it will cause the size of the message to increase rapidly.
 
 #### 6.3 General Narrative Text Rules
 
-* All resources in a MedComMessagingMessage **SHALL** contain a Narrative Text defined by the [resource].Text element
-* The Narrative Text **SHALL** have a status with value "extensions". Extensions means that the contents of the narrative are entirely generated from the core elements in the content and some of the content is generated from extensions.
-* The narrative **SHALL** reflect the impact of all modifier extensions.
+* All resources in a MedComMessagingMessage **SHALL** contain a Narrative Text defined by the [resource].text element.
+* The Narrative Text **SHALL** have a status with value "generated" or "extensions". 
+* The Narrative Text **SHALL** include elements marked with ∑-symbol in combination with MustSupport. 
+* The Narrative Text **SHALL NOT** include base-64-encoded attachments.
+
 
 #### 6.4 Links for Narrative Text
 
