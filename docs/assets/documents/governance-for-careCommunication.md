@@ -1,6 +1,8 @@
 # Governance for MedCom CareCommunication
 
 - [Coupling of messages](#coupling-of-messages)
+- [Deceased element in MedComCorePatient](#Deceased-element-in-MedComCorePatient)
+- [Requirements for linebreaks](#Requirements-for-linebreaks)
 - [Requirements and optionality regarding the flow](#requirements-and-optionality-regarding-the-flow)
    * [Rules regarding new CareCommunication ](#rules-regarding-new-carecommunication)
    * [Rules regarding replies ](#rules-regarding-replies)
@@ -12,13 +14,21 @@
 
 A CareCommunication can be send as a new message from a sender to a receiver. When a new message is sent, a message thread is started. A message thread is the correspondence being displayed to the user. A new message can be replied to or forwarded. Depending on the type of response or actions from the user, a new message thread might be created. Governance concerning when to create a new message thread will be accounted for in the following.
 
-Governance for CareCommunication must be seen as additional requirements besides the Implementation Guide, use cases and clinical guidelines for application. Consequently, the requirements for managing message threads are also included in the test protocols. 
+Governance for CareCommunication must be seen as additional requirements besides the Implementation Guide, use cases and clinical guidelines for application. Consequently, the requirements for managing message threads are also included in the test protocols.
 
 # Coupling of messages
 
 A communication identifier is implemented to ensure that CareCommunications sent back and forth between healthcare professionals are displayed correct and likewise to the sender and receiver. When to create a new communication identifier is presented in section Requirements and optionality regarding the flow.
 
-A Provenance instance describes the activity of the current message, for example is it a new message or a reply. In case the message is a reply or forwarding, the instance will reference the MessageHeader.id from the message it is responding to. Further, the Provenance instance includes a reference to the payload(s) (also known as the message segments with text or attachments) in the Communication instance that are included for this current message. If there, for example, is included one payload with message text and two with attachments for the current message, the Provenance will include the identifier from all three payloads. 
+A Provenance instance describes the activity of the current message, for example is it a new message or a reply. In case the message is a reply or forwarding, the instance will reference the MessageHeader.id from the message it is responding to. Further, the Provenance instance includes a reference to the payload(s) (also known as the message segments with text or attachments) in the Communication instance that are included for this current message. If there, for example, is included one payload with message text and two with attachments for the current message, the Provenance will include the identifier from all three payloads.
+
+# Deceased element in MedComCorePatient
+The "deceased" element in MedComCorePatient is not a requirement in the context of CareCommunication. This applies to both deceasedBoolean and deceasedDateTime. This means that receiving systems are not expected to process these values if present in a CareCommunication.
+
+# Requirements for linebreaks
+It is a requirement for the sender system to support the ability to include linebreaks in the free text field of the message.
+It is a requirement for the receiver system to support and display linebreaks in the free text field of the message.
+Linebreaks must be inserted in the free text by using `<br/>`.
 
 # Requirements and optionality regarding the flow
 
