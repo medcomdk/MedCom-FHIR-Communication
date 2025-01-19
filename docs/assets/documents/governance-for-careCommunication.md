@@ -23,9 +23,11 @@ A communication identifier is implemented to ensure that CareCommunications sent
 A Provenance instance describes the activity of the current message, for example is it a new message or a reply. In case the message is a reply or forwarding, the instance will reference the MessageHeader.id from the message it is responding to. Further, the Provenance instance includes a reference to the payload(s) (also known as the message segments with text or attachments) in the Communication instance that are included for this current message. If there, for example, is included one payload with message text and two with attachments for the current message, the Provenance will include the identifier from all three payloads.
 
 # Deceased element in MedComCorePatient
-The "deceased" element in MedComCorePatient is not a requirement in the context of CareCommunication. This applies to both deceasedBoolean and deceasedDateTime. This means that receiving systems are not expected to process these values if present in a CareCommunication.
+
+The "deceased" element in MedComCorePatient is not a requirement in the context of CareCommunication for both sending and receiving system. This applies to both deceasedBoolean and deceasedDateTime. This means that receiving systems are not expected to process these values if present in a CareCommunication.
 
 # Requirements for linebreaks
+
 It is a requirement for the sender system to support the ability to include linebreaks in the free text field of the message.
 It is a requirement for the receiver system to support and display linebreaks in the free text field of the message.
 Linebreaks must be inserted in the free text by using `<br/>`.
