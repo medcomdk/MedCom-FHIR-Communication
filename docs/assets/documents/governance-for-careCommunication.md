@@ -35,7 +35,7 @@ Linebreaks must be inserted in the free text by using `<br/>`.
 
 # Use of SOR ID and Location Number (EAN)
 Clear communication in CareCommunication relies on understanding how the SOR ID and location number (EAN) are used.
-In the FHIR profile for CareCommunication medcom-messaging-organization, only the SOR ID is mandatory, while the location number is optional. However, the location number will always be included if it is available.
+In the FHIR profile for CareCommunication medcom-messaging-organization, it is required that both the SOR ID and the location number are specified for the organization sending/receiving a CareCommunication.
 This means:
 1) Senders must be registered with a SOR ID that has an associated location number.
 2) If a sub-department does not have a location number linked to its SOR ID, CareCommunications from this sub-department must be sent from the overarching organizational level where both a SOR ID and a location number are associated.
