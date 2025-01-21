@@ -2,8 +2,9 @@
 
 - [Coupling of messages](#coupling-of-messages)
 - [Deceased element in MedComCorePatient](#Deceased-element-in-MedComCorePatient)
-- [Requirements for linebreaks](#Requirements-for-linebreaks)
-- [Requirements and optionality regarding the flow](#requirements-and-optionality-regarding-the-flow)
+- [Requirements for linebreaks](#deceased-element-in-medcomcorepatient)
+- [Guidelines for the Use of SOR ID and Location Number (EAN)](#requirements-for-linebreaks)
+- [Requirements and optionality regarding the flow](#use-of-sor-id-and-location-number-ean)
    * [Rules regarding new CareCommunication ](#rules-regarding-new-carecommunication)
    * [Rules regarding replies ](#rules-regarding-replies)
    * [Rules regarding forwarding](#rules-regarding-forwarding)
@@ -31,6 +32,13 @@ The "deceased" element in MedComCorePatient is not a requirement in the context 
 It is a requirement for the sender system to support the ability to include linebreaks in the free text field of the message.
 It is a requirement for the receiver system to support and display linebreaks in the free text field of the message.
 Linebreaks must be inserted in the free text by using `<br/>`.
+
+# Use of SOR ID and Location Number (EAN)
+Clear communication in CareCommunication relies on understanding how the SOR ID and location number (EAN) are used.
+In the FHIR profile for CareCommunication medcom-messaging-organization, only the SOR ID is mandatory, while the location number is optional. However, the location number will always be included if it is available.
+This means:
+1) Senders must be registered with a SOR ID that has an associated location number.
+2) If a sub-department does not have a location number linked to its SOR ID, CareCommunications from this sub-department must be sent from the overarching organizational level where both a SOR ID and a location number are associated.
 
 # Requirements and optionality regarding the flow
 
