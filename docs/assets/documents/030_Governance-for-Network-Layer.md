@@ -47,6 +47,7 @@ Sending MedCom FHIR messages over the VANS Network requires the sending system t
 When sending to both primary and cc destinations.
 
 1. A Sending Ecosystem **MUST** secure that the MedCom FHIR messages for primary and cc receivers differs on ID's as described in [Governance for MedCom FHIR Messaging](040_Governance4FHIR-Messaging.md)
+2. A Sending Ecosystem **MUST** ensure that the size of a MedCom FHIR message embeded in a VANSEnvelope is above 100 MB when send on the VANS Network. If the validation of size is before embedment in a VANSEnvelope, it is allowed for the sending ecosystem to set a limit to 100 MB, e.g. 98 MB, to ensure room for the embedment in VANS-envelope.
 
 ## 4 Receiving MedCom FHIR messages
 
