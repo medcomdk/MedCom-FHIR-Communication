@@ -31,7 +31,7 @@ The "deceased" element in MedComCorePatient is not a requirement in the context 
 
 It is a requirement for the sender system to support the ability to include linebreaks in the free text field of the message.
 It is a requirement for the receiver system to support and display linebreaks in the free text field of the message.
-Linebreaks must be inserted in the free text by using `<br/>`.
+Linebreaks must be inserted in the free text by using `\n` in FHIR-JSON and `&#xA;` in FHIR-XML.
 
 # Use of SOR ID and Location Number (EAN)
 Clear communication in CareCommunication relies on understanding how the SOR ID and location number (EAN) are used.
