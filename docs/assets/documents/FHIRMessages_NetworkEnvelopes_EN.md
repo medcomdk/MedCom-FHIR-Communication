@@ -76,7 +76,7 @@ Specifically, the above for MedCom's FHIR messages means this
 |**Envelope Receiver**  |VANSEnvelope                           |
 |**Format**             |"HL7"                                  |
 |**Name**               |"MCM:FDIS91#`<postfix value>`"         |
-|**Version**            |"4.0.0"                                |
+|**Version**            |"5.0"                                |
 
 Name **MUST** explicitly be taken from the following ValueSet:<a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">CodeSystem-medcom-messaging-sorEdiSystem</a>
 
