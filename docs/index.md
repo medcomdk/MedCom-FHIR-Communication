@@ -13,11 +13,8 @@
   + [4.1 Governance for MedCom FHIR Messages](#41-governance-for-medcom-fhir-messages)
   + [4.2 Governance for displaying MedCom FHIR Messages](#42-governance-for-displaying-medcom-fhir-messages)
   + [4.3 Governance for EpisodeOfCare-identifier](#43-governance-for-episode-of-care-identifiers)
-* [5 Terminology](#5-terminology)
-  + [5.1 Governance for MedCom FHIR Terminology](#51-governance-for-medcom-fhir-terminology)
-  + [5.2 Governance for MedCom FHIR Terminology Server](#52-governance-for-medcom-fhir-terminology-server)
-* [6 Governance for concrete MedCom FHIR Standards](#6-governance-for-concrete-medcom-fhir-standards)
-  + [6.1 Versioning of MedCom FHIR Standards](#61-versioning-of-medcom-fhir-standards)
+* [5 Governance for concrete MedCom FHIR Standards](#6-governance-for-concrete-medcom-fhir-standards)
+  + [5.1 Versioning of MedCom FHIR Standards](#61-versioning-of-medcom-fhir-standards)
 <br>
 
 ## 1 Introduction to Governance for MedCom FHIR Messaging
@@ -140,25 +137,14 @@ An episode of care identifier (Danish: forløbsid) is used for linking messages 
 
 [Click here to reade more about episode of care identifiers](/assets/documents/080_Governance-for-episode-of-care-identifiers.md)
 
-## 5 Terminology 
-
-### 5.1 Governance for MedCom FHIR Terminology
-
-Governance for MedCom FHIR Terminology covers Codesystems, Valuesets and ConceptMaps, which are published through our MedCom FHIR Terminology IG and hosted on a MedCom FHIR Terminology Server.
-
-[Click here to go to Governance for Terminology.](/assets/documents/070_Governance-for-Terminology.md)
-
-### 5.2 Governance for MedCom FHIR Terminology Server
-
-Governance for the MedCom FHIR Terminology Server will appear here when published.
-
-## 6 Governance for concrete MedCom FHIR Standards
+<!-- RCH: Move to general Governance -->
+## 5 Governance for concrete MedCom FHIR Standards
 
 Each MedCom FHIR Message will potentially add some specific Governance Rules to the mix of overall Governance Rules. These are handled on a separate page, to which the specific standard also will link to.
 
 [Click here to go to Governance for concrete MedCom FHIR Message Standards.](/assets/documents/090_Governance-for-concrete-standards.md)
 
-### 6.1 Versioning of MedCom FHIR Standards
+### 5.1 Versioning of MedCom FHIR Standards
 Vendors should be prepared to handle multiple versions of a MedCom FHIR standard.
 The version of the standard is not explicitly stated in a message. However, the version of a received message can be found in the [VANSEnvelope, which is described in the section of Governance for Network Layer](/assets/documents/030_Governance-for-Network-Layer.md). 
 
