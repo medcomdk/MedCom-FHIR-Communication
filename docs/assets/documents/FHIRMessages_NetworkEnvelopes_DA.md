@@ -75,7 +75,7 @@ Konkret betyder ovenstående for MedComs FHIR\-meddelelser dette
 |Kuvert  |VANSenvelope          |
 |Format  |"HL7"                 |
 |Name    |"MCM:FDIS91#`<code>`" |
-|Version |"3.0.0"               |
+|Version |"5.0"               |
 
 Postfixværdier for Name vil være indenfor dette code udfaldsrum, som er taget fra: <a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html" target="_blank">CareCommunications ValueSet for categories</a>
 
