@@ -3,7 +3,6 @@
 **Table of contents**
 * [1 Introduction to Governance for MedCom FHIR Messaging](#1-introduction-to-governance-for-medcom-fhir-messaging)
 * [2 Terms and abbreviations](#2-terms-and-abbreviations)
-  + [2.1 Special terms used in Governance for MedCom FHIR Messaging](#21-special-terms-used-in-governance-for-medcom-fhir-messaging)
 * [3 Message exchange](#3-message-exchange)
   + [3.1 Governance for Reliable Messaging in general](#31-governance-for-reliable-messaging-in-general)
   + [3.2 Governance for Network Layer](#32-governance-for-network-layer)
@@ -13,8 +12,7 @@
   + [4.1 Governance for MedCom FHIR Messages](#41-governance-for-medcom-fhir-messages)
   + [4.2 Governance for displaying MedCom FHIR Messages](#42-governance-for-displaying-medcom-fhir-messages)
   + [4.3 Governance for EpisodeOfCare-identifier](#43-governance-for-episode-of-care-identifiers)
-* [5 Governance for concrete MedCom FHIR Standards](#6-governance-for-concrete-medcom-fhir-standards)
-  + [5.1 Versioning of MedCom FHIR Standards](#61-versioning-of-medcom-fhir-standards)
+* [5 Versions of MedCom FHIR Standards](#5-versions-of-medcom-fhir-standards)
 <br>
 
 ## 1 Introduction to Governance for MedCom FHIR Messaging
@@ -57,24 +55,6 @@ In the following we follow a top-down approach by addressing shipping over the N
 ## 2 Terms and abbreviations
 
 [Click here to get an overview of the terms and abbreviations used in to describe the Governance.](/assets/documents/011_Governance_Terms.md)
-
-### 2.1 Special terms used in Governance for MedCom FHIR Messaging
-
-MedCom adopts the normative words defined in IETF Best Current Practice 14: Key words for use in RFCs to Indicate Requirement Levels (BCP-14) (currently RFC 2119 and RFC 8174), certain words indicate whether a specific content of the Technical Framework is normative: either required (e.g., “must”, “required”, “shall”) or optional (e.g., “may”, “recommended”). Informative content does not contain these key words.
-
-<a href="https://www.rfc-editor.org/info/rfc2119" target="_blank">RFC 2119</a> specifies common key words that may be used in protocol specifications, where <a href="https://www.rfc-editor.org/info/rfc8174" target="_blank">RFC 8174</a> aims to reduce the ambiguity by clarifying that only UPPERCASE usage of the key words have the defined special meanings.
-
-This specification uses the conformance verbs SHALL, SHOULD, and MAY as defined in RFC 2119. Unlike RFC 2119, however, this specification allows that different applications might not be able to interoperate because of how they use optional features. In particular:
-
-* **SHALL**: (or “REQUIRED” or “MUST”) an absolute requirement for all implementations
-* **SHALL NOT**: (or "MUST NOT") an absolute prohibition against inclusion for all implementations
-* **SHOULD/SHOULD NOT**: (or “RECOMMENDED”/“NOT RECOMMENDED”) A best practice or recommendation to be considered by implementers within the context of their particular implementation; there may be valid reasons to ignore an item, but the full implications must be understood and carefully weighed before choosing a different course
-* **MAY**: (or "OPTIONAL") This is truly optional language for an implementation; can be included or omitted as the implementer decides with no implications
-
-<br>
-
-This convention is in compliance with HL7 FHIR use of the terms, which is descibed by <a href="http://www.hl7.org/fhir/conformance-rules.html#conflang" target="_blank">HL7 FHIR under conformance language</a>.
-
 
 ## 3 Message exchange
 
@@ -121,7 +101,7 @@ You can find a description here:<a href="https://medcomdk.github.io/dk-medcom-me
 
 ### 4.1 Governance for MedCom FHIR Messages
 
-Governance for MedCom FHIR Messages covers the basic ruleset for a MedCom FHIR Message, MedComMessagingMessage and its content, MedComMessagingMessageHeader, MedComMessagingOrganization and MedComMessagingProvenance
+Governance for MedCom FHIR Messages covers the basic ruleset for a MedCom FHIR Message, MedComMessagingMessage and its content, including MedComMessagingMessageHeader, MedComMessagingOrganization and MedComMessagingProvenance.
 
 [Click here to go to Governance for MedCom FHIR Messages.](/assets/documents/050_Governance-for-MedCom-FHIR-Messages.md)
 
@@ -137,15 +117,8 @@ An episode of care identifier (Danish: forløbsid) is used for linking messages 
 
 [Click here to reade more about episode of care identifiers](/assets/documents/080_Governance-for-episode-of-care-identifiers.md)
 
-<!-- RCH: Move to general Governance -->
-## 5 Governance for concrete MedCom FHIR Standards
-
-Each MedCom FHIR Message will potentially add some specific Governance Rules to the mix of overall Governance Rules. These are handled on a separate page, to which the specific standard also will link to.
-
-[Click here to go to Governance for concrete MedCom FHIR Message Standards.](/assets/documents/090_Governance-for-concrete-standards.md)
-
-### 5.1 Versioning of MedCom FHIR Standards
+## 5 Versions of MedCom FHIR Standards
 Vendors should be prepared to handle multiple versions of a MedCom FHIR standard.
 The version of the standard is not explicitly stated in a message. However, the version of a received message can be found in the [VANSEnvelope, which is described in the section of Governance for Network Layer](/assets/documents/030_Governance-for-Network-Layer.md). 
 
-When receiving a MedCom FHIR message, it should be validated against the rules and contraints defined in the associtated Implementaiotn guide of the same version. If it is not possible for you to use the versionnumber from the envelopes, it is recommended that systems always validate a message against the latest version of the standard when recieving a such one. As long as there are no breaking changes in the standard (i.e. a non-backwards compatible change) this will be a viable way to go. With breaking changes, systems should include two versions of the standard that can validated against, for example version 3.0.0 and 2.1.0.
+When receiving a MedCom FHIR message, it should be validated against the rules and contraints defined in the associtated Implementaiotn guide of the same version. If it is not possible for you to use the versionnumber from the envelopes, it is recommended that systems always validate a message against the latest version of the standard when recieving a such one. As long as there are no breaking changes in the standard (i.e. a non-backwards compatible change) this will be a viable way to go.
