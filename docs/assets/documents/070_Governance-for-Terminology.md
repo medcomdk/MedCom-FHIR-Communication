@@ -1,3 +1,5 @@
+<!-- OBS: This content is outdated and no longer used. Another terminology governance is mape in the GitHupLangingPage repo.
+
 # Governance of MedCom FHIR Terminologies
 
 **Table of content**
@@ -40,3 +42,4 @@ A ConceptMap is valid until the date of a newer version of this ConceptMap is re
 |<a href="https://medcomdk.github.io/dk-medcom-terminology/">Detailed specification for MedCom FHIR Terminology</a>
 |<a href="https://medcomfhir.dk/ig/terminology/" target="_blank">Detailed specification for MedCom FHIR Terminology in MedCom FHIR Terminology IG</a>
 |<a href="http://hl7.org/fhir/R4/terminology-service.html" target="_blank">Detailed specification for Terminology in FHIR R4</a>
+-->
