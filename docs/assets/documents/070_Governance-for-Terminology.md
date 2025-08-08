@@ -1,4 +1,4 @@
-<!-- OBS: This content is outdated and no longer used. Another terminology governance is mape in the GitHupLangingPage repo.
+<!-- OBS: This content is outdated and no longer used. Another terminology governance is mape in the MedComLandingPage repo.
 
 # Governance of MedCom FHIR Terminologies
 
