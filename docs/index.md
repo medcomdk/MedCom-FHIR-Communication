@@ -124,6 +124,8 @@ An episode of care identifier (Danish: forløbsid) is used for linking messages 
 
 ## 5 Versions of MedCom FHIR Standards
 Vendors should be prepared to handle multiple versions of a MedCom FHIR standard.
-The version of the standard is not explicitly stated in a message. However, the version of a received message can be found in the [VANSEnvelope, which is described in the section of Governance for Network Layer](/assets/documents/030_Governance-for-Network-Layer.md). 
+The version of the standard is not explicitly stated in a message. However, the version of a received message can be found in the [VANSEnvelope, which is described in the section of Governance for Network Layer](/assets/documents/030_Governance-for-Network-Layer.md).
+
+MedCom is, as of 2025, starting to introduce references in the MessageHeader to MessageDefinitions via the `definition` element. This means that future releases containing MessageHeaders will have an associated MessageDefinition linked. You can find the Implementation Guide for MessageDefinitions [here](https://medcomfhir.dk/ig/messagedefinitions/). MessageDefinitions contains the the standard's version.
 
 When receiving a MedCom FHIR message, it should be validated against the rules and contraints defined in the associtated Implementaiotn guide of the same version. If it is not possible for you to use the versionnumber from the envelopes, it is recommended that systems always validate a message against the latest version of the standard when recieving a such one. As long as there are no breaking changes in the standard (i.e. a non-backwards compatible change) this will be a viable way to go.
