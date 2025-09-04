@@ -178,39 +178,75 @@ Derived implementations **SHOULD** inherit the field’s “Must Support” flag
 <br>
 
 ### 6 Narrative Texts
-The narrative text contains sufficient detail to make it "clinically safe" for a human to just read the narrative. 
 
-The narrative text **SHALL** encode all the structured data pointed out by the ∑-symbol in combination with MustSupport. Elements only marked with the ∑-symbol, and not MustSupport are not expected to be a part of the narrative text. 
+#### 6.1 The Importance of Narrative Text in MedCom’s FHIR Standards
+In MedCom’s FHIR standards, it is required that all FHIR resources include a narrative text. The narrative serves an essential purpose: It ensures that the clinical or administrative content of the resource can be understood by healthcare professionals without the need for specialized technical tools. While the structured elements of a FHIR resource are designed for system-to-system communication, the narrative provides a human-readable summary that makes the information accessible to human interpreation in a simple XHTML view.
 
-Each resource, beside the MedComMessagingMessage, **SHALL** contain a narrative text in the element text, eventhough this element is not marked with MS or has a minimum cardinality of 1.
+The narrative text plays a critical role in supporting robustness and patient safety across the healthcare system. First, it allows the content of a message to be read even if the recipient system fails to process the structured data. For example. Second, when narrative text is displayed across multiple versions of a standard, it increases patient safety by ensuring that as much information as possible remains visible, and it enables healthcare professionals to review historical messages in the future. Third, it makes it additional elements beyond those defined in the MedCom standard transparent, since FHIR allows resources to include more data than the standard strictly requires. Fourth, including a narrative is considered best practice in FHIR and aligns MedCom’s work with international recommendations. Finally, the presence of a narrative ensures that even if a system receives a FHIR Bundle it is not fully equipped to handle, the content can still be displayed and understood when necessary.
 
-Narratives contain two sub elements, status and div.
+#### 6.2 Requirements for the Narratives
 
-#### 6.1 The status element
+The narrative text **SHALL** include a human-readable representation of every data element marked with the Obligation code **SHALL:in-narrative**.
 
-In MedCom FHIR Messages the status **SHALL** always be "generated" meaning that the narrative is generated from elements with ∑-symbol and MustSupport, or "extension" meaning that in addition to "generated", it is including extensions.
+Obligations in FHIR define actor-specific requirements in an Implementation Guide to express conformance expectations. The code “SHALL:in-narrative” indicates that the referenced data element must be represented in the human-readable narrative of the resource. An Actor represents a defined role in an exchange, and obligations are applied to actors to indicate their specific responsibilities. The narrative **SHALL** provide a human-readable summary of the essential elements and **SHALL NOT** replicate the full structured content.
 
-A narrative in MedCom FHIR Messages **SHALL NEVER** be of code: empty.
+All MedCom FHIR ressources **SHALL** include a narrative in the `[resource].text`-element (even though it is not marked with 1..1 cardinality in the Implementation Guide), except the Bundle resources. Since the Bundle itself does not carry clinical meaning, its content must be understood by reviewing the individual resources inside the Bundle.
 
-#### 6.2 The div element
+Narratives contain two sub elements, text.status and text.div.
 
-The contents of the div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
+##### 6.2.1 The status element
+
+In MedCom FHIR ressources the text.status elemen **SHALL** always use the code "generated" or "extension". The status "generated" **SHALL** be used when the resource contains only standard, generated content. The status "extension" **SHALL** be used when the resource includes additional elements provided through extensions.
+
+A narrative in MedCom FHIR resources **SHALL NEVER** be of code: empty.
+
+##### 6.2.2 The div element
+
+The contents of the text.div element are XHTML fragments that **SHALL** contain only the basic HTML formatting elements described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, '<a>' elements (either name or href), images and internally contained style attributes.
 
 The XHTML content **SHALL NOT** contain a head, a body element, external stylesheet references, deprecated elements, scripts, forms, base/link/xlink, frames, iframes, objects or event related attributes (e.g. onClick). 
 
 If a resource includes a base-64-encoded attachment, this **SHALL NOT** be included in the narrative text, as it will cause the size of the message to increase rapidly.
 
-#### 6.3 General Narrative Text Rules
+##### 6.2.3 General Narrative Text Rules
 
-* All resources in a MedComMessagingMessage **SHALL** contain a Narrative Text defined by the [resource].text element.
+* All resources **SHALL** contain a narrative text defined by the `[resource].text` element (Except Bundles).
 * The Narrative Text **SHALL** have a status with value "generated" or "extensions". 
-* The Narrative Text **SHALL** include elements marked with ∑-symbol in combination with MustSupport. 
+* The Narrative Text **SHALL** include elements marked with the Obligation code **SHALL:in-narrative**. 
 * The Narrative Text **SHALL NOT** include base-64-encoded attachments.
+* If a resource contains extra information beyond the MedCom standard, this **SHALL** be included in the narrative.
+* The narrative **SHALL** use Danish clinical terminology or recognized Danish display texts where such exist, and it **SHALL** also include the corresponding English text to ensure international readability.
 
+#### 6.3 Governance for narrative content in MedCom FHIR standards
+
+This governance is applied by MedCom to define which elements **SHALL** be included in the narrative and assigned the Obligation code **SHALL:in-narrative** found in the MedCom FHIR standard profiles. The purpose of this governance is to ensure a consistent use of narrative texts across MedCom’s FHIR profiles. The governance defines which types of elements that **SHALL** be included in the human-readable narrative and which should be excluded, based on best practice and patient safety considerations. The same type of element **SHOULD** always be treated consistently across MedCom profiles to support predictable implementation.
+
+##### 6.3.1 Elements that must be included in the narrative text
+
+Clinically and administratively relevant information (CARI), including diagnoses, observations, procedures, and other content directly relevant to patient care or administration **SHALL** be included in the narrative text.
+
+Clinically and administratively relevant information includes:
+
+* Elements representing relevant person and organization information (e.g., Patient, Practitioner, Organization), including e.g. name, role, CPR-number, birthdate, and contact information.
+* Codes and corresponding systems with human meaning. When coded values are used (e.g., LOINC, SNOMED CT, MedCom codes), their display text (the human-readable term) must appear in the narrative.
+* Relevant values (e.g., observation results, medication names and dosages, diagnostic conclusions).
+* Relevant elements from extension.
+* Identifiers (e.g., SOR-ID, municipality codes, episode-of-care identifiers) when they have human relevance.
+* Relevant dates and times.
+
+##### 6.3.2 Elements that shall not be included in the narrative text
+
+* Technical identifiers.
+* System-generated IDs (UUIDs, database keys, OIDs).
+* References and resource links.
+* FHIR references (e.g., Patient/123) should not be rendered in the narrative; instead, their human-readable display (e.g., patient name) must be shown.
+* Metadata.
+* Elements such as meta, versionId, lastUpdated, or technical extensions not meaningful for end users.
+* Extensions without direct clinical relevance.
 
 #### 6.4 Links for Narrative Text
 
-| Links for Narrative Text|
+|Additional information can be found in the following links for narrative texts in FHIR|
 |:---|
 |<a href="http://hl7.org/fhir/R4/narrative.html#Narrative" target ="_blank">Narrative Text description in FHIR R4</a>|
 |<a href="http://hl7.org/fhir/R4/codesystem-narrative-status.html#4.3.14.424.2" target="_blank">NarrativeStatus in FHIR R4</a>|
