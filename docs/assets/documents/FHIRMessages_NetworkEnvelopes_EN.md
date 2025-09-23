@@ -82,7 +82,7 @@ Name **MUST** explicitly be taken from the following ValueSet:<a href="https://m
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from:<a href=""></a> <a href ="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-careCommunication-categories.html" target="_blank">CareCommunications ValueSet for categories</a>
 
-The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">VansStatisticalCodeCombination</a>
+The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-statisticalCodes.html" target="_blank">VansStatisticalCodeCombination</a>
 
 
 ### 3.2 HospitalNotification
@@ -99,7 +99,7 @@ Name **MUST** explicitly be taken from the following ValueSet: <a href="https://
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from the HospitalNotification ValueSet:<a href="https://medcomfhir.dk/ig/terminology/ValueSet-medcom-hospitalNotification-messageActivities.html" target="_blank">MedComHospitalNotificationMessageActivityCodes</a> 
 
-The combined Name+Postfix **MUST** explicitly conform with the following ValueSet:<a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">VansStatisticalCodeCombination</a>
+The combined Name+Postfix **MUST** explicitly conform with the following ValueSet:<a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-statisticalCodes.html" target="_blank">VansStatisticalCodeCombination</a>
 
 
 ### 3.3 Acknowledgement
@@ -116,4 +116,4 @@ Name **MUST** explicitly be taken from the following ValueSet: <a href="https://
 
 Postfix Values for Name **MUST** be within this ValueSet, which is taken from the Response Code ValueSet: Codes:  [http://hl7.org/fhir/R4/valueset-response-code.html](http://hl7.org/fhir/R4/valueset-response-code.html)
 
-The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">VansStatisticalCodeCombination</a>
+The combined Name+Postfix **MUST** explicitly conform with the following ValueSet: <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-statisticalCodes.html" target="_blank">VansStatisticalCodeCombination</a>
