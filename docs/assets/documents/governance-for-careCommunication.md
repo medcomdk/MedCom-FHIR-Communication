@@ -68,7 +68,7 @@ It is a requirement that a system can send a reply to an already received CareCo
 |medcom-carecommunication-4 | User of a sender system **SHOULD** be able to reply to the latest message when the latest message is sent from the sender system itself. |
 |medcom-carecommunication-5 | User of the sender system **SHALL** NOT be able to reply to messages which isn't the latest. If this is necesary, a new message thread with a unique communication identifier **SHALL** be created. |
 |medcom-carecommunication-6 | When replying to a CareCommunication that already includes an attachment, the base64-encoded content **SHALL NOT**  be included, but the identifier, timestamp and title **SHALL** be included, and author information **SHALL** be included if available. |
-|medcom-carecommunication-7 | When replying to a CareCommunication with a specific sender, the he specific sender **SHALL** automatically set the specific sender as the specific recipient in the reply. |
+|medcom-carecommunication-7 | When replying to a CareCommunication with a specific sender, the specific sender **SHALL** automatically set the specific sender as the specific recipient in the reply. |
 
 
 **Receiver system**<br> 
