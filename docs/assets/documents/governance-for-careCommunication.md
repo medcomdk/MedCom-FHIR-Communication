@@ -1,7 +1,6 @@
 # Governance for MedCom CareCommunication
 
 - [Coupling of messages](#coupling-of-messages)
-- [Deceased element in MedComCorePatient](#Deceased-element-in-MedComCorePatient)
 - [Requirements for linebreaks](#deceased-element-in-medcomcorepatient)
 - [Guidelines for the Use of SOR ID and Location Number (EAN)](#requirements-for-linebreaks)
 - [Requirements and optionality regarding the flow](#use-of-sor-id-and-location-number-ean)
@@ -22,10 +21,6 @@ Governance for CareCommunication must be seen as additional requirements besides
 A communication identifier is implemented to ensure that CareCommunications sent back and forth between healthcare professionals are displayed correct and likewise to the sender and receiver. When to create a new communication identifier is presented in section Requirements and optionality regarding the flow.
 
 A Provenance instance describes the activity of the current message, for example is it a new message or a reply. In case the message is a reply or forwarding, the instance will reference the MessageHeader.id from the message it is responding to. Further, the Provenance instance includes a reference to the payload(s) (also known as the message segments with text or attachments) in the Communication instance that are included for this current message. If there, for example, is included one payload with message text and two with attachments for the current message, the Provenance will include the identifier from all three payloads.
-
-# Deceased element in MedComCorePatient
-
-The "deceased" element in MedComCorePatient is not a requirement in the context of CareCommunication for both sending and receiving system. This applies to both deceasedBoolean and deceasedDateTime. This means that receiving systems are not expected to process these values if present in a CareCommunication.
 
 # Requirements for linebreaks
 
