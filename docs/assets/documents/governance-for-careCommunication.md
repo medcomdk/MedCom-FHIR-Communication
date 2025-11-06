@@ -8,7 +8,6 @@
    * [Rules regarding replies ](#rules-regarding-replies)
    * [Rules regarding forwarding](#rules-regarding-forwarding)
    * [General rules ](#general-rules)
-   * [Correction and cancellation](#correction-and-cancellation)
 - [Acknowledgements](#acknowledgements)
 - [Envelope ](#envelope)
 

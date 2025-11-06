@@ -129,3 +129,7 @@ The version of the standard is not explicitly stated in a message. However, the 
 MedCom is, as of 2025, starting to introduce references in the MessageHeader to MessageDefinitions via the `definition` element. This means that future releases containing MessageHeaders will have an associated MessageDefinition linked. You can find the Implementation Guide for MessageDefinitions [here](https://medcomfhir.dk/ig/messagedefinitions/). MessageDefinitions contains the the standard's version.
 
 When receiving a MedCom FHIR message, it should be validated against the rules and contraints defined in the associtated Implementation guide of the same version. If it is not possible for you to use the versionnumber from the envelopes, it is recommended that systems always validate a message against the latest version of the standard when recieving a such one. As long as there are no breaking changes in the standard (i.e. a non-backwards compatible change) this will be a viable way to go.
+
+## 6 FHIR Validation in Messaging
+
+Vendors using a MedCom FHIR Messaging standard **MUST** follow specific rules for how validation must be performed. See the [governance for validation here](https://medcomdk.github.io/MedComLandingPage/assets/documents/FHIRValidationGovernance.html).
