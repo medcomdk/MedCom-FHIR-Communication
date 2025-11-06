@@ -13,6 +13,7 @@
   + [4.2 Governance for displaying MedCom FHIR Messages](#42-governance-for-displaying-medcom-fhir-messages)
   + [4.3 Governance for EpisodeOfCare-identifier](#43-governance-for-episode-of-care-identifiers)
 * [5 Versions of MedCom FHIR Standards](#5-versions-of-medcom-fhir-standards)
+* [6 FHIR Validation in Messaging](#6-fhir-validation-in-messaging)
 <br>
 
 ## 1 Introduction to Governance for MedCom FHIR Messaging
