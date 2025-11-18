@@ -110,7 +110,7 @@ The combined Name+Postfix **MUST** explicitly conform with the following ValueSe
 |**Envelope Receiver**  |VANSEnvelope                           |
 |**Format**             |"HL7"                                  |
 |**Name**               |"MCM:FCTL#`<postfix value>`"          |
-|**Version**            |"2.0.0"                                |
+|**Version**            |"2.0"                                |
 
 Name **MUST** explicitly be taken from the following ValueSet: <a href="https://medcomfhir.dk/ig/terminology/CodeSystem-medcom-messaging-sorEdiSystem.html" target="_blank">VansStatisticalCodeCombination</a>
 
